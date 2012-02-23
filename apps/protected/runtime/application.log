@@ -1,0 +1,49 @@
+2012/02/23 15:21:50 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "D:\WebServer\health claim\HIC\apps\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in D:\WebServer\health claim\HIC\yii1110\framework\web\CAssetManager.php:116
+Stack trace:
+#0 D:\WebServer\health claim\HIC\yii1110\framework\web\CAssetManager.php(101): CAssetManager->setBasePath('D:\WebServer\he...')
+#1 D:\WebServer\health claim\HIC\yii1110\framework\web\CAssetManager.php(219): CAssetManager->getBasePath()
+#2 D:\WebServer\health claim\HIC\yii1110\framework\web\CClientScript.php(449): CAssetManager->publish('D:\WebServer\he...')
+#3 D:\WebServer\health claim\HIC\yii1110\framework\web\CClientScript.php(486): CClientScript->getCoreScriptUrl()
+#4 D:\WebServer\health claim\HIC\yii1110\framework\web\CClientScript.php(302): CClientScript->getPackageBaseUrl('jquery')
+#5 D:\WebServer\health claim\HIC\yii1110\framework\web\CClientScript.php(195): CClientScript->renderCoreScripts()
+#6 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 D:\WebServer\health claim\HIC\apps\protected\controllers\SiteController.php(92): CController->render('login', Array)
+#9 D:\WebServer\health claim\HIC\yii1110\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('login')
+#14 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#15 D:\WebServer\health claim\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\WebServer\health claim\HIC\apps\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/health%20claim/HIC/apps/index.php?r=site/login
+HTTP_REFERER=http://localhost/health%20claim/HIC/apps/index.php?r=site/page&view=about
+---
+2012/02/23 15:22:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php:484
+Stack trace:
+#0 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(271): CController->missingAction('gii')
+#1 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('gii')
+#2 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('site/gii')
+#3 D:\WebServer\health claim\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\WebServer\health claim\HIC\apps\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health%20claim/HIC/apps/index.php?r=site/gii
+---
+2012/02/23 15:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('gii/index')
+#1 D:\WebServer\health claim\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\WebServer\health claim\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health%20claim/HIC/apps/index.php?r=gii/index
+---
+2012/02/23 15:23:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('gii/index')
+#1 D:\WebServer\health claim\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\WebServer\health claim\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health%20claim/HIC/apps/index.php?r=gii/index
+---
