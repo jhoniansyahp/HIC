@@ -16,15 +16,18 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.*',
+		'ext.giix-components.*', // giix components
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		'modules'=>array(
-			'polis',
-		),
+		'polis',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
+			'generatorPaths' => array(
+				'ext.giix-core', // giix generators
+			),
 			'password'=>'root',
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
@@ -49,9 +52,15 @@ return array(
 			),
 		),
 		*/
-		'db'=>array(
+		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+		),*/
+		'db' => array(
+			'connectionString' => 'pgsql:host=localhost;port=5432;dbname=health_claim',
+			'username' => 'postgres',
+			'password' => 'postgres',
 		),
+		
 		// uncomment the following to use a MySQL database
 		/*
 		'db'=>array(
