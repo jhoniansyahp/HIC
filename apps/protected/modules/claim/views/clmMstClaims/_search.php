@@ -1,216 +1,76 @@
-<div class="wide form">
-
-<?php $form = $this->beginWidget('GxActiveForm', array(
-	'action' => Yii::app()->createUrl($this->route),
-	'method' => 'get',
+<?php $form=$this->beginWidget('ext.bootstrap.widgets.BootActiveForm',array(
+	'action'=>Yii::app()->createUrl($this->route),
+	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_claim_no'); ?>
-		<?php echo $form->textField($model, 'v_claim_no', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_claim_no',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_policy_no'); ?>
-		<?php echo $form->textField($model, 'v_policy_no', array('maxlength' => 50)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_policy_no',array('class'=>'span5','maxlength'=>50)); ?>
 
+	<?php echo $form->textFieldRow($model,'d_claim',array('class'=>'span5')); ?>
 
+	<?php echo $form->textFieldRow($model,'d_submitted',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'd_claim'); ?>
-		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
-			'model' => $model,
-			'attribute' => 'd_claim',
-			'value' => $model->d_claim,
-			'options' => array(
-				'showButtonPanel' => true,
-				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
-				),
-			));
-; ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_claim_intim',array('class'=>'span5','maxlength'=>150)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'd_submitted'); ?>
-		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
-			'model' => $model,
-			'attribute' => 'd_submitted',
-			'value' => $model->d_submitted,
-			'options' => array(
-				'showButtonPanel' => true,
-				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
-				),
-			));
-; ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_address',array('class'=>'span5','maxlength'=>300)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_claim_intim'); ?>
-		<?php echo $form->textField($model, 'v_claim_intim', array('maxlength' => 150)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_city',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_address'); ?>
-		<?php echo $form->textField($model, 'v_address', array('maxlength' => 300)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_province',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_city'); ?>
-		<?php echo $form->textField($model, 'v_city', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_claim_status_note',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_province'); ?>
-		<?php echo $form->textField($model, 'v_province', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_claim_status',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_claim_status_note'); ?>
-		<?php echo $form->textField($model, 'v_claim_status_note', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_diagnosa_note',array('class'=>'span5','maxlength'=>250)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_claim_status'); ?>
-		<?php echo $form->textField($model, 'v_claim_status', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_doc_scan',array('class'=>'span5','maxlength'=>250)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_diagnosa_note'); ?>
-		<?php echo $form->textField($model, 'v_diagnosa_note', array('maxlength' => 250)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_sent_by',array('class'=>'span5','maxlength'=>250)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_doc_scan'); ?>
-		<?php echo $form->textField($model, 'v_doc_scan', array('maxlength' => 250)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_sent_to',array('class'=>'span5','maxlength'=>250)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_sent_by'); ?>
-		<?php echo $form->textField($model, 'v_sent_by', array('maxlength' => 250)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'d_sent_doc',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_sent_to'); ?>
-		<?php echo $form->textField($model, 'v_sent_to', array('maxlength' => 250)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_intim_email',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'd_sent_doc'); ?>
-		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
-			'model' => $model,
-			'attribute' => 'd_sent_doc',
-			'value' => $model->d_sent_doc,
-			'options' => array(
-				'showButtonPanel' => true,
-				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
-				),
-			));
-; ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_intim_telp',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_intim_email'); ?>
-		<?php echo $form->textField($model, 'v_intim_email', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_bank_code',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_intim_telp'); ?>
-		<?php echo $form->textField($model, 'v_intim_telp', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_bank_cabang',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_bank_code'); ?>
-		<?php echo $form->textField($model, 'v_bank_code', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_rekening_no',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_bank_cabang'); ?>
-		<?php echo $form->textField($model, 'v_bank_cabang', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_rekening_nama',array('class'=>'span5','maxlength'=>250)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_rekening_no'); ?>
-		<?php echo $form->textField($model, 'v_rekening_no', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_cabang_layanan',array('class'=>'span5','maxlength'=>100)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_rekening_nama'); ?>
-		<?php echo $form->textField($model, 'v_rekening_nama', array('maxlength' => 250)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'d_incident_date',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_cabang_layanan'); ?>
-		<?php echo $form->textField($model, 'v_cabang_layanan', array('maxlength' => 100)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_claim_doc',array('class'=>'span5','maxlength'=>250)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'd_incident_date'); ?>
-		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
-			'model' => $model,
-			'attribute' => 'd_incident_date',
-			'value' => $model->d_incident_date,
-			'options' => array(
-				'showButtonPanel' => true,
-				'changeYear' => true,
-				'dateFormat' => 'yy-mm-dd',
-				),
-			));
-; ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_verifikasi_by',array('class'=>'span5','maxlength'=>30)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_claim_doc'); ?>
-		<?php echo $form->textField($model, 'v_claim_doc', array('maxlength' => 250)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'d_verifikasi_date',array('class'=>'span5','maxlength'=>6)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_verifikasi_by'); ?>
-		<?php echo $form->textField($model, 'v_verifikasi_by', array('maxlength' => 30)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_upload_by',array('class'=>'span5','maxlength'=>30)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'd_verifikasi_date'); ?>
-		<?php echo $form->textField($model, 'd_verifikasi_date', array('maxlength' => 6)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'d_upload_date',array('class'=>'span5','maxlength'=>6)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_upload_by'); ?>
-		<?php echo $form->textField($model, 'v_upload_by', array('maxlength' => 30)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_created_by',array('class'=>'span5','maxlength'=>30)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'd_upload_date'); ?>
-		<?php echo $form->textField($model, 'd_upload_date', array('maxlength' => 6)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'d_created_date',array('class'=>'span5','maxlength'=>6)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_created_by'); ?>
-		<?php echo $form->textField($model, 'v_created_by', array('maxlength' => 30)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_updated_by',array('class'=>'span5','maxlength'=>30)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'd_created_date'); ?>
-		<?php echo $form->textField($model, 'd_created_date', array('maxlength' => 6)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'d_updated_date',array('class'=>'span5','maxlength'=>6)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'v_updated_by'); ?>
-		<?php echo $form->textField($model, 'v_updated_by', array('maxlength' => 30)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'v_member_no',array('class'=>'span5','maxlength'=>50)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'd_updated_date'); ?>
-		<?php echo $form->textField($model, 'd_updated_date', array('maxlength' => 6)); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo GxHtml::submitButton(Yii::t('app', 'Search')); ?>
+	<div class="actions">
+		<?php echo CHtml::submitButton('Search',array('class'=>'btn primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

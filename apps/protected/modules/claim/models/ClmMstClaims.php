@@ -10,7 +10,7 @@ class ClmMstClaims extends BaseClmMstClaims
 	public function attributeLabels() {
 		return array(
 			'v_claim_no' => Yii::t('app', 'No Klaim'),
-			'v_policy_no' => Yii::t('app', 'No Peserta'),			
+			'v_policy_no' => Yii::t('app', 'No Polis'),			
 			'd_claim' => Yii::t('app', 'Tgl Proses'),
 			'd_submitted' => Yii::t('app', 'Tgl Pengajuan'),
 			'v_claim_intim' => Yii::t('app', 'nama pengaju klaim'),
@@ -33,6 +33,7 @@ class ClmMstClaims extends BaseClmMstClaims
 			'v_cabang_layanan' => Yii::t('app', 'cabang layanan'),
 			'd_incident_date' => Yii::t('app', 'tgl kejadian'),
 			'v_claim_doc' => Yii::t('app', 'Dokumen Klaim'),
+			'v_member_no' => Yii::t('app', 'No Peserta'),
 		);
 	}
 }

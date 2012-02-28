@@ -1,19 +1,17 @@
 <?php
-
-$this->breadcrumbs = array(
-	ClmMstClaims::label(2),
-	Yii::t('app', 'Index'),
+$this->breadcrumbs=array(
+	'Clm Mst Claims',
 );
 
-$this->menu = array(
-	array('label'=>Yii::t('app', 'Create') . ' ' . ClmMstClaims::label(), 'url' => array('create')),
-	array('label'=>Yii::t('app', 'Manage') . ' ' . ClmMstClaims::label(2), 'url' => array('admin')),
+$this->menu=array(
+	array('label'=>'Create ClmMstClaims','url'=>array('create')),
+	array('label'=>'Manage ClmMstClaims','url'=>array('admin')),
 );
 ?>
 
-<h1><?php echo GxHtml::encode(ClmMstClaims::label(2)); ?></h1>
+<h1>Clm Mst Claims</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
+<?php $this->widget('ext.bootstrap.widgets.BootListView',array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
-)); 
+)); ?>

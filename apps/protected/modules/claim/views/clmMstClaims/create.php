@@ -1,20 +1,15 @@
 <?php
-
-$this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	Yii::t('app', 'Create'),
+$this->breadcrumbs=array(
+	'Clm Mst Claims'=>array('index'),
+	'Create',
 );
 
-$this->menu = array(
-	array('label'=>Yii::t('app', 'List') . ' ' . $model->label(2), 'url' => array('index')),
-	array('label'=>Yii::t('app', 'Manage') . ' ' . $model->label(2), 'url' => array('admin')),
+$this->menu=array(
+	array('label'=>'List ClmMstClaims','url'=>array('index')),
+	array('label'=>'Manage ClmMstClaims','url'=>array('admin')),
 );
 ?>
 
-<h1><?php echo Yii::t('app', 'Create') . ' ' . GxHtml::encode($model->label()); ?></h1>
+<h1>Create ClmMstClaims</h1>
 
-<?php
-$this->renderPartial('_form', array(
-		'model' => $model,
-		'buttons' => 'create'));
-?>
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
