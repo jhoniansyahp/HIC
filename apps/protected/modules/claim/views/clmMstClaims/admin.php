@@ -43,8 +43,7 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 	'filter' => $model,
 	'columns' => array(
 		'v_claim_no',
-		'v_policy_no',
-		'n_line_no',
+		'v_policy_no',		
 		'd_claim',
 		'd_submitted',
 		'v_claim_intim',

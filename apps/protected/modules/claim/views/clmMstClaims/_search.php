@@ -15,10 +15,7 @@
 		<?php echo $form->textField($model, 'v_policy_no', array('maxlength' => 50)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model, 'n_line_no'); ?>
-		<?php echo $form->textField($model, 'n_line_no'); ?>
-	</div>
+
 
 	<div class="row">
 		<?php echo $form->label($model, 'd_claim'); ?>

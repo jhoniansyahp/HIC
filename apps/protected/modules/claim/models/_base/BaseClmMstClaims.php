@@ -88,12 +88,35 @@ abstract class BaseClmMstClaims extends GxActiveRecord {
 		return array(
 		);
 	}
+// No Klaim
+// No Peserta
+// Tgl Proses
+// Tgl Pengajuan
+// nama pengaju klaim
+// Alamat Lengkap
+// kota
+// provinsi
+// telp pengaju klaim
+// alamat email pengaju klaim
+// Bank
+// cabang bank
+// no rekening
+// atas nama rekening
+// cabang layanan
+// tgl kejadian
+// Dokumen Klaim
+// Tanggal Dikirim
+// Tujuan Pengiriman 
+// Pengiriman Melalui
+// File Scan Dokumen Klaim
+// catatan diagnosa
+// status klaim
+// ket status klaim
 
 	public function attributeLabels() {
 		return array(
 			'v_claim_no' => Yii::t('app', 'V Claim No'),
-			'v_policy_no' => Yii::t('app', 'V Policy No'),
-			'n_line_no' => Yii::t('app', 'N Line No'),
+			'v_policy_no' => Yii::t('app', 'V Policy No'),			
 			'd_claim' => Yii::t('app', 'D Claim'),
 			'd_submitted' => Yii::t('app', 'D Submitted'),
 			'v_claim_intim' => Yii::t('app', 'V Claim Intim'),
@@ -131,8 +154,7 @@ abstract class BaseClmMstClaims extends GxActiveRecord {
 		$criteria = new CDbCriteria;
 
 		$criteria->compare('v_claim_no', $this->v_claim_no, true);
-		$criteria->compare('v_policy_no', $this->v_policy_no, true);
-		$criteria->compare('n_line_no', $this->n_line_no);
+		$criteria->compare('v_policy_no', $this->v_policy_no, true);		
 		$criteria->compare('d_claim', $this->d_claim, true);
 		$criteria->compare('d_submitted', $this->d_submitted, true);
 		$criteria->compare('v_claim_intim', $this->v_claim_intim, true);

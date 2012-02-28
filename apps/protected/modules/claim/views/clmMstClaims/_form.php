@@ -1,4 +1,4 @@
-<div class="form">
+<div class="wide form">
 
 
 <?php $form = $this->beginWidget('GxActiveForm', array(
@@ -23,11 +23,7 @@
 		<?php echo $form->textField($model, 'v_policy_no', array('maxlength' => 50)); ?>
 		<?php echo $form->error($model,'v_policy_no'); ?>
 		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'n_line_no'); ?>
-		<?php echo $form->textField($model, 'n_line_no'); ?>
-		<?php echo $form->error($model,'n_line_no'); ?>
-		</div><!-- row -->
+		
 		<div class="row">
 		<?php echo $form->labelEx($model,'d_claim'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(

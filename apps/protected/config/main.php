@@ -7,21 +7,20 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
-
+	'name'=>'HIC',
+	'theme'=>'bootstrap',
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array('log', 'bootstrap'),
 
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
 		'ext.giix-components.*', // giix components
-
 	),
 
 	'modules'=>array(
-		// uncomment the following to enable the Gii tool
+		// uncomment the following to enable the Gii tool		
 		'claim',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -30,6 +29,7 @@ return array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 			'generatorPaths' => array(
 				'ext.giix-core', // giix generators
+				'bootstrap.gii', // since 0.9.1
 			),
 
 		),
@@ -37,7 +37,25 @@ return array(
 	),
 
 	// application components
-	'components'=>array(
+		'components'=>array(			
+			'bootstrap'=>array(
+			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+			'coreCss'=>true, // whether to register the Bootstrap core CSS (bootstrap.min.css), defaults to true
+			'responsiveCss'=>false, // whether to register the Bootstrap responsive CSS (bootstrap-responsive.min.css), default to false
+			'plugins'=>array(
+				// Optionally you can configure the "global" plugins (button, popover, tooltip and transition)
+				// To prevent a plugin from being loaded set it to false as demonstrated below
+				'transition'=>false, // disable CSS transitions
+				'tooltip'=>array(
+					'selector'=>'a.tooltip', // bind the plugin tooltip to anchor tags with the 'tooltip' class
+					'options'=>array(
+						'placement'=>'bottom', // place the tooltips below instead
+					),
+				),				
+				// If you need help with configuring the plugins, please refer to Bootstrap's own documentation:
+				// http://twitter.github.com/bootstrap/javascript.html
+			),
+		),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -49,7 +67,7 @@ return array(
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',				
 			),
 		),
 		/*
