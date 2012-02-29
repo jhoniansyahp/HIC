@@ -23,7 +23,7 @@
 	
 	<?php $this->widget('bootstrap.widgets.BootNavbar', array(
     'fixed'=>false,	
-    'brand'=>Yii::app()->name,
+    //'brand'=>Yii::app()->name,
     'brandUrl'=>'#',
     'collapse'=>true, // requires bootstrap-responsive.css
     'items'=>array(
@@ -31,9 +31,9 @@
             'class'=>'bootstrap.widgets.BootMenu',			
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index') , 'active'=>true),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
+				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				//array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Setup', 'url'=>'#', 'items'=>array(
                     array('label'=>'DROPDOWN HEADER', 'itemOptions'=>array('class'=>'nav-header')),
                     array('label'=>'Action', 'url'=>'#'),
                     array('label'=>'Another action', 'url'=>'#'),
@@ -41,8 +41,32 @@
                     '---',
                     array('label'=>'Separated link', 'url'=>'#'),
                 )),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Polis', 'url'=>'#', 'items'=>array(
+                    array('label'=>'DROPDOWN HEADER', 'itemOptions'=>array('class'=>'nav-header')),
+                    array('label'=>'Action', 'url'=>'#'),
+                    array('label'=>'Another action', 'url'=>'#'),
+                    array('label'=>'Something else here', 'url'=>'#'),
+                    '---',
+                    array('label'=>'Separated link', 'url'=>'#'),
+                )),
+				array('label'=>'Claim', 'url'=>'#', 'items'=>array(
+                    array('label'=>'DROPDOWN HEADER', 'itemOptions'=>array('class'=>'nav-header')),
+                    array('label'=>'Action', 'url'=>'#'),
+                    array('label'=>'Another action', 'url'=>'#'),
+                    array('label'=>'Something else here', 'url'=>'#'),
+                    '---',
+                    array('label'=>'Separated link', 'url'=>'#'),
+                )),
+				array('label'=>'Laporan', 'url'=>'#', 'items'=>array(
+                    array('label'=>'DROPDOWN HEADER', 'itemOptions'=>array('class'=>'nav-header')),
+                    array('label'=>'Action', 'url'=>'#'),
+                    array('label'=>'Another action', 'url'=>'#'),
+                    array('label'=>'Something else here', 'url'=>'#'),
+                    '---',
+                    array('label'=>'Separated link', 'url'=>'#'),
+                )),
+				//array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),            
         ),
         '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
@@ -50,8 +74,10 @@
             'class'=>'bootstrap.widgets.BootMenu',
             'htmlOptions'=>array('class'=>'pull-right'),
             'items'=>array(
-                array('label'=>'Link', 'url'=>'#'),
-                array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+                //array('label'=>'Link', 'url'=>'#'),
+                array('label'=>'Profile', 'url'=>'#', 'items'=>array(
                     array('label'=>'Action', 'url'=>'#'),
                     array('label'=>'Another action', 'url'=>'#'),
                     array('label'=>'Something else here', 'url'=>'#'),
@@ -62,7 +88,7 @@
         ),
     ),
 )); ?>
-<div class="container-fluid">
+<div class="container">
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('bootstrap.widgets.BootCrumb', array(    
 			'links'=>$this->breadcrumbs,
