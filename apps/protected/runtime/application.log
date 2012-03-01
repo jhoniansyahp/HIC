@@ -1542,3 +1542,93 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/health_claim/HIC/apps/index.php/setup/agent/Company
 ---
+2012/03/02 02:02:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/parameter
+---
+2012/03/02 02:02:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/form".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/form')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/form
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/lookup
+---
+2012/03/02 02:02:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/role".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/role')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/role
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/form
+---
+2012/03/02 02:02:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/role
+---
+2012/03/02 02:03:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/role
+---
+2012/03/02 02:04:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/role
+---
+2012/03/02 02:05:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/role
+---
+2012/03/02 02:06:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/role
+---
+2012/03/02 02:06:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/role
+---
+2012/03/02 02:07:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/role
+---

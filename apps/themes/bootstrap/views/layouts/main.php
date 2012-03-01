@@ -33,10 +33,10 @@
 				array('label'=>'Home', 'url'=>array('/site/index') , 'active'=>true),
 				array('label'=>'Setup', 'url'=>array('/setup'),'items'=> array(
 					array('label'=>'Setup Aplikasi', 'itemOptions'=>array('class'=>'nav-header')),
-					array('label'=>'Setup Produk Umum','url'=>array('/setup/plan')),
 					array('label'=>'Master Agent','url'=>array('/setup/agent')),
 					array('label'=>'Master Company','url'=>array('/setup/company')),
 					array('label'=>'Master Organisasi','url'=>array('/setup/organization')),
+					array('label'=>'Setup Produk Umum','url'=>array('/setup/plan')),
 					'---',
 					array('label'=>'Setup Umum', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Parameter','url'=>array('/setup/parameter')),
@@ -45,11 +45,14 @@
 					array('label'=>'Setup Security User', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Form','url'=>array('/setup/form')),
 					array('label'=>'Role','url'=>array('/setup/role')),
-					array('label'=>'Form - Role','url'=>array('/setup/lookup')),
+					array('label'=>'Form - Role','url'=>array('/setup/formrole')),
 					array('label'=>'Admin User','url'=>array('/setup/users')),
 					array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
 				)),
-				array('label'=>'Polis', 'url'=>array('/polis/quotPolis/admin')),
+				array('label'=>'Polis', 'url'=>'#','items' => array(
+					array('label'=>'Data Polis','url' => array('/polis/quotPolis/admin'))
+				)),
+				array('label'=>'Claim', 'url'=>array('/claim')),
 				array('label'=>'Laporan', 'url'=>'#', 'items'=>array(
                     array('label'=>'DROPDOWN HEADER', 'itemOptions'=>array('class'=>'nav-header')),
                     array('label'=>'Action', 'url'=>'#'),
@@ -87,6 +90,7 @@
 	<?php endif?>
 	<?php echo $content; ?>
 </div><!-- page -->
+<hr />
 
 </body>
 </html>
