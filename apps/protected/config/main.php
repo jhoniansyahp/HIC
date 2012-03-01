@@ -22,6 +22,7 @@ return array(
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool		
 		'claim',
+		'polis',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'crot',
@@ -77,10 +78,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'pgsql:host=localhost;dbname=HIC',
+			'connectionString' => 'pgsql:host=localhost;dbname=health_claim',
 			'emulatePrepare' => true,
 			'username' => 'postgres',
-			'password' => 'root',
+			'password' => 'postgres',
 			'charset' => 'utf8',
 		),
 		

@@ -1,0 +1,977 @@
+2012/02/29 19:58:05 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Webserver/health_claim/HIC/apps/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Webserver/health_claim/HIC/yii1110/framework/web/CAssetManager.php:116
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CAssetManager.php(101): CAssetManager->setBasePath('/Webserver/heal...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CAssetManager.php(219): CAssetManager->getBasePath()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/components/Bootstrap.php(346): CAssetManager->publish('/Webserver/heal...', false, -1, true)
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/components/Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/components/Bootstrap.php(57): Bootstrap->registerCss()
+#5 /Webserver/health_claim/HIC/yii1110/framework/base/CModule.php(388): Bootstrap->init()
+#6 /Webserver/health_claim/HIC/yii1110/framework/base/CModule.php(493): CModule->getComponent('bootstrap')
+#7 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(146): CModule->preloadComponents()
+#8 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(127): CApplication->__construct('/Webserver/heal...')
+#9 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(100): YiiBase::createApplication('CWebApplication', '/Webserver/heal...')
+#10 /Webserver/health_claim/HIC/apps/index.php(13): YiiBase::createWebApplication('/Webserver/heal...')
+#11 {main}
+REQUEST_URI=/health_claim/HIC/apps/
+HTTP_REFERER=http://localhost/health_claim/HIC/
+---
+2012/02/29 19:59:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] FATAL:  password authentication failed for user "postgres"' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Webserver/health_claim/HIC/yii1110/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(615): CApplication->getDb()
+#5 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(ClmMstClaims))
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('ClmMstClaims')
+#8 /Webserver/health_claim/HIC/apps/protected/modules/claim/controllers/ClmMstClaimsController.php(58): CActiveDataProvider->__construct('ClmMstClaims')
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): ClmMstClaimsController->actionIndex()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('claim/ClmMstCla...')
+#15 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/claim/ClmMstClaims
+---
+2012/02/29 20:02:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] FATAL:  database "HIC" does not exist' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Webserver/health_claim/HIC/yii1110/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CFormModel.php(40): CrudCode->init()
+#6 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(152): CFormModel->__construct()
+#7 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/default/index
+---
+2012/02/29 20:11:50 [error] [php] include(SetupMstPlans.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): polismaster->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): polismaster->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1186): activeLabel()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(560): activeLabelEx()
+#7 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInput.php(164): BootActiveForm->labelEx()
+#8 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInputVertical.php(149): BootInputVertical->getLabel()
+#9 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInput.php(114): BootInputVertical->textField()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(174): BootInputVertical->run()
+#11 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/BootActiveForm.php(491): PolismasterController->widget()
+#12 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/BootActiveForm.php(179): BootActiveForm->inputRow()
+#13 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/polismaster/_search.php(10): BootActiveForm->textFieldRow()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): PolismasterController->renderInternal()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): PolismasterController->renderFile()
+#17 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/polismaster/admin.php(37): PolismasterController->renderPartial()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): PolismasterController->renderInternal()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): PolismasterController->renderFile()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): PolismasterController->renderPartial()
+#22 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/PolismasterController.php(148): PolismasterController->render()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): PolismasterController->actionAdmin()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): PolismasterController->runAction()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#28 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): PolismasterController->filterAccessControl()
+#29 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#30 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#31 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): PolismasterController->runActionWithFilters()
+#32 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): PolismasterController->run()
+#33 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#34 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#35 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/polismaster/admin
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/29 20:12:24 [error] [php] include(SetupMstCoys.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): polismaster->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): polismaster->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1186): activeLabel()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(560): activeLabelEx()
+#7 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInput.php(164): BootActiveForm->labelEx()
+#8 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInputVertical.php(149): BootInputVertical->getLabel()
+#9 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInput.php(114): BootInputVertical->textField()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(174): BootInputVertical->run()
+#11 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/BootActiveForm.php(491): PolismasterController->widget()
+#12 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/BootActiveForm.php(179): BootActiveForm->inputRow()
+#13 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/polismaster/_search.php(14): BootActiveForm->textFieldRow()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): PolismasterController->renderInternal()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): PolismasterController->renderFile()
+#17 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/polismaster/admin.php(37): PolismasterController->renderPartial()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): PolismasterController->renderInternal()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): PolismasterController->renderFile()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): PolismasterController->renderPartial()
+#22 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/PolismasterController.php(148): PolismasterController->render()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): PolismasterController->actionAdmin()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): PolismasterController->runAction()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#28 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): PolismasterController->filterAccessControl()
+#29 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#30 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#31 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): PolismasterController->runActionWithFilters()
+#32 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): PolismasterController->run()
+#33 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#34 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#35 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/polismaster/admin
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/29 20:12:56 [error] [php] include(SetupMstAgents.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): polismaster->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): polismaster->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1186): activeLabel()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(560): activeLabelEx()
+#7 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInput.php(164): BootActiveForm->labelEx()
+#8 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInputVertical.php(149): BootInputVertical->getLabel()
+#9 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInput.php(114): BootInputVertical->textField()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(174): BootInputVertical->run()
+#11 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/BootActiveForm.php(491): PolismasterController->widget()
+#12 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/BootActiveForm.php(179): BootActiveForm->inputRow()
+#13 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/polismaster/_search.php(16): BootActiveForm->textFieldRow()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): PolismasterController->renderInternal()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): PolismasterController->renderFile()
+#17 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/polismaster/admin.php(37): PolismasterController->renderPartial()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): PolismasterController->renderInternal()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): PolismasterController->renderFile()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): PolismasterController->renderPartial()
+#22 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/PolismasterController.php(148): PolismasterController->render()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): PolismasterController->actionAdmin()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): PolismasterController->runAction()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#28 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): PolismasterController->filterAccessControl()
+#29 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#30 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#31 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): PolismasterController->runActionWithFilters()
+#32 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): PolismasterController->run()
+#33 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#34 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#35 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/polismaster/admin
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/29 20:14:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/polismaster/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/polismast...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/polismaster/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/polismaster/admin
+---
+2012/02/29 20:22:39 [error] [exception.CException] exception 'CException' with message 'Property "MasterPolis.No. Polis" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:131
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(144): CComponent->__get('No. Polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('No. Polis')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(MasterPolis), 'No. Polis')
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(MasterPolis), 'No. Polis', Array)
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(575): CHtml::activeTextField(Object(MasterPolis), 'No. Polis', Array)
+#5 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInputVertical.php(150): CActiveForm->textField(Object(MasterPolis), 'No. Polis', Array)
+#6 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/input/BootInput.php(114): BootInputVertical->textField()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(174): BootInput->run()
+#8 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/BootActiveForm.php(491): CBaseController->widget('bootstrap.widge...', Array)
+#9 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/widgets/BootActiveForm.php(179): BootActiveForm->inputRow('textfield', Object(MasterPolis), 'No. Polis', NULL, Array)
+#10 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterPolis/_form.php(10): BootActiveForm->textFieldRow(Object(MasterPolis), 'No. Polis', Array)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#14 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterPolis/create.php(15): CController->renderPartial('_form', Array)
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#19 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php(78): CController->render('create', Array)
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#28 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#30 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#31 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#32 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/masterPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/masterPolis/index
+---
+2012/02/29 20:30:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "d_start" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php (72)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 20:30:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "d_start" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php(72): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/masterPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/masterPolis/create
+---
+2012/02/29 20:33:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "v_currency" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php (73)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 20:33:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "v_currency" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php(73): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/masterPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/masterPolis/create
+---
+2012/02/29 20:34:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "v_company_code" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_currency", "v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php (73)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 20:34:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "v_company_code" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_currency", "v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2, :yp3)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php(73): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/masterPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/masterPolis/create
+---
+2012/02/29 20:35:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "n_agent_no" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_currency", "v_company_code", "v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php (73)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 20:35:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "n_agent_no" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_currency", "v_company_code", "v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php(73): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/masterPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/masterPolis/create
+---
+2012/02/29 21:01:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "n_agent_no" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_currency", "v_company_code", "v_created_by", "v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php (73)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 21:01:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "n_agent_no" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_currency", "v_company_code", "v_created_by", "v_policy_no", "n_member", "v_plan_code") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterPolisController.php(73): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/masterPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/masterPolis/create
+---
+2012/02/29 21:05:09 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.polis.QuotPolis" is invalid. Make sure it points to an existing PHP file.' in /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:318
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 /Webserver/health_claim/HIC/yii1110/framework/validators/CInlineValidator.php(43): CrudCode->validateModel('model', Array)
+#2 /Webserver/health_claim/HIC/yii1110/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(BootstrapCode), 'model')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CModel.php(158): CValidator->validate(Object(BootstrapCode), NULL)
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(158): CModel->validate()
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
+2012/02/29 21:30:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type numeric: ""
+LINE 1: ...23213', 123123, '', '', '', '', '1', NULL, 'Bul', '', '', ''...
+                                                             ^. The SQL statement executed was: INSERT INTO "pol_mst_quot" ("v_quotation_no", "v_policy_no", "v_plan_code", "v_currency", "v_company_code", "n_agent_no", "v_contact_person", "v_contact_telp", "v_address", "v_city", "v_policy_status", "n_member", "v_premi_freq", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (72)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 21:30:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type numeric: ""
+LINE 1: ...23213', 123123, '', '', '', '', '1', NULL, 'Bul', '', '', ''...
+                                                             ^. The SQL statement executed was: INSERT INTO "pol_mst_quot" ("v_quotation_no", "v_policy_no", "v_plan_code", "v_currency", "v_company_code", "n_agent_no", "v_contact_person", "v_contact_telp", "v_address", "v_city", "v_policy_status", "n_member", "v_premi_freq", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(72): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/create
+---
+2012/02/29 21:31:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type numeric: ""
+LINE 1: ...23213', 123123, '', '', '', '', '1', NULL, 'Bul', '', '', ''...
+                                                             ^. The SQL statement executed was: INSERT INTO "pol_mst_quot" ("v_quotation_no", "v_policy_no", "v_plan_code", "v_currency", "v_company_code", "n_agent_no", "v_contact_person", "v_contact_telp", "v_address", "v_city", "v_policy_status", "n_member", "v_premi_freq", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (72)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 21:31:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type numeric: ""
+LINE 1: ...23213', 123123, '', '', '', '', '1', NULL, 'Bul', '', '', ''...
+                                                             ^. The SQL statement executed was: INSERT INTO "pol_mst_quot" ("v_quotation_no", "v_policy_no", "v_plan_code", "v_currency", "v_company_code", "n_agent_no", "v_contact_person", "v_contact_telp", "v_address", "v_city", "v_policy_status", "n_member", "v_premi_freq", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(72): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/create
+---
+2012/02/29 21:33:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "d_start" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_quot" ("v_quotation_no", "v_policy_no", "v_plan_code", "v_currency", "v_company_code", "n_agent_no", "v_contact_person", "v_contact_telp", "v_address", "v_city", "v_policy_status", "n_member", "v_premi_freq", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (72)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 21:33:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "d_start" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_quot" ("v_quotation_no", "v_policy_no", "v_plan_code", "v_currency", "v_company_code", "n_agent_no", "v_contact_person", "v_contact_telp", "v_address", "v_city", "v_policy_status", "n_member", "v_premi_freq", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(72): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/create
+---
+2012/02/29 21:37:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "v_created_by" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_quot" ("v_quotation_no", "v_policy_no", "v_plan_code", "v_currency", "v_company_code", "n_agent_no", "v_contact_person", "v_contact_telp", "v_address", "v_city", "v_policy_status", "n_member", "v_premi_freq", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (72)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 21:37:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "v_created_by" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_quot" ("v_quotation_no", "v_policy_no", "v_plan_code", "v_currency", "v_company_code", "n_agent_no", "v_contact_person", "v_contact_telp", "v_address", "v_city", "v_policy_status", "n_member", "v_premi_freq", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(72): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/create
+---
+2012/02/29 21:40:37 [error] [php] Indirect modification of overloaded property QuotPolis::$attributes has no effect (/Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php:72)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/create
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (72)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 21:59:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/polis/quotPolis/create".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/polis/quo...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/polis/quotPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+---
+2012/02/29 22:03:22 [error] [exception.CException] exception 'CException' with message 'Property "BootButtonColumn.label" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:174
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWidgetFactory.php(162): CComponent->__set('label', 'Add')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(QuotPolisController), 'ext.bootstrap.w...', Array)
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.bootstrap.w...', Array)
+#3 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(49): CBaseController->widget('ext.bootstrap.w...', Array)
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#8 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): CController->render('admin', Array)
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('admin')
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#20 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/index
+---
+2012/02/29 22:03:57 [error] [exception.CException] exception 'CException' with message 'Property "BootButtonColumn.url" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:174
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWidgetFactory.php(162): CComponent->__set('url', '/health_claim/H...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(QuotPolisController), 'ext.bootstrap.w...', Array)
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.bootstrap.w...', Array)
+#3 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(48): CBaseController->widget('ext.bootstrap.w...', Array)
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#8 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): CController->render('admin', Array)
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('admin')
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#20 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/index
+---
+2012/02/29 22:08:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quotPolis/create".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('quotPolis/creat...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/quotPolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+---
+2012/02/29 22:18:10 [error] [exception.CException] exception 'CException' with message 'Property "BootButtonColumn.title" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:174
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(222): CComponent->__set('title', 'Action')
+#1 /Webserver/health_claim/HIC/yii1110/framework/zii/widgets/grid/CGridView.php(313): YiiBase::createComponent(Array, Object(BootGridView))
+#2 /Webserver/health_claim/HIC/yii1110/framework/zii/widgets/grid/CGridView.php(284): CGridView->initColumns()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(148): CGridView->init()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.bootstrap.w...', Array)
+#5 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(81): CBaseController->widget('ext.bootstrap.w...', Array)
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#10 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): CController->render('admin', Array)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('admin')
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#22 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/index
+---
+2012/02/29 22:18:27 [error] [exception.CException] exception 'CException' with message 'Property "BootButtonColumn.Name" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:174
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(222): CComponent->__set('Name', 'Action')
+#1 /Webserver/health_claim/HIC/yii1110/framework/zii/widgets/grid/CGridView.php(313): YiiBase::createComponent(Array, Object(BootGridView))
+#2 /Webserver/health_claim/HIC/yii1110/framework/zii/widgets/grid/CGridView.php(284): CGridView->initColumns()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(148): CGridView->init()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.bootstrap.w...', Array)
+#5 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(81): CBaseController->widget('ext.bootstrap.w...', Array)
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#10 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): CController->render('admin', Array)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('admin')
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#22 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/index
+---
+2012/02/29 22:40:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:337
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('delete')
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#10 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/delete
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+---
+2012/02/29 22:45:39 [error] [php] Missing argument 2 for YiiBase::t(), called in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/view.php on line 20 and defined (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:567)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): QuotPolisController->renderInternal()
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): QuotPolisController->renderFile()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): QuotPolisController->renderPartial()
+#3 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(55): QuotPolisController->render()
+#4 unknown(0): QuotPolisController->actionView()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#17 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/view/id/79687
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/view.php (20)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (55)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 23:16:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/polis/quotPolis/admin".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/polis/quo...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/polis/quotPolis/admin
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+---
+2012/02/29 23:17:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/polis/quotPolis/admin".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/polis/quo...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/polis/quotPolis/admin
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+---
+2012/02/29 23:24:28 [error] [php] include(polis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(97): ReflectionClass->__construct()
+#2 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(114): CPhpMessageSource->getMessageFile()
+#3 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(104): CPhpMessageSource->loadMessages()
+#4 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(86): CPhpMessageSource->translateMessage()
+#5 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(574): CPhpMessageSource->translate()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(3): t()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): QuotPolisController->renderInternal()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): QuotPolisController->renderFile()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): QuotPolisController->renderPartial()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): QuotPolisController->render()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#23 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php (3)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (150)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 23:25:53 [error] [php] include(polis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(97): ReflectionClass->__construct()
+#2 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(114): CPhpMessageSource->getMessageFile()
+#3 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(104): CPhpMessageSource->loadMessages()
+#4 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(86): CPhpMessageSource->translateMessage()
+#5 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(574): CPhpMessageSource->translate()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(4): t()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): QuotPolisController->renderInternal()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): QuotPolisController->renderFile()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): QuotPolisController->renderPartial()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): QuotPolisController->render()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#23 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php (4)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (150)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 23:32:15 [error] [php] include(polis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(97): ReflectionClass->__construct()
+#2 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(114): CPhpMessageSource->getMessageFile()
+#3 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(104): CPhpMessageSource->loadMessages()
+#4 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(86): CPhpMessageSource->translateMessage()
+#5 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(574): CPhpMessageSource->translate()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(3): t()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): QuotPolisController->renderInternal()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): QuotPolisController->renderFile()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): QuotPolisController->renderPartial()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): QuotPolisController->render()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#23 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php (3)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (150)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 23:33:01 [error] [php] include(polis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(97): ReflectionClass->__construct()
+#2 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(114): CPhpMessageSource->getMessageFile()
+#3 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(104): CPhpMessageSource->loadMessages()
+#4 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(86): CPhpMessageSource->translateMessage()
+#5 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(574): CPhpMessageSource->translate()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(3): t()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): QuotPolisController->renderInternal()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): QuotPolisController->renderFile()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): QuotPolisController->renderPartial()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): QuotPolisController->render()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#23 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php (3)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (150)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 23:36:19 [error] [php] include(polis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(97): ReflectionClass->__construct()
+#2 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(114): CPhpMessageSource->getMessageFile()
+#3 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(104): CPhpMessageSource->loadMessages()
+#4 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(86): CPhpMessageSource->translateMessage()
+#5 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(574): CPhpMessageSource->translate()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/create.php(3): t()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): QuotPolisController->renderInternal()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): QuotPolisController->renderFile()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): QuotPolisController->renderPartial()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(80): QuotPolisController->render()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionCreate()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#23 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/create
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/create.php (3)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (80)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/29 23:46:16 [error] [php] include(polis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(97): ReflectionClass->__construct()
+#2 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(114): CPhpMessageSource->getMessageFile()
+#3 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(104): CPhpMessageSource->loadMessages()
+#4 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(86): CPhpMessageSource->translateMessage()
+#5 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(574): CPhpMessageSource->translate()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/index.php(3): t()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): QuotPolisController->renderInternal()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): QuotPolisController->renderFile()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): QuotPolisController->renderPartial()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(135): QuotPolisController->render()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionIndex()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#23 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/index
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/index.php (3)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (135)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/01 00:33:27 [error] [php] include(polis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(97): ReflectionClass->__construct()
+#2 /Webserver/health_claim/HIC/yii1110/framework/i18n/CPhpMessageSource.php(114): CPhpMessageSource->getMessageFile()
+#3 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(104): CPhpMessageSource->loadMessages()
+#4 /Webserver/health_claim/HIC/yii1110/framework/i18n/CMessageSource.php(86): CPhpMessageSource->translateMessage()
+#5 /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php(574): CPhpMessageSource->translate()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/view.php(3): t()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): QuotPolisController->renderInternal()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): QuotPolisController->renderFile()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): QuotPolisController->renderPartial()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(55): QuotPolisController->render()
+#12 unknown(0): QuotPolisController->actionView()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): QuotPolisController->runAction()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): QuotPolisController->filterAccessControl()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): QuotPolisController->runActionWithFilters()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): QuotPolisController->run()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#25 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#26 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/view/id/5345
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/view.php (3)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php (55)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/01 00:46:18 [error] [exception.CException] exception 'CException' with message 'Property "BootActiveForm.class" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:174
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWidgetFactory.php(162): CComponent->__set('class', 'alert-info')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(QuotPolisController), 'ext.bootstrap.w...', Array)
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(190): CBaseController->createWidget('ext.bootstrap.w...', Array)
+#3 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/_search.php(5): CBaseController->beginWidget('ext.bootstrap.w...', Array)
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#7 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/quotPolis/admin.php(37): CController->renderPartial('_search', Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#12 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(150): CController->render('admin', Array)
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionAdmin()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('admin')
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis...')
+#24 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/admin
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/view/id/5345
+---
+2012/03/01 20:04:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] FATAL:  password authentication failed for user "postgres"' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Webserver/health_claim/HIC/yii1110/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(615): CApplication->getDb()
+#5 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(QuotPolis))
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('QuotPolis')
+#8 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/QuotPolisController.php(132): CActiveDataProvider->__construct('QuotPolis')
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): QuotPolisController->actionIndex()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/quotPolis')
+#20 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotPolis/
+---
