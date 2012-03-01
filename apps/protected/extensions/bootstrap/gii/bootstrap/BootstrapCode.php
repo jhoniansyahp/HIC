@@ -28,4 +28,30 @@ class BootstrapCode extendS CrudCode
 				return "\$form->{$inputField}(\$model,'{$column->name}',array('class'=>'span5','maxlength'=>$column->size))";
 		}
 	}
+	
+	public function generateDatePicker($model,$column){
+		
+		return "
+		  echo '<div class=\"control-group\">';
+		  echo \$form->labelEx(\$model,'{$column->name}');
+		 echo '<div class=\"controls\">';
+		\$form->widget('zii.widgets.jui.CJuiDatePicker', array(
+	        'model'=>\$model,
+	        'attribute'=>'{$column->name}',
+	        'name'=>'{$column->name}',    // This is how it works for me.
+			'value'=>'{$column->defaultValue}',
+	        'options'=>array('dateFormat'=>'dd-mm-yy', 
+	                        'altFormat'=>'yy-mm-dd', 
+	                        'changeMonth'=>'true', 
+	                        'changeYear'=>'true',
+							'showButtonPanel'=>'false',
+	                        'yearRange'=>'1998:2030', 
+	                     	),
+	        'htmlOptions'=>array('size'=>'10','class'=>'span5 date')
+	   ));
+		echo \"</div>\n</div>\"; 
+	";
+	   
+		
+	}
 }

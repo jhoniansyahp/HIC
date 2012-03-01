@@ -13,14 +13,12 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php echo Yii::t('polisModule.main','Lihat Polis Nomor {n}',$model->v_quotation_no); ?></h1>
-
-<h3>
+<div class="alert alert-info">
 <?php
 echo CHtml::Link(Yii::t('polisModule.main','&laquo; Kembali ke data polis'), Yii::app()->createUrl('polis/quotPolis/admin'));
 ?>
-</h3>
-<br />
+</div>
+<h1><?php echo Yii::t('polisModule.main','Lihat Polis Nomor {n}',$model->v_quotation_no); ?></h1>
 <?php 
 
 $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -54,8 +52,8 @@ $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	),
 )); ?>
 
-<h3>
+<div class="alert alert-info">
 <?php
 echo CHtml::Link(Yii::t('polisModule.main','&laquo; Kembali ke data polis'), Yii::app()->createUrl('polis/quotPolis/admin'));
 ?>
-</h3>
+</div>

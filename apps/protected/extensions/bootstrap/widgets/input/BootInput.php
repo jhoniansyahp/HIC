@@ -121,7 +121,11 @@ abstract class BootInput extends CInputWidget
 			case self::TYPE_UNEDITABLE:
 				$this->uneditableField();
 				break;
-
+			
+			case self::TYPE_DATEPICKER:
+				$this->datePicker();
+				break;
+				
 			default:
 				throw new CException(__CLASS__.': Failed to run widget! Type is invalid.');
 		}

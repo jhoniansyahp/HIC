@@ -2,7 +2,7 @@
 return array (
   'template' => 'default',
   'tablePrefix' => '',
-  'modelPath' => 'application.modules.polis.models',
+  'modelPath' => 'application.modules.setup.models',
   'baseClass' => 'GxActiveRecord',
   'buildRelations' => true,
 );

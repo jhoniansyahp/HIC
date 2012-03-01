@@ -23,6 +23,7 @@ return array(
 		// uncomment the following to enable the Gii tool		
 		'claim',
 		'polis',
+		 'setup',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'crot',
