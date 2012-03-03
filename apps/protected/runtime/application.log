@@ -1,0 +1,877 @@
+2012/02/23 15:21:50 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "D:\WebServer\health claim\HIC\apps\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in D:\WebServer\health claim\HIC\yii1110\framework\web\CAssetManager.php:116
+Stack trace:
+#0 D:\WebServer\health claim\HIC\yii1110\framework\web\CAssetManager.php(101): CAssetManager->setBasePath('D:\WebServer\he...')
+#1 D:\WebServer\health claim\HIC\yii1110\framework\web\CAssetManager.php(219): CAssetManager->getBasePath()
+#2 D:\WebServer\health claim\HIC\yii1110\framework\web\CClientScript.php(449): CAssetManager->publish('D:\WebServer\he...')
+#3 D:\WebServer\health claim\HIC\yii1110\framework\web\CClientScript.php(486): CClientScript->getCoreScriptUrl()
+#4 D:\WebServer\health claim\HIC\yii1110\framework\web\CClientScript.php(302): CClientScript->getPackageBaseUrl('jquery')
+#5 D:\WebServer\health claim\HIC\yii1110\framework\web\CClientScript.php(195): CClientScript->renderCoreScripts()
+#6 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 D:\WebServer\health claim\HIC\apps\protected\controllers\SiteController.php(92): CController->render('login', Array)
+#9 D:\WebServer\health claim\HIC\yii1110\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('login')
+#14 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#15 D:\WebServer\health claim\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\WebServer\health claim\HIC\apps\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/health%20claim/HIC/apps/index.php?r=site/login
+HTTP_REFERER=http://localhost/health%20claim/HIC/apps/index.php?r=site/page&view=about
+---
+2012/02/23 15:22:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php:484
+Stack trace:
+#0 D:\WebServer\health claim\HIC\yii1110\framework\web\CController.php(271): CController->missingAction('gii')
+#1 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('gii')
+#2 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('site/gii')
+#3 D:\WebServer\health claim\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\WebServer\health claim\HIC\apps\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health%20claim/HIC/apps/index.php?r=site/gii
+---
+2012/02/23 15:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('gii/index')
+#1 D:\WebServer\health claim\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\WebServer\health claim\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health%20claim/HIC/apps/index.php?r=gii/index
+---
+2012/02/23 15:23:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\WebServer\health claim\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('gii/index')
+#1 D:\WebServer\health claim\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\WebServer\health claim\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health%20claim/HIC/apps/index.php?r=gii/index
+---
+2012/02/23 21:36:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/
+---
+2012/02/23 21:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis
+---
+2012/02/23 21:44:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/page&view=about
+---
+2012/02/23 21:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis
+---
+2012/02/23 21:44:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis
+---
+2012/02/23 21:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis
+---
+2012/02/23 21:48:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('polis')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('site/polis')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=site/polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis
+---
+2012/02/23 21:48:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('polis')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('site/polis')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=site/polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/polis
+---
+2012/02/23 21:48:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('polis')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('site/polis')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=site/polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/polis
+---
+2012/02/23 21:48:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('polis')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('site/polis')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=site/polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/polis
+---
+2012/02/23 21:53:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('polis')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('site/polis')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=site/polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/polis
+---
+2012/02/23 21:53:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/polis
+---
+2012/02/23 21:53:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/login
+---
+2012/02/23 21:53:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('/polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=/polis
+---
+2012/02/23 21:53:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis
+---
+2012/02/23 21:57:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+---
+2012/02/23 21:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('polis')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('site/polis')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=site/polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/index
+---
+2012/02/23 21:57:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "polis".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('polis')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('polis')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('site/polis')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=site/polis
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/index
+---
+2012/02/23 21:57:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/polis
+---
+2012/02/23 21:57:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/index
+---
+2012/02/23 21:57:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/index
+---
+2012/02/23 21:57:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/index
+---
+2012/02/23 21:57:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/index
+---
+2012/02/23 21:57:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/default/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/default/i...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/default/index
+---
+2012/02/23 21:58:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/Default/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/Default/i...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/Default/index
+---
+2012/02/23 21:58:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/default/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/default/i...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/default/index
+---
+2012/02/23 21:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/default/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/default/i...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/default/index
+---
+2012/02/23 21:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/default/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/default/i...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/default/index
+---
+2012/02/23 21:59:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php
+---
+2012/02/23 21:59:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/default/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/default/i...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/default/index
+---
+2012/02/23 21:59:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/login
+---
+2012/02/23 22:00:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/login
+---
+2012/02/23 22:00:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "polis/index".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/index')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/index
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/index
+---
+2012/02/23 22:06:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] fe_sendauth: no password supplied' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Webserver/health_claim/HIC/yii1110/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/model/ModelCode.php(54): CModule->__get('db')
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(152): CFormModel->__construct()
+#7 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/model')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=gii/model
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=gii/default/index
+---
+2012/02/23 22:22:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#9 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterPolis/
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=site/login
+---
+2012/02/23 22:22:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('edit')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('edit')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterPolis/edit
+---
+2012/02/23 22:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('list')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('list')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterPolis/list
+---
+2012/02/23 22:23:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('list')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('list')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterPol...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterPolis/list
+---
+2012/02/23 22:23:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterpol...')
+#9 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/
+---
+2012/02/23 22:23:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('view')
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterpol...')
+#9 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/view
+---
+2012/02/23 22:23:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('view')
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterpol...')
+#9 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/view/
+---
+2012/02/23 22:23:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterpol...')
+#9 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/
+---
+2012/02/23 22:24:23 [error] [php] include(SetupMstPlans.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): MasterPolis->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): MasterPolis->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1186): activeLabel()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(560): activeLabelEx()
+#7 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_form.php(37): GxActiveForm->labelEx()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php(19): MasterPolisController->renderPartial()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): MasterPolisController->renderPartial()
+#16 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(49): MasterPolisController->render()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#28 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/23 22:24:47 [error] [php] include(SetupMstPlans.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): MasterPolis->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): MasterPolis->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(545): activeLabel()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_search.php(29): GxActiveForm->label()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#10 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/admin.php(37): MasterPolisController->renderPartial()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): MasterPolisController->renderPartial()
+#15 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(95): MasterPolisController->render()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionAdmin()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#27 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/admin
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/23 22:26:18 [error] [php] include(SetupMstPlans.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): MasterPolis->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): MasterPolis->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1186): activeLabel()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(560): activeLabelEx()
+#7 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_form.php(37): GxActiveForm->labelEx()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php(19): MasterPolisController->renderPartial()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): MasterPolisController->renderPartial()
+#16 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(49): MasterPolisController->render()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#28 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/23 22:27:11 [error] [php] include(SetupMstCoys.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): MasterPolis->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): MasterPolis->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1186): activeLabel()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(560): activeLabelEx()
+#7 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_form.php(47): GxActiveForm->labelEx()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php(19): MasterPolisController->renderPartial()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): MasterPolisController->renderPartial()
+#16 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(49): MasterPolisController->render()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#28 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/23 22:27:40 [error] [php] include(SetupMstAgents.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): MasterPolis->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): MasterPolis->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1186): activeLabel()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(560): activeLabelEx()
+#7 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_form.php(52): GxActiveForm->labelEx()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php(19): MasterPolisController->renderPartial()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): MasterPolisController->renderPartial()
+#16 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(49): MasterPolisController->render()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#28 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/23 22:27:42 [error] [php] include(SetupMstAgents.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(119): model()
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(165): MasterPolis->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1161): MasterPolis->getAttributeLabel()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/helpers/CHtml.php(1186): activeLabel()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/widgets/CActiveForm.php(560): activeLabelEx()
+#7 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_form.php(52): GxActiveForm->labelEx()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#11 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php(19): MasterPolisController->renderPartial()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): MasterPolisController->renderPartial()
+#16 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(49): MasterPolisController->render()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#24 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#25 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#26 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#27 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#28 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (119)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (165)
+2012/02/23 22:28:14 [error] [php] include(PolDtlPolis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(26): model()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php(152): model()
+#3 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_form.php(147): MasterPolis->getRelationLabel()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#7 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php(19): MasterPolisController->renderPartial()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): MasterPolisController->renderPartial()
+#12 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(49): MasterPolisController->render()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#24 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (26)
+in /Webserver/health_claim/HIC/apps/protected/extensions/giix-components/GxActiveRecord.php (152)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_form.php (147)
+2012/02/23 22:33:03 [warning] [application] Failed to set unsafe attribute "polDtlPolises" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/23 22:33:26 [warning] [application] Failed to set unsafe attribute "polDtlPolises" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 20:41:44 [error] [php] include(MasterPolis.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CActiveDataProvider.php(75): model()
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(80): CActiveDataProvider->__construct()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionIndex()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/index
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (80)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 20:54:27 [error] [exception.CException] exception 'CException' with message 'Alias "ext.xupload.XUploadWidget" is invalid. Make sure it points to an existing PHP file.' in /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:318
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWidgetFactory.php(147): YiiBase::import('ext.xupload.XUp...', true)
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(MasterPolisController), 'ext.xupload.XUp...', Array)
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.xupload.XUp...', Array)
+#3 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_uploadform.php(12): CBaseController->widget('ext.xupload.XUp...', Array)
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#7 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php(19): CController->renderPartial('_uploadform', Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require('/Webserver/heal...')
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Webserver/heal...', Array, true)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): CBaseController->renderFile('/Webserver/heal...', Array, true)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#12 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(49): CController->render('create', Array)
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#21 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#23 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterpol...')
+#24 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/masterpolis/index
+---
+2012/02/24 20:55:11 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 20:55:13 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 20:55:14 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 20:55:15 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 21:02:45 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 21:03:11 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 21:07:38 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 21:07:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "v_policy_no" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_contact_person", "v_contact_telp", "v_address", "v_city", "n_member", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi", "v_upload_by", "d_upload_date", "v_verifikasi_by", "d_verifikasi_date", "v_updated_by", "d_updated_date") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13).
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (41)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 21:07:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "v_policy_no" violates not-null constraint. The SQL statement executed was: INSERT INTO "pol_mst_polis" ("v_contact_person", "v_contact_telp", "v_address", "v_city", "n_member", "n_premi_budget", "v_add_info_penanggung", "n_add_info_premi", "v_upload_by", "d_upload_date", "v_verifikasi_by", "d_verifikasi_date", "v_updated_by", "d_updated_date") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13)' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(41): CActiveRecord->save()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterpol...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+---
+2012/02/24 21:09:06 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 21:09:10 [warning] [application] Failed to set unsafe attribute "file" of "MasterPolis".
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (39)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/02/24 21:29:42 [error] [php] Undefined variable: form (/Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_uploadform.php:6)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#1 /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php(19): MasterPolisController->renderPartial()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(127): require()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CBaseController.php(96): MasterPolisController->renderInternal()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(870): MasterPolisController->renderFile()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(783): MasterPolisController->renderPartial()
+#6 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php(49): MasterPolisController->render()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterPolisController->actionCreate()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterPolisController->runAction()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterPolisController->filterAccessControl()
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#15 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterPolisController->runActionWithFilters()
+#16 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterPolisController->run()
+#17 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#18 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/_uploadform.php (6)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/views/masterpolis/create.php (19)
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterpolisController.php (49)
+2012/02/24 21:30:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "upload".' in /Webserver/health_claim/HIC/yii1110/framework/web/CController.php:484
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(271): CController->missingAction('upload')
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('upload')
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('polis/masterpol...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php?r=polis/masterpolis/upload
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php?r=polis/masterpolis/create
+---
