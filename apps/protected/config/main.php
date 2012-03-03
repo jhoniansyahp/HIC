@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.*',
 		'ext.giix-components.*', // giix components
 		'application.extensions.*',
 	),
@@ -24,6 +25,8 @@ return array(
 		// uncomment the following to enable the Gii tool		
 		'polis',
 		'claim',
+		'polis',
+		 'setup',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'crot',
@@ -72,7 +75,6 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',				
 			),
 		),
-		/*
 		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/
@@ -83,7 +85,7 @@ return array(
 			'connectionString' => 'pgsql:host=localhost;dbname=HIC',
 			'emulatePrepare' => true,
 			'username' => 'postgres',
-			'password' => 'root',
+			'password' => 'postgres',
 			'charset' => 'utf8',
 		),
 		

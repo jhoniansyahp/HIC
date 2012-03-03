@@ -11,6 +11,12 @@ class BootstrapCode extendS CrudCode
 {
 	public function generateActiveRow($modelClass, $column)
 	{
+		
+		if(stripos(strtolower($column->name),'created_'))return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'updated_')) return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'verifikasi_')) return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'upload_')) return "\"&nbsp;\"";
+		
 		if ($column->type === 'boolean')
 			return "\$form->checkBoxRow(\$model,'{$column->name}')";
 		else if (stripos($column->dbType,'text') !== false)
@@ -28,4 +34,38 @@ class BootstrapCode extendS CrudCode
 				return "\$form->{$inputField}(\$model,'{$column->name}',array('class'=>'span5','maxlength'=>$column->size))";
 		}
 	}
+	
+	public function generateDatePicker($model,$column){
+		
+		
+		if(stripos(strtolower($column->name),'created_'))return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'updated_')) return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'verifikasi_')) return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'upload_')) return "\"&nbsp;\"";
+		
+		
+		return "
+		  echo '<div class=\"control-group\">';
+		  echo \$form->labelEx(\$model,'{$column->name}');
+		 echo '<div class=\"controls\">';
+		\$form->widget('zii.widgets.jui.CJuiDatePicker', array(
+	        'model'=>\$model,
+	        'attribute'=>'{$column->name}',
+	        'name'=>'{$column->name}',    // This is how it works for me.
+			'value'=>'{$column->defaultValue}',
+	        'options'=>array('dateFormat'=>'dd-mm-yy', 
+	                        'altFormat'=>'yy-mm-dd', 
+	                        'changeMonth'=>'true', 
+	                        'changeYear'=>'true',
+							'showButtonPanel'=>'false',
+	                        'yearRange'=>'1998:2030', 
+	                     	),
+	        'htmlOptions'=>array('size'=>'10','class'=>'span5 date')
+	   ));
+		echo \"</div>\n</div>\"; 
+	";
+	  	
+	}
+	
+		
 }
