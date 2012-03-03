@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.*',
 		'ext.giix-components.*', // giix components
 	),
 
@@ -72,12 +73,9 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',				
 			),
 		),
-		/*
-		'db'=>array(
+		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/
-		// uncomment the following to use a MySQL database
-		
 		'db'=>array(
 			'connectionString' => 'pgsql:host=localhost;dbname=health_claim',
 			'emulatePrepare' => true,

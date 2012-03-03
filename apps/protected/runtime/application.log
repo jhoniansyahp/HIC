@@ -1985,4 +1985,3 @@ Stack trace:
 #14 {main}
 REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
 HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
----
