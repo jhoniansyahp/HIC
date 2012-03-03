@@ -11,6 +11,12 @@ class BootstrapCode extendS CrudCode
 {
 	public function generateActiveRow($modelClass, $column)
 	{
+		
+		if(stripos(strtolower($column->name),'created_'))return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'updated_')) return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'verifikasi_')) return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'upload_')) return "\"&nbsp;\"";
+		
 		if ($column->type === 'boolean')
 			return "\$form->checkBoxRow(\$model,'{$column->name}')";
 		else if (stripos($column->dbType,'text') !== false)
@@ -30,6 +36,13 @@ class BootstrapCode extendS CrudCode
 	}
 	
 	public function generateDatePicker($model,$column){
+		
+		
+		if(stripos(strtolower($column->name),'created_'))return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'updated_')) return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'verifikasi_')) return "\"&nbsp;\"";
+		if(stripos(strtolower($column->name),'upload_')) return "\"&nbsp;\"";
+		
 		
 		return "
 		  echo '<div class=\"control-group\">';
@@ -51,7 +64,8 @@ class BootstrapCode extendS CrudCode
 	   ));
 		echo \"</div>\n</div>\"; 
 	";
-	   
-		
+	  	
 	}
+	
+		
 }

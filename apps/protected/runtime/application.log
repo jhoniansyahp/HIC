@@ -1632,3 +1632,357 @@ Stack trace:
 REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
 HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/role
 ---
+2012/03/03 00:38:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/organization".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/organizat...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/organization
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/company/Create
+---
+2012/03/03 00:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/organization".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/organizat...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/organization
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/plan/Create
+---
+2012/03/03 00:39:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/parameter/Create
+---
+2012/03/03 00:39:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/form".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/form')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/form
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/lookup
+---
+2012/03/03 00:39:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/organization".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/organizat...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/organization
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/agent
+---
+2012/03/03 01:33:49 [error] [php] Invalid argument supplied for foreach() (/Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_primary_search.php:20)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): BootstrapCode->prepare()
+#1 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): BootstrapGenerator->prepare()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): BootstrapGenerator->actionIndex()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): BootstrapGenerator->runAction()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): BootstrapGenerator->runActionWithFilters()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): BootstrapGenerator->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+in /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_primary_search.php (20)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/03 01:40:17 [error] [php] Undefined variable: columns (/Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_primary_search.php:28)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): BootstrapCode->prepare()
+#1 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): BootstrapGenerator->prepare()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): BootstrapGenerator->actionIndex()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): BootstrapGenerator->runAction()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): BootstrapGenerator->runActionWithFilters()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): BootstrapGenerator->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+in /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_primary_search.php (28)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/03 01:48:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/lookup".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/lookup')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/lookup
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/parameter
+---
+2012/03/03 02:05:56 [error] [exception.CException] exception 'CException' with message 'CPgsqlColumnSchema and its behaviors do not have a method or closure named "getText".' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:266
+Stack trace:
+#0 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/BootstrapCode.php(16): CComponent->__call('getText', Array)
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/BootstrapCode.php(16): CPgsqlColumnSchema->getText()
+#2 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php(39): BootstrapCode->generateActiveRow('plan', Object(CPgsqlColumnSchema))
+#3 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeModel.php(320): require('/Webserver/heal...')
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(97): CCodeModel->render('/Webserver/heal...')
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): CrudCode->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#13 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
+2012/03/03 02:07:29 [error] [exception.CException] exception 'CException' with message 'Property "CPgsqlColumnSchema.text" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:131
+Stack trace:
+#0 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/BootstrapCode.php(16): CComponent->__get('text')
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php(39): BootstrapCode->generateActiveRow('plan', Object(CPgsqlColumnSchema))
+#2 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeModel.php(320): require('/Webserver/heal...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(97): CCodeModel->render('/Webserver/heal...')
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): CrudCode->prepare()
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
+2012/03/03 02:08:04 [error] [exception.CException] exception 'CException' with message 'Property "CPgsqlColumnSchema.v_plan_code" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:131
+Stack trace:
+#0 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/BootstrapCode.php(16): CComponent->__get('v_plan_code')
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php(39): BootstrapCode->generateActiveRow('plan', Object(CPgsqlColumnSchema))
+#2 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeModel.php(320): require('/Webserver/heal...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(97): CCodeModel->render('/Webserver/heal...')
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): CrudCode->prepare()
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
+2012/03/03 02:19:39 [error] [exception.CException] exception 'CException' with message 'Property "BootstrapCode.v_plan_code" is not defined.' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:131
+Stack trace:
+#0 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/BootstrapCode.php(15): CComponent->__get('v_plan_code')
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php(39): BootstrapCode->generateActiveRow('plan', Object(CPgsqlColumnSchema))
+#2 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeModel.php(320): require('/Webserver/heal...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(97): CCodeModel->render('/Webserver/heal...')
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): CrudCode->prepare()
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
+2012/03/03 02:35:22 [error] [php] Undefined variable: model (/Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php:30)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): BootstrapCode->prepare()
+#1 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): BootstrapGenerator->prepare()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): BootstrapGenerator->actionIndex()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): BootstrapGenerator->runAction()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): BootstrapGenerator->runActionWithFilters()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): BootstrapGenerator->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+in /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php (30)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/03 02:35:39 [error] [php] Trying to get property of non-object (/Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php:30)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): BootstrapCode->prepare()
+#1 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): BootstrapGenerator->prepare()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): BootstrapGenerator->actionIndex()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): BootstrapGenerator->runAction()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): BootstrapGenerator->runActionWithFilters()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): BootstrapGenerator->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+in /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php (30)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/03 02:38:16 [error] [exception.CException] exception 'CException' with message 'BootstrapCode and its behaviors do not have a method or closure named "refresh".' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:266
+Stack trace:
+#0 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php(30): CComponent->__call('refresh', Array)
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php(30): BootstrapCode->refresh()
+#2 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeModel.php(320): require('/Webserver/heal...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(97): CCodeModel->render('/Webserver/heal...')
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): CrudCode->prepare()
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
+2012/03/03 02:42:34 [error] [php] Undefined index: v_plan_code (/Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php:31)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): BootstrapCode->prepare()
+#1 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): BootstrapGenerator->prepare()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): BootstrapGenerator->actionIndex()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): BootstrapGenerator->runAction()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): BootstrapGenerator->runActionWithFilters()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): BootstrapGenerator->run()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#8 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+in /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php (31)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/03 02:43:46 [error] [exception.CException] exception 'CException' with message 'BootstrapCode and its behaviors do not have a method or closure named "model".' in /Webserver/health_claim/HIC/yii1110/framework/base/CComponent.php:266
+Stack trace:
+#0 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php(30): CComponent->__call('model', Array)
+#1 /Webserver/health_claim/HIC/apps/protected/extensions/bootstrap/gii/bootstrap/templates/hic/_form.php(30): BootstrapCode->model()
+#2 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeModel.php(320): require('/Webserver/heal...')
+#3 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(97): CCodeModel->render('/Webserver/heal...')
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(161): CrudCode->prepare()
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
+2012/03/03 13:48:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/organization".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/organizat...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/organization
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/polis/quotPolis/update/id/7686876
+---
+2012/03/03 13:50:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/organization".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/organizat...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/organization
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/plan
+---
+2012/03/03 14:10:27 [error] [php] include(master_quotation.php): failed to open stream: No such file or directory (/Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:418)
+Stack trace:
+#0 /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterQuotationController.php(137): spl_autoload_call()
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): MasterQuotationController->actionIndex()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): MasterQuotationController->runAction()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): MasterQuotationController->filterAccessControl()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): MasterQuotationController->runActionWithFilters()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): MasterQuotationController->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/polis/MasterQuotation
+in /Webserver/health_claim/HIC/apps/protected/modules/polis/controllers/MasterQuotationController.php (137)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/03 16:30:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/form".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/form')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/form
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php
+---
+2012/03/03 16:30:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/formrole".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/formrole')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/formrole
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/form
+---
+2012/03/03 16:31:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/organization".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/organizat...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/organization
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/claim
+---
+2012/03/03 16:59:40 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.setup.plans" is invalid. Make sure it points to an existing PHP file.' in /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:318
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 /Webserver/health_claim/HIC/yii1110/framework/validators/CInlineValidator.php(43): CrudCode->validateModel('model', Array)
+#2 /Webserver/health_claim/HIC/yii1110/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(BootstrapCode), 'model')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CModel.php(158): CValidator->validate(Object(BootstrapCode), NULL)
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(158): CModel->validate()
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
+2012/03/03 16:59:48 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.setup.models.plans" is invalid. Make sure it points to an existing PHP file.' in /Webserver/health_claim/HIC/yii1110/framework/YiiBase.php:318
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/gii/generators/crud/CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 /Webserver/health_claim/HIC/yii1110/framework/validators/CInlineValidator.php(43): CrudCode->validateModel('model', Array)
+#2 /Webserver/health_claim/HIC/yii1110/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(BootstrapCode), 'model')
+#3 /Webserver/health_claim/HIC/yii1110/framework/base/CModel.php(158): CValidator->validate(Object(BootstrapCode), NULL)
+#4 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(158): CModel->validate()
+#5 /Webserver/health_claim/HIC/yii1110/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('gii/bootstrap')
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/gii/bootstrap
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/gii/bootstrap
+---
