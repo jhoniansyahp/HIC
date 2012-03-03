@@ -17,10 +17,12 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'ext.giix-components.*', // giix components
+		'application.extensions.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool		
+		'polis',
 		'claim',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',

@@ -168,6 +168,24 @@ class BootInputHorizontal extends BootInput
 		echo $this->getError().$this->getHint();
 		echo '</div>';
 	}
+	
+		/**
+	 * Renders a text field.
+	 * @return string the rendered content
+	 */
+	protected function maskTextField()
+	{
+		echo $this->getLabel().'<div class="controls">';
+		//echo $this->form->textField($this->model, $this->attribute, $this->htmlOptions);
+		$this->widget('CMaskedTextField', array(
+		'model' => $this->model,
+		'attribute' => $this->attribute,
+		'mask' => '9.999,99',
+		'htmlOptions' => array('size' => 6)
+		));
+		echo $this->getError().$this->getHint();
+		echo '</div>';
+	}
 
 	/**
 	 * Renders a CAPTCHA.

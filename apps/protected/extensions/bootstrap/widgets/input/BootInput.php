@@ -26,6 +26,7 @@ abstract class BootInput extends CInputWidget
 	const TYPE_RADIOLIST_INLINE = 'radiobuttonlist_inline';
 	const TYPE_TEXTAREA = 'textarea';
 	const TYPE_TEXT = 'textfield';
+	const TYPE_MTEXT = 'masktextfield';
 	const TYPE_CAPTCHA = 'captcha';
 	const TYPE_UNEDITABLE = 'uneditable';
 
@@ -112,6 +113,10 @@ abstract class BootInput extends CInputWidget
 
 			case self::TYPE_TEXT:
 				$this->textField();
+				break;
+				
+			case self::TYPE_MTEXT:
+				$this->maskTextField();
 				break;
 
 			case self::TYPE_CAPTCHA:

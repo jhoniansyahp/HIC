@@ -14,6 +14,7 @@ class ClmMstClaimsController extends GxController {
 
 
 		if (isset($_POST['ClmMstClaims'])) {
+			$_POST['ClmMstClaims']['v_claim_no'] ='999';
 			$model->setAttributes($_POST['ClmMstClaims']);
 
 			if ($model->save()) {
