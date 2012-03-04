@@ -30,4 +30,16 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_NONE;
 		return !$this->errorCode;
 	}
+	
+	  // Load user model.
+	  public function loadUser($id=null)
+	    {
+	        if($this->_model===null)
+	        {
+	            if($id!==null)
+	                $this->_model=User::model()->findByPk($id);
+	        }
+	        return $this->_model;
+	    }
+	
 }

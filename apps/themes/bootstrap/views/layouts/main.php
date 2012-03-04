@@ -23,7 +23,7 @@
 	
 	<?php $this->widget('bootstrap.widgets.BootNavbar', array(
     'fixed'=>false,	
-    'brand'=>Yii::app()->name,
+    //'brand'=>Yii::app()->name,
     'brandUrl'=>'#',
     'collapse'=>true, // requires bootstrap-responsive.css
     'items'=>array(
@@ -37,6 +37,7 @@
 					array('label'=>'Master Company','url'=>array('/setup/company')),
 					array('label'=>'Master Organisasi','url'=>array('/setup/organization')),
 					array('label'=>'Setup Produk Umum','url'=>array('/setup/plan')),
+					array('label'=>'Setup Produk Klaim','url'=>array('/setup/claimplan')),
 					'---',
 					array('label'=>'Setup Umum', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Parameter','url'=>array('/setup/parameter')),
@@ -47,10 +48,11 @@
 					array('label'=>'Role','url'=>array('/setup/role')),
 					array('label'=>'Form - Role','url'=>array('/setup/formrole')),
 					array('label'=>'Admin User','url'=>array('/setup/users')),
-					array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
+					//array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
 				)),
 				array('label'=>'Polis', 'url'=>'#','items' => array(
-					array('label'=>'Data Polis','url' => array('/polis/quotPolis/admin'))
+					array('label'=>'Data Polis','url' => array('/polis/quotation')),
+					array('label'=>'Upload Data Polis','url' => array('/polis/upload'))
 				)),
 				array('label'=>'Claim', 'url'=>array('/claim')),
 				array('label'=>'Laporan', 'url'=>'#', 'items'=>array(
@@ -61,8 +63,8 @@
                     '---',
                     array('label'=>'Separated link', 'url'=>'#'),
                 )),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				//array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),            
         ),
         '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
@@ -70,19 +72,22 @@
             'class'=>'bootstrap.widgets.BootMenu',
             'htmlOptions'=>array('class'=>'pull-right'),
             'items'=>array(
-                array('label'=>'Link', 'url'=>'#'),
-                array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
-                    array('label'=>'Action', 'url'=>'#'),
-                    array('label'=>'Another action', 'url'=>'#'),
-                    array('label'=>'Something else here', 'url'=>'#'),
-                    '---',
-                    array('label'=>'Separated link', 'url'=>'#'),
-                )),
+	        		array('label'=>'Profile', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
+					array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
+                	array('label'=>'Action', 'url'=>'#'),
+                	array('label'=>'Another action', 'url'=>'#'),
+                	array('label'=>'Something else here', 'url'=>'#'),
+                	'---',
+                	array('label'=>'Separated link', 'url'=>'#'),
+            	)),
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+                //array('label'=>'Link', 'url'=>'#'),
             ),
         ),
     ),
 )); ?>
-<div class="container-fluid">
+<div class="container">
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('bootstrap.widgets.BootCrumb', array(    
 			'links'=>$this->breadcrumbs,

@@ -18,10 +18,12 @@ return array(
 		'application.components.*',
 		'application.modules.*',
 		'ext.giix-components.*', // giix components
+		'application.extensions.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool		
+		'polis',
 		'claim',
 		'polis',
 		 'setup',
@@ -44,7 +46,7 @@ return array(
 			'bootstrap'=>array(
 			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
 			'coreCss'=>true, // whether to register the Bootstrap core CSS (bootstrap.min.css), defaults to true
-			'responsiveCss'=>false, // whether to register the Bootstrap responsive CSS (bootstrap-responsive.min.css), default to false
+			'responsiveCss'=>true, // whether to register the Bootstrap responsive CSS (bootstrap-responsive.min.css), default to false
 			'plugins'=>array(
 				// Optionally you can configure the "global" plugins (button, popover, tooltip and transition)
 				// To prevent a plugin from being loaded set it to false as demonstrated below

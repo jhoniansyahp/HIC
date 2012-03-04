@@ -24,6 +24,18 @@ abstract class GxController extends Controller {
 	 * @var array Context menu items. This property will be assigned to {@link CMenu::items}.
 	 */
 	public $menu = array();
+	
+	public $globalMenu = array(
+				array('label'=>'LIST HEADER', 'itemOptions'=>array('class'=>'nav-header')),
+				array('label'=>'Home', 'icon'=>'home', 'url'=>'#', 'active'=>true),
+				array('label'=>'Library', 'icon'=>'book', 'url'=>'#'),
+				array('label'=>'Application', 'icon'=>'pencil', 'url'=>'#'),
+				array('label'=>'ANOTHER LIST HEADER', 'itemOptions'=>array('class'=>'nav-header')),
+				array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
+				array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
+				array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
+				array('label'=>'LIST HEADER', 'itemOptions'=>array('class'=>'nav-header')),
+	);
 	/**
 	 * @var array The breadcrumbs of the current page. The value of this property will
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
