@@ -4311,3 +4311,30 @@ Stack trace:
 REQUEST_URI=/health_claim/HIC/apps/index.php/polis/quotation
 HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/claim
 ---
+2012/03/04 13:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/organization".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/organizat...')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/organization
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/agent
+---
+2012/03/04 13:25:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/agent".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/agent')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/agent
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php
+---
+2012/03/04 13:26:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/agent".' in /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/agent')
+#1 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/agent
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php
+---
