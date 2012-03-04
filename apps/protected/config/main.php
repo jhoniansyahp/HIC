@@ -19,6 +19,8 @@ return array(
 		'application.modules.*',
 		'ext.giix-components.*', // giix components
 		'application.extensions.*',
+		'application.modules.rights.*',
+		'application.modules.rights.components.*',
 	),
 
 	'modules'=>array(
@@ -26,7 +28,13 @@ return array(
 		'polis',
 		'claim',
 		'polis',
-		 'setup',
+		'setup',
+		'user',
+		'rights'=>array(
+			'debug'=>true,
+			'install'=>false,
+			'enableBizRuleData'=>true,
+		),
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'crot',
@@ -42,7 +50,13 @@ return array(
 	),
 
 	// application components
-		'components'=>array(			
+		'components'=>array(
+			'user'=>array(
+				'class'=>'RWebUser',
+				// enable cookie-based authentication
+				'allowAutoLogin'=>true,
+				'loginUrl'=>'/apps/index.php/user/login',
+			),
 			'bootstrap'=>array(
 			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
 			'coreCss'=>true, // whether to register the Bootstrap core CSS (bootstrap.min.css), defaults to true
@@ -85,6 +99,15 @@ return array(
 			'password' => 'postgres',
 			'charset' => 'utf8',
 		),
+		
+		'authManager'=>array(
+			'class'=>'RDbAuthManager',
+			'connectionID'=>'db',
+			'itemTable'=>'authitem',
+			'itemChildTable'=>'authitemchild',
+			'assignmentTable'=>'authassignment',
+			'rightsTable'=>'rights',
+        ),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

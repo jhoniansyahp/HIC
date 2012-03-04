@@ -43,7 +43,7 @@ abstract class BaseSetupMstAgents extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'v_agent_code';
+		return 'v_agent_name';
 	}
 
 	public function rules() {

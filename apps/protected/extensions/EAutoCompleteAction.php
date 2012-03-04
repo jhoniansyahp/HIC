@@ -28,7 +28,7 @@ class EAutoCompleteAction extends CAction
                 }
                 $this->matributs['label']=$m->{$this->label};
                 $this->matributs['value']=$m->{$this->value};
-
+				$this->matributs['id']=$m->{$this->id};
                 $this->results[] = $this->matributs;
                 //print_r($matributs);
                 /*
