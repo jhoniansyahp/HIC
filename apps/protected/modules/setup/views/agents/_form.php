@@ -15,12 +15,15 @@
 	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+<?php if(empty($model->n_agent_no)):?>
 <?php echo $form->textFieldRow($model,'n_agent_no',array('class'=>'span5')); ?>
+<?php else: ?>
+<?php echo $form->uneditableRow($model,'n_agent_no',array('class'=>'span5')); ?>
+<?php endif;?>
 <?php echo $form->textFieldRow($model,'v_agent_code',array('class'=>'span5','maxlength'=>20)); ?>
 <?php echo $form->textFieldRow($model,'v_agent_name',array('class'=>'span5','maxlength'=>150)); ?>
-<?php echo $form->textFieldRow($model,'v_agent_type',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo $form->textFieldRow($model,'v_status_agent',array('class'=>'span5','maxlength'=>10)); ?>
+<?php echo $form->dropDownListRow($model, 'v_agent_type', array('I'=>Yii::t('setupModule.main','Individu'),'C' => Yii::t('setupModule.main','Perusahaan/Bisnis'))); ?>
+<?php echo $form->dropDownListRow($model, 'v_status_agent', array('A'=>Yii::t('setupModule.main','Aktif'),'I' => Yii::t('setupModule.main','Non Aktif'))); ?>
 <?php echo $form->textFieldRow($model,'v_channel_no',array('class'=>'span5','maxlength'=>10)); ?>
 <?php echo $form->textFieldRow($model,'v_jabatan',array('class'=>'span5','maxlength'=>30)); ?>
 <?php 
@@ -38,7 +41,7 @@
 			   // display size of the FK field.  only matters if not hidden.  defaults to 10
 			  'FKFieldSize'=>15,
 			  'relName'=>'vReportingTo', // the relation name defined above
-			  'displayAttr'=>'v_reporting_to',  // attribute or pseudo-attribute to display
+			  'displayAttr'=>'v_agent_name',  // attribute or pseudo-attribute to display
 			  // length of the AutoComplete/display field, defaults to 50
 			  //'autoCompleteLength'=>15,
 			  // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may

@@ -55,9 +55,9 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('setupModule.main','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('setupModule.main','Apakah anda yakin ingin menghapus data ini?')."'))
         {
                 document.getElementById('setup-mst-organizations-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
                 document.getElementById('setup-mst-organizations-form').submit();

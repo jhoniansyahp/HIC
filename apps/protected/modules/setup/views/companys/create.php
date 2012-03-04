@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Coys'=>array('index'),
-	'Create',
+	Yii::t('setupModule.main','Setup Company(s)')=>array('index'),
+	Yii::t('setupModule.main','Buat'),
 );
 
 /*
@@ -19,6 +19,6 @@ $this->menu=array(
 );*/
 ?>
 
-<h1>Create SetupMstCoys</h1>
+<h1><?php echo Yii::t('setupModule.main',"Buat Company");?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

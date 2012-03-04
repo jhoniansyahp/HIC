@@ -8,7 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Plan Benefits'=>array('index'),
+	'Setup Plan'=>array('/setup/plans/index'),
+	'View ' => array('/setup/plans/view','id'=>$model->v_plan_code),
 	'Create',
 );
 

@@ -40,7 +40,7 @@
 			   // display size of the FK field.  only matters if not hidden.  defaults to 10
 			  'FKFieldSize'=>15,
 			  'relName'=>'nExistingAgent', // the relation name defined above
-			  'displayAttr'=>'n_existing_agent',  // attribute or pseudo-attribute to display
+			  'displayAttr'=>'v_agent_name',  // attribute or pseudo-attribute to display
 			  // length of the AutoComplete/display field, defaults to 50
 			  //'autoCompleteLength'=>15,
 			  // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may

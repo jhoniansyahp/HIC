@@ -38,7 +38,7 @@ class PlansController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','delete','deleteall',
+				'actions'=>array('create','update','delete','deleteall','createdetail'
 				),
 				'users'=>array('@'),
 			),
@@ -61,8 +61,10 @@ class PlansController extends Controller
 	
 	public function actions()
 	{
+					
 		return array(
-					);
+			
+				);
 		
 	}
 
@@ -100,15 +102,15 @@ class PlansController extends Controller
 			$model->attributes=$_POST['SetupMstPlans'];
 			
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_start = $this->convertDate($model->d_plan_start);
+						$model->d_plan_start = $this->getDate()->toSave($model->d_plan_start);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_end = $this->convertDate($model->d_plan_end);
+						$model->d_plan_end = $this->getDate()->toSave($model->d_plan_end);
 										$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_plan_code));
@@ -136,9 +138,9 @@ class PlansController extends Controller
 			$model->attributes=$_POST['SetupMstPlans'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_start = $this->convertDate($model->d_plan_start);
+						$model->d_plan_start = $this->getDate()->toSave($model->d_plan_start);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_end = $this->convertDate($model->d_plan_end);
+						$model->d_plan_end = $this->getDate()->toSave($model->d_plan_end);
 						
 						$model->v_updated_by=Yii::app()->user->id;
 						$model->d_updated_date=new CDbExpression('NOW()');
@@ -188,19 +190,19 @@ class PlansController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_plan_start) && isset($_GET['SetupMstPlans'])){
-							$model->d_plan_start = new CDbExpression("=".$this->convertDate($model->d_plan_start));
+							$model->d_plan_start = new CDbExpression("=".$this->getDate()->toSave($model->d_plan_start));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_plan_end) && isset($_GET['SetupMstPlans'])){
-							$model->d_plan_end = new CDbExpression("=".$this->convertDate($model->d_plan_end));
+							$model->d_plan_end = new CDbExpression("=".$this->getDate()->toSave($model->d_plan_end));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupMstPlans'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstPlans'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 						
 								
@@ -224,7 +226,7 @@ class PlansController extends Controller
 	                {
 	                        $model->deleteByPk($id);
 	                }
-
+ Yii::app()->user->setFlash('error', 'Please select at least one record to delete.');
 	                $this->actionIndex();
 	        }
 	        else
@@ -274,4 +276,16 @@ class PlansController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	/**
+	 *
+	 *
+	 */
+	 public function actionCreateDetail(){
+		Yii::import('application.modules.setup.controllers.planBenefitsController');
+		
+		planBenefitsController::actionCreate();
+	}
+	
+	
 }

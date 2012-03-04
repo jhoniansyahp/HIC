@@ -11,7 +11,7 @@
 	'method'=>'get',
 )); ?>
 <div class="alert alert-warning">
-	<?php echo $form->textFieldRow($model,'n_agent_no',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldRow($model,'v_agent_code',array('class'=>'span5')); ?>
 
 	<div class="actions">
 		<?php

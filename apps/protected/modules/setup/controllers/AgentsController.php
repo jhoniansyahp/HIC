@@ -67,9 +67,9 @@ class AgentsController extends Controller
 			   'combo_setup-mst-agents'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
 				  'model'=> 'SetupMstAgents',
-				  'label'=> 'v_reporting_to',
-				  'value'=> 'v_reporting_to',
-				   'id' => 'v_reporting_to',
+				  'label'=> 'v_agent_name',
+				  'value'=> 'v_agent_name',
+				   'id' => 'n_agent_no',
 				),
 					);
 		
@@ -104,9 +104,9 @@ class AgentsController extends Controller
 								$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->n_agent_no));
@@ -134,11 +134,11 @@ class AgentsController extends Controller
 			$model->attributes=$_POST['SetupMstAgents'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 												$model->v_updated_by=Yii::app()->user->id;
 												$model->d_updated_date=new CDbExpression('NOW()');
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->n_agent_no));
@@ -182,11 +182,11 @@ class AgentsController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupMstAgents'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstAgents'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 								
 		$this->render('index',array(

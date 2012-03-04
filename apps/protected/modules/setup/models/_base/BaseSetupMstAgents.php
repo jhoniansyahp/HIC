@@ -39,7 +39,7 @@ abstract class BaseSetupMstAgents extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'SetupMstAgents|SetupMstAgents', $n);
+		return Yii::t('setupModule.main', 'SetupMstAgents|SetupMstAgents', $n);
 	}
 
 	public static function representingColumn() {

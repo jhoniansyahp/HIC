@@ -32,7 +32,14 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 	
-	public function convertDate($date){
+	public function getDate(){
+		return new CDateFormat();
+	}
+	
+	public function appHelper(){
+		return new HICHelper();
+	}
+	/*public function convertDate($date){
 		
 		if(!(stripos($date,'/') !== FALSE)) return $date;
 		
@@ -60,5 +67,5 @@ class Controller extends CController
 		$newDate = sprintf('%02d/%02d/%4d', $d, $m, $y);
 		
 		return $newDate;
-	}
+	}*/
 }

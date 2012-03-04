@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Coys'=>array('index'),
-	$model->v_company_code,
+	Yii::t('setupModule.main',"Setup Company(s)")=>array('index'),
+	$model->v_company_name,
 );
 /*
 $this->menu=array(
@@ -29,8 +29,7 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_com
 ?>
 </div>
 
-<h1>View SetupMstCoys #<?php echo $model->v_company_code; ?></h1>
-
+<h1><?php echo Yii::t('setupModule.main',"Lihat \$company_name",array("\$company_name"=>$model->v_company_name));?></h1>
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	'data'=>$model,
@@ -44,7 +43,10 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_com
 		'v_jenis_usaha',
 		'v_mobilitas',
 		'v_office_hours',
-		'n_existing_agent',
+		array(
+			"value"=>SetupMstAgents::model()->findByPK($model->n_existing_agent)->v_agent_name,
+			"name" => "n_existing_agent",
+		),
 		'v_comp_add1',
 		'v_comp_add2',
 		'v_comp_add3',

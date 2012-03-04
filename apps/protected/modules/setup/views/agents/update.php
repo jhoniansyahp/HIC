@@ -8,9 +8,9 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Agents'=>array('index'),
-	$model->n_agent_no=>array('view','id'=>$model->n_agent_no),
-	'Update',
+	Yii::t('setupModule.main','Setup Agents')=>array('index'),
+	Yii::t('setupModule.main','Agent no_agent',array("no_agent"=>$model->n_agent_no))=>array('view','id'=>$model->n_agent_no),
+	Yii::t('setupModule.main','Update'),
 );
 /*
 $this->menu=array(
@@ -22,7 +22,7 @@ $this->menu=array(
 ?>
 
 <h1><?php
-Yii::t('setupModule.main','Update Data No. {n}',$model->n_agent_no);
+echo Yii::t('setupModule.main','Update Data $agent_name',array("\$agent_name"=>$model->v_agent_name,"\$agent_code"=>$model->v_agent_code));
 ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

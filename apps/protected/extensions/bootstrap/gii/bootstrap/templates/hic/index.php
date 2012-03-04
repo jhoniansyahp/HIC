@@ -64,11 +64,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('<?php echo $this->getModule()->name;?>Module.main','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('<?php echo $this->getModule()->name;?>Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
         {
-                document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').action='".Yii::app()->createUrl('/<?php echo $this->getModule()->name;?>/<?php echo $this->class2id($this->modelClass); ?>/deleteall')."';
                 document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').submit();
 				return false;
         }

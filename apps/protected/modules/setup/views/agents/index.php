@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Agents'=>array('index'),
-	'Manage',
+	'Setup Agent(s)'=>array('index'),
+	'Index',
 );
 /*
 $this->menu=array(
@@ -40,11 +40,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#setup-mst-agents-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"setup-mst-agents-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);
 		});
 	}else{
 		$('input[name=\"setup-mst-agents-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);
 		});
 	}
 });
@@ -55,9 +55,9 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('setupModule.main','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('setupModule.main','Apakah anda yakin ingin menghapus data ini?')."'))
         {
                 document.getElementById('setup-mst-agents-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
                 document.getElementById('setup-mst-agents-form').submit();
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1>Setup Mst Agents</h1>
+<h1><?php echo Yii::t('setupModule.main','Setup Agent(s)');?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -105,7 +105,9 @@ $form=$this->beginWidget('CActiveForm', array(
 ));
 ?>
 
-<?php $this->widget('ext.bootstrap.widgets.BootGridView',array(
+<?php 
+
+$this->widget('ext.bootstrap.widgets.BootGridView',array(
 	'id'=>'setup-mst-agents-grid',
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
@@ -121,13 +123,24 @@ $form=$this->beginWidget('CActiveForm', array(
 		'value'=>$model->n_agent_no,
 		'class'=>'CCheckBoxColumn',
 	),
-			'n_agent_no',
+		//'n_agent_no',
 		'v_agent_code',
 		'v_agent_name',
-		'v_agent_type',
-		'v_status_agent',
+		array(
+			"name" => "v_agent_type",
+			"value" => "Controller::appHelper()->labelAgentType(\$data->v_agent_type)",
+		),
+		array(
+			"name" => "v_status_agent",
+			"value" => "Controller::appHelper()->statusActivate(\$data->v_status_agent)",
+		),
 		'v_channel_no',
 		'v_jabatan',
+		array(
+			"name" => "v_reporting_to",
+			"value" => "SetupMstAgents::model()->findByPK(\$data->v_reporting_to)->v_agent_name"
+		),
+		'n_coy_id',
 		/*
 		'v_reporting_to',
 		'v_created_by',

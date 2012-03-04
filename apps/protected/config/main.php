@@ -9,6 +9,9 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'HIC',
 	'theme'=>'bootstrap',
+	// language
+	'sourceLanguage'=>'id',
+	'language'=>'id_id',
 	// preloading 'log' component
 	'preload'=>array('log', 'bootstrap'),
 
@@ -25,7 +28,7 @@ return array(
 		// uncomment the following to enable the Gii tool		
 		'polis',
 		'claim',
-		'polis',
+		'translate',
 		 'setup',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -42,7 +45,11 @@ return array(
 	),
 
 	// application components
-		'components'=>array(			
+		'components'=>array(
+			'ELangHandler' => array (
+			            'class' => 'application.extensions.langhandler.ELangHandler',
+			            'languages' => array('en','id'),
+			        ),
 			'bootstrap'=>array(
 			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
 			'coreCss'=>true, // whether to register the Bootstrap core CSS (bootstrap.min.css), defaults to true
