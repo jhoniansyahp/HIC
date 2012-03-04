@@ -5332,3 +5332,109 @@ Stack trace:
 REQUEST_URI=/health_claim/HIC/apps/index.php/setup/claimplan
 HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/planBenefits/index
 ---
+2012/03/04 14:29:14 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:29:14 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:34:04 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:34:04 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:34:56 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:34:56 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:35:40 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:35:40 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:36:52 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:36:52 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:38:10 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 14:38:10 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:11:41 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:11:41 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:12:30 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:12:30 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:13:33 [error] [php] Undefined variable: d (/Webserver/health_claim/HIC/apps/protected/components/Controller.php:60)
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): PlansController->runAction()
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): PlansController->filterAccessControl()
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): PlansController->runActionWithFilters()
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): PlansController->run()
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#12 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Webserver/health_claim/HIC/apps/index.php(13): CWebApplication->run()
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/plans/update/id/123
+in /Webserver/health_claim/HIC/apps/protected/components/Controller.php (60)
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (150)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:14:01 [warning] [application] Failed to set unsafe attribute "0" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:14:01 [warning] [application] Failed to set unsafe attribute "1" of "SetupPlanBenefits".
+in /Webserver/health_claim/HIC/apps/protected/modules/setup/controllers/PlansController.php (79)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:14:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: integer ~~ unknown
+LINE 1: ... FROM "setup_mst_agents" "t" WHERE v_reporting_to LIKE '%13%...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.. The SQL statement executed was: SELECT * FROM "setup_mst_agents" "t" WHERE v_reporting_to LIKE :ycp0.
+in /Webserver/health_claim/HIC/apps/protected/extensions/EAutoCompleteAction.php (19)
+in /Webserver/health_claim/HIC/apps/index.php (13)
+2012/03/04 15:14:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator does not exist: integer ~~ unknown
+LINE 1: ... FROM "setup_mst_agents" "t" WHERE v_reporting_to LIKE '%13%...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.. The SQL statement executed was: SELECT * FROM "setup_mst_agents" "t" WHERE v_reporting_to LIKE :ycp0' in /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Webserver/health_claim/HIC/yii1110/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Webserver/health_claim/HIC/yii1110/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Webserver/health_claim/HIC/apps/protected/extensions/EAutoCompleteAction.php(19): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Webserver/health_claim/HIC/yii1110/framework/web/actions/CAction.php(75): EAutoCompleteAction->run()
+#5 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(309): CAction->runWithParams(Array)
+#6 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(EAutoCompleteAction))
+#7 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Webserver/health_claim/HIC/yii1110/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(292): CFilterChain->run()
+#12 /Webserver/health_claim/HIC/yii1110/framework/web/CController.php(266): CController->runActionWithFilters(Object(EAutoCompleteAction), Array)
+#13 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(276): CController->run('combo_setup-mst...')
+#14 /Webserver/health_claim/HIC/yii1110/framework/web/CWebApplication.php(135): CWebApplication->runController('setup/agents/co...')
+#15 /Webserver/health_claim/HIC/yii1110/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Webserver/health_claim/HIC/apps/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/health_claim/HIC/apps/index.php/setup/agents/combo_setup-mst-agents?term=13
+HTTP_REFERER=http://localhost/health_claim/HIC/apps/index.php/setup/agents/update/id/13
+---

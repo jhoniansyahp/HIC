@@ -43,12 +43,20 @@ class Controller extends CController
 		return $newDate;
 	}
 	
-	public function convertDateNormal($date){
-	
+	public function convertDate2Readable($date){
+		
 		if(!(stripos($date,'-') !== FALSE)) return $date;
 		
-		list($d, $m, $y) = preg_split('/-/', $date);
-
+		$newDate = date("d M Y",strtotime($date));
+		
+		return $newDate;
+	}
+	
+	public function convertDateNormal($date){
+		if(!(stripos($date,'-') !== FALSE)) return $date;
+		
+		//$newDate = date("d M Y",strtotime($date));
+		list($y, $m, $d) = preg_split('/-/', $date);
 		$newDate = sprintf('%02d/%02d/%4d', $d, $m, $y);
 		
 		return $newDate;

@@ -38,14 +38,19 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_pla
 		'v_plan_code',
 		'v_plan_name',
 		'v_plan_desc',
-		'd_plan_start',
-		'd_plan_end',
+		array(
+			'name' => 'd_plan_start',
+			'value' => $this->convertDate2Readable($model->d_plan_start),
+		),
+		array(
+			'name' => 'd_plan_end',
+			'value' => $this->convertDate2Readable($model->d_plan_end),
+		),
 		'v_prod_line',
 		'v_prod_composition',
 		'v_indv_or_group',
 		'v_plan_type',
 		'v_curr_code',
-		'v_status',
 	),
 )); ?>
 

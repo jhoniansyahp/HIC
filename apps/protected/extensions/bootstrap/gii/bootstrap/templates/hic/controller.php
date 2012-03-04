@@ -1,4 +1,11 @@
 <?php
+/**
+ * This is the template for generating a controller class file for CRUD feature.
+ * The following variables are available in this template:
+ * - $this: the BootCrudCode object
+ */
+?>
+<?php echo "<?php\n"; ?>
 
 /***************************
 #	Developed: Abdul Ibad
@@ -7,7 +14,7 @@
 #	Date: @ March 2012
 ***************************/
 
-class PlansController extends Controller
+class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseControllerClass."\n"; ?>
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -39,7 +46,12 @@ class PlansController extends Controller
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update','delete','deleteall',
-				),
+				<?php foreach($this->tableSchema->columns as $column){
+					$relation = $this->findRelation($this->modelClass,$column);
+					$relatedModelClass = $relation[3];
+					if(empty($relation)) continue;?>
+					'combo_<?php echo $this->class2id($relatedModelClass);?>',
+					<?php } ?>),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -62,7 +74,28 @@ class PlansController extends Controller
 	public function actions()
 	{
 		return array(
-					);
+			<?php foreach($this->tableSchema->columns as $column){
+					
+					//if(!($column->isForeignKey)) continue;
+					
+					$relation = $this->findRelation($this->modelClass,$column);
+					
+					if(empty($relation)) continue;
+					
+					$relatedModelClass = $relation[3];
+					$relatedFKField = $relation[2];
+		
+				?>
+				
+			   'combo_<?php echo $this->class2id($relatedModelClass);?>'=>array(
+				  'class'=>'application.extensions.EAutoCompleteAction',
+				  'model'=> '<?php echo $this->modelClass;?>',
+				  'label'=> '<?php echo $column->name;?>',
+				  'value'=> '<?php echo $column->name;?>',
+				   'id' => '<?php echo $column->name;?>',
+				),
+			<?php }?>
+		);
 		
 	}
 
@@ -72,15 +105,8 @@ class PlansController extends Controller
 	 */
 	public function actionView($id)
 	{
-		
-		$model = $this->loadModel($id);
-
-		$detailmodel = new SetupPlanBenefits('search');
-		$detailmodel->attributes = array('v_plan_code',$model->v_plan_code);
-		
 		$this->render('view',array(
-			'model'=>$model,
-			'detailmodel'=>$detailmodel,
+			'model'=>$this->loadModel($id),
 		));
 	}
 
@@ -90,28 +116,42 @@ class PlansController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new SetupMstPlans;
+		$model=new <?php echo $this->modelClass; ?>;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['SetupMstPlans']))
+		if(isset($_POST['<?php echo $this->modelClass; ?>']))
 		{
-			$model->attributes=$_POST['SetupMstPlans'];
+			$model->attributes=$_POST['<?php echo $this->modelClass; ?>'];
 			
-									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_start = $this->convertDate($model->d_plan_start);
-											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_end = $this->convertDate($model->d_plan_end);
-										$model->v_created_by=Yii::app()->user->id;
-												$model->d_created_date=new CDbExpression('NOW()');
-									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
-											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
-								
+			<?php
+				foreach($this->tableSchema->columns as $column){
+					
+					if(stripos($column->name,'created_by')){
+			?>
+					$model-><?php echo $column->name;?>=Yii::app()->user->id;
+			<?php			
+					}else if(stripos($column->name,'created_date')){
+			?>
+									$model-><?php echo $column->name;?>=new CDbExpression('NOW()');
+			<?php
+					}
+				
+				
+					if((stripos($column->dbType,"date") !== FALSE) OR 
+					   (stripos($column->dbType,"timestamp") !== FALSE) 
+					  ){
+					?>
+						 // Convert dd/mm/yy to yy-mm-dd
+						$model-><?php echo $column->name;?> = $this->convertDate($model-><?php echo $column->name;?>);
+					<?php
+					}
+			}
+			?>
+			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->v_plan_code));
+				$this->redirect(array('view','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
 		}
 
 		$this->render('create',array(
@@ -131,25 +171,41 @@ class PlansController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['SetupMstPlans']))
+		if(isset($_POST['<?php echo $this->modelClass; ?>']))
 		{
-			$model->attributes=$_POST['SetupMstPlans'];
+			$model->attributes=$_POST['<?php echo $this->modelClass; ?>'];
 			
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_start = $this->convertDate($model->d_plan_start);
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_end = $this->convertDate($model->d_plan_end);
+					<?php
+				foreach($this->tableSchema->columns as $column){
+
 						
-						$model->v_updated_by=Yii::app()->user->id;
-						$model->d_updated_date=new CDbExpression('NOW()');
-							
+					if(stripos($column->name,'updated_by')){
+					?>
+							$model-><?php echo $column->name;?>=Yii::app()->user->id;
+					<?php			
+					}else if(stripos($column->name,'updated_date')){
+					?>
+							$model-><?php echo $column->name;?>=new CDbExpression('NOW()');
+					<?php
+					}
+					
+					if((stripos($column->dbType,"date") !== FALSE) OR 
+					   (stripos($column->dbType,"timestamp") !== FALSE) 
+					  ){
+					?>
+					    // Convert dd/mm/yy to yy-mm-dd
+						$model-><?php echo $column->name;?> = $this->convertDate($model-><?php echo $column->name;?>);
+					<?php
+					}
+					
+					
+					
+				}
+			?>		
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->v_plan_code));
+				$this->redirect(array('view','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
 		}
-	
-		$model->d_plan_start = $this->convertDateNormal($model->d_plan_start);
-		$model->d_plan_end = $this->convertDateNormal($model->d_plan_end);
-	
+
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -180,30 +236,31 @@ class PlansController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$model=new SetupMstPlans('search');
+		$model=new <?php echo $this->modelClass; ?>('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['SetupMstPlans']))
-			$model->attributes=$_GET['SetupMstPlans'];
+		if(isset($_GET['<?php echo $this->modelClass; ?>']))
+			$model->attributes=$_GET['<?php echo $this->modelClass; ?>'];
 			
 			
-								    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_plan_start) && isset($_GET['SetupMstPlans'])){
-							$model->d_plan_start = new CDbExpression("=".$this->convertDate($model->d_plan_start));
-						}
-										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_plan_end) && isset($_GET['SetupMstPlans'])){
-							$model->d_plan_end = new CDbExpression("=".$this->convertDate($model->d_plan_end));
-						}
-										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_created_date) && isset($_GET['SetupMstPlans'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
-						}
-										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_updated_date) && isset($_GET['SetupMstPlans'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
-						}
-						
+			<?php
+				foreach($this->tableSchema->columns as $column){
 								
+					if((stripos($column->dbType,"date") !== FALSE) OR 
+					   (stripos($column->dbType,"timestamp") !== FALSE) 
+					  ){
+					?>
+					    // Convert dd/mm/yy to yy-mm-dd
+						if(!empty($model-><?php echo $column->name;?>) && isset($_GET['<?php echo $this->modelClass; ?>'])){
+							$model-><?php echo $column->name;?> = new CDbExpression("=".$this->convertDate($model-><?php echo $column->name;?>));
+						}
+					<?php
+					}
+					
+					
+					
+				}
+			?>
+			
 		$this->render('index',array(
 			'model'=>$model,
 		));
@@ -214,11 +271,11 @@ class PlansController extends Controller
 	*/
 	public function actionDeleteAll()
 	{
-	        if (isset($_POST['setup-mst-plans-grid_c0']))
+	        if (isset($_POST['<?php echo $this->class2id($this->modelClass); ?>-grid_c0']))
 	        {
-	                $ids = $_POST['setup-mst-plans-grid_c0'];
+	                $ids = $_POST['<?php echo $this->class2id($this->modelClass); ?>-grid_c0'];
 
-	                $model=new SetupMstPlans;
+	                $model=new <?php echo $this->modelClass; ?>;
 
 	                foreach ($ids as $id)
 	                {
@@ -239,10 +296,10 @@ class PlansController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new SetupMstPlans('search');
+		$model=new <?php echo $this->modelClass; ?>('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['SetupMstPlans']))
-			$model->attributes=$_GET['SetupMstPlans'];
+		if(isset($_GET['<?php echo $this->modelClass; ?>']))
+			$model->attributes=$_GET['<?php echo $this->modelClass; ?>'];
 
 		$this->render('index',array(
 			'model'=>$model,
@@ -256,7 +313,7 @@ class PlansController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=SetupMstPlans::model()->findByPk($id);
+		$model=<?php echo $this->modelClass; ?>::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -268,7 +325,7 @@ class PlansController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='setup-mst-plans-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='<?php echo $this->class2id($this->modelClass); ?>-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
