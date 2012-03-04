@@ -43,7 +43,7 @@ abstract class BaseSetupPlanBenefits extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('v_plan_code, v_kelompok, n_baris, v_created_by, d_created_date', 'required'),
+			array('v_plan_code', 'required'),
 			array('v_plan_code, v_kelompok, n_baris, v_update', 'length', 'max'=>10),
 			array('v_template', 'length', 'max'=>20),
 			array('v_benefit, v_formula', 'length', 'max'=>50),

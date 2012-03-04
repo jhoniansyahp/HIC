@@ -66,9 +66,9 @@ class PlanBenefitsController extends Controller
 							
 			   'combo_setup-mst-plans'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
-				  'model'=> 'SetupPlanBenefits',
-				  'label'=> 'v_plan_code',
-				  'value'=> 'v_plan_code',
+				  'model'=> 'SetupMstPlans',
+				  'label'=> 'v_plan_name',
+				  'value'=> 'v_plan_name',
 				   'id' => 'v_plan_code',
 				),
 					);

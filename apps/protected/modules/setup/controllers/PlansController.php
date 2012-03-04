@@ -72,8 +72,15 @@ class PlansController extends Controller
 	 */
 	public function actionView($id)
 	{
+		
+		$model = $this->loadModel($id);
+
+		$detailmodel = new SetupPlanBenefits('search');
+		$detailmodel->attributes = array('v_plan_code',$model->v_plan_code);
+		
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
+			'detailmodel'=>$detailmodel,
 		));
 	}
 
@@ -195,6 +202,7 @@ class PlansController extends Controller
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstPlans'])){
 							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
 						}
+						
 								
 		$this->render('index',array(
 			'model'=>$model,

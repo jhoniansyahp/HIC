@@ -48,6 +48,9 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_pla
 		'v_status',
 	),
 )); ?>
+
+<?php $this->renderPartial('/planBenefits/index',array("model"=>$detailmodel));?>
+
 <?php
 echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
