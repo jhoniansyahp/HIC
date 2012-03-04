@@ -351,6 +351,18 @@ class GiixModelCode extends ModelCode {
 			return null;
 	}
 
+
+	function getModule(){
+		
+		$path = $this->baseModelPath;
+		$folders = explode(".",$path);
+		$module =  $folders[2];	
+		$module = CJSON::encode(array("name"=>$module));
+		$module = json_decode($module);
+		
+		return $module;
+	}
+
 	/**
 	 * Returns the message to be displayed when the newly generated code is saved successfully.
 	 * #MethodTracker
