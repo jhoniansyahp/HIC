@@ -67,9 +67,9 @@ class AgentsController extends Controller
 			   'combo_setup-mst-agents'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
 				  'model'=> 'SetupMstAgents',
-				  'label'=> 'v_reporting_to',
-				  'value'=> 'v_reporting_to',
-				   'id' => 'v_reporting_to',
+				  'label'=> 'v_agent_name',
+				  'value'=> 'v_agent_name',
+				   'id' => 'n_agent_no',
 				),
 					);
 		

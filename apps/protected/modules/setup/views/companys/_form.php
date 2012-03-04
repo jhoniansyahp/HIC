@@ -34,13 +34,13 @@
 			  'model'=>$model,
 			  'attribute'=>'n_existing_agent', //the FK field (from CJuiInputWidget)
 			  // controller method to return the autoComplete data (from CJuiAutoComplete)
-			  'sourceUrl'=>array('combo_setup-mst-agents'),
+			  'sourceUrl'=>array('agents/combo_setup-mst-agents'),
 			  // defaults to false.  set 'true' to display the FK field with 'readonly' attribute.
 			  'showFKField'=>false,
 			   // display size of the FK field.  only matters if not hidden.  defaults to 10
 			  'FKFieldSize'=>15,
 			  'relName'=>'nExistingAgent', // the relation name defined above
-			  'displayAttr'=>'n_existing_agent',  // attribute or pseudo-attribute to display
+			  'displayAttr'=>'v_agent_name',  // attribute or pseudo-attribute to display
 			  // length of the AutoComplete/display field, defaults to 50
 			  //'autoCompleteLength'=>15,
 			  // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may
@@ -48,7 +48,7 @@
 			  'options'=>array(
 				  // number of characters that must be typed before
 				  // autoCompleter returns a value, defaults to 2
-				  'minLength'=>2,
+				  'minLength'=>1,
 			  ),
 			  'htmlOptions' => array(
 					'class' => 'span5',

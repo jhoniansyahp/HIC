@@ -139,17 +139,17 @@ class PlansController extends Controller
 						$model->d_plan_start = $this->convertDate($model->d_plan_start);
 										    // Convert dd/mm/yy to yy-mm-dd
 						$model->d_plan_end = $this->convertDate($model->d_plan_end);
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
-												$model->v_updated_by=Yii::app()->user->id;
-												$model->d_updated_date=new CDbExpression('NOW()');
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						
+						$model->v_updated_by=Yii::app()->user->id;
+						$model->d_updated_date=new CDbExpression('NOW()');
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_plan_code));
 		}
-
+	
+		$model->d_plan_start = $this->convertDateNormal($model->d_plan_start);
+		$model->d_plan_end = $this->convertDateNormal($model->d_plan_end);
+	
 		$this->render('update',array(
 			'model'=>$model,
 		));
