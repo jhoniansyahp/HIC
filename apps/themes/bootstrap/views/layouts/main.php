@@ -31,7 +31,7 @@
             'class'=>'bootstrap.widgets.BootMenu',			
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index') , 'active'=>true),
-				array('label'=>'Setup', 'url'=>array('/setup'),'items'=> array(
+				array('label'=>'Setup', 'url'=>'#','items'=> array(
 					array('label'=>'Setup Aplikasi', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Master Agent','url'=>array('/setup/agents')),
 					array('label'=>'Master Company','url'=>array('/setup/companys')),
@@ -80,8 +80,8 @@
                 	'---',
                 	array('label'=>'Separated link', 'url'=>'#'),
             	)),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest),
                 //array('label'=>'Link', 'url'=>'#'),
             ),
         ),

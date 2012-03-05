@@ -34,7 +34,7 @@
 			  'model'=>$model,
 			  'attribute'=>'n_existing_agent', //the FK field (from CJuiInputWidget)
 			  // controller method to return the autoComplete data (from CJuiAutoComplete)
-			  'sourceUrl'=>array('combo_setup-mst-agents'),
+			  'sourceUrl'=>array('agents/combo_setup-mst-agents'),
 			  // defaults to false.  set 'true' to display the FK field with 'readonly' attribute.
 			  'showFKField'=>false,
 			   // display size of the FK field.  only matters if not hidden.  defaults to 10
@@ -48,7 +48,7 @@
 			  'options'=>array(
 				  // number of characters that must be typed before
 				  // autoCompleter returns a value, defaults to 2
-				  'minLength'=>2,
+				  'minLength'=>1,
 			  ),
 			  'htmlOptions' => array(
 					'class' => 'span5',
@@ -69,10 +69,6 @@
 <?php echo $form->textFieldRow($model,'v_fax',array('class'=>'span5','maxlength'=>30)); ?>
 <?php echo $form->textFieldRow($model,'v_email',array('class'=>'span5','maxlength'=>80)); ?>
 <?php echo $form->textFieldRow($model,'v_contact_person',array('class'=>'span5','maxlength'=>50)); ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
 	<div class="actions">
 		<?php
 		echo CHtml::submitButton($model->isNewRecord ? Yii::t('setupModule.main','Buat') : Yii::t('setupModule.main','Simpan'),array('class'=>'btn primary')); 
