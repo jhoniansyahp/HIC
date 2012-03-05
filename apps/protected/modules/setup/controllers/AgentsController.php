@@ -101,12 +101,12 @@ class AgentsController extends Controller
 		{
 			$model->attributes=$_POST['SetupMstAgents'];
 			
-								$model->v_created_by=Yii::app()->user->id;
-												$model->d_created_date=new CDbExpression('NOW()');
-									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
-											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+			$model->v_created_by=Yii::app()->user->id;
+			$model->d_created_date=new CDbExpression('NOW()');
+			// Convert dd/mm/yy to yy-mm-dd
+			$model->d_created_date = $this->convertDate($model->d_created_date);
+			// Convert dd/mm/yy to yy-mm-dd
+			$model->d_updated_date = $this->convertDate($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->n_agent_no));
