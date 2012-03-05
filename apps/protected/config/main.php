@@ -110,6 +110,7 @@ return array(
 			'itemChildTable'=>'authitemchild',
 			'assignmentTable'=>'authassignment',
 			'rightsTable'=>'rights',
+			'defaultRoles'=>array('Guest'),
         ),
 		
 		'errorHandler'=>array(
