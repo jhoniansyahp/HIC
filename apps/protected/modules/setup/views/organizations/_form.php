@@ -59,8 +59,17 @@
 	   ));
 		echo "</div>
 </div>"; ?>
+<?php
+
+$lookups = SetupSecUsers::model()->findByPK(Yii::app()->user->v_user_code)->with('setupMstLookups')->findByAttributes(array("v_lookup_name"=>"v_org_level"));
+
+print_r($lookups->attributes);
+	
+?>
+
 <?php echo $form->textFieldRow($model,'v_flag_coy_id',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo $form->textFieldRow($model,'v_org_level',array('class'=>'span5','maxlength'=>30)); ?>
+<?php echo $form->dropDownListRow($model, 'v_status_agent', array('Y'=>Yii::t('setupModule.main','Perusahaan/Bisnis'),'N' => Yii::t('setupModule.main','Unit'))); ?>
+<?php echo $form->dropDownListRow($model, 'v_org_level', array()); ?>
 <?php 
 		
 			echo '<div class="control-group">';
@@ -76,7 +85,7 @@
 			   // display size of the FK field.  only matters if not hidden.  defaults to 10
 			  'FKFieldSize'=>15,
 			  'relName'=>'nOrgParent', // the relation name defined above
-			  'displayAttr'=>'n_org_parent',  // attribute or pseudo-attribute to display
+			  'displayAttr'=>'v_org_name',  // attribute or pseudo-attribute to display
 			  // length of the AutoComplete/display field, defaults to 50
 			  //'autoCompleteLength'=>15,
 			  // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may
@@ -105,10 +114,6 @@
 <?php echo $form->textFieldRow($model,'v_contact_person',array('class'=>'span5','maxlength'=>60)); ?>
 <?php echo $form->textFieldRow($model,'v_phone_person',array('class'=>'span5','maxlength'=>15)); ?>
 <?php echo $form->textFieldRow($model,'v_email_person',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
 	<div class="actions">
 		<?php
 		echo CHtml::submitButton($model->isNewRecord ? Yii::t('setupModule.main','Buat') : Yii::t('setupModule.main','Simpan'),array('class'=>'btn primary')); 

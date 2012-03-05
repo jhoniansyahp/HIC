@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Organizations'=>array('index'),
-	$model->n_org_id,
+	Yii::t('setupModule.main','Setup Organization(s)')=>array('index'),
+	Yii::t('setupModule.main','View ',array("\$n_org_id"=>$model->n_org_id,"\$v_org_name"=>$model->v_org_name)),
 );
 /*
 $this->menu=array(
@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_org
 ?>
 </div>
 
-<h1>View SetupMstOrganizations #<?php echo $model->n_org_id; ?></h1>
+<h1><?php echo Yii::t('setupModule.main','View Organization $v_org_name',array('$v_org_name'=>$model->v_org_name,'$n_org_id'=>$model->n_org_id)); ?></h1>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -38,11 +38,21 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_org
 		'n_org_id',
 		'v_org_code',
 		'v_org_name',
-		'd_start_date',
-		'd_end_date',
+		array(
+			"name"=>'d_start_date',
+			"value"=>$this->getDate()->toReadable($model->d_start_date),
+		),
+		array(
+			"name"=>'d_end_date',
+			"value"=>$this->getDate()->toReadable($model->d_end_date),
+		),
 		'v_flag_coy_id',
 		'v_org_level',
-		'n_org_parent',
+		array(
+			"name" => "n_org_parent",
+			"value" => !empty($model->n_org_parent) ? SetupMstOrganizations::model()->findByPK($model->n_org_parent)->v_org_name : '',
+			"visible" => !empty($model->n_org_parent) ? true : false,
+		),
 		'v_no_account',
 		'v_npwp',
 		'v_currency',

@@ -11,7 +11,7 @@
 	'method'=>'get',
 )); ?>
 <div class="alert alert-warning">
-<?php echo $form->textFieldRow($model,'n_org_id',array('class'=>'span5','maxlength'=>15)); ?>
+<?php //echo $form->textFieldRow($model,'n_org_id',array('class'=>'span5','maxlength'=>15)); ?>
 <?php echo $form->textFieldRow($model,'v_org_code',array('class'=>'span5','maxlength'=>30)); ?>
 <?php echo $form->textFieldRow($model,'v_org_name',array('class'=>'span5','maxlength'=>150)); ?>
 <?php 
@@ -58,21 +58,17 @@
 <?php echo $form->textFieldRow($model,'v_org_level',array('class'=>'span5','maxlength'=>30)); ?>
 <?php echo $form->textFieldRow($model,'n_org_parent',array('class'=>'span5','maxlength'=>15)); ?>
 <?php echo $form->textFieldRow($model,'v_no_account',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo $form->textFieldRow($model,'v_npwp',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_currency',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_address',array('class'=>'span5','maxlength'=>150)); ?>
+<?php //echo $form->textFieldRow($model,'v_npwp',array('class'=>'span5','maxlength'=>30)); ?>
+<?php //echo $form->textFieldRow($model,'v_currency',array('class'=>'span5','maxlength'=>15)); ?>
+<?php //echo $form->textFieldRow($model,'v_address',array('class'=>'span5','maxlength'=>150)); ?>
 <?php echo $form->textFieldRow($model,'v_city',array('class'=>'span5','maxlength'=>30)); ?>
 <?php echo $form->textFieldRow($model,'v_province',array('class'=>'span5','maxlength'=>30)); ?>
 <?php echo $form->textFieldRow($model,'v_country',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_post_code',array('class'=>'span5','maxlength'=>5)); ?>
-<?php echo $form->textFieldRow($model,'v_phone',array('class'=>'span5','maxlength'=>15)); ?>
+<?php //echo $form->textFieldRow($model,'v_post_code',array('class'=>'span5','maxlength'=>5)); ?>
+<?php //echo $form->textFieldRow($model,'v_phone',array('class'=>'span5','maxlength'=>15)); ?>
 <?php echo $form->textFieldRow($model,'v_contact_person',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo $form->textFieldRow($model,'v_phone_person',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_email_person',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
+<?php //echo $form->textFieldRow($model,'v_phone_person',array('class'=>'span5','maxlength'=>15)); ?>
+<?php //echo $form->textFieldRow($model,'v_email_person',array('class'=>'span5','maxlength'=>60)); ?>
 	<div class="actions">
 		<?php
 		 echo CHtml::submitButton(Yii::t('setupModule.main','Cari'),array('class'=>'btn primary'));

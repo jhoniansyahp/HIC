@@ -67,9 +67,9 @@ class OrganizationsController extends Controller
 			   'combo_setup-mst-organizations'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
 				  'model'=> 'SetupMstOrganizations',
-				  'label'=> 'n_org_parent',
-				  'value'=> 'n_org_parent',
-				   'id' => 'n_org_parent',
+				  'label'=> 'v_org_name',
+				  'value'=> 'v_org_name',
+				   'id' => 'n_org_id',
 				),
 					);
 		
@@ -102,15 +102,15 @@ class OrganizationsController extends Controller
 			$model->attributes=$_POST['SetupMstOrganizations'];
 			
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_start_date = $this->convertDate($model->d_start_date);
+						$model->d_start_date = $this->getDate()->toSave($model->d_start_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_end_date = $this->convertDate($model->d_end_date);
+						$model->d_end_date = $this->getDate()->toSave($model->d_end_date);
 										$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->n_org_id));
@@ -138,15 +138,15 @@ class OrganizationsController extends Controller
 			$model->attributes=$_POST['SetupMstOrganizations'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_start_date = $this->convertDate($model->d_start_date);
+						$model->d_start_date = $this->getDate()->toSave($model->d_start_date);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_end_date = $this->convertDate($model->d_end_date);
+						$model->d_end_date = $this->getDate()->toSave($model->d_end_date);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 												$model->v_updated_by=Yii::app()->user->id;
 												$model->d_updated_date=new CDbExpression('NOW()');
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->n_org_id));
@@ -190,19 +190,19 @@ class OrganizationsController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_start_date) && isset($_GET['SetupMstOrganizations'])){
-							$model->d_start_date = new CDbExpression("=".$this->convertDate($model->d_start_date));
+							$model->d_start_date = new CDbExpression("=".$this->getDate()->toSave($model->d_start_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_end_date) && isset($_GET['SetupMstOrganizations'])){
-							$model->d_end_date = new CDbExpression("=".$this->convertDate($model->d_end_date));
+							$model->d_end_date = new CDbExpression("=".$this->getDate()->toSave($model->d_end_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupMstOrganizations'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstOrganizations'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 								
 		$this->render('index',array(

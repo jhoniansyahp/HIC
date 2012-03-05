@@ -11,7 +11,8 @@
 	'method'=>'get',
 )); ?>
 <div class="alert alert-warning">
-	<?php echo $form->textFieldRow($model,'n_org_id',array('class'=>'span5','maxlength'=>15)); ?>
+	<?php //echo $form->textFieldRow($model,'n_org_id',array('class'=>'span5','maxlength'=>15)); ?>
+	<?php echo $form->textFieldRow($model,'v_org_code',array('class'=>'span5','maxlength'=>30)); ?>
 
 	<div class="actions">
 		<?php

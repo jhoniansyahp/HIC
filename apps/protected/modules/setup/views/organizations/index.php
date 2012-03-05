@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Organizations'=>array('index'),
-	'Manage',
+	Yii::t('setupModule.main','Setup Organization(s)')=>array('index'),
+	Yii::t('setupModule.main','Index'),
 );
 /*
 $this->menu=array(
@@ -59,7 +59,7 @@ $('.deleteall-button').click(function(){
         }
         else if (window.confirm('".Yii::t('setupModule.main','Apakah anda yakin ingin menghapus data ini?')."'))
         {
-                document.getElementById('setup-mst-organizations-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-mst-organizations-form').action='".Yii::app()->createUrl('/setup/organizations/deleteall')."';
                 document.getElementById('setup-mst-organizations-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1>Setup Mst Organizations</h1>
+<h1><?php echo Yii::t('setupModule.main','Setup Organization(s)');?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -121,17 +121,17 @@ $form=$this->beginWidget('CActiveForm', array(
 		'value'=>$model->n_org_id,
 		'class'=>'CCheckBoxColumn',
 	),
-			'n_org_id',
+		//'n_org_id',
 		'v_org_code',
 		'v_org_name',
 			array(
 		'name' => 'd_start_date',
-		'value'=>'date("d M Y",strtotime($data->d_start_date))',
+		'value'=>'Controller::getDate()->toReadable($data->d_start_date)',
 	)
 	,
 			array(
 		'name' => 'd_end_date',
-		'value'=>'date("d M Y",strtotime($data->d_end_date))',
+		'value'=>'Controller::getDate()->toReadable($data->d_end_date)',
 	)
 	,
 		'v_flag_coy_id',
