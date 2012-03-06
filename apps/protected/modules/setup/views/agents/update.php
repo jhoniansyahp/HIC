@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('setupModule.main','Setup Agents')=>array('index'),
-	Yii::t('setupModule.main','Agent no_agent',array("no_agent"=>$model->n_agent_no))=>array('view','id'=>$model->n_agent_no),
+	Yii::t('setupModule.main','Setup Agent(s)')=>array('index'),
+	Yii::t('setupModule.main','Agent',array("no_agent"=>$model->n_agent_no))=>array('view','id'=>$model->n_agent_no),
 	Yii::t('setupModule.main','Update'),
 );
 /*

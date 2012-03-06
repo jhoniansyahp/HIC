@@ -19,7 +19,7 @@
 <?php echo $form->textFieldRow($model,'v_param_code',array('class'=>'span5','maxlength'=>60)); ?>
 <?php echo $form->textFieldRow($model,'v_param_name',array('class'=>'span5','maxlength'=>150)); ?>
 <?php echo $form->textFieldRow($model,'v_param_desc',array('class'=>'span5','maxlength'=>150)); ?>
-<?php echo $form->textFieldRow($model,'v_flag',array('class'=>'span5','maxlength'=>1)); ?>
+<?php echo $form->dropDownListRow($model, 'v_flag', array('A'=>Yii::t('setupModule.main','Aktif'),'I' => Yii::t('setupModule.main','Non Aktif'))); ?>
 <?php echo $form->textFieldRow($model,'n_value_number',array('class'=>'span5','maxlength'=>30)); ?>
 <?php 
 		  echo '<div class="control-group">';

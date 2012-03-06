@@ -54,9 +54,40 @@
 	   ));
 		echo "</div>
 </div>"; ?>
-<?php echo $form->textFieldRow($model,'v_flag_coy_id',array('class'=>'span5','maxlength'=>1)); ?>
+<?php echo $form->dropDownListRow($model, 'v_flag_coy_id', array(''=>Yii::t('setupModule.main','Tidak ada'),'Y'=>Yii::t('setupModule.main','Perusahaan/Bisnis'),'N' => Yii::t('setupModule.main','Unit'))); ?>
 <?php echo $form->textFieldRow($model,'v_org_level',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'n_org_parent',array('class'=>'span5','maxlength'=>15)); ?>
+<?php 
+		
+			echo '<div class="control-group">';
+			echo $form->labelEx($model, 'n_org_parent');
+			 echo '<div class="controls">';
+		 $this->widget('EJuiAutoCompleteFkField', array(
+			  'model'=>$model,
+			  'attribute'=>'n_org_parent', //the FK field (from CJuiInputWidget)
+			  // controller method to return the autoComplete data (from CJuiAutoComplete)
+			  'sourceUrl'=>array('combo_setup-mst-organizations'),
+			  // defaults to false.  set 'true' to display the FK field with 'readonly' attribute.
+			  'showFKField'=>false,
+			   // display size of the FK field.  only matters if not hidden.  defaults to 10
+			  'FKFieldSize'=>15,
+			  'relName'=>'nOrgParent', // the relation name defined above
+			  'displayAttr'=>'v_org_name',  // attribute or pseudo-attribute to display
+			  // length of the AutoComplete/display field, defaults to 50
+			  //'autoCompleteLength'=>15,
+			  // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may
+			  // also be defined.  read the code and docs for all options
+			  'options'=>array(
+				  // number of characters that must be typed before
+				  // autoCompleter returns a value, defaults to 2
+				  'minLength'=>2,
+			  ),
+			  'htmlOptions' => array(
+					'class' => 'span5',
+			  ),
+		 ));
+		 echo $form->error($model, 'n_org_parent');
+		 echo "</div>
+</div>";?>
 <?php echo $form->textFieldRow($model,'v_no_account',array('class'=>'span5','maxlength'=>60)); ?>
 <?php //echo $form->textFieldRow($model,'v_npwp',array('class'=>'span5','maxlength'=>30)); ?>
 <?php //echo $form->textFieldRow($model,'v_currency',array('class'=>'span5','maxlength'=>15)); ?>

@@ -8,9 +8,9 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Parameters'=>array('index'),
-	$model->v_param_code=>array('view','id'=>$model->v_param_code),
-	'Update',
+	Yii::t('setupModule.main','Setup Parameters')=>array('index'),
+	Yii::t('setupModule.main','Lihat')=>array('view','id'=>$model->v_param_code),
+	Yii::t('setupModule.main','Update'),
 );
 /*
 $this->menu=array(
@@ -22,7 +22,7 @@ $this->menu=array(
 ?>
 
 <h1><?php
-Yii::t('setupModule.main','Update Data No. {n}',$model->v_param_code);
+echo Yii::t('setupModule.main','Update Data $v_param_name',array("\$v_param_name"=>$model->v_param_name));
 ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

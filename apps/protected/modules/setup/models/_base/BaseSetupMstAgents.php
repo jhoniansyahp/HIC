@@ -48,7 +48,7 @@ abstract class BaseSetupMstAgents extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('n_agent_no, v_agent_code, v_agent_name, v_status_agent', 'required'),
+			array('v_agent_code, v_agent_name, v_status_agent', 'required'),
 			array('n_agent_no, v_reporting_to, n_coy_id', 'numerical', 'integerOnly'=>true),
 			array('v_agent_code', 'length', 'max'=>20),
 			array('v_agent_name', 'length', 'max'=>150),

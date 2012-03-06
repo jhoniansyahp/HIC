@@ -129,16 +129,22 @@ $this->widget('ext.bootstrap.widgets.BootGridView',array(
 		array(
 			"name" => "v_agent_type",
 			"value" => "Controller::appHelper()->labelAgentType(\$data->v_agent_type)",
+			"htmlOptions" => array("style"=>"text-align: center"),
 		),
 		array(
 			"name" => "v_status_agent",
 			"value" => "Controller::appHelper()->statusActivate(\$data->v_status_agent)",
+			"htmlOptions" => array("style"=>"text-align: center"),
 		),
-		'v_channel_no',
+		array(
+			'name' => 'v_channel_no',
+			"htmlOptions" => array("style"=>"text-align: center"),
+		),
 		'v_jabatan',
 		array(
 			"name" => "v_reporting_to",
-			"value" => "SetupMstAgents::model()->findByPK(\$data->v_reporting_to)->v_agent_name"
+			"value" => "!empty(\$data->v_reporting_to) ? SetupMstAgents::model()->findByPK(\$data->v_reporting_to)->v_agent_name : '-'",
+			"htmlOptions" => array("style"=>"text-align: center"),
 		),
 		'n_coy_id',
 		/*

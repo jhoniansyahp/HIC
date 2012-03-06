@@ -152,6 +152,11 @@ class OrganizationsController extends Controller
 				$this->redirect(array('view','id'=>$model->n_org_id));
 		}
 
+							    // Convert dd/mm/yy to yy-mm-dd
+			$model->d_start_date = $this->getDate()->toDisplay($model->d_start_date);
+							    // Convert dd/mm/yy to yy-mm-dd
+			$model->d_end_date = $this->getDate()->toDisplay($model->d_end_date);
+			
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -203,6 +208,10 @@ class OrganizationsController extends Controller
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstOrganizations'])){
 							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
+						}
+						
+						if(empty($model->n_org_parent) && isset($_GET['SetupMstOrganizations'])){
+							unset($model->n_org_parent);
 						}
 								
 		$this->render('index',array(

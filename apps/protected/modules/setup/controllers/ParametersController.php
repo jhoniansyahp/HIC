@@ -93,13 +93,13 @@ class ParametersController extends Controller
 			$model->attributes=$_POST['SetupMstParameters'];
 			
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_value_date = $this->convertDate($model->d_value_date);
+						$model->d_value_date = $this->getDate()->toSave($model->d_value_date);
 										$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_param_code));
@@ -127,18 +127,20 @@ class ParametersController extends Controller
 			$model->attributes=$_POST['SetupMstParameters'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_value_date = $this->convertDate($model->d_value_date);
+						$model->d_value_date = $this->getDate()->toSave($model->d_value_date);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 												$model->v_updated_by=Yii::app()->user->id;
 												$model->d_updated_date=new CDbExpression('NOW()');
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_param_code));
 		}
 
+		$model->d_value_date = $this->getDate()->toDisplay($model->d_value_date);
+		
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -177,15 +179,15 @@ class ParametersController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_value_date) && isset($_GET['SetupMstParameters'])){
-							$model->d_value_date = new CDbExpression("=".$this->convertDate($model->d_value_date));
+							$model->d_value_date = new CDbExpression("=".$this->getDate()->toSave($model->d_value_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupMstParameters'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstParameters'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 								
 		$this->render('index',array(

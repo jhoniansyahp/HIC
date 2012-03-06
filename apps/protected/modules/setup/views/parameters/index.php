@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Parameters'=>array('index'),
-	'Manage',
+	Yii::t('setupModule.main','Setup Parameters')=>array('index'),
+	Yii::t('setupModule.main','Index'),
 );
 /*
 $this->menu=array(
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1>Setup Mst Parameters</h1>
+<h1><?php echo Yii::t('setupModule.main',"Setup Parameters");?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -124,9 +124,16 @@ $form=$this->beginWidget('CActiveForm', array(
 			'v_param_code',
 		'v_param_name',
 		'v_param_desc',
-		'v_flag',
+		array(
+			"name"=>"v_flag",
+			"value"=> "Controller::appHelper()->statusActivate(\$data->v_flag)",
+			"htmlOptions" => array("style"=>"text-align: center"),
+		),
 		'n_value_number',
-		'd_value_date',
+		array(
+			"name"=>"d_value_date",
+			"value"=>"Controller::getDate()->toReadable(\$data->d_value_date)",
+		),
 		'v_value_char',
 		/*
 		'v_created_by',

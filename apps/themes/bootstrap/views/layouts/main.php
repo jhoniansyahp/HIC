@@ -44,10 +44,11 @@
 					array('label'=>'Lookup','url'=>array('/setup/lookups')),
 					'---',
 					array('label'=>'Setup Security User', 'itemOptions'=>array('class'=>'nav-header')),
-					array('label'=>'Form','url'=>array('/setup/form')),
-					array('label'=>'Role','url'=>array('/setup/role')),
+					array('label'=>'Tasks','url'=>array('/rights/authitem/tasks')),
+					array('label'=>'Roles','url'=>array('/rights/authitem/roles')),
+					array('label'=>'Operations','url'=>array('/rights/authitem/operations')),
 					array('label'=>'Form - Role','url'=>array('/setup/formrole')),
-					array('label'=>'Admin User','url'=>array('/setup/users')),
+					array('label'=>'Admin User','url'=>array('/user/admin')),
 					//array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
 				)),
 				array('label'=>'Polis', 'url'=>'#','items' => array(
@@ -72,13 +73,10 @@
             'class'=>'bootstrap.widgets.BootMenu',
             'htmlOptions'=>array('class'=>'pull-right'),
             'items'=>array(
-	        		array('label'=>'Profile', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
-					array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
-                	array('label'=>'Action', 'url'=>'#'),
-                	array('label'=>'Another action', 'url'=>'#'),
-                	array('label'=>'Something else here', 'url'=>'#'),
-                	'---',
-                	array('label'=>'Separated link', 'url'=>'#'),
+	        		array('label'=>Yii::t("menu",'Profile'), 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
+					array('label'=>Yii::t("menu",'Your Profile'),'url'=>array('/user/profile')),
+					array('label'=>Yii::t("menu",'Ubah Informasi'),'url'=>array('/user/profile/edit')),
+                	array('label'=>Yii::t("menu",'Ubah Password'), 'url'=>array('/user/profile/changepassword')),
             	)),
 				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest),

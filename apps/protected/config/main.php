@@ -34,7 +34,7 @@ return array(
 		'user',
 		'rights'=>array(
 			'debug'=>true,
-			'install'=>true,
+			'install'=>false,
 			'enableBizRuleData'=>true,
 		),
 		'gii'=>array(
@@ -91,7 +91,9 @@ return array(
 		'rights' => array(
 				'superuserName' => 'admin',
 				'authenticatedName'=>'Authenticated',
-				'install' => true,
+				'install' => false,
+				'layout' => '//layouts/main',
+				//'appLayout'=>'application.themes.bootstrap.views.layouts',
 		 ),
 		'urlManager'=>array(
 			'urlFormat'=>'path',

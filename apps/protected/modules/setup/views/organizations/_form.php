@@ -60,9 +60,8 @@
 		echo "</div>
 </div>"; ?>
 
-<?php echo $form->textFieldRow($model,'v_flag_coy_id',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo $form->dropDownListRow($model, 'v_status_agent', array('Y'=>Yii::t('setupModule.main','Perusahaan/Bisnis'),'N' => Yii::t('setupModule.main','Unit'))); ?>
-<?php echo $form->dropDownListRow($model, 'v_org_level', array()); ?>
+<?php echo $form->dropDownListRow($model, 'v_flag_coy_id', array('Y'=>Yii::t('setupModule.main','Perusahaan/Bisnis'),'N' => Yii::t('setupModule.main','Unit'))); ?>
+<?php echo $form->dropDownListRow($model, 'v_org_level', array('PERUSH'=>'Perusahaan','CAB'=>'Cabang','UNIT'=>'Unit')); ?>
 <?php 
 		
 			echo '<div class="control-group">';

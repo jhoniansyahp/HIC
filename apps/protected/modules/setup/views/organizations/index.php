@@ -40,11 +40,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#setup-mst-organizations-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"setup-mst-organizations-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);	
 		});
 	}else{
 		$('input[name=\"setup-mst-organizations-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);	
 		});
 	}
 });
@@ -105,7 +105,11 @@ $form=$this->beginWidget('CActiveForm', array(
 ));
 ?>
 
-<?php $this->widget('ext.bootstrap.widgets.BootGridView',array(
+<?php 
+
+
+
+$this->widget('ext.bootstrap.widgets.BootGridView',array(
 	'id'=>'setup-mst-organizations-grid',
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
@@ -122,19 +126,35 @@ $form=$this->beginWidget('CActiveForm', array(
 		'class'=>'CCheckBoxColumn',
 	),
 		//'n_org_id',
-		'v_org_code',
+		array(
+			'name'=>'v_org_code',
+			"htmlOptions" => array("style"=>"text-align:center"),
+		),
 		'v_org_name',
 			array(
 		'name' => 'd_start_date',
 		'value'=>'Controller::getDate()->toReadable($data->d_start_date)',
+		"htmlOptions" => array("style"=>"text-align:center"),
 	)
 	,
-			array(
+	array(
 		'name' => 'd_end_date',
 		'value'=>'Controller::getDate()->toReadable($data->d_end_date)',
+		"htmlOptions" => array("style"=>"text-align:center"),
 	)
 	,
-		'v_flag_coy_id',
+	array(
+		"name" => "v_flag_coy_id",
+		"value" => "Controller::appHelper()->labelOrganizationFlagCoy(\$data->v_flag_coy_id)",
+		"htmlOptions" => array("style"=>"text-align:center"),
+	),
+	array(
+		"name" => 	"n_org_parent",
+		"value" => " !empty(\$data->n_org_parent) ? SetupMstOrganizations::model()->findByPK(\$data->n_org_parent)->v_org_name : \"-\"",
+		"htmlOptions" => array("style"=>"text-align:center"),
+	),
+	
+		//'v_flag_coy_id',
 		'v_org_level',
 		/*
 		'n_org_parent',

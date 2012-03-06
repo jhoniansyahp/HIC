@@ -11,7 +11,7 @@
 	'method'=>'get',
 )); ?>
 <div class="alert alert-warning">
-	<?php echo $form->textFieldRow($model,'v_param_code',array('class'=>'span5','maxlength'=>60)); ?>
+	<?php echo $form->textFieldRow($model,'v_param_name',array('class'=>'span5','maxlength'=>150)); ?>
 
 	<div class="actions">
 		<?php

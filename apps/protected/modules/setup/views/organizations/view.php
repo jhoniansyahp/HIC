@@ -46,7 +46,10 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_org
 			"name"=>'d_end_date',
 			"value"=>$this->getDate()->toReadable($model->d_end_date),
 		),
-		'v_flag_coy_id',
+		array(
+			"name"=>"v_flag_coy_id",
+			"value"=> $this->appHelper()->labelOrganizationFlagCoy($model->v_flag_coy_id),
+		),
 		'v_org_level',
 		array(
 			"name" => "n_org_parent",

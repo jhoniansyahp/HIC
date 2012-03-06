@@ -104,13 +104,20 @@ class AgentsController extends Controller
 			$model->v_created_by=Yii::app()->user->id;
 			$model->d_created_date=new CDbExpression('NOW()');
 			// Convert dd/mm/yy to yy-mm-dd
-			$model->d_created_date = $this->convertDate($model->d_created_date);
+			$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 			// Convert dd/mm/yy to yy-mm-dd
-			$model->d_updated_date = $this->convertDate($model->d_updated_date);
-								
+			$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
+			
+			$lastNumber = substr($model->n_agent_no,-6,6);
+			$newNumber = $lastNumber+1;
+			
+			$model->n_agent_no = date('y',time()).date("m",time()).$model->n_coy_id.$newNumber;
+										
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->n_agent_no));
 		}
+		
+
 
 		$this->render('create',array(
 			'model'=>$model,
@@ -134,11 +141,11 @@ class AgentsController extends Controller
 			$model->attributes=$_POST['SetupMstAgents'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 												$model->v_updated_by=Yii::app()->user->id;
 												$model->d_updated_date=new CDbExpression('NOW()');
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->n_agent_no));
@@ -182,11 +189,15 @@ class AgentsController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupMstAgents'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstAgents'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
+						}
+						
+						if(empty($model->v_reporting_to) && isset($_GET['SetupMstAgents'])){
+							unset($model->v_reporting_to);
 						}
 								
 		$this->render('index',array(

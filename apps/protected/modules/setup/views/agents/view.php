@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_age
 ?>
 </div>
 
-<h1><?php echo Yii::t('setupModule.main','Lihat Agent $no_agent',array('$no_agent'=>$model->n_agent_no));?></h1>
+<h1><?php echo Yii::t('setupModule.main','Lihat Agent $name_agent',array('$no_agent'=>$model->n_agent_no,'$name_agent'=>$model->v_agent_name));?></h1>
 
 
 <?php 
@@ -58,7 +58,7 @@ $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 		'v_jabatan',
 		array(
 			"name" => "v_reporting_to",
-			"value" => SetupMstAgents::model()->findByPK($model->v_reporting_to)->v_agent_name,
+			"value" => !empty($model->v_reporting_to) ? SetupMstAgents::model()->findByPK($model->v_reporting_to)->v_agent_name : '-',
 		),
 		array(
 			"name" => "n_coy_id",

@@ -38,7 +38,24 @@ class HICHelper
 			break;
 		}
 		
-					return $label;
+		return $label;
 		
+	}
+	
+	public function labelOrganizationFlagCoy($flag){
+		
+		switch(strtoupper($flag)){
+			case "Y":
+				$label = Yii::t("setupModule.main","Perusahaan/Bisnis");
+			break;
+			case "N":
+				$label = Yii::t("setupModule.main","Unit");
+			break;
+			default:
+				$label = Yii::t("setupModule.main","Tidak diketahui");
+			break;
+		}
+		
+			return $label;
 	}
 }
