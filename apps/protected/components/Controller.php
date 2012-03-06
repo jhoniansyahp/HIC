@@ -67,5 +67,12 @@ class Controller extends RController
 		
 		return $newDate;
 	}
+	
+	public function render($view, $data=null, $return=false)
+	{
+		$theme = $_GET['theme'];
+		Yii::app()->setTheme($theme);
+		parent::render($view,$data,$return);
+	}
 
 }

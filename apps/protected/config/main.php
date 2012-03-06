@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'HIC',
-	'theme'=>'bootstrap',
+	'theme'=>'cyborg',
 	// preloading 'log' component
 	'preload'=>array('log', 'bootstrap'),
 
