@@ -1,8 +1,8 @@
 <?php
 return array (
-  'template' => 'default',
+  'template' => 'hic',
   'tablePrefix' => '',
-  'modelPath' => 'application.modules.claim.models',
+  'modelPath' => 'application.modules.rights.models',
   'baseClass' => 'GxActiveRecord',
   'buildRelations' => true,
 );

@@ -34,7 +34,7 @@ return array(
 		'user',
 		'rights'=>array(
 			'debug'=>true,
-			'install'=>false,
+			'install'=>true,
 			'enableBizRuleData'=>true,
 		),
 		'gii'=>array(
@@ -61,7 +61,7 @@ return array(
 				'class'=>'RWebUser',
 				// enable cookie-based authentication
 				'allowAutoLogin'=>true,
-				'loginUrl'=>'/apps/index.php/user/login',
+				'loginUrl'=>array('/user/login'),
 			),
 			'bootstrap'=>array(
 			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
@@ -81,17 +81,21 @@ return array(
 				// http://twitter.github.com/bootstrap/javascript.html
 			),
 		),
-		'user'=>array(
+		/*'user'=>array(
 			'class'=>'RWebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
             'loginUrl'=>'/HIC/apps/user/login',
-		),
+		),*/
 		// uncomment the following to enable URLs in path-format
-		
+		'rights' => array(
+				'superuserName' => 'admin',
+				'authenticatedName'=>'Authenticated',
+				'install' => true,
+		 ),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			'showScriptName'=>false,
+			//'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

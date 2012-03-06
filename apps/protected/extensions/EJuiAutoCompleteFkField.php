@@ -201,9 +201,11 @@ class EJuiAutoCompleteFkField extends CJuiAutoComplete {
         // setup javascript to do the work
         $this->options['create']="js:function(event, ui){\$(this).val('".$this->_display."');}";  // show initial display value
         // after user picks from list, save the ID in model/attr field, and Value in _save field for redisplay
-
+		     
+		$tempz ='';
+		
         if(!empty($this->upField)){
-            $tempz ='';
+ 
             foreach($this->upField as $k=>$v){
                 $this->_fieldName2 = get_class($this->model).'_'.$k;
                 $tempz .=  " \$('#".$this->_fieldName2."').val(ui.item." . $v ."); ";

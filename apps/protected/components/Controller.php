@@ -25,6 +25,20 @@ class Controller extends CController
 				array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
 				array('label'=>'LIST HEADER', 'itemOptions'=>array('class'=>'nav-header')),
 	);
+	
+	
+	/*public function filters()
+	{
+		
+		return array(
+			'Rights'
+		);
+	}*/
+	
+	public function allowedActions() 
+	{ 
+		return 'login,index'; 
+	}
 	/**
 	 * @var array the breadcrumbs of the current page. The value of this property will
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}

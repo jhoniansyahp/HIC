@@ -59,13 +59,6 @@
 	   ));
 		echo "</div>
 </div>"; ?>
-<?php
-
-$lookups = SetupSecUsers::model()->findByPK(Yii::app()->user->v_user_code)->with('setupMstLookups')->findByAttributes(array("v_lookup_name"=>"v_org_level"));
-
-print_r($lookups->attributes);
-	
-?>
 
 <?php echo $form->textFieldRow($model,'v_flag_coy_id',array('class'=>'span5','maxlength'=>1)); ?>
 <?php echo $form->dropDownListRow($model, 'v_status_agent', array('Y'=>Yii::t('setupModule.main','Perusahaan/Bisnis'),'N' => Yii::t('setupModule.main','Unit'))); ?>
