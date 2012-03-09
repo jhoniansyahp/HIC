@@ -33,11 +33,11 @@
 endforeach; ?>
 	<div class="actions">
 		<?php echo "<?php\n";?>
-		 echo CHtml::submitButton(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Cari'),array('class'=>'btn primary'));
+		 echo CHtml::submitButton(Yii::t('app','Search'),array('class'=>'btn primary'));
 		 <?php echo " echo '&nbsp;';\n";?>
-		 echo CHtml::submitButton(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Batal'), array('class'=>'btn','onclick'=>'this.form.reset()'));
+		 echo CHtml::submitButton(Yii::t('app','Cancel'), array('class'=>'btn','onclick'=>'this.form.reset()'));
 		<?php echo " echo '&nbsp;';\n";?> 
-		 echo CHtml::link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Pencarian Sederhana'),'#',array('class'=>'search-simple-button btn')); 
+		 echo CHtml::link(Yii::t('app','Simple Search'),'#',array('class'=>'search-simple-button btn')); 
 		?>
 	</div>
 </div>

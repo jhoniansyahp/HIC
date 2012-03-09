@@ -12,14 +12,14 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block"><?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> </p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 <?php echo $form->textFieldRow($model,'v_param_code',array('class'=>'span5','maxlength'=>60)); ?>
 <?php echo $form->textFieldRow($model,'v_param_name',array('class'=>'span5','maxlength'=>150)); ?>
 <?php echo $form->textFieldRow($model,'v_param_desc',array('class'=>'span5','maxlength'=>150)); ?>
-<?php echo $form->dropDownListRow($model, 'v_flag', array('A'=>Yii::t('setupModule.main','Aktif'),'I' => Yii::t('setupModule.main','Non Aktif'))); ?>
+<?php echo $form->dropDownListRow($model, 'v_flag', array('A'=>Yii::t('app','Active'),'I' => Yii::t('app','Inactive'))); ?>
 <?php echo $form->textFieldRow($model,'n_value_number',array('class'=>'span5','maxlength'=>30)); ?>
 <?php 
 		  echo '<div class="control-group">';
@@ -48,15 +48,15 @@
 <?php echo ""; ?>
 	<div class="actions">
 		<?php
-		echo CHtml::submitButton($model->isNewRecord ? Yii::t('setupModule.main','Buat') : Yii::t('setupModule.main','Simpan'),array('class'=>'btn primary')); 
+		echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save'),array('class'=>'btn primary')); 
 		?>
 		&nbsp;
 		
 		<?php
-		echo CHtml::resetButton(Yii::t('setupModule.main','Batal'),array('class'=>'btn primary')); ?>&nbsp;|
+		echo CHtml::resetButton(Yii::t('app','Cancel'),array('class'=>'btn primary')); ?>&nbsp;|
 		
 		<?php
-		echo CHtml::link(Yii::t('setupModule.main','Kembali Ke List'),array('index'), array('class'=>'btn')); ?>
+		echo CHtml::link(Yii::t('app','Back to List'),array('index'), array('class'=>'btn')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

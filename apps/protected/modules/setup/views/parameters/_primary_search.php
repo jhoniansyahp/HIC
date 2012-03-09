@@ -15,12 +15,12 @@
 
 	<div class="actions">
 		<?php
-		 echo CHtml::submitButton(Yii::t('setupModule.main','Cari'),array('class'=>'btn primary'));
+		 echo CHtml::submitButton(Yii::t('app','Search'),array('class'=>'btn primary'));
 		  echo '&nbsp;';
-		 echo CHtml::submitButton(Yii::t('setupModule.main','Batal'), array('class'=>'btn','onclick'=>'this.form.reset()'));
+		 echo CHtml::submitButton(Yii::t('app','Cancel'), array('class'=>'btn','onclick'=>'this.form.reset()'));
 		 echo '&nbsp;';
  
-		 echo CHtml::link(Yii::t('setupModule.main','Pencarian Mutakhir'),'#',array('class'=>'search-advanced-button btn')); 
+		 echo CHtml::link(Yii::t('app','Advanced Search'),'#',array('class'=>'search-advanced-button btn')); 
 		?>
 	</div>
 </div>

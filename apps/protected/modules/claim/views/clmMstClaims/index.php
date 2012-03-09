@@ -57,7 +57,7 @@ $('.deleteall-button').click(function(){
         {
                 alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Are you sure want to delete this?')."'))
         {
                 document.getElementById('clm-mst-claims-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
                 document.getElementById('clm-mst-claims-form').submit();
@@ -88,13 +88,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 <p>
 <?php
-echo CHtml::link(Yii::t('claimModule.main','Tambah'),array('Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('claimModule.main','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
 
-echo CHtml::Button(Yii::t('claimModule.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('claimModule.main','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php

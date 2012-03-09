@@ -30,7 +30,7 @@ foreach($this->tableSchema->columns as $column)
 	if((stripos($column->dbType,'date') !== FALSE) OR 
 	   (stripos($column->dbType,'date') !== FALSE)
 	  ){
-		echo "\t<?php echo CHtml::encode(\$this->ConvertDateNormal(\$data->{$column->name})); ?>a\n\t<br />\n\n";
+		echo "\t<?php echo CHtml::encode(\$this->getDate()->toReadable(\$data->{$column->name})); ?>a\n\t<br />\n\n";
 	}else{
 		echo "\t<?php echo CHtml::encode(\$data->{$column->name}); ?>\n\t<br />\n\n";
 	}

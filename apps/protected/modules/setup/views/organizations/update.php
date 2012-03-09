@@ -8,9 +8,9 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t("setupModule.main","Setup Organization(s)")=>array('index'),
-	$model->n_org_id=>array('view','id'=>$model->n_org_id),
-	Yii::t("setupModule.main",'Update'),
+	Yii::t("app","Organizations")=>array('index'),
+	Yii::t("app","View")=>array('view','id'=>$model->n_org_id),
+	Yii::t("app",'Update'),
 );
 /*
 $this->menu=array(
@@ -21,8 +21,9 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php
-echo Yii::t('setupModule.main','Update Data $v_org_name',array("\$v_org_name"=>$model->v_org_name,'$v_org_code'=>$model->v_org_code));
+<h1>
+<?php
+echo Yii::t('app','Update Organization',array("\$v_org_name"=>$model->v_org_name,'$v_org_code'=>$model->v_org_code));
 ?></h1>
 
 <?php 

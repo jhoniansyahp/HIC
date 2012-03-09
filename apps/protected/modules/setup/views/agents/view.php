@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('setupModule.main',"Setup Agent(s)")=>array('index'),
-	Yii::t('setupModule.main',"Lihat"),
+	Yii::t('app',"Agents")=>array('index'),
+	Yii::t('app',"View"),
 );
 /*
 $this->menu=array(
@@ -23,13 +23,13 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_agent_no), array('update','id'=>$model->n_agent_no));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_agent_no), array('update','id'=>$model->n_agent_no));
 ?>
 </div>
 
-<h1><?php echo Yii::t('setupModule.main','Lihat Agent $name_agent',array('$no_agent'=>$model->n_agent_no,'$name_agent'=>$model->v_agent_name));?></h1>
+<h1><?php echo Yii::t('app','View Agent',array('$no_agent'=>$model->n_agent_no,'$name_agent'=>$model->v_agent_name));?></h1>
 
 
 <?php 
@@ -67,16 +67,16 @@ $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_agent_no),array('update','id'=>$model->n_agent_no),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_agent_no),array('update','id'=>$model->n_agent_no),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_agent_no), array('update','id'=>$model->n_agent_no));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_agent_no), array('update','id'=>$model->n_agent_no));
 ?>
 </div>
 </p>

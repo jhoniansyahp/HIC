@@ -54,7 +54,7 @@
 	   ));
 		echo "</div>
 </div>"; ?>
-<?php echo $form->dropDownListRow($model, 'v_flag_coy_id', array(''=>Yii::t('setupModule.main','Tidak ada'),'Y'=>Yii::t('setupModule.main','Perusahaan/Bisnis'),'N' => Yii::t('setupModule.main','Unit'))); ?>
+<?php echo $form->dropDownListRow($model, 'v_flag_coy_id', array(''=>Yii::t('app','All'),'Y'=>Yii::t('app','Company/Business'),'N' => Yii::t('app','Unit'))); ?>
 <?php echo $form->textFieldRow($model,'v_org_level',array('class'=>'span5','maxlength'=>30)); ?>
 <?php 
 		
@@ -102,12 +102,12 @@
 <?php //echo $form->textFieldRow($model,'v_email_person',array('class'=>'span5','maxlength'=>60)); ?>
 	<div class="actions">
 		<?php
-		 echo CHtml::submitButton(Yii::t('setupModule.main','Cari'),array('class'=>'btn primary'));
+		 echo CHtml::submitButton(Yii::t('app','Search'),array('class'=>'btn primary'));
 		  echo '&nbsp;';
-		 echo CHtml::submitButton(Yii::t('setupModule.main','Batal'), array('class'=>'btn','onclick'=>'this.form.reset()'));
+		 echo CHtml::submitButton(Yii::t('app','Cancel'), array('class'=>'btn','onclick'=>'this.form.reset()'));
 		 echo '&nbsp;';
  
-		 echo CHtml::link(Yii::t('setupModule.main','Pencarian Sederhana'),'#',array('class'=>'search-simple-button btn')); 
+		 echo CHtml::link(Yii::t('app','Simple Search'),'#',array('class'=>'search-simple-button btn')); 
 		?>
 	</div>
 </div>

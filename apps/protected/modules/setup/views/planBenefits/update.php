@@ -22,7 +22,7 @@ $this->menu=array(
 ?>
 
 <h1><?php
-Yii::t('setupModule.main','Update Data No. {n}',$model->v_plan_code);
+Yii::t('app','Update Data No. {n}',$model->v_plan_code);
 ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

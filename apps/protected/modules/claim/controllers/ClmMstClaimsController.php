@@ -102,23 +102,23 @@ class ClmMstClaimsController extends Controller
 			$model->attributes=$_POST['ClmMstClaims'];
 			
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_claim = $this->convertDate($model->d_claim);
+						$model->d_claim = $this->getDate()->toSave($model->d_claim);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_submitted = $this->convertDate($model->d_submitted);
+						$model->d_submitted = $this->getDate()->toSave($model->d_submitted);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_sent_doc = $this->convertDate($model->d_sent_doc);
+						$model->d_sent_doc = $this->getDate()->toSave($model->d_sent_doc);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_incident_date = $this->convertDate($model->d_incident_date);
+						$model->d_incident_date = $this->getDate()->toSave($model->d_incident_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_verifikasi_date = $this->convertDate($model->d_verifikasi_date);
+						$model->d_verifikasi_date = $this->getDate()->toSave($model->d_verifikasi_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_upload_date = $this->convertDate($model->d_upload_date);
+						$model->d_upload_date = $this->getDate()->toSave($model->d_upload_date);
 										$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_claim_no));
@@ -146,23 +146,23 @@ class ClmMstClaimsController extends Controller
 			$model->attributes=$_POST['ClmMstClaims'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_claim = $this->convertDate($model->d_claim);
+						$model->d_claim = $this->getDate()->toSave($model->d_claim);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_submitted = $this->convertDate($model->d_submitted);
+						$model->d_submitted = $this->getDate()->toSave($model->d_submitted);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_sent_doc = $this->convertDate($model->d_sent_doc);
+						$model->d_sent_doc = $this->getDate()->toSave($model->d_sent_doc);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_incident_date = $this->convertDate($model->d_incident_date);
+						$model->d_incident_date = $this->getDate()->toSave($model->d_incident_date);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_verifikasi_date = $this->convertDate($model->d_verifikasi_date);
+						$model->d_verifikasi_date = $this->getDate()->toSave($model->d_verifikasi_date);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_upload_date = $this->convertDate($model->d_upload_date);
+						$model->d_upload_date = $this->getDate()->toSave($model->d_upload_date);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 												$model->v_updated_by=Yii::app()->user->id;
 												$model->d_updated_date=new CDbExpression('NOW()');
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_claim_no));
@@ -206,35 +206,35 @@ class ClmMstClaimsController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_claim) && isset($_GET['ClmMstClaims'])){
-							$model->d_claim = new CDbExpression("=".$this->convertDate($model->d_claim));
+							$model->d_claim = new CDbExpression("=".$this->getDate()->toSave($model->d_claim));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_submitted) && isset($_GET['ClmMstClaims'])){
-							$model->d_submitted = new CDbExpression("=".$this->convertDate($model->d_submitted));
+							$model->d_submitted = new CDbExpression("=".$this->getDate()->toSave($model->d_submitted));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_sent_doc) && isset($_GET['ClmMstClaims'])){
-							$model->d_sent_doc = new CDbExpression("=".$this->convertDate($model->d_sent_doc));
+							$model->d_sent_doc = new CDbExpression("=".$this->getDate()->toSave($model->d_sent_doc));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_incident_date) && isset($_GET['ClmMstClaims'])){
-							$model->d_incident_date = new CDbExpression("=".$this->convertDate($model->d_incident_date));
+							$model->d_incident_date = new CDbExpression("=".$this->getDate()->toSave($model->d_incident_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_verifikasi_date) && isset($_GET['ClmMstClaims'])){
-							$model->d_verifikasi_date = new CDbExpression("=".$this->convertDate($model->d_verifikasi_date));
+							$model->d_verifikasi_date = new CDbExpression("=".$this->getDate()->toSave($model->d_verifikasi_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_upload_date) && isset($_GET['ClmMstClaims'])){
-							$model->d_upload_date = new CDbExpression("=".$this->convertDate($model->d_upload_date));
+							$model->d_upload_date = new CDbExpression("=".$this->getDate()->toSave($model->d_upload_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['ClmMstClaims'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['ClmMstClaims'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 								
 		$this->render('index',array(

@@ -22,11 +22,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_start_date')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_start_date)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_start_date)); ?>a
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_end_date')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_end_date)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_end_date)); ?>a
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('v_flag_coy_id')); ?>:</b>

@@ -68,9 +68,9 @@ class DetailLookupsController extends Controller
 			   'combo_setup-mst-organizations'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
 				  'model'=> 'SetupDtlLookups',
-				  'label'=> 'n_org_id',
-				  'value'=> 'n_org_id',
-				   'id' => 'n_org_id',
+				  'label'=> 'n_coy_id',
+				  'value'=> 'n_coy_id',
+				   'id' => 'n_coy_id',
 				),
 							
 			   'combo_setup-mst-lookups'=>array(
@@ -113,9 +113,9 @@ class DetailLookupsController extends Controller
 								$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_lookup_dtl_code));
@@ -143,11 +143,11 @@ class DetailLookupsController extends Controller
 			$model->attributes=$_POST['SetupDtlLookups'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 												$model->v_updated_by=Yii::app()->user->id;
 												$model->d_updated_date=new CDbExpression('NOW()');
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_lookup_dtl_code));
@@ -191,11 +191,11 @@ class DetailLookupsController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupDtlLookups'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupDtlLookups'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 								
 		$this->render('index',array(

@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Agents'=>array('index'),
-	'Create Agent',
+	Yii::t('app','Agents')=>array('index'),
+	Yii::t('app','Create'),
 );
 
 /*
@@ -19,6 +19,6 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php echo Yii::t('setupModule.main','Create Agent');?></h1>
+<h1><?php echo Yii::t('app','Create Agent');?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

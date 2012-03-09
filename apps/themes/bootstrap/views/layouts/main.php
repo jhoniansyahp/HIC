@@ -37,7 +37,7 @@
 					array('label'=>'Master Company','url'=>array('/setup/companys')),
 					array('label'=>'Master Organisasi','url'=>array('/setup/organizations')),
 					array('label'=>'Setup Produk Umum','url'=>array('/setup/plans')),
-					array('label'=>'Setup Produk Klaim','url'=>array('/setup/claimplan')),
+					array('label'=>'Setup Produk Klaim','url'=>array('/setup/planbenefits')),
 					'---',
 					array('label'=>'Setup Umum', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Parameter','url'=>array('/setup/parameters')),

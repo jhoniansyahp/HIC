@@ -144,7 +144,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 					  ){
 					?>
 						 // Convert dd/mm/yy to yy-mm-dd
-						$model-><?php echo $column->name;?> = $this->convertDate($model-><?php echo $column->name;?>);
+						$model-><?php echo $column->name;?> = $this->getDate()->toSave($model-><?php echo $column->name;?>);
 					<?php
 					}
 			}
@@ -194,7 +194,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 					  ){
 					?>
 					    // Convert dd/mm/yy to yy-mm-dd
-						$model-><?php echo $column->name;?> = $this->convertDate($model-><?php echo $column->name;?>);
+						$model-><?php echo $column->name;?> = $this->getDate()->toSave($model-><?php echo $column->name;?>);
 					<?php
 					}
 					
@@ -251,7 +251,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 					?>
 					    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model-><?php echo $column->name;?>) && isset($_GET['<?php echo $this->modelClass; ?>'])){
-							$model-><?php echo $column->name;?> = new CDbExpression("=".$this->convertDate($model-><?php echo $column->name;?>));
+							$model-><?php echo $column->name;?> = new CDbExpression("=".$this->getDate()->toSave($model-><?php echo $column->name;?>));
 						}
 					<?php
 					}

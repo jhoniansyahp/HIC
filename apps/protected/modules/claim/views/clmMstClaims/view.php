@@ -23,9 +23,9 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('claimModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('claimModule.main','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('claimModule.main','Ubah Data {n} &raquo;',$model->v_claim_no), array('update','id'=>$model->v_claim_no));
+echo CHtml::Link(Yii::t('claimModule.main','Update &raquo;',$model->v_claim_no), array('update','id'=>$model->v_claim_no));
 ?>
 </div>
 
@@ -63,16 +63,16 @@ echo CHtml::Link(Yii::t('claimModule.main','Ubah Data {n} &raquo;',$model->v_cla
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('claimModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('claimModule.main','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('claimModule.main','Ubah Data {n} &raquo;',$model->v_claim_no),array('update','id'=>$model->v_claim_no),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('claimModule.main','Update &raquo;',$model->v_claim_no),array('update','id'=>$model->v_claim_no),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('claimModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('claimModule.main','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('claimModule.main','Ubah Data {n} &raquo;',$model->v_claim_no), array('update','id'=>$model->v_claim_no));
+echo CHtml::Link(Yii::t('claimModule.main','Update &raquo;',$model->v_claim_no), array('update','id'=>$model->v_claim_no));
 ?>
 </div>
 </p>

@@ -10,13 +10,13 @@ class HICHelper
 		
 		switch(strtoupper($agentType)){
 			case "I":
-				$label = Yii::t('setupModule.main','Individu');
+				$label = Yii::t('app','Individu');
 			break;
 			case "C":
-				$label = Yii::t('setupModule.main','Perusahaan/Bisnis');
+				$label = Yii::t('app','Company/Business');
 			break;
 			default:
-				$label = Yii::t('setupModule.main','Tidak diketahui');
+				$label = Yii::t('app','Unknown');
 			break;
 		}
 		
@@ -28,13 +28,13 @@ class HICHelper
 
 		switch(strtoupper($status)){
 			case "I":
-				$label = Yii::t('setupModule.main',"Non Aktif");
+				$label = Yii::t('app',"Inactive");
 			break;
 			case "A":
-				$label = Yii::t('setupModule.main',"Aktif");
+				$label = Yii::t('app',"Active");
 			break;
 			default:
-				$label = Yii::t('setupModule.main',"Tidak diketahui");
+				$label = Yii::t('app',"Unknown");
 			break;
 		}
 		
@@ -46,16 +46,36 @@ class HICHelper
 		
 		switch(strtoupper($flag)){
 			case "Y":
-				$label = Yii::t("setupModule.main","Perusahaan/Bisnis");
+				$label = Yii::t("app","Company/Business");
 			break;
 			case "N":
-				$label = Yii::t("setupModule.main","Unit");
+				$label = Yii::t("app","Unit");
 			break;
 			default:
-				$label = Yii::t("setupModule.main","Tidak diketahui");
+				$label = Yii::t("app","Unknown");
 			break;
 		}
 		
 			return $label;
 	}
+        
+        public function labelPlanProdComposition($flag)
+        {
+            
+                switch(strtoupper($flag)){
+                    case "Y": 
+                        $label = Yii::t("app","Yes");
+                    break;
+                    case "N":
+                        $label = Yii::t("app","No");
+                    break;
+                    default:
+                        $label = Yii::t("app","Unknown");
+                     break;
+                }
+
+                return $label;
+            
+            
+        }
 }

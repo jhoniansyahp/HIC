@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('setupModule.main','Setup Organization(s)')=>array('index'),
-	Yii::t('setupModule.main','View ',array("\$n_org_id"=>$model->n_org_id,"\$v_org_name"=>$model->v_org_name)),
+	Yii::t('app','Organizations')=>array('index'),
+	Yii::t('app','View ',array("\$n_org_id"=>$model->n_org_id,"\$v_org_name"=>$model->v_org_name)),
 );
 /*
 $this->menu=array(
@@ -23,13 +23,13 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_org_id), array('update','id'=>$model->n_org_id));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_org_id), array('update','id'=>$model->n_org_id));
 ?>
 </div>
 
-<h1><?php echo Yii::t('setupModule.main','View Organization $v_org_name',array('$v_org_name'=>$model->v_org_name,'$n_org_id'=>$model->n_org_id)); ?></h1>
+<h1><?php echo Yii::t('app','View Organization',array('$v_org_name'=>$model->v_org_name,'$n_org_id'=>$model->n_org_id)); ?></h1>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -71,16 +71,16 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_org
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_org_id),array('update','id'=>$model->n_org_id),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_org_id),array('update','id'=>$model->n_org_id),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_org_id), array('update','id'=>$model->n_org_id));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_org_id), array('update','id'=>$model->n_org_id));
 ?>
 </div>
 </p>

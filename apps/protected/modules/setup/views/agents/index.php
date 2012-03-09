@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Agent(s)'=>array('index'),
-	'Index',
+	Yii::t('app','Agents')=>array('index'),
+	Yii::t('app','Index'),
 );
 /*
 $this->menu=array(
@@ -55,9 +55,9 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('setupModule.main','Pilih salah satu row')."');
+                alert('".Yii::t('app','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('setupModule.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
                 document.getElementById('setup-mst-agents-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
                 document.getElementById('setup-mst-agents-form').submit();
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('setupModule.main','Setup Agent(s)');?></h1>
+<h1><?php echo Yii::t('app','Agents');?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -88,13 +88,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 <p>
 <?php
-echo CHtml::link(Yii::t('setupModule.main','Tambah'),array('Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
 
-echo CHtml::Button(Yii::t('setupModule.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php
@@ -146,7 +146,10 @@ $this->widget('ext.bootstrap.widgets.BootGridView',array(
 			"value" => "!empty(\$data->v_reporting_to) ? SetupMstAgents::model()->findByPK(\$data->v_reporting_to)->v_agent_name : '-'",
 			"htmlOptions" => array("style"=>"text-align: center"),
 		),
-		'n_coy_id',
+                array(
+                  "name" => "n_coy_id",
+                  "value" => "!empty(\$data->n_coy_id) ? SetupMstOrganizations::model()->findByAttributes(array('n_org_id'=>\$data->n_coy_id))->v_org_name : '-'",
+                ),
 		/*
 		'v_reporting_to',
 		'v_created_by',

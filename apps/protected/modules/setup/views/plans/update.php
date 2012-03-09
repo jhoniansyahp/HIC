@@ -8,9 +8,9 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Plans'=>array('index'),
-	$model->v_plan_code=>array('view','id'=>$model->v_plan_code),
-	'Update',
+	Yii::t('app','Plans')=>array('index'),
+	Yii::t('app','View')=>array('view','id'=>$model->v_plan_code),
+	Yii::t('app','Update'),
 );
 /*
 $this->menu=array(
@@ -22,7 +22,7 @@ $this->menu=array(
 ?>
 
 <h1><?php
-Yii::t('setupModule.main','Update Data No. {n}',$model->v_plan_code);
+echo Yii::t('app','Update Plan',$model->v_plan_code);
 ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

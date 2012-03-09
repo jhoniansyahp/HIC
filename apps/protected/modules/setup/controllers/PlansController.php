@@ -30,29 +30,7 @@ class PlansController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-<<<<<<< HEAD
-	public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','delete','deleteall','createdetail'
-				),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
-=======
+
 	// public function accessRules()
 	// {
 		// return array(
@@ -74,8 +52,7 @@ class PlansController extends Controller
 			// ),
 		// );
 	// }
->>>>>>> june
-	
+
 	
 	/**
 	 * Mass Delete
@@ -101,13 +78,9 @@ class PlansController extends Controller
 		
 		$model = $this->loadModel($id);
 
-		$detailmodel = new SetupPlanBenefits('search');
-		$detailmodel->attributes = array('v_plan_code',$model->v_plan_code);
-		
 		$this->render('view',array(
 			'model'=>$model,
-			'detailmodel'=>$detailmodel,
-		));
+			));
 	}
 
 	/**
@@ -173,8 +146,8 @@ class PlansController extends Controller
 				$this->redirect(array('view','id'=>$model->v_plan_code));
 		}
 	
-		$model->d_plan_start = $this->convertDateNormal($model->d_plan_start);
-		$model->d_plan_end = $this->convertDateNormal($model->d_plan_end);
+		$model->d_plan_start = $this->getDate()->toReadable($model->d_plan_start);
+		$model->d_plan_end = $this->getDate()->toReadable($model->d_plan_end);
 	
 		$this->render('update',array(
 			'model'=>$model,

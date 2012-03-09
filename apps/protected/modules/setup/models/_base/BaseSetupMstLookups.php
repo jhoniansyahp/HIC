@@ -68,17 +68,17 @@ abstract class BaseSetupMstLookups extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'n_coy_id' => Yii::t('setupModule.main','Coy Id'),
-			'v_lookup_code' => Yii::t('setupModule.main', 'Lookup Code'),
-			'v_lookup_name' => Yii::t('setupModule.main', 'Lookup Name'),
-			'v_lookup_desc' => Yii::t('setupModule.main', 'Lookup Desc'),
-			'v_flag' => Yii::t('setupModule.main', 'Flag'),
-			'v_created_by' => Yii::t('setupModule.main', 'Created By'),
-			'd_created_date' => Yii::t('setupModule.main', 'Created Date'),
-			'v_updated_by' => Yii::t('setupModule.main', 'Updated By'),
-			'd_updated_date' => Yii::t('setupModule.main', 'Updated Date'),
-			'setupDtlLookups' => Yii::t('setupModule.main','SetupDtlLookups'),
-			'nCoy' => Yii::t('setupModule.main','NCoy'),
+			'n_coy_id' => Yii::t('app','Coy Id'),
+			'v_lookup_code' => Yii::t('app', 'Lookup Code'),
+			'v_lookup_name' => Yii::t('app', 'Lookup Name'),
+			'v_lookup_desc' => Yii::t('app', 'Lookup Desc'),
+			'v_flag' => Yii::t('app', 'Flag'),
+			'v_created_by' => Yii::t('app', 'Created By'),
+			'd_created_date' => Yii::t('app', 'Created Date'),
+			'v_updated_by' => Yii::t('app', 'Updated By'),
+			'd_updated_date' => Yii::t('app', 'Updated Date'),
+			'setupDtlLookups' => Yii::t('app','SetupDtlLookups'),
+			'nCoy' => Yii::t('app','NCoy'),
 		);
 	}
 

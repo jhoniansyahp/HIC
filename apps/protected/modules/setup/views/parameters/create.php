@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('setupModule.main','Setup Parameters')=>array('index'),
-	Yii::t('setupModule.main','Buat'),
+	Yii::t('app','Setup Parameters')=>array('index'),
+	Yii::t('app','Create'),
 );
 
 /*
@@ -19,6 +19,6 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php echo Yii::t('setupModule.main',"Buat Parameter");?></h1>
+<h1><?php echo Yii::t('app',"Buat Parameter");?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
