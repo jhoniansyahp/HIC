@@ -70,8 +70,10 @@ class Controller extends RController
 	
 	public function render($view, $data=null, $return=false)
 	{
-		$theme = $_GET['theme'];
-		Yii::app()->setTheme($theme);
+		if(isset($_GET['theme'])) {
+			$theme = $_GET['theme'];
+			Yii::app()->setTheme($theme);
+		}
 		parent::render($view,$data,$return);
 	}
 
