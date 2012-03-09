@@ -37,7 +37,13 @@ class Controller extends RController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
-	
+	public function getDate(){
+		return new CDateFormat();
+	}
+
+	public function appHelper(){
+		return new HICHelper();
+	}
 	public function convertDate($date){
 		
 		if(!(stripos($date,'/') !== FALSE)) return $date;
@@ -73,6 +79,10 @@ class Controller extends RController
 		if(isset($_GET['theme'])) {
 			$theme = $_GET['theme'];
 			Yii::app()->setTheme($theme);
+		}
+		if(isset($_GET['lang'])) {
+			$lang = $_GET['lang'];
+			Yii::app()->setLanguage($lang);
 		}
 		parent::render($view,$data,$return);
 	}

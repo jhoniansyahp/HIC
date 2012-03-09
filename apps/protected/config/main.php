@@ -10,8 +10,8 @@ return array(
 	'name'=>'HIC',
 	'theme'=>'bootstrap',
 	// language
-	'sourceLanguage'=>'id',
-	'language'=>'id_id',
+	//'sourceLanguage'=>'id',
+	'language'=>'id',
 	// preloading 'log' component
 	'preload'=>array('log', 'bootstrap'),
 
