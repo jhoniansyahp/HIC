@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Coys'=>array('index'),
-	$model->v_company_code,
+	Yii::t('app',"Companys")=>array('index'),
+	Yii::t('app','View'),
 );
 /*
 $this->menu=array(
@@ -23,14 +23,13 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_company_code), array('update','id'=>$model->v_company_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code), array('update','id'=>$model->v_company_code));
 ?>
 </div>
 
-<h1>View SetupMstCoys #<?php echo $model->v_company_code; ?></h1>
-
+<h1><?php echo Yii::t('app',"View Company",array("\$company_name"=>$model->v_company_name));?></h1>
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	'data'=>$model,
@@ -44,7 +43,10 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_com
 		'v_jenis_usaha',
 		'v_mobilitas',
 		'v_office_hours',
-		'n_existing_agent',
+		array(
+			"value"=>SetupMstAgents::model()->findByPK($model->n_existing_agent)->v_agent_name,
+			"name" => "n_existing_agent",
+		),
 		'v_comp_add1',
 		'v_comp_add2',
 		'v_comp_add3',
@@ -60,16 +62,16 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_com
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_company_code),array('update','id'=>$model->v_company_code),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code),array('update','id'=>$model->v_company_code),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_company_code), array('update','id'=>$model->v_company_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code), array('update','id'=>$model->v_company_code));
 ?>
 </div>
 </p>

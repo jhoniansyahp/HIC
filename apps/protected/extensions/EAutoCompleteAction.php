@@ -2,6 +2,7 @@
 class EAutoCompleteAction extends CAction
 {
     public $model;
+	public $query;
     public $label;
     public $value;
     public $id;
@@ -12,6 +13,11 @@ class EAutoCompleteAction extends CAction
     public function run()
     {
         if(isset($this->model) && isset($this->label)) {
+	
+			
+			if(!isset($_GET['term']) && $_GET['term'] == "") CJSON::encode(array("label"=>"","value"=>"","id"=>""));
+			if(isset($_GET['term']) && $_GET['term'] == "") CJSON::encode(array("label"=>"","value"=>"","id"=>""));
+			
             $criteria = new CDbCriteria();
             $criteria->compare($this->label, $_GET['term'], true);
             $model = new $this->model;
@@ -28,7 +34,8 @@ class EAutoCompleteAction extends CAction
                 }
                 $this->matributs['label']=$m->{$this->label};
                 $this->matributs['value']=$m->{$this->value};
-				$this->matributs['id']=$m->{$this->id};
+				$this->matributs['id']   =$m->{$this->id};
+
                 $this->results[] = $this->matributs;
                 //print_r($matributs);
                 /*

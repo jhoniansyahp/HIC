@@ -66,17 +66,17 @@ abstract class BaseSetupMstParameters extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'v_param_code' => Yii::t('setupModule.main', 'Param Code'),
-			'v_param_name' => Yii::t('setupModule.main', 'Param Name'),
-			'v_param_desc' => Yii::t('setupModule.main', 'Param Desc'),
-			'v_flag' => Yii::t('setupModule.main', 'Flag'),
-			'n_value_number' => Yii::t('setupModule.main', 'Value Number'),
-			'd_value_date' => Yii::t('setupModule.main', 'Value Date'),
-			'v_value_char' => Yii::t('setupModule.main', 'Value Char'),
-			'v_created_by' => Yii::t('setupModule.main', 'Created By'),
-			'd_created_date' => Yii::t('setupModule.main', 'Created Date'),
-			'v_updated_by' => Yii::t('setupModule.main', 'Updated By'),
-			'd_updated_date' => Yii::t('setupModule.main', 'Updated Date'),
+			'v_param_code' => Yii::t('app', 'Param Code'),
+			'v_param_name' => Yii::t('app', 'Param Name'),
+			'v_param_desc' => Yii::t('app', 'Param Desc'),
+			'v_flag' => Yii::t('app', 'Flag'),
+			'n_value_number' => Yii::t('app', 'Value Number'),
+			'd_value_date' => Yii::t('app', 'Value Date'),
+			'v_value_char' => Yii::t('app', 'Value Char'),
+			'v_created_by' => Yii::t('app', 'Created By'),
+			'd_created_date' => Yii::t('app', 'Created Date'),
+			'v_updated_by' => Yii::t('app', 'Updated By'),
+			'd_updated_date' => Yii::t('app', 'Updated Date'),
 		);
 	}
 

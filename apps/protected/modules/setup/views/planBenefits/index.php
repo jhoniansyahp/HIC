@@ -8,7 +8,7 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Plan Benefits'=>array('index'),
+	''=>array('index'),
 	'Manage',
 );
 /*
@@ -40,11 +40,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#setup-plan-benefits-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"setup-plan-benefits-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);	
 		});
 	}else{
 		$('input[name=\"setup-plan-benefits-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);	
 		});
 	}
 });
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('app','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-plan-benefits-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-plan-benefits-form').action='".Yii::app()->createUrl(array('/setup/planbenefits/deleteall'))."';
                 document.getElementById('setup-plan-benefits-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('setupModule.main',"Detail Plan Benefits");?></h1>
+<h1><?php echo Yii::t('app',"Claim Product");?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -86,14 +86,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
+
 <p>
 <?php
-echo CHtml::link(Yii::t('setupModule.main','Tambah'),array('/setup/planBenefits/Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
-echo CHtml::Button(Yii::t('setupModule.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php
@@ -120,7 +121,7 @@ $form=$this->beginWidget('CActiveForm', array(
 		'value'=>$model->v_plan_code,
 		'class'=>'CCheckBoxColumn',
 	),
-			'v_plan_code',
+		'v_plan_code',
 		'v_template',
 		'v_kelompok',
 		'n_baris',

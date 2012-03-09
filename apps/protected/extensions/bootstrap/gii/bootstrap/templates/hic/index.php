@@ -64,11 +64,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('app','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').action='".Yii::app()->createUrl('/<?php echo $this->getModule()->name;?>/<?php echo $this->class2id($this->modelClass); ?>/deleteall')."';
                 document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').submit();
 				return false;
         }
@@ -98,11 +98,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 <p>
 <?php echo "<?php";?>
 
-echo CHtml::link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Tambah'),array('Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 <?php echo "?>\n&nbsp;\n<?php\n"; ?>
 
-echo CHtml::Button(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php 

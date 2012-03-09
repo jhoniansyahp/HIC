@@ -18,7 +18,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>\n"; ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block"><?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> </p>
 
 	<?php echo "<?php echo \$form->errorSummary(\$model); ?>\n"; ?>
 
@@ -45,15 +45,15 @@ foreach($this->tableSchema->columns as $column)
 ?>
 	<div class="actions">
 		<?php echo "<?php\n"; ?>
-		echo CHtml::submitButton($model->isNewRecord ? Yii::t('<?php echo $this->getModule()->name;?>Module.main','Buat') : Yii::t('<?php echo $this->getModule()->name;?>Module.main','Simpan'),array('class'=>'btn primary')); 
+		echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save'),array('class'=>'btn primary')); 
 		?>
 		&nbsp;
 		
 		<?php echo "<?php\n";?>
-		echo CHtml::resetButton(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Batal'),array('class'=>'btn primary')); ?>&nbsp;|
+		echo CHtml::resetButton(Yii::t('app','Cancel'),array('class'=>'btn primary')); ?>&nbsp;|
 		
 		<?php echo "<?php\n";?>
-		echo CHtml::link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Kembali Ke List'),array('index'), array('class'=>'btn')); ?>
+		echo CHtml::link(Yii::t('app','Back to List'),array('index'), array('class'=>'btn')); ?>
 	</div>
 
 <?php echo "<?php \$this->endWidget(); ?>\n"; ?>

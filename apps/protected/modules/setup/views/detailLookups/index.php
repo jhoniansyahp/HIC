@@ -40,11 +40,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#setup-dtl-lookups-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"setup-dtl-lookups-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);	
 		});
 	}else{
 		$('input[name=\"setup-dtl-lookups-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);
 		});
 	}
 });
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('app','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-dtl-lookups-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-dtl-lookups-form').action='".Yii::app()->createUrl("/setup/lookups/deleteall")."';
                 document.getElementById('setup-dtl-lookups-form').submit();
 				return false;
         }
@@ -88,13 +88,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 <p>
 <?php
-echo CHtml::link(Yii::t('setupModule.main','Tambah'),array('Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
 
-echo CHtml::Button(Yii::t('setupModule.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php
@@ -121,7 +121,7 @@ $form=$this->beginWidget('CActiveForm', array(
 		'value'=>$model->v_lookup_dtl_code,
 		'class'=>'CCheckBoxColumn',
 	),
-			'n_coy_id',
+		'n_coy_id',
 		'n_org_id',
 		'v_lookup_code',
 		'v_lookup_dtl_code',

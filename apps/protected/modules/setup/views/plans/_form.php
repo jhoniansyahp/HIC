@@ -12,7 +12,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block"><?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> </p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -60,26 +60,22 @@
 		echo "</div>
 </div>"; ?>
 <?php echo $form->textFieldRow($model,'v_prod_line',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_prod_composition',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo $form->textFieldRow($model,'v_indv_or_group',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo $form->textFieldRow($model,'v_plan_type',array('class'=>'span5','maxlength'=>10)); ?>
+<?php echo $form->dropDownListRow($model, 'v_prod_composition', array('Y'=>Yii::t('app','Yes'),'N' => Yii::t('app','No'))); ?>       
+<?php echo $form->dropDownListRow($model, 'v_indv_or_group', array('G'=>Yii::t('app','Group'),'I' => Yii::t('app','Individual'),'J'=> Yii::t('app',"Joint"))); ?>       
+<?php //echo $form->textFieldRow($model,'v_plan_type',array('class'=>'span5','maxlength'=>10)); ?>
 <?php echo $form->textFieldRow($model,'v_curr_code',array('class'=>'span5','maxlength'=>10)); ?>
-<?php echo $form->textFieldRow($model,'v_status',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
+<?php echo $form->dropDownListRow($model, 'v_status', array('A'=>Yii::t('app','Active'),'I' => Yii::t('app','Inactive'))); ?>
 	<div class="actions">
 		<?php
-		echo CHtml::submitButton($model->isNewRecord ? Yii::t('setupModule.main','Buat') : Yii::t('setupModule.main','Simpan'),array('class'=>'btn primary')); 
+		echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save'),array('class'=>'btn primary')); 
 		?>
 		&nbsp;
 		
 		<?php
-		echo CHtml::resetButton(Yii::t('setupModule.main','Batal'),array('class'=>'btn primary')); ?>&nbsp;|
+		echo CHtml::resetButton(Yii::t('app','Cancel'),array('class'=>'btn primary')); ?>&nbsp;|
 		
 		<?php
-		echo CHtml::link(Yii::t('setupModule.main','Kembali Ke List'),array('index'), array('class'=>'btn')); ?>
+		echo CHtml::link(Yii::t('app','Back to List'),array('index'), array('class'=>'btn')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

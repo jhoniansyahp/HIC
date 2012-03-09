@@ -12,7 +12,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block"><?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> </p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -59,8 +59,9 @@
 	   ));
 		echo "</div>
 </div>"; ?>
-<?php echo $form->textFieldRow($model,'v_flag_coy_id',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo $form->textFieldRow($model,'v_org_level',array('class'=>'span5','maxlength'=>30)); ?>
+
+<?php echo $form->dropDownListRow($model, 'v_flag_coy_id', array('Y'=>Yii::t('app','Company/Business'),'N' => Yii::t('app','Unit'))); ?>
+<?php echo $form->dropDownListRow($model, 'v_org_level', array('PERUSH'=>'Perusahaan','CAB'=>'Cabang','UNIT'=>'Unit')); ?>
 <?php 
 		
 			echo '<div class="control-group">';
@@ -76,7 +77,7 @@
 			   // display size of the FK field.  only matters if not hidden.  defaults to 10
 			  'FKFieldSize'=>15,
 			  'relName'=>'nOrgParent', // the relation name defined above
-			  'displayAttr'=>'n_org_parent',  // attribute or pseudo-attribute to display
+			  'displayAttr'=>'v_org_name',  // attribute or pseudo-attribute to display
 			  // length of the AutoComplete/display field, defaults to 50
 			  //'autoCompleteLength'=>15,
 			  // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may
@@ -105,21 +106,17 @@
 <?php echo $form->textFieldRow($model,'v_contact_person',array('class'=>'span5','maxlength'=>60)); ?>
 <?php echo $form->textFieldRow($model,'v_phone_person',array('class'=>'span5','maxlength'=>15)); ?>
 <?php echo $form->textFieldRow($model,'v_email_person',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
 	<div class="actions">
 		<?php
-		echo CHtml::submitButton($model->isNewRecord ? Yii::t('setupModule.main','Buat') : Yii::t('setupModule.main','Simpan'),array('class'=>'btn primary')); 
+		echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save'),array('class'=>'btn primary')); 
 		?>
 		&nbsp;
 		
 		<?php
-		echo CHtml::resetButton(Yii::t('setupModule.main','Batal'),array('class'=>'btn primary')); ?>&nbsp;|
+		echo CHtml::resetButton(Yii::t('app','Cancel'),array('class'=>'btn primary')); ?>&nbsp;|
 		
 		<?php
-		echo CHtml::link(Yii::t('setupModule.main','Kembali Ke List'),array('index'), array('class'=>'btn')); ?>
+		echo CHtml::link(Yii::t('app','Back to List'),array('index'), array('class'=>'btn')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

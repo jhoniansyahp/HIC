@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Organizations'=>array('index'),
-	'Manage',
+	Yii::t('app','Organizations')=>array('index'),
+	Yii::t('app','Index'),
 );
 /*
 $this->menu=array(
@@ -40,11 +40,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#setup-mst-organizations-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"setup-mst-organizations-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);	
 		});
 	}else{
 		$('input[name=\"setup-mst-organizations-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);	
 		});
 	}
 });
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('app','Pilih salah satu row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-mst-organizations-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-mst-organizations-form').action='".Yii::app()->createUrl('/setup/organizations/deleteall')."';
                 document.getElementById('setup-mst-organizations-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1>Setup Mst Organizations</h1>
+<h1><?php echo Yii::t('app','Organizations');?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -88,13 +88,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 <p>
 <?php
-echo CHtml::link(Yii::t('setupModule.main','Tambah'),array('Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
 
-echo CHtml::Button(Yii::t('setupModule.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php
@@ -105,7 +105,11 @@ $form=$this->beginWidget('CActiveForm', array(
 ));
 ?>
 
-<?php $this->widget('ext.bootstrap.widgets.BootGridView',array(
+<?php 
+
+
+
+$this->widget('ext.bootstrap.widgets.BootGridView',array(
 	'id'=>'setup-mst-organizations-grid',
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
@@ -121,20 +125,36 @@ $form=$this->beginWidget('CActiveForm', array(
 		'value'=>$model->n_org_id,
 		'class'=>'CCheckBoxColumn',
 	),
-			'n_org_id',
-		'v_org_code',
+		//'n_org_id',
+		array(
+			'name'=>'v_org_code',
+			"htmlOptions" => array("style"=>"text-align:center"),
+		),
 		'v_org_name',
 			array(
 		'name' => 'd_start_date',
-		'value'=>'date("d M Y",strtotime($data->d_start_date))',
+		'value'=>'Controller::getDate()->toReadable($data->d_start_date)',
+		"htmlOptions" => array("style"=>"text-align:center"),
 	)
 	,
-			array(
+	array(
 		'name' => 'd_end_date',
-		'value'=>'date("d M Y",strtotime($data->d_end_date))',
+		'value'=>'Controller::getDate()->toReadable($data->d_end_date)',
+		"htmlOptions" => array("style"=>"text-align:center"),
 	)
 	,
-		'v_flag_coy_id',
+	array(
+		"name" => "v_flag_coy_id",
+		"value" => "Controller::appHelper()->labelOrganizationFlagCoy(\$data->v_flag_coy_id)",
+		"htmlOptions" => array("style"=>"text-align:center"),
+	),
+	array(
+		"name" => 	"n_org_parent",
+		"value" => " !empty(\$data->n_org_parent) ? SetupMstOrganizations::model()->findByPK(\$data->n_org_parent)->v_org_name : \"-\"",
+		"htmlOptions" => array("style"=>"text-align:center"),
+	),
+	
+		//'v_flag_coy_id',
 		'v_org_level',
 		/*
 		'n_org_parent',

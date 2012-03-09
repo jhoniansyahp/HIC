@@ -67,18 +67,18 @@ abstract class BaseSetupPlanBenefits extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'v_plan_code' => Yii::t('setupModule.main','Plan Code'),
-			'v_template' => Yii::t('setupModule.main', 'Template'),
-			'v_kelompok' => Yii::t('setupModule.main', 'Kelompok'),
-			'n_baris' => Yii::t('setupModule.main', 'Baris'),
-			'v_benefit' => Yii::t('setupModule.main', 'Benefit'),
-			'v_formula' => Yii::t('setupModule.main', 'Formula'),
-			'v_update' => Yii::t('setupModule.main', 'Update'),
-			'v_created_by' => Yii::t('setupModule.main', 'Created By'),
-			'd_created_date' => Yii::t('setupModule.main', 'Created Date'),
-			'v_updated_by' => Yii::t('setupModule.main', 'Updated By'),
-			'd_updated_date' => Yii::t('setupModule.main', 'Updated Date'),
-			'vPlanCode' => Yii::t('setupModule.main','VPlanCode'),
+			'v_plan_code' => Yii::t('app','Plan Code'),
+			'v_template' => Yii::t('app', 'Template'),
+			'v_kelompok' => Yii::t('app', 'Kelompok'),
+			'n_baris' => Yii::t('app', 'Baris'),
+			'v_benefit' => Yii::t('app', 'Benefit'),
+			'v_formula' => Yii::t('app', 'Formula'),
+			'v_update' => Yii::t('app', 'Update'),
+			'v_created_by' => Yii::t('app', 'Created By'),
+			'd_created_date' => Yii::t('app', 'Created Date'),
+			'v_updated_by' => Yii::t('app', 'Updated By'),
+			'd_updated_date' => Yii::t('app', 'Updated Date'),
+			'vPlanCode' => Yii::t('app','VPlanCode'),
 		);
 	}
 

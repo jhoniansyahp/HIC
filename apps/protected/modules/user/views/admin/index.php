@@ -13,8 +13,9 @@ $this->breadcrumbs=array(
 	));
 ?>
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(
 	'dataProvider'=>$dataProvider,
+	'template'=>'{pager}{items}{pager}',
 	'columns'=>array(
 		array(
 			'name' => 'id',
@@ -48,7 +49,8 @@ $this->breadcrumbs=array(
 			'value'=>'User::itemAlias("AdminStatus",$data->superuser)',
 		),
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.BootButtonColumn',
+			'htmlOptions'=>array('style'=>'width: 50px'),
 		),
 	),
 )); ?>

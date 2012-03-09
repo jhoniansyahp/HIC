@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Parameters'=>array('index'),
-	$model->v_param_code,
+	Yii::t('app','Setup Parameters')=>array('index'),
+	Yii::t('app','View'),
 );
 /*
 $this->menu=array(
@@ -23,13 +23,13 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_param_code), array('update','id'=>$model->v_param_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_param_code), array('update','id'=>$model->v_param_code));
 ?>
 </div>
 
-<h1>View SetupMstParameters #<?php echo $model->v_param_code; ?></h1>
+<h1><?php echo Yii::t('app','View Parameter $v_param_name',array('$v_param_name'=>$model->v_param_name));?></h1>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -39,22 +39,31 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_par
 		'v_param_name',
 		'v_param_desc',
 		'v_flag',
-		'n_value_number',
-		'd_value_date',
-		'v_value_char',
+		array(
+			'name' => 'n_value_number',
+			'value' => !empty($model->n_value_number) ? $model->n_value_number : "",
+		),
+		array(
+			'name' => 'd_value_date',
+			'value' => !empty($model->d_value_date) ? $this->getDate()->toReadable($model->d_value_date) : "",
+		),
+		array(
+			'name' => 'v_value_char',
+			'value' => !empty($model->v_value_char) ? $model->v_value_char : "",
+		),
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_param_code),array('update','id'=>$model->v_param_code),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_param_code),array('update','id'=>$model->v_param_code),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_param_code), array('update','id'=>$model->v_param_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_param_code), array('update','id'=>$model->v_param_code));
 ?>
 </div>
 </p>

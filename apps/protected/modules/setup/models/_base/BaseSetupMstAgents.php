@@ -48,7 +48,7 @@ abstract class BaseSetupMstAgents extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('n_agent_no, v_agent_code, v_agent_name, v_status_agent', 'required'),
+			array('v_agent_code, v_agent_name, v_status_agent', 'required'),
 			array('n_agent_no, v_reporting_to, n_coy_id', 'numerical', 'integerOnly'=>true),
 			array('v_agent_code', 'length', 'max'=>20),
 			array('v_agent_name', 'length', 'max'=>150),
@@ -77,23 +77,23 @@ abstract class BaseSetupMstAgents extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'n_agent_no' => Yii::t('setupModule.main', 'Agent No'),
-			'v_agent_code' => Yii::t('setupModule.main', 'Agent Code'),
-			'v_agent_name' => Yii::t('setupModule.main', 'Agent Name'),
-			'v_agent_type' => Yii::t('setupModule.main', 'Agent Type'),
-			'v_status_agent' => Yii::t('setupModule.main', 'Status Agent'),
-			'v_channel_no' => Yii::t('setupModule.main', 'Channel No'),
-			'v_jabatan' => Yii::t('setupModule.main', 'Jabatan'),
-			'v_reporting_to' => Yii::t('setupModule.main','Reporting To'),
-			'v_created_by' => Yii::t('setupModule.main', 'Created By'),
-			'd_created_date' => Yii::t('setupModule.main', 'Created Date'),
-			'v_updated_by' => Yii::t('setupModule.main', 'Updated By'),
-			'd_updated_date' => Yii::t('setupModule.main', 'Updated Date'),
-			'n_coy_id' => Yii::t('setupModule.main', 'Coy'),
-			'polMstPolises' => Yii::t('setupModule.main','PolMstPolises'),
-			'setupMstCoys' => Yii::t('setupModule.main','SetupMstCoys'),
-			'vReportingTo' => Yii::t('setupModule.main','VReportingTo'),
-			'setupMstAgents' => Yii::t('setupModule.main','SetupMstAgents'),
+			'n_agent_no' => Yii::t('app', 'Agent No'),
+			'v_agent_code' => Yii::t('app', 'Agent Code'),
+			'v_agent_name' => Yii::t('app', 'Agent Name'),
+			'v_agent_type' => Yii::t('app', 'Agent Type'),
+			'v_status_agent' => Yii::t('app', 'Status Agent'),
+			'v_channel_no' => Yii::t('app', 'Channel No'),
+			'v_jabatan' => Yii::t('app', 'Jabatan'),
+			'v_reporting_to' => Yii::t('app','Reporting To'),
+			'v_created_by' => Yii::t('app', 'Created By'),
+			'd_created_date' => Yii::t('app', 'Created Date'),
+			'v_updated_by' => Yii::t('app', 'Updated By'),
+			'd_updated_date' => Yii::t('app', 'Updated Date'),
+			'n_coy_id' => Yii::t('app', 'Coy'),
+			'polMstPolises' => Yii::t('app','PolMstPolises'),
+			'setupMstCoys' => Yii::t('app','SetupMstCoys'),
+			'vReportingTo' => Yii::t('app','VReportingTo'),
+			'setupMstAgents' => Yii::t('app','SetupMstAgents'),
 		);
 	}
 

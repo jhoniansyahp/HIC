@@ -33,9 +33,9 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php echo "<?php\n";?>
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Ubah Data {n} &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>), array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>), array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
 ?>
 </div>
 
@@ -63,16 +63,16 @@ foreach($this->tableSchema->columns as $column){
 	),
 )); ?>
 <?php echo "<?php\n"; ?>
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Ubah Data {n} &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>),array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>),array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php echo "<?php\n";?>
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Ubah Data {n} &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>), array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>), array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
 ?>
 </div>
 </p>

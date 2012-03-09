@@ -23,9 +23,9 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->v_lookup_dtl_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->v_lookup_dtl_code));
 ?>
 </div>
 
@@ -55,16 +55,16 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_loo
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_lookup_dtl_code),array('update','id'=>$model->v_lookup_dtl_code),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_dtl_code),array('update','id'=>$model->v_lookup_dtl_code),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->v_lookup_dtl_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->v_lookup_dtl_code));
 ?>
 </div>
 </p>

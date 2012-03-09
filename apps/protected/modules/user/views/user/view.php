@@ -38,7 +38,7 @@ $this->breadcrumbs=array(
 		)
 	);
 			
-	$this->widget('zii.widgets.CDetailView', array(
+	$this->widget('ext.bootstrap.widgets.BootDetailView', array(
 		'data'=>$model,
 		'attributes'=>$attributes,
 	));

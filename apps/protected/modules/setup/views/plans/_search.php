@@ -55,23 +55,23 @@
 		echo "</div>
 </div>"; ?>
 <?php echo $form->textFieldRow($model,'v_prod_line',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_prod_composition',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo $form->textFieldRow($model,'v_indv_or_group',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo $form->textFieldRow($model,'v_plan_type',array('class'=>'span5','maxlength'=>10)); ?>
+<?php echo $form->dropDownListRow($model, 'v_prod_composition', array(""=>"All",'Y'=>Yii::t('app','Yes'),'N' => Yii::t('app','No'))); ?>       
+<?php echo $form->dropDownListRow($model, 'v_indv_or_group', array(""=>"All",'G'=>Yii::t('app','Group'),'I' => Yii::t('app','Individual'),'J'=> Yii::t('app',"Joint"))); ?>       
+<?php //echo $form->textFieldRow($model,'v_plan_type',array('class'=>'span5','maxlength'=>10)); ?>
 <?php echo $form->textFieldRow($model,'v_curr_code',array('class'=>'span5','maxlength'=>10)); ?>
-<?php echo $form->textFieldRow($model,'v_status',array('class'=>'span5','maxlength'=>1)); ?>
+<?php echo $form->dropDownListRow($model, 'v_status', array(""=>"All",'A'=>Yii::t('app','Active'),'I' => Yii::t('app','Inactive'))); ?>
 <?php echo ""; ?>
 <?php echo ""; ?>
 <?php echo ""; ?>
 <?php echo ""; ?>
 	<div class="actions">
 		<?php
-		 echo CHtml::submitButton(Yii::t('setupModule.main','Cari'),array('class'=>'btn primary'));
+		 echo CHtml::submitButton(Yii::t('app','Search'),array('class'=>'btn primary'));
 		  echo '&nbsp;';
-		 echo CHtml::submitButton(Yii::t('setupModule.main','Batal'), array('class'=>'btn','onclick'=>'this.form.reset()'));
+		 echo CHtml::submitButton(Yii::t('app','Cancel'), array('class'=>'btn','onclick'=>'this.form.reset()'));
 		 echo '&nbsp;';
  
-		 echo CHtml::link(Yii::t('setupModule.main','Pencarian Sederhana'),'#',array('class'=>'search-simple-button btn')); 
+		 echo CHtml::link(Yii::t('app','Simple Search'),'#',array('class'=>'search-simple-button btn')); 
 		?>
 	</div>
 </div>

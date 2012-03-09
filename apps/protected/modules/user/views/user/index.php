@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 	<li><?php echo CHtml::link(UserModule::t('Manage Profile Field'),array('profileField/admin')); ?></li>
 </ul><!-- actions --><?php 
 } ?>
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(
 	'dataProvider'=>$dataProvider,
 	'columns'=>array(
 		array(

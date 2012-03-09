@@ -9,7 +9,9 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'HIC',
 	'theme'=>'bootstrap',
-	'language'=>'id',
+	// language
+	'sourceLanguage'=>'id',
+	'language'=>'id_id',
 	// preloading 'log' component
 	'preload'=>array('log', 'bootstrap'),
 
@@ -28,7 +30,6 @@ return array(
 		// uncomment the following to enable the Gii tool		
 		'polis',
 		'claim',
-		'polis',
 		'setup',
 		'user',
 		'rights'=>array(
@@ -52,11 +53,15 @@ return array(
 
 	// application components
 		'components'=>array(
+			'ELangHandler' => array (
+			            'class' => 'application.extensions.langhandler.ELangHandler',
+			            'languages' => array('en','id'),
+			        ),
 			'user'=>array(
 				'class'=>'RWebUser',
 				// enable cookie-based authentication
 				'allowAutoLogin'=>true,
-				'loginUrl'=>'/apps/index.php/user/login',
+				'loginUrl'=>array('/user/login'),
 			),
 			'bootstrap'=>array(
 			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
@@ -76,17 +81,23 @@ return array(
 				// http://twitter.github.com/bootstrap/javascript.html
 			),
 		),
-		'user'=>array(
+		/*'user'=>array(
 			'class'=>'RWebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
             'loginUrl'=>'/HIC/apps/user/login',
-		),
+		),*/
 		// uncomment the following to enable URLs in path-format
-		
+		'rights' => array(
+				'superuserName' => 'admin',
+				'authenticatedName'=>'Authenticated',
+				'install' => false,
+				'layout' => '//layouts/main',
+				//'appLayout'=>'application.themes.bootstrap.views.layouts',
+		 ),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			'showScriptName'=>false,
+			//'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

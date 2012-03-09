@@ -32,7 +32,7 @@ $this->menu=array(
 ?>
 
 <h1><?php echo "<?php\n";?>
-Yii::t('<?php echo $this->getModule()->name;?>Module.main','Update Data No. {n}',$model-><?php echo $this->tableSchema->primaryKey;?>);
+Yii::t('app','Update Data No. {n}',$model-><?php echo $this->tableSchema->primaryKey;?>);
 ?></h1>
 
 <?php echo "<?php echo \$this->renderPartial('_form',array('model'=>\$model)); ?>"; ?>

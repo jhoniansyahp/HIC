@@ -15,7 +15,7 @@
 
 			<div class="row">
 
-				<table class="items generate-item-table" border="0" cellpadding="0" cellspacing="0">
+				<table class="items generate-item-table table table-striped" border="0" cellpadding="0" cellspacing="0">
 
 					<tbody>
 

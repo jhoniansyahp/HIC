@@ -81,9 +81,14 @@ class LookupsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model = $this->loadModel($id);
+		//$detailmodel =  new SetupDtlLookups('search');
+		//$detailmodel->attributes = array('v_lookup_code', $model->v_lookup_code);
+		
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
 		));
+		
 	}
 
 	/**
@@ -104,9 +109,9 @@ class LookupsController extends Controller
 								$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_lookup_code));
@@ -134,11 +139,11 @@ class LookupsController extends Controller
 			$model->attributes=$_POST['SetupMstLookups'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 												$model->v_updated_by=Yii::app()->user->id;
 												$model->d_updated_date=new CDbExpression('NOW()');
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_lookup_code));
@@ -182,16 +187,40 @@ class LookupsController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupMstLookups'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstLookups'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 								
 		$this->render('index',array(
 			'model'=>$model,
 		));
+		
+	}
+	
+	public function actionIndexDetails($PK)
+	{
+			$model=new SetupDtlLookups('search');
+			$model->findByPK($PK);
+			$model->unsetAttributes();  // clear any default values
+			if(isset($_GET['SetupDtlLookups']))
+				$model->attributes=$_GET['SetupDtlLookups'];
+
+
+									    // Convert dd/mm/yy to yy-mm-dd
+							if(!empty($model->d_created_date) && isset($_GET['SetupDtlLookups'])){
+								$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
+							}
+											    // Convert dd/mm/yy to yy-mm-dd
+							if(!empty($model->d_updated_date) && isset($_GET['SetupDtlLookups'])){
+								$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
+							}
+
+			$this->render('index',array(
+				'model'=>$model,
+			));
 	}
 
 	/*

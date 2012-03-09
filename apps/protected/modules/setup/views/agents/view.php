@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Agents'=>array('index'),
-	$model->n_agent_no,
+	Yii::t('app',"Agents")=>array('index'),
+	Yii::t('app',"View"),
 );
 /*
 $this->menu=array(
@@ -23,40 +23,60 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_agent_no), array('update','id'=>$model->n_agent_no));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_agent_no), array('update','id'=>$model->n_agent_no));
 ?>
 </div>
 
-<h1>View SetupMstAgents #<?php echo $model->n_agent_no; ?></h1>
+<h1><?php echo Yii::t('app','View Agent',array('$no_agent'=>$model->n_agent_no,'$name_agent'=>$model->v_agent_name));?></h1>
 
 
-<?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
+<?php 
+
+$organizations = SetupMstOrganizations::model()->findByAttributes(array("n_org_id"=>$model->n_coy_id));
+$organizationName = $model->n_coy_id;
+if(isset($organizations->v_org_name)){
+	$organizationName = $organizations->v_org_name;
+}
+
+$this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	'data'=>$model,
 	'attributes'=>array(
 		'n_agent_no',
 		'v_agent_code',
 		'v_agent_name',
-		'v_agent_type',
-		'v_status_agent',
+		array(
+			"name" => "v_agent_type",
+			"value" => $this->appHelper()->labelAgentType($model->v_agent_type),
+		),
+		array(
+			"name" => "v_status_agent",
+			"value" => $this->appHelper()->statusActivate($model->v_status_agent),
+		),
 		'v_channel_no',
 		'v_jabatan',
-		'v_reporting_to',
-		'n_coy_id',
+		array(
+			"name" => "v_reporting_to",
+			"value" => !empty($model->v_reporting_to) ? SetupMstAgents::model()->findByPK($model->v_reporting_to)->v_agent_name : '-',
+		),
+		array(
+			"name" => "n_coy_id",
+			"value" => $organizationName,
+		),
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_agent_no),array('update','id'=>$model->n_agent_no),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_agent_no),array('update','id'=>$model->n_agent_no),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->n_agent_no), array('update','id'=>$model->n_agent_no));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_agent_no), array('update','id'=>$model->n_agent_no));
 ?>
 </div>
 </p>
