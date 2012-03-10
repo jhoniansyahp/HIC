@@ -7,13 +7,13 @@ $this->breadcrumbs=array(
 
 <h1><?php echo UserModule::t("Login"); ?></h1>
 
-<?php if(Yii::app()->user->hasFlash('loginMessage')): ?>
+<?php //if(Yii::app()->user->hasFlash('loginMessage')): ?>
 
 <div class="success">
-	<?php echo Yii::app()->user->getFlash('loginMessage'); ?>
+	<?php //echo Yii::app()->user->getFlash('loginMessage'); ?>
 </div>
 
-<?php endif; ?>
+<?php //endif; ?>
 
 <p><?php echo UserModule::t("Please fill out the following form with your login credentials:"); ?></p>
 

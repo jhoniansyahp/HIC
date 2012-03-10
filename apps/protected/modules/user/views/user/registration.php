@@ -19,8 +19,7 @@ $this->breadcrumbs=array(
 	'disableAjaxValidationAttributes'=>array('RegistrationForm_verifyCode'),
 	'htmlOptions' => array('enctype'=>'multipart/form-data'),
 )); ?>
-
-	<p class="note"><?php echo UserModule::t('<?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> '); ?></p>
+	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
 	
 	<?php echo $form->errorSummary(array($model,$profile)); ?>
 	
