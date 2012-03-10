@@ -40,10 +40,10 @@ $this->breadcrumbs=array(
 		</p>
 	</div-->
 	
-	<!--div class="row rememberMe">
-		<?php //echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-		<?php //echo CHtml::activeLabelEx($model,'rememberMe'); ?>
-	</div-->
+	<div class="row rememberMe">
+		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
+		<?php echo CHtml::activeLabelEx($model,'rememberMe'); ?>
+	</div>
 
 	<div class="row submit">
 		<?php echo CHtml::submitButton(UserModule::t("Login")); ?>

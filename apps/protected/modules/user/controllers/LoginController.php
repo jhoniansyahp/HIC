@@ -10,7 +10,7 @@ class LoginController extends Controller
 	public function actionLogin()
 	{
                
-		$this->layout = '//layouts/main';
+		$this->layout = '//layouts/login';
 		if (Yii::app()->user->isGuest) {
 			$model=new UserLogin;
 			// collect user input data
