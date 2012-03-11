@@ -66,10 +66,11 @@ class LookupsController extends Controller
 							
 			   'combo_setup-mst-organizations'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
-				  'model'=> 'SetupMstLookups',
-				  'label'=> 'n_coy_id',
-				  'value'=> 'n_coy_id',
-				   'id' => 'n_coy_id',
+				  'model'=> 'SetupMstOrganizations',
+				  'label'=> 'v_org_name',
+				  'value'=> 'v_org_name',
+				   'id' => 'n_org_id',
+				   'condition' => array('v_flag_coy_id=:flag',array(':flag'=>'Y')),
 				),
 					);
 		
@@ -192,6 +193,10 @@ class LookupsController extends Controller
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstLookups'])){
 							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
+						}
+						
+						if(empty($model->n_coy_id) && isset($_GET['SetupMstLookups'])){
+							unset($model->n_coy_id);
 						}
 								
 		$this->render('index',array(

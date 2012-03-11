@@ -61,7 +61,11 @@
 </div>"; ?>
 
 <?php echo $form->dropDownListRow($model, 'v_flag_coy_id', array('Y'=>Yii::t('app','Company/Business'),'N' => Yii::t('app','Unit'))); ?>
-<?php echo $form->dropDownListRow($model, 'v_org_level', array('PERUSH'=>'Perusahaan','CAB'=>'Cabang','UNIT'=>'Unit')); ?>
+<?php 
+$helper = $this->lookupHelper();
+$helperValues = $helper->findByPK('ORGANIZATION_LEVEL');
+echo $form->dropDownListRow($model, 'v_org_level',$helperValues); 
+?>
 <?php 
 		
 			echo '<div class="control-group">';
@@ -99,8 +103,18 @@
 <?php echo $form->textFieldRow($model,'v_currency',array('class'=>'span5','maxlength'=>15)); ?>
 <?php echo $form->textFieldRow($model,'v_address',array('class'=>'span5','maxlength'=>150)); ?>
 <?php echo $form->textFieldRow($model,'v_city',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_province',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_country',array('class'=>'span5','maxlength'=>30)); ?>
+<?php 
+	unset($helperValues);
+	$helper = $this->lookupHelper();
+	$helperValues = $helper->findByPK('PROVINCE');
+	echo $form->dropDownListRow($model, 'v_province',$helperValues);
+?>
+<?php 
+	unset($helperValues);
+	$helper = $this->lookupHelper();
+	$helperValues = $helper->findByPK('COUNTRY');
+	echo $form->dropDownListRow($model, 'v_country',$helperValues);
+?>
 <?php echo $form->textFieldRow($model,'v_post_code',array('class'=>'span5','maxlength'=>5)); ?>
 <?php echo $form->textFieldRow($model,'v_phone',array('class'=>'span5','maxlength'=>15)); ?>
 <?php echo $form->textFieldRow($model,'v_contact_person',array('class'=>'span5','maxlength'=>60)); ?>

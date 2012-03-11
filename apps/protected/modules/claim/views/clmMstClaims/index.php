@@ -55,7 +55,7 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('{$this->getModule()->name}Module.main','Please select row')."');
         }
         else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Are you sure want to delete this?')."'))
         {

@@ -67,6 +67,7 @@ abstract class BaseSetupMstAgents extends GxActiveRecord {
 			'setupMstCoys' => array(self::HAS_MANY, 'SetupMstCoys', 'n_existing_agent'),
 			'vReportingTo' => array(self::BELONGS_TO, 'SetupMstAgents', 'v_reporting_to'),
 			'setupMstAgents' => array(self::HAS_MANY, 'SetupMstAgents', 'v_reporting_to'),
+			'nCoyId' => array(self::BELONGS_TO, 'SetupMstOrganizations', 'n_coy_id'),
 		);
 	}
 

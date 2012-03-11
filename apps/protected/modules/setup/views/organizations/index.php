@@ -55,7 +55,7 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('app','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
         else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
@@ -131,7 +131,7 @@ $this->widget('ext.bootstrap.widgets.BootGridView',array(
 			"htmlOptions" => array("style"=>"text-align:center"),
 		),
 		'v_org_name',
-			array(
+	array(
 		'name' => 'd_start_date',
 		'value'=>'Controller::getDate()->toReadable($data->d_start_date)',
 		"htmlOptions" => array("style"=>"text-align:center"),
@@ -150,12 +150,15 @@ $this->widget('ext.bootstrap.widgets.BootGridView',array(
 	),
 	array(
 		"name" => 	"n_org_parent",
-		"value" => " !empty(\$data->n_org_parent) ? SetupMstOrganizations::model()->findByPK(\$data->n_org_parent)->v_org_name : \"-\"",
+		"value" => "Controller::lookupHelper()->custom(SetupMstOrganizations::model(),\$data->n_org_parent,'v_org_name')",
 		"htmlOptions" => array("style"=>"text-align:center"),
 	),
 	
 		//'v_flag_coy_id',
-		'v_org_level',
+	array(
+		"name" => "v_org_level",
+		"value" =>  "Controller::lookupHelper()->toReadable(\"ORGANIZATION_LEVEL\",\$data->v_org_level)",
+	),
 		/*
 		'n_org_parent',
 		'v_no_account',

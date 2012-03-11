@@ -20,6 +20,10 @@
  * @property string $d_created_date
  * @property string $v_updated_by
  * @property string $d_updated_date
+ * @property integer $n_max_harirawat
+ * @property integer $n_max_klaim_pmonth
+ * @property integer $n_max_klaim_pday
+ * @property integer $n_max_visite_pday
  *
  * @property SetupMstPlans $vPlanCode
  */
@@ -38,19 +42,20 @@ abstract class BaseSetupPlanBenefits extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'v_created_by';
+		return 'v_template';
 	}
 
 	public function rules() {
 		return array(
-			array('v_plan_code', 'required'),
+			array('v_plan_code, v_kelompok, n_baris, v_created_by, d_created_date', 'required'),
+			array('n_max_harirawat, n_max_klaim_pmonth, n_max_klaim_pday, n_max_visite_pday', 'numerical', 'integerOnly'=>true),
 			array('v_plan_code, v_kelompok, n_baris, v_update', 'length', 'max'=>10),
 			array('v_template', 'length', 'max'=>20),
 			array('v_benefit, v_formula', 'length', 'max'=>50),
 			array('v_created_by, v_updated_by', 'length', 'max'=>30),
 			array('d_updated_date', 'safe'),
-			array('v_template, v_benefit, v_formula, v_update, v_updated_by, d_updated_date', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('v_plan_code, v_template, v_kelompok, n_baris, v_benefit, v_formula, v_update, v_created_by, d_created_date, v_updated_by, d_updated_date', 'safe', 'on'=>'search'),
+			array('v_template, v_benefit, v_formula, v_update, v_updated_by, d_updated_date, n_max_harirawat, n_max_klaim_pmonth, n_max_klaim_pday, n_max_visite_pday', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('v_plan_code, v_template, v_kelompok, n_baris, v_benefit, v_formula, v_update, v_created_by, d_created_date, v_updated_by, d_updated_date, n_max_harirawat, n_max_klaim_pmonth, n_max_klaim_pday, n_max_visite_pday', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,6 +83,10 @@ abstract class BaseSetupPlanBenefits extends GxActiveRecord {
 			'd_created_date' => Yii::t('app', 'Created Date'),
 			'v_updated_by' => Yii::t('app', 'Updated By'),
 			'd_updated_date' => Yii::t('app', 'Updated Date'),
+			'n_max_harirawat' => Yii::t('app', 'Max Harirawat'),
+			'n_max_klaim_pmonth' => Yii::t('app', 'Max Klaim Pmonth'),
+			'n_max_klaim_pday' => Yii::t('app', 'Max Klaim Pday'),
+			'n_max_visite_pday' => Yii::t('app', 'Max Visite Pday'),
 			'vPlanCode' => Yii::t('app','VPlanCode'),
 		);
 	}
@@ -96,6 +105,10 @@ abstract class BaseSetupPlanBenefits extends GxActiveRecord {
 		$criteria->compare('d_created_date', $this->d_created_date, true);
 		$criteria->compare('v_updated_by', $this->v_updated_by, true);
 		$criteria->compare('d_updated_date', $this->d_updated_date, true);
+		$criteria->compare('n_max_harirawat', $this->n_max_harirawat);
+		$criteria->compare('n_max_klaim_pmonth', $this->n_max_klaim_pmonth);
+		$criteria->compare('n_max_klaim_pday', $this->n_max_klaim_pday);
+		$criteria->compare('n_max_visite_pday', $this->n_max_visite_pday);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

@@ -41,14 +41,16 @@
 					'---',
 					array('label'=>'Setup Umum', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Parameter','url'=>array('/setup/parameters')),
-					array('label'=>'Lookup','url'=>array('/setup/lookups')),
+					array('label'=>'Lookups','url'=>array('/setup/lookups')),
+					array('label'=>'Detail Lookups','url'=>array('/setup/detaillookups')),
 					'---',
 					array('label'=>'Setup Security User', 'itemOptions'=>array('class'=>'nav-header')),
+					array('label'=>'Admin User','url'=>array('/user/admin')),
 					array('label'=>'Tasks','url'=>array('/rights/authitem/tasks')),
 					array('label'=>'Roles','url'=>array('/rights/authitem/roles')),
 					array('label'=>'Operations','url'=>array('/rights/authitem/operations')),
-					array('label'=>'Form - Role','url'=>array('/setup/formrole')),
-					array('label'=>'Admin User','url'=>array('/user/admin')),
+					array('label'=>'Permissions','url'=>array('/rights/authitem/permissions')),
+					array('label'=>'Assignment','url'=>array('/rights/assignment')),
 					//array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
 				)),
 				array('label'=>'Polis', 'url'=>'#','items' => array(
@@ -94,6 +96,36 @@
 	<?php echo $content; ?>
 </div><!-- page -->
 <hr />
-
+<div class="row">
+    <div class="footer span16">   
+    
+        <div class="span2" style="float:left">System v.0.1</div>
+       
+       <div class="span6 right">
+        <select id="select01" class="span3 right">
+                <option>Pilih Bahasa</option>
+                <option>Indonesia</option>
+                <option>Ingris</option>
+                <option>Arab</option>
+                <option>Spanyol</option>
+              </select>
+              
+        <select id="select02" class="span2 right" style="margin-right:10px;">
+                <option>Pilih Style</option>
+                <option>cyborg</option>
+                <option>slate</option>
+                <option>united</option>
+                <option>dangdut</option>
+              </select>
+        </div>
+        <div class="span4" style="margin:0 auto">
+        Copyright &copy; 2012 - <a href="#">Disclaimer</a> | <a href="#">Help</a> 
+        </div>
+        
+        
+   
+        
+        </div>
+    </div>
 </body>
 </html>

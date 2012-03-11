@@ -186,7 +186,12 @@ class EJuiAutoCompleteFkField extends CJuiAutoComplete {
         $this->_lookupName = $this->attribute.'_lookup';
 
         $related = $this->model->{$this->relName}; // get the related record
-        $this->_display=(!empty($this->model->{$this->attribute}) ? $related->{$this->displayAttr} : '');
+
+		if(isset($related->{$this->displayAttr})){
+        	$this->_display =  (!empty($this->model->{$this->attribute}) ? $related->{$this->displayAttr} : '');
+		}else{
+			$this->_display = "";
+		}
 
         if (!isset($this->options['minLength']))
             $this->options['minLength'] = 2;

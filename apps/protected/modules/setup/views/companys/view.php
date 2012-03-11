@@ -36,15 +36,24 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code), array('u
 	'attributes'=>array(
 		'v_company_code',
 		'v_company_group',
-		'v_inst_type',
+		array(
+			"name" => "v_inst_type",
+			"value" => Controller::lookupHelper()->toReadable("INST_TYPE",$model->v_inst_type),
+		),
 		'v_company_name',
 		'v_regn_no',
 		'v_short_name',
-		'v_jenis_usaha',
-		'v_mobilitas',
+		array(
+			"name" => "v_jenis_usaha",
+			"value" => Controller::lookupHelper()->toReadable("BUSINESS_LINES",$model->v_jenis_usaha),
+		),
+		array(
+			"name" => "v_mobilitas",
+			"value" => Controller::lookupHelper()->toReadable("BUSINESS_MOBILITY",$model->v_mobilitas),
+		),
 		'v_office_hours',
 		array(
-			"value"=>SetupMstAgents::model()->findByPK($model->n_existing_agent)->v_agent_name,
+			"value"=>Controller::lookupHelper()->custom(SetupMstAgents::model(),$model->n_existing_agent,'v_agent_name'),
 			"name" => "n_existing_agent",
 		),
 		'v_comp_add1',
@@ -52,8 +61,14 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code), array('u
 		'v_comp_add3',
 		'v_postcode',
 		'v_town',
-		'v_state_code',
-		'v_country_code',
+		array(
+			"name" => "v_state_code",
+			"value" => Controller::lookupHelper()->toReadable("PROVINCE",$model->v_state_code),
+		),
+		array(
+			"name" => "v_country_code",
+			"value" => Controller::lookupHelper()->toReadable("COUNTRY",$model->v_country_code),
+		),
 		'v_phone1',
 		'v_phone2',
 		'v_fax',

@@ -1,7 +1,9 @@
-<?php $this->widget('zii.widgets.CMenu', array(
-	'firstItemCssClass'=>'first',
-	'lastItemCssClass'=>'last',
-	'htmlOptions'=>array('class'=>'actions'),
+<?php $this->widget('bootstrap.widgets.BootMenu', array(
+	//'firstItemCssClass'=>'first',
+	//'lastItemCssClass'=>'last',
+	'type' => 'pills',
+	'stacked' => true,
+	//'htmlOptions'=>array('class'=>'btn'),
 	'items'=>array(
 		array(
 			'label'=>Rights::t('core', 'Assignments'),

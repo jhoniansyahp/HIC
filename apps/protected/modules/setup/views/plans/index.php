@@ -121,20 +121,23 @@ $form=$this->beginWidget('CActiveForm', array(
 		'value'=>$model->v_plan_code,
 		'class'=>'CCheckBoxColumn',
 	),
-			'v_plan_code',
+                'v_plan_code',
 		'v_plan_name',
 		'v_plan_desc',
 			array(
 		'name' => 'd_plan_start',
-		'value'=>'date("d M Y",strtotime($data->d_plan_start))',
+		'value'=>'Controller::getDate()->toReadable($data->d_plan_start)',
 	)
 	,
 			array(
 		'name' => 'd_plan_end',
-		'value'=>'date("d M Y",strtotime($data->d_plan_end))',
+		'value'=>'Controller::getDate()->toReadable($data->d_plan_end)',
 	)
 	,
-		'v_prod_line',
+		array(
+			"name" => "v_prod_line",
+			"value" => "Controller::lookupHelper()->toReadable('PRODUCT_LINE',\$data->v_prod_line)",
+		),
 		//'v_prod_composition',
 		/*
 		'v_indv_or_group',

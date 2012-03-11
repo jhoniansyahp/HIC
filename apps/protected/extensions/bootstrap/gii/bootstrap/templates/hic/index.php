@@ -16,8 +16,8 @@
 echo "<?php\n";
 $label=$this->pluralize($this->class2name($this->modelClass));
 echo "\$this->breadcrumbs=array(
-	'$label'=>array('index'),
-	'Manage',
+	Yii::t('app','$label')=>array('index'),
+	Yii::t('app','Manage'),
 );\n";
 ?>
 /*
@@ -49,11 +49,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#<?php echo $this->class2id($this->modelClass); ?>-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"<?php echo $this->class2id($this->modelClass); ?>-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);	
 		});
 	}else{
 		$('input[name=\"<?php echo $this->class2id($this->modelClass); ?>-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);	
 		});
 	}
 });
@@ -64,11 +64,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('app','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
         else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').action='".Yii::app()->createUrl('/<?php echo $this->getModule()->name;?>/<?php echo $this->class2id($this->modelClass); ?>/deleteall')."';
+                document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').action='".Yii::app()->createUrl('/deleteall')."';
                 document.getElementById('<?php echo $this->class2id($this->modelClass); ?>-form').submit();
 				return false;
         }
@@ -77,7 +77,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1><?php echo $this->pluralize($this->class2name($this->modelClass)); ?></h1>
+<h1><?php echo "<?php ";?>echo Yii::t('app','<?php echo $this->pluralize($this->class2name($this->modelClass)); ?>');?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

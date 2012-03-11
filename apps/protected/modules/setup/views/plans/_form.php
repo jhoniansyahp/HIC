@@ -59,11 +59,19 @@
 	   ));
 		echo "</div>
 </div>"; ?>
-<?php echo $form->textFieldRow($model,'v_prod_line',array('class'=>'span5','maxlength'=>30)); ?>
+<?php 
+	$helper = $this->lookupHelper();
+	$helperValues = $helper->findByPK('PRODUCT_LINE');
+	echo $form->dropDownListRow($model, 'v_prod_line',$helperValues);
+?>
 <?php echo $form->dropDownListRow($model, 'v_prod_composition', array('Y'=>Yii::t('app','Yes'),'N' => Yii::t('app','No'))); ?>       
 <?php echo $form->dropDownListRow($model, 'v_indv_or_group', array('G'=>Yii::t('app','Group'),'I' => Yii::t('app','Individual'),'J'=> Yii::t('app',"Joint"))); ?>       
 <?php //echo $form->textFieldRow($model,'v_plan_type',array('class'=>'span5','maxlength'=>10)); ?>
-<?php echo $form->textFieldRow($model,'v_curr_code',array('class'=>'span5','maxlength'=>10)); ?>
+<?php 
+	$helper = $this->lookupHelper();
+	$helperValues = $helper->findByPK('CURRENCY');
+	echo $form->dropDownListRow($model, 'v_curr_code',$helperValues);
+?>
 <?php echo $form->dropDownListRow($model, 'v_status', array('A'=>Yii::t('app','Active'),'I' => Yii::t('app','Inactive'))); ?>
 	<div class="actions">
 		<?php

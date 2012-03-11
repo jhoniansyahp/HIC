@@ -11,27 +11,19 @@
 	'method'=>'get',
 )); ?>
 <div class="alert alert-warning">
-<?php echo $form->textFieldRow($model,'n_coy_id',array('class'=>'span5','maxlength'=>22)); ?>
-<?php echo $form->textFieldRow($model,'n_org_id',array('class'=>'span5','maxlength'=>22)); ?>
-<?php echo $form->textFieldRow($model,'v_lookup_code',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo $form->textFieldRow($model,'v_lookup_dtl_code',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo $form->textFieldRow($model,'v_lookup_dtl_name',array('class'=>'span5','maxlength'=>150)); ?>
-<?php echo $form->textFieldRow($model,'v_lookup_dtl_desc',array('class'=>'span5','maxlength'=>500)); ?>
-<?php echo $form->textFieldRow($model,'v_flex',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo $form->textFieldRow($model,'v_sub_kelompok',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo $form->textFieldRow($model,'v_kelompok',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo $form->textFieldRow($model,'v_laporan',array('class'=>'span5','maxlength'=>60)); ?>
-<?php echo $form->textFieldRow($model,'v_dr_cr',array('class'=>'span5','maxlength'=>2)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_1',array('class'=>'span5','maxlength'=>200)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_2',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_3',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_4',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_5',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_6',array('class'=>'span5','maxlength'=>15)); ?>
+<div class="row-fluid">
+	<div class="span5">
+<?php echo $form->textFieldRow($model,'n_org_id',array('class'=>'span3','maxlength'=>22)); ?>
+<?php echo $form->textFieldRow($model,'v_lookup_code',array('class'=>'span3','maxlength'=>60)); ?>
+<?php echo $form->textFieldRow($model,'v_lookup_dtl_code',array('class'=>'span3','maxlength'=>60)); ?>
+</div>
+<div class="span5">
+<?php echo $form->textFieldRow($model,'v_lookup_dtl_name',array('class'=>'span3','maxlength'=>150)); ?>
+<?php echo $form->textFieldRow($model,'v_lookup_dtl_desc',array('class'=>'span3','maxlength'=>500)); ?>
+<?php echo $form->dropDownListRow($model, 'v_flex', array(''=>Yii::t('app','All'),'A'=>Yii::t('app','Active'),'I' => Yii::t('app','Inactive'))); ?>
+</div>
+</div>
+
 	<div class="actions">
 		<?php
 		 echo CHtml::submitButton(Yii::t('app','Search'),array('class'=>'btn primary'));

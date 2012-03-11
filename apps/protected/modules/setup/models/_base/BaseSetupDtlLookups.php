@@ -48,8 +48,9 @@ abstract class BaseSetupDtlLookups extends GxActiveRecord {
 		return Yii::t('app', 'SetupDtlLookups|SetupDtlLookups', $n);
 	}
 
+	
 	public static function representingColumn() {
-		return 'n_coy_id';
+		return array('v_lookup_code','v_lookup_dtl_code');
 	}
 
 	public function rules() {
@@ -73,6 +74,7 @@ abstract class BaseSetupDtlLookups extends GxActiveRecord {
 	public function relations() {
 		return array(
 			'nOrg' => array(self::BELONGS_TO, 'SetupMstOrganizations', 'n_org_id'),
+			'nCoy' => array(self::BELONGS_TO, 'SetupMstOrganizations', 'n_coy_id'),
 			'vLookupCode' => array(self::BELONGS_TO, 'SetupMstLookups', 'v_lookup_code'),
 		);
 	}
@@ -112,7 +114,7 @@ abstract class BaseSetupDtlLookups extends GxActiveRecord {
 
 	public function search() {
 		$criteria = new CDbCriteria;
-
+		$criteria->compare('n_lookup_dtl_id', $this->n_lookup_dtl_id);
 		$criteria->compare('n_coy_id', $this->n_coy_id, true);
 		$criteria->compare('n_org_id', $this->n_org_id);
 		$criteria->compare('v_lookup_code', $this->v_lookup_code);

@@ -2,7 +2,7 @@
 
 <?php echo CHtml::beginForm(); ?>
 
-	<p class="note"><?php echo UserModule::t('<?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> '); ?></p>
+	<p class="note"><?php echo UserModule::t('Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>')); ?></p>
 
 	<?php echo CHtml::errorSummary($model); ?>
 	

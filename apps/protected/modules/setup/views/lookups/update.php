@@ -8,7 +8,7 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('app','Setup Lookups')=>array('index'),
+	Yii::t('app','Lookups')=>array('index'),
 	Yii::t('app','View',array('$v_lookup_code'=>$model->v_lookup_code))=>array('view','id'=>$model->v_lookup_code),
 	Yii::t('app','Update'),
 );
@@ -22,7 +22,7 @@ $this->menu=array(
 ?>
 
 <h1><?php
-echo Yii::t('app','Update Data $v_lookup_name',array("\$v_lookup_name"=>$model->v_lookup_name));
+echo Yii::t('app','Update Lookup',array("\$v_lookup_name"=>$model->v_lookup_name));
 ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

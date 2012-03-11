@@ -8,7 +8,7 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('app','Setup Parameters')=>array('index'),
+	Yii::t('app','Parameters')=>array('index'),
 	Yii::t('app','View'),
 );
 /*
@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_param_code), array('upd
 ?>
 </div>
 
-<h1><?php echo Yii::t('app','View Parameter $v_param_name',array('$v_param_name'=>$model->v_param_name));?></h1>
+<h1><?php echo Yii::t('app','View Parameter',array('$v_param_name'=>$model->v_param_name));?></h1>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(

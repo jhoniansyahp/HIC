@@ -13,7 +13,7 @@
 	</p>
 
 	<p><?php echo CHtml::link(Rights::t('core', 'Create a new task'), array('authItem/create', 'type'=>CAuthItem::TYPE_TASK), array(
-		'class'=>'add-task-link',
+		'class'=>'add-task-link btn',
 	)); ?></p>
 
 	<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(

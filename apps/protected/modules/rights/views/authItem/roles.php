@@ -13,7 +13,7 @@
 	</p>
 
 	<p><?php echo CHtml::link(Rights::t('core', 'Create a new role'), array('authItem/create', 'type'=>CAuthItem::TYPE_ROLE), array(
-	   	'class'=>'add-role-link',
+	   	'class'=>'add-role-link btn',
 	)); ?></p>
 
 	<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(

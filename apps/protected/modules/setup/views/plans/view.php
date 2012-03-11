@@ -46,14 +46,23 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('upda
 			'name' => 'd_plan_end',
 			'value' => $this->getDate()->toReadable($model->d_plan_end),
 		),
-		'v_prod_line',
+		array(
+			"name" => 'v_prod_line',
+			"value" => $this->lookupHelper()->toReadable('PRODUCT_LINE',$model->v_prod_line),
+		),
                 array(
                   "name" =>  'v_prod_composition',
-                  "value" => $this->appHelper()->labelPlanProdComposition($model->v_prod_composition),
+                  "value" => $this->appHelper()->statusActivate($model->v_prod_composition),
                 ),
-		'v_indv_or_group',
+		array(
+			"name" => "v_indv_or_group",
+			"value" => $this->appHelper()->labelIndividuOrGroup($model->v_indv_or_group),
+		),
 		//'v_plan_type',
-		'v_curr_code',
+		array(
+			"name"=>"v_curr_code",
+			"value" => $this->lookupHelper()->toDisplay($model->v_curr_code),
+		),
 	),
 )); ?>
 

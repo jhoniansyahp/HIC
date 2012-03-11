@@ -8,9 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Plan'=>array('/setup/plans/index'),
-	'View ' => array('/setup/plans/view','id'=>$model->v_plan_code),
-	'Create',
+	Yii::t('app','Claim Product')=>array('index'),
+	Yii::t('app','Create'),
 );
 
 /*
@@ -20,6 +19,6 @@ $this->menu=array(
 );*/
 ?>
 
-<h1>Create SetupPlanBenefits</h1>
+<h1><?php echo Yii::t("app","Create Claim Product");?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

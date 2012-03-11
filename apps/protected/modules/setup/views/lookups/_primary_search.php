@@ -11,7 +11,7 @@
 	'method'=>'get',
 )); ?>
 <div class="alert alert-warning">
-	<?php echo $form->textFieldRow($model,'n_coy_id',array('class'=>'span5','maxlength'=>22)); ?>
+	<?php echo $form->textFieldRow($model,'v_lookup_name',array('class'=>'span5','maxlength'=>22)); ?>
 	
 	<div class="actions">
 		<?php

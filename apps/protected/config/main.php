@@ -12,6 +12,7 @@ return array(
 	// language
 	'sourceLanguage'=>'id',
 	'language'=>'id_id',
+	'theme'=>'bootstrap',
 	// preloading 'log' component
 	'preload'=>array('log', 'bootstrap'),
 

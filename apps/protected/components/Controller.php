@@ -3,7 +3,7 @@
  * Controller is the customized base controller class.
  * All controller classes for this application should extend from this base class.
  */
-class Controller extends CController
+class Controller extends RController
 {
 	/**
 	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
@@ -27,17 +27,23 @@ class Controller extends CController
 	);
 	
 	
-	/*public function filters()
+	public function filters()
 	{
 		
 		return array(
 			'Rights'
 		);
-	}*/
+	}
 	
 	public function allowedActions() 
 	{ 
 		return 'login,index'; 
+	}
+	
+	public function globalMenu(){
+		$module = $this->getModule();
+		
+		print_r($module);
 	}
 	/**
 	 * @var array the breadcrumbs of the current page. The value of this property will
@@ -53,33 +59,27 @@ class Controller extends CController
 	public function appHelper(){
 		return new HICHelper();
 	}
-	/*public function convertDate($date){
-		
-		if(!(stripos($date,'/') !== FALSE)) return $date;
-		
-		list($d, $m, $y) = preg_split('/\//', $date);
-
-		$newDate = sprintf('%4d-%02d-%02d', $y, $m, $d);
-		
-		return $newDate;
+	
+	public function bootstrapHelper(){
+		return new bootstrapHelper();
 	}
 	
-	public function convertDate2Readable($date){
-		
-		if(!(stripos($date,'-') !== FALSE)) return $date;
-		
-		$newDate = date("d M Y",strtotime($date));
-		
-		return $newDate;
+	public function lookupHelper($criteria = null){
+		return new lookupHelper($criteria);
 	}
 	
-	public function convertDateNormal($date){
-		if(!(stripos($date,'-') !== FALSE)) return $date;
+	public function formHelper()
+	{
+		return new formHelper();
+	}
+	
+	public function render($view, $data=null, $return=false)
+	{
 		
-		//$newDate = date("d M Y",strtotime($date));
-		list($y, $m, $d) = preg_split('/-/', $date);
-		$newDate = sprintf('%02d/%02d/%4d', $d, $m, $y);
-		
-		return $newDate;
-	}*/
+		if(isset($_GET['theme'])){
+			$theme = $_GET['theme'];
+			Yii::app()->setTheme($theme);
+		}
+		parent::render($view,$data,$return);
+	}
 }

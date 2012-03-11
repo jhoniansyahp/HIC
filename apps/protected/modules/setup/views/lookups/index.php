@@ -8,7 +8,7 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('app','Setup Lookups')=>array('index'),
+	Yii::t('app','Lookups')=>array('index'),
 	Yii::t('app','Index'),
 );
 /*
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('app','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
         else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-mst-lookups-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-mst-lookups-form').action='".Yii::app()->createUrl('/setup/lookups/deleteall')."';
                 document.getElementById('setup-mst-lookups-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('app','Setup Lookups');?></h1>
+<h1><?php echo Yii::t('app','Lookups');?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -127,7 +127,7 @@ $this->widget('ext.bootstrap.widgets.BootGridView',array(
 		),
 		array(
 			"name" => "n_coy_id",
-			"value"=>'SetupMstOrganizations::model()->findByAttributes(array("n_org_id"=>$data->n_coy_id,"v_flag_coy_id"=>"Y"))->v_org_name',
+			"value"=> 'Controller::lookupHelper()->custom(SetupMstOrganizations::model(),$data->n_coy_id,"v_org_name")',
 		),
 		'v_lookup_code',
 		'v_lookup_name',
@@ -135,6 +135,7 @@ $this->widget('ext.bootstrap.widgets.BootGridView',array(
 		array(
 			"name" => "v_flag",
 			"value" => "Controller::appHelper()->statusActivate(\$data->v_flag)",
+			"htmlOptions" => array('style'=>'text-align:center'),
 		),
 		/*'v_created_by',
 		'd_created_date',

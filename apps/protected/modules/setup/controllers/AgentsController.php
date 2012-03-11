@@ -71,7 +71,15 @@ class AgentsController extends Controller
 				  'value'=> 'v_agent_name',
 				   'id' => 'n_agent_no',
 				),
-					);
+				'combo_setup-mst-organizations' => array(
+					'class' => 'application.extensions.EAutoCompleteAction',
+					'model' => 'SetupMstOrganizations',
+					'label' => 'v_org_name',
+					'value' => 'v_org_name',
+					'id' => 'n_org_id',
+					'condition' => array('v_flag_coy_id=:flag_coy',array(':flag_coy'=>'N')),
+				),
+			);
 		
 	}
 
@@ -198,6 +206,11 @@ class AgentsController extends Controller
 						
 						if(empty($model->v_reporting_to) && isset($_GET['SetupMstAgents'])){
 							unset($model->v_reporting_to);
+						}
+						
+						
+						if(empty($model->n_coy_id) && isset($_GET['SetupMstAgents'])){
+							unset($model->n_coy_id);
 						}
 								
 		$this->render('index',array(

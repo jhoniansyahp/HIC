@@ -13,10 +13,10 @@
 	</p>
 
 	<p><?php echo CHtml::link(Rights::t('core', 'Create a new operation'), array('authItem/create', 'type'=>CAuthItem::TYPE_OPERATION), array(
-		'class'=>'add-operation-link',
+		'class'=>'add-operation-link btn',
 	)); ?></p>
 
-	<?php $this->widget('zii.widgets.grid.CGridView', array(
+	<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(
 	    'dataProvider'=>$dataProvider,
 	    'template'=>'{items}',
 	    'emptyText'=>Rights::t('core', 'No operations found.'),

@@ -17,8 +17,8 @@ echo "<?php\n";
 $nameColumn=$this->guessNameColumn($this->tableSchema->columns);
 $label=$this->pluralize($this->class2name($this->modelClass));
 echo "\$this->breadcrumbs=array(
-	'$label'=>array('index'),
-	\$model->{$nameColumn},
+	Yii::t('app','$label')=>array('index'),
+	Yii::t('app','View'),
 );\n";
 ?>
 /*
@@ -39,7 +39,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model-><?php echo $this->tableSc
 ?>
 </div>
 
-<h1>View <?php echo $this->modelClass." #<?php echo \$model->{$this->tableSchema->primaryKey}; ?>"; ?></h1>
+<h1><?php echo "<?php ";?>echo Yii::t('app','View #{no}',array('{no}'=>'<?php echo "\$model->{$this->tableSchema->primaryKey}"; ?>'); ?></h1>
 
 
 <?php echo "<?php"; ?> $this->widget('ext.bootstrap.widgets.BootDetailView',array(

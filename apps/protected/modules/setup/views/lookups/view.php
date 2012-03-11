@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('app','Setup Lookups')=>array('index'),
-	Yii::t('app','View $v_lookup_code',array('$v_lookup_code'=>$model->v_lookup_code)),
+	Yii::t('app','Lookups')=>array('index'),
+	Yii::t('app','View',array('$v_lookup_code'=>$model->v_lookup_code)),
 );
 /*
 $this->menu=array(
@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_code), array('up
 ?>
 </div>
 
-<h1><?php echo Yii::t('app','View $v_lookup_code',array('$v_lookup_code'=>$model->v_lookup_code)); ?></h1>
+<h1><?php echo Yii::t('app','View Lookup',array('$v_lookup_code'=>$model->v_lookup_code)); ?></h1>
 
 
 <?php 
@@ -43,7 +43,7 @@ $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 			"value" => !empty($org) ? $org->v_org_name : '-',
 		),
 		'v_lookup_code',
-		'v_lookup_code',
+		'v_lookup_name',
 		'v_lookup_desc',
 		array(
 			"name" => "v_flag",

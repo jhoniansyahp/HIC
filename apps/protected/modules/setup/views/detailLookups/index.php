@@ -8,13 +8,13 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Dtl Lookups'=>array('index'),
-	'Manage',
+	Yii::t('app','Detail Lookups')=>array('index'),
+	Yii::t('app','Manage'),
 );
 /*
 $this->menu=array(
-	array('label'=>'List SetupDtlLookups','url'=>array('index')),
-	array('label'=>'Create SetupDtlLookups','url'=>array('create')),
+	array('label'=>'List Detail Lookups','url'=>array('index')),
+	array('label'=>'Create Detail Lookups','url'=>array('create')),
 );*/
 
 Yii::app()->clientScript->registerScript('search', "
@@ -44,7 +44,7 @@ $('#setup-dtl-lookups-master-checkbox').click(function(){
 		});
 	}else{
 		$('input[name=\"setup-dtl-lookups-grid_c0[]\"]').each(function(){
-			$(this).attr('checked',false);
+			$(this).attr('checked',false);	
 		});
 	}
 });
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('app','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
         else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-dtl-lookups-form').action='".Yii::app()->createUrl("/setup/lookups/deleteall")."';
+                document.getElementById('setup-dtl-lookups-form').action='".Yii::app()->createUrl('/setup/detaillookups/deleteall')."';
                 document.getElementById('setup-dtl-lookups-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1>Setup Dtl Lookups</h1>
+<h1><?php echo Yii::t('app','Detail Lookups');?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -105,14 +105,24 @@ $form=$this->beginWidget('CActiveForm', array(
 ));
 ?>
 
-<?php $this->widget('ext.bootstrap.widgets.BootGridView',array(
+<?php 
+
+$mstOrg = SetupMstOrganizations::model();
+$coy = $mstOrg->findByPK($model->n_coy_id);
+$org = $mstOrg->findByPK($model->n_org_id);
+
+$this->widget('ext.bootstrap.widgets.BootGridView',array(
 	'id'=>'setup-dtl-lookups-grid',
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
 	'itemsCssClass'=>'table table-bordered',
-	'template'=>"{pager}\n{items}\n{pager}",
+	'enablePagination' => true,
+	'template'=>"{items}\n{pager}",
+	'pagerCssClass' => 'pagination',
 	'pager' => array(
+		'header' => 'Go To Page<br />',
 		'pageSize' => '20',
+		'htmlOptions' => array('class'=>''),
 	 ),
 	'columns'=>array(
 
@@ -121,13 +131,22 @@ $form=$this->beginWidget('CActiveForm', array(
 		'value'=>$model->v_lookup_dtl_code,
 		'class'=>'CCheckBoxColumn',
 	),
-		'n_coy_id',
-		'n_org_id',
+array(
+	"name" => "n_coy_id",
+	"value" => "Controller::lookupHelper()->custom(SetupMstOrganizations::model(),\$data->n_org_id,'v_org_name')",
+),
+array(
+	"name" => "n_org_id",
+	"value" => "\$org = SetupMstOrganizations::model()->findByPK(\$data->n_org_id); isset(\$org->v_org_name) ? \$org->v_org_name : '-'",
+),
 		'v_lookup_code',
 		'v_lookup_dtl_code',
 		'v_lookup_dtl_name',
 		'v_lookup_dtl_desc',
-		'v_flex',
+		array(
+			'name' => 'v_flex',
+			'value' => "Controller::appHelper()->statusActivate(\$data->v_flex)",
+		),
 		/*
 		'v_created_by',
 		'd_created_date',

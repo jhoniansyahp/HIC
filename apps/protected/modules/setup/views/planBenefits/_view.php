@@ -54,6 +54,22 @@
 	<?php echo CHtml::encode($data->d_updated_date); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('n_max_harirawat')); ?>:</b>
+	<?php echo CHtml::encode($data->n_max_harirawat); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('n_max_klaim_pmonth')); ?>:</b>
+	<?php echo CHtml::encode($data->n_max_klaim_pmonth); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('n_max_klaim_pday')); ?>:</b>
+	<?php echo CHtml::encode($data->n_max_klaim_pday); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('n_max_visite_pday')); ?>:</b>
+	<?php echo CHtml::encode($data->n_max_visite_pday); ?>
+	<br />
+
 	*/ ?>
 
 </div>

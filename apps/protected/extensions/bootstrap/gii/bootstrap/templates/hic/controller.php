@@ -25,19 +25,19 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	/**
 	 * @return array action filters
 	 */
-	public function filters()
+	/*public function filters()
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
 		);
-	}
+	}*/
 
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+	/*public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
@@ -62,7 +62,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 				'users'=>array('*'),
 			),
 		);
-	}
+	}*/
 	
 	
 	/**
@@ -89,10 +89,10 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 				
 			   'combo_<?php echo $this->class2id($relatedModelClass);?>'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
-				  'model'=> '<?php echo $this->modelClass;?>',
-				  'label'=> '<?php echo $column->name;?>',
-				  'value'=> '<?php echo $column->name;?>',
-				   'id' => '<?php echo $column->name;?>',
+				  'model'=> '<?php echo $relatedModelClass;?>',
+				  'label'=> '<?php echo $relatedFKField;?>',
+				  'value'=> '<?php echo $relatedFKField;?>',
+				   'id' => '<?php echo $relatedFKField;?>',
 				),
 			<?php }?>
 		);

@@ -18,12 +18,24 @@
 
 <?php echo $form->textFieldRow($model,'v_company_code',array('class'=>'span5','maxlength'=>20)); ?>
 <?php echo $form->textFieldRow($model,'v_company_group',array('class'=>'span5','maxlength'=>50)); ?>
-<?php echo $form->textFieldRow($model,'v_inst_type',array('class'=>'span5','maxlength'=>10)); ?>
+<?php 
+	$instTypeHelper = $this->lookupHelper();
+	$instType = $instTypeHelper->findByPK('INST_TYPE');
+	echo $form->dropDownListRow($model, 'v_inst_type',$instType); 
+?>
 <?php echo $form->textFieldRow($model,'v_company_name',array('class'=>'span5','maxlength'=>500)); ?>
 <?php echo $form->textFieldRow($model,'v_regn_no',array('class'=>'span5','maxlength'=>100)); ?>
 <?php echo $form->textFieldRow($model,'v_short_name',array('class'=>'span5','maxlength'=>100)); ?>
-<?php echo $form->textFieldRow($model,'v_jenis_usaha',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_mobilitas',array('class'=>'span5','maxlength'=>30)); ?>
+<?php 
+	$helper = $this->lookupHelper();
+	$helperValues = $helper->findByPK('BUSINESS_LINES');
+	echo $form->dropDownListRow($model, 'v_jenis_usaha',$helperValues);
+?>
+<?php 
+$helper = $this->lookupHelper();
+$helperValues = $helper->findByPK('BUSINESS_MOBILITY');
+echo $form->dropDownListRow($model, 'v_mobilitas',$helperValues);
+?>
 <?php echo $form->textFieldRow($model,'v_office_hours',array('class'=>'span5','maxlength'=>50)); ?>
 <?php 
 		
@@ -62,8 +74,16 @@
 <?php echo $form->textFieldRow($model,'v_comp_add3',array('class'=>'span5','maxlength'=>100)); ?>
 <?php echo $form->textFieldRow($model,'v_postcode',array('class'=>'span5','maxlength'=>20)); ?>
 <?php echo $form->textFieldRow($model,'v_town',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_state_code',array('class'=>'span5','maxlength'=>30)); ?>
-<?php echo $form->textFieldRow($model,'v_country_code',array('class'=>'span5','maxlength'=>30)); ?>
+<?php 
+	$helper = $this->lookupHelper();
+	$helperValues = $helper->findByPK('PROVINCE');
+	echo $form->dropDownListRow($model, 'v_state_code',$helperValues);
+?>
+<?php 
+	$helper = $this->lookupHelper();
+	$helperValues = $helper->findByPK('COUNTRY');
+	echo $form->dropDownListRow($model, 'v_country_code',$helperValues);
+?>
 <?php echo $form->textFieldRow($model,'v_phone1',array('class'=>'span5','maxlength'=>30)); ?>
 <?php echo $form->textFieldRow($model,'v_phone2',array('class'=>'span5','maxlength'=>30)); ?>
 <?php echo $form->textFieldRow($model,'v_fax',array('class'=>'span5','maxlength'=>30)); ?>

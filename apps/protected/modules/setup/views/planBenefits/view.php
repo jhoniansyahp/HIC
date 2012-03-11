@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Plan Benefits'=>array('index'),
-	$model->v_plan_code,
+	Yii::t('app','Claim Product')=>array('index'),
+	Yii::t('app','View'),
 );
 /*
 $this->menu=array(
@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('upda
 ?>
 </div>
 
-<h1>View SetupPlanBenefits #<?php echo $model->v_plan_code; ?></h1>
+<h1><?php Yii::t('app','View #{no}',array('{no}'=>'$model->v_plan_code'); ?></h1>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -42,6 +42,10 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('upda
 		'v_benefit',
 		'v_formula',
 		'v_update',
+		'n_max_harirawat',
+		'n_max_klaim_pmonth',
+		'n_max_klaim_pday',
+		'n_max_visite_pday',
 	),
 )); ?>
 <?php

@@ -50,10 +50,13 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_org_id), array('update'
 			"name"=>"v_flag_coy_id",
 			"value"=> $this->appHelper()->labelOrganizationFlagCoy($model->v_flag_coy_id),
 		),
-		'v_org_level',
+		array(
+			"name" => "v_org_level",
+			"value" => Controller::lookupHelper()->toReadable("ORGANIZATION_LEVEL",$model->v_org_level),
+		),
 		array(
 			"name" => "n_org_parent",
-			"value" => !empty($model->n_org_parent) ? SetupMstOrganizations::model()->findByPK($model->n_org_parent)->v_org_name : '',
+			"value" => $this->lookupHelper()->custom(SetupMstOrganizations::model(),$model->n_org_parent,'v_org_name'),
 			"visible" => !empty($model->n_org_parent) ? true : false,
 		),
 		'v_no_account',
@@ -61,8 +64,14 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_org_id), array('update'
 		'v_currency',
 		'v_address',
 		'v_city',
-		'v_province',
-		'v_country',
+		array(
+			"name" => "v_province",
+			"value" => Controller::lookupHelper()->toReadable("PROVINCE",$model->v_province),
+		),
+		array(
+			"name" => "v_country",
+			"value" => Controller::lookupHelper()->toReadable("COUNTRY",$model->v_country),
+		),
 		'v_post_code',
 		'v_phone',
 		'v_contact_person',

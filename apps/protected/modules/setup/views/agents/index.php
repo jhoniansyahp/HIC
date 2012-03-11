@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('app','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
         else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-mst-agents-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-mst-agents-form').action='".Yii::app()->createUrl('/setup/agents/deleteall')."';
                 document.getElementById('setup-mst-agents-form').submit();
 				return false;
         }
@@ -148,7 +148,7 @@ $this->widget('ext.bootstrap.widgets.BootGridView',array(
 		),
                 array(
                   "name" => "n_coy_id",
-                  "value" => "!empty(\$data->n_coy_id) ? SetupMstOrganizations::model()->findByAttributes(array('n_org_id'=>\$data->n_coy_id))->v_org_name : '-'",
+                  "value" => "Controller::lookupHelper()->custom(SetupMstOrganizations::model(),\$data->n_coy_id,'v_org_name')",
                 ),
 		/*
 		'v_reporting_to',

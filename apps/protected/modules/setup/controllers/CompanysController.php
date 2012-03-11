@@ -188,6 +188,10 @@ class CompanysController extends Controller
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstCoys'])){
 							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
+						
+						if(empty($model->n_existing_agent) && isset($_GET['SetupMstCoys'])){
+							unset($model->n_existing_agent);
+						}
 								
 		$this->render('index',array(
 			'model'=>$model,

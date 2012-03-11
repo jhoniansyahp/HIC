@@ -55,7 +55,7 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('app','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
         else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
@@ -110,9 +110,10 @@ $form=$this->beginWidget('CActiveForm', array(
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
 	'itemsCssClass'=>'table table-bordered',
-	'template'=>"{pager}\n{items}\n{pager}",
+	'template'=>"{items}\n{pager}",
 	'pager' => array(
 		'pageSize' => '20',
+		'header' => 'Go To Page<br />',
 	 ),
 	'columns'=>array(
 
@@ -123,11 +124,17 @@ $form=$this->beginWidget('CActiveForm', array(
 	),
 			'v_company_code',
 		'v_company_group',
-		'v_inst_type',
+		array(
+			"name" => "v_inst_type",
+			"value" => "Controller::lookupHelper()->toReadable('INST_TYPE',\$data->v_inst_type)",
+		),
 		'v_company_name',
 		'v_regn_no',
 		'v_short_name',
-		'v_jenis_usaha',
+		array(
+			"name" => "v_jenis_usaha",
+			"value" => "Controller::lookupHelper()->toReadable('BUSINESS_LINES',\$data->v_jenis_usaha)",
+		),
 		/*
 		'v_mobilitas',
 		'v_office_hours',

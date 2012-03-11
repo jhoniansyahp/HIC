@@ -23,7 +23,7 @@
 
 				<h4><?php echo Rights::t('core', 'Parents'); ?></h4>
 
-				<?php $this->widget('zii.widgets.grid.CGridView', array(
+				<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(
 					'dataProvider'=>$parentDataProvider,
 					'template'=>'{items}',
 					'hideHeader'=>true,
@@ -59,7 +59,7 @@
 
 				<h4><?php echo Rights::t('core', 'Children'); ?></h4>
 
-				<?php $this->widget('zii.widgets.grid.CGridView', array(
+				<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(
 					'dataProvider'=>$childDataProvider,
 					'template'=>'{items}',
 					'hideHeader'=>true,

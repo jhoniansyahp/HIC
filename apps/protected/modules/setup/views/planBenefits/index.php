@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	''=>array('index'),
-	'Manage',
+	Yii::t('app','Claim Product')=>array('index'),
+	Yii::t('app','Index'),
 );
 /*
 $this->menu=array(
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('app','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
         else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-plan-benefits-form').action='".Yii::app()->createUrl(array('/setup/planbenefits/deleteall'))."';
+                document.getElementById('setup-plan-benefits-form').action='".Yii::app()->createUrl('/deleteall')."';
                 document.getElementById('setup-plan-benefits-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('app',"Claim Product");?></h1>
+<h1><?php echo Yii::t('app','Claim Product');?></h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -86,14 +86,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
-
 <p>
 <?php
-echo CHtml::link(Yii::t('app','Add'),array('create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
+
 echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
@@ -121,7 +121,7 @@ $form=$this->beginWidget('CActiveForm', array(
 		'value'=>$model->v_plan_code,
 		'class'=>'CCheckBoxColumn',
 	),
-		'v_plan_code',
+			'v_plan_code',
 		'v_template',
 		'v_kelompok',
 		'n_baris',
@@ -133,6 +133,10 @@ $form=$this->beginWidget('CActiveForm', array(
 		'd_created_date',
 		'v_updated_by',
 		'd_updated_date',
+		'n_max_harirawat',
+		'n_max_klaim_pmonth',
+		'n_max_klaim_pday',
+		'n_max_visite_pday',
 		*/
 		array(
 			'class'=>'bootstrap.widgets.BootButtonColumn',

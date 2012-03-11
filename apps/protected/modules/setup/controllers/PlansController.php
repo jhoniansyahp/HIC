@@ -146,8 +146,8 @@ class PlansController extends Controller
 				$this->redirect(array('view','id'=>$model->v_plan_code));
 		}
 	
-		$model->d_plan_start = $this->getDate()->toReadable($model->d_plan_start);
-		$model->d_plan_end = $this->getDate()->toReadable($model->d_plan_end);
+		$model->d_plan_start = $this->getDate()->toDisplay($model->d_plan_start);
+		$model->d_plan_end = $this->getDate()->toDisplay($model->d_plan_end);
 	
 		$this->render('update',array(
 			'model'=>$model,
