@@ -25,11 +25,11 @@ $this->menu=array(
 <?php
 echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->v_lookup_dtl_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_lookup_dtl_id), array('update','id'=>$model->n_lookup_dtl_id));
 ?>
 </div>
 
-<h1><?php echo Yii::t('app','View #{no}',array('{no}'=>$model->v_lookup_dtl_code)); ?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','View #{no}',array('{no}'=>$model->v_lookup_dtl_code)); ?></h1></div>
 
 
 <?php 
@@ -48,7 +48,10 @@ $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 			"name" => "n_org_id",
 			"value" => isset($org->v_org_name) ? $org->v_org_name : '-',
 		),
-		'v_lookup_code',
+		array(
+			"name" => "v_lookup_code",
+			"value" => $this->lookupHelper()->custom(SetupMstLookups::model(),$model->v_lookup_code,'v_lookup_name'),
+		),
 		'v_lookup_dtl_code',
 		'v_lookup_dtl_name',
 		'v_lookup_dtl_desc',
@@ -71,14 +74,14 @@ $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 <?php
 echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_dtl_code),array('update','id'=>$model->v_lookup_dtl_code),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_lookup_dtl_id),array('update','id'=>$model->n_lookup_dtl_id),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
 echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->v_lookup_dtl_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->n_lookup_dtl_id));
 ?>
 </div>
 </p>

@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_param_code), array('upd
 ?>
 </div>
 
-<h1><?php echo Yii::t('app','View Parameter',array('$v_param_name'=>$model->v_param_name));?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','View Parameter',array('$v_param_name'=>$model->v_param_name));?></h1></div>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(

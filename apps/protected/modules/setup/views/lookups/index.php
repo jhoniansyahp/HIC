@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('app','Lookups');?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','Lookups');?></h1></div>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -115,9 +115,11 @@ $this->widget('ext.bootstrap.widgets.BootGridView',array(
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
 	'itemsCssClass'=>'table table-bordered',
-	'template'=>"{pager}\n{items}\n{pager}",
+	'template'=>"{items}\n{pager}",
 	'pager' => array(
 		'pageSize' => '20',
+		'header' => 'Go To Page<br />',
+		'htmlOptions' => array('class'=>''),
 	 ),
 	'columns'=>array(
 		array(

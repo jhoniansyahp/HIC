@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_code), array('up
 ?>
 </div>
 
-<h1><?php echo Yii::t('app','View Lookup',array('$v_lookup_code'=>$model->v_lookup_code)); ?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','View Lookup',array('$v_lookup_code'=>$model->v_lookup_code)); ?></h1></div>
 
 
 <?php 

@@ -3,7 +3,7 @@ $this->breadcrumbs=array(
 	$this->module->id,
 );
 ?>
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
+<div class="page-header"><h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1></div>
 
 <p>
 This is the view content for action "<?php echo $this->action->id; ?>".

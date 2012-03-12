@@ -21,8 +21,8 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php
+<div class="page-header"><h1><?php
 echo Yii::t('app','Update Agent',array("\$agent_name"=>$model->v_agent_name,"\$agent_code"=>$model->v_agent_code));
-?></h1>
+?></h1></div>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

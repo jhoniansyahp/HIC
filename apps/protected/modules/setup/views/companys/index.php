@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t("app","Companys");?></h1>
+<div class="page-header"><h1><?php echo Yii::t("app","Companys");?></h1></div>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -112,6 +112,7 @@ $form=$this->beginWidget('CActiveForm', array(
 	'itemsCssClass'=>'table table-bordered',
 	'template'=>"{items}\n{pager}",
 	'pager' => array(
+		'htmlOptions' => array('class'=>''), 
 		'pageSize' => '20',
 		'header' => 'Go To Page<br />',
 	 ),

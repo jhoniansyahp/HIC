@@ -52,7 +52,7 @@
 <?php echo $form->textFieldRow($model,'v_lookup_name',array('class'=>'span5','maxlength'=>150)); ?>
 <?php echo $form->textFieldRow($model,'v_lookup_desc',array('class'=>'span5','maxlength'=>150)); ?>
 <?php echo $form->dropDownListRow($model, 'v_flag', array('A'=>Yii::t('app','Active'),'I' => Yii::t('app','Inactive'))); ?>
-	<div class="actions">
+	<div class="actions btn-actions">
 		<?php
 		echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save'),array('class'=>'btn primary')); 
 		?>

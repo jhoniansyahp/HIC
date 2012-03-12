@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_org_id), array('update'
 ?>
 </div>
 
-<h1><?php echo Yii::t('app','View Organization',array('$v_org_name'=>$model->v_org_name,'$n_org_id'=>$model->n_org_id)); ?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','View Organization',array('$v_org_name'=>$model->v_org_name,'$n_org_id'=>$model->n_org_id)); ?></h1></div>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -61,7 +61,10 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_org_id), array('update'
 		),
 		'v_no_account',
 		'v_npwp',
-		'v_currency',
+	array(
+		"name"=>"v_currency",
+		"value" => $this->lookupHelper()->toReadable('CURRENCY',$model->v_currency),
+	),
 		'v_address',
 		'v_city',
 		array(

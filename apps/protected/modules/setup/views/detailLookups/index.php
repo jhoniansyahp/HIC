@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('app','Detail Lookups');?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','Detail Lookups');?></h1></div>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -86,6 +86,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
+
 <p>
 <?php
 echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));

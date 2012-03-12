@@ -15,7 +15,8 @@
 	<p class="help-block"><?php  echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> </p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+<div class="row-fluid">
+	<div class="span5">
 	<?php 
 
 				echo '<div class="control-group">';
@@ -95,7 +96,7 @@
 			   // display size of the FK field.  only matters if not hidden.  defaults to 10
 			  'FKFieldSize'=>15,
 			  'relName'=>'vLookupCode', // the relation name defined above
-			  'displayAttr'=>'v_lookup_code',  // attribute or pseudo-attribute to display
+			  'displayAttr'=>'v_lookup_name',  // attribute or pseudo-attribute to display
 			  // length of the AutoComplete/display field, defaults to 50
 			  //'autoCompleteLength'=>15,
 			  // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may
@@ -120,13 +121,22 @@
 <?php echo $form->textFieldRow($model,'v_kelompok',array('class'=>'span5','maxlength'=>60)); ?>
 <?php echo $form->textFieldRow($model,'v_laporan',array('class'=>'span5','maxlength'=>60)); ?>
 <?php echo $form->textFieldRow($model,'v_dr_cr',array('class'=>'span5','maxlength'=>2)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_1',array('class'=>'span5','maxlength'=>200)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_2',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_3',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_4',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_5',array('class'=>'span5','maxlength'=>15)); ?>
-<?php echo $form->textFieldRow($model,'v_variable_6',array('class'=>'span5','maxlength'=>15)); ?>
-	<div class="actions">
+</div>
+</div>
+  <div class="page-header"><h1>Variable</h1></div>
+<div class="row-fluid">
+<div class="span5">
+<?php echo $form->textFieldRow($model,'v_variable_1',array('class'=>'span3','maxlength'=>200)); ?>
+<?php echo $form->textFieldRow($model,'v_variable_2',array('class'=>'span3','maxlength'=>15)); ?>
+<?php echo $form->textFieldRow($model,'v_variable_3',array('class'=>'span3','maxlength'=>15)); ?>
+</div>
+<div class="span5">
+<?php echo $form->textFieldRow($model,'v_variable_4',array('class'=>'span3','maxlength'=>15)); ?>
+<?php echo $form->textFieldRow($model,'v_variable_5',array('class'=>'span3','maxlength'=>15)); ?>
+<?php echo $form->textFieldRow($model,'v_variable_6',array('class'=>'span3','maxlength'=>15)); ?>
+</div>
+</div>
+	<div class="actions btn-actions">
 		<?php
 		echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save'),array('class'=>'btn primary')); 
 		?>

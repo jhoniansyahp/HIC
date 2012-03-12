@@ -21,10 +21,10 @@ $this->menu=array(
 );*/
 ?>
 
-<h1>
+<div class="page-header"><h1>
 <?php
 echo Yii::t('app','Update Organization',array("\$v_org_name"=>$model->v_org_name,'$v_org_code'=>$model->v_org_code));
-?></h1>
+?></h1></div>
 
 <?php 
 

@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code), array('u
 ?>
 </div>
 
-<h1><?php echo Yii::t('app',"View Company",array("\$company_name"=>$model->v_company_name));?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app',"View Company",array("\$company_name"=>$model->v_company_name));?></h1></div>
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	'data'=>$model,

@@ -19,6 +19,6 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php echo Yii::t('app','Create Organizations');?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','Create Organizations');?></h1></div>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

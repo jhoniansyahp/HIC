@@ -21,8 +21,8 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php
+<div class="page-header"><h1><?php
 echo Yii::t('app','Update Lookup',array("\$v_lookup_name"=>$model->v_lookup_name));
-?></h1>
+?></h1></div>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

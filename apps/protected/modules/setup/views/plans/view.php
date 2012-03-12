@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('upda
 ?>
 </div>
 
-<h1><?php echo Yii::t('app','View Plan');?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','View Plan');?></h1></div>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -61,7 +61,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('upda
 		//'v_plan_type',
 		array(
 			"name"=>"v_curr_code",
-			"value" => $this->lookupHelper()->toDisplay($model->v_curr_code),
+			"value" => $this->lookupHelper()->toReadable('CURRENCY',$model->v_curr_code),
 		),
 	),
 )); ?>

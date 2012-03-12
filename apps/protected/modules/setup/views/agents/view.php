@@ -29,7 +29,7 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_agent_no), array('updat
 ?>
 </div>
 
-<h1><?php echo Yii::t('app','View Agent',array('$no_agent'=>$model->n_agent_no,'$name_agent'=>$model->v_agent_name));?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','View Agent',array('$no_agent'=>$model->n_agent_no,'$name_agent'=>$model->v_agent_name));?></h1></div>
 
 
 <?php 

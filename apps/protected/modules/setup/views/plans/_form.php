@@ -15,10 +15,11 @@
 	<p class="help-block"><?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> </p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-<?php echo $form->textFieldRow($model,'v_plan_code',array('class'=>'span5','maxlength'=>10)); ?>
-<?php echo $form->textFieldRow($model,'v_plan_name',array('class'=>'span5','maxlength'=>50)); ?>
-<?php echo $form->textFieldRow($model,'v_plan_desc',array('class'=>'span5','maxlength'=>500)); ?>
+<div class="row-fluid">
+	<div class="span5">
+<?php echo $form->textFieldRow($model,'v_plan_code',array('class'=>'span3','maxlength'=>10)); ?>
+<?php echo $form->textFieldRow($model,'v_plan_name',array('class'=>'span3','maxlength'=>50)); ?>
+<?php echo $form->textFieldRow($model,'v_plan_desc',array('class'=>'span3','maxlength'=>500)); ?>
 <?php 
 		  echo '<div class="control-group">';
 		  echo $form->labelEx($model,'d_plan_start');
@@ -35,7 +36,7 @@
 							'showButtonPanel'=>'false',
 	                        'yearRange'=>'1998:2030', 
 	                     	),
-	        'htmlOptions'=>array('size'=>'10','class'=>'span5 date')
+	        'htmlOptions'=>array('size'=>'10','class'=>'span3 date')
 	   ));
 		echo "</div>
 </div>"; ?>
@@ -55,10 +56,12 @@
 							'showButtonPanel'=>'false',
 	                        'yearRange'=>'1998:2030', 
 	                     	),
-	        'htmlOptions'=>array('size'=>'10','class'=>'span5 date')
+	        'htmlOptions'=>array('size'=>'10','class'=>'span3 date')
 	   ));
 		echo "</div>
 </div>"; ?>
+</div>
+<div class="span5">
 <?php 
 	$helper = $this->lookupHelper();
 	$helperValues = $helper->findByPK('PRODUCT_LINE');
@@ -66,14 +69,16 @@
 ?>
 <?php echo $form->dropDownListRow($model, 'v_prod_composition', array('Y'=>Yii::t('app','Yes'),'N' => Yii::t('app','No'))); ?>       
 <?php echo $form->dropDownListRow($model, 'v_indv_or_group', array('G'=>Yii::t('app','Group'),'I' => Yii::t('app','Individual'),'J'=> Yii::t('app',"Joint"))); ?>       
-<?php //echo $form->textFieldRow($model,'v_plan_type',array('class'=>'span5','maxlength'=>10)); ?>
+<?php //echo $form->textFieldRow($model,'v_plan_type',array('class'=>'span3','maxlength'=>10)); ?>
 <?php 
 	$helper = $this->lookupHelper();
 	$helperValues = $helper->findByPK('CURRENCY');
 	echo $form->dropDownListRow($model, 'v_curr_code',$helperValues);
 ?>
 <?php echo $form->dropDownListRow($model, 'v_status', array('A'=>Yii::t('app','Active'),'I' => Yii::t('app','Inactive'))); ?>
-	<div class="actions">
+</div>
+</div>
+	<div class="actions btn-actions">
 		<?php
 		echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save'),array('class'=>'btn primary')); 
 		?>
