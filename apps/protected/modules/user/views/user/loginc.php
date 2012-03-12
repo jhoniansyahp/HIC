@@ -18,7 +18,7 @@ $this->breadcrumbs=array(
 <p><?php echo UserModule::t("Please fill out the following form with your login credentials:"); ?></p>
 
 <div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $formz=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
@@ -31,16 +31,16 @@ $this->breadcrumbs=array(
 	<?php echo CHtml::errorSummary($model); ?>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<?php echo $formz->labelEx($model,'username'); ?>
+		<?php echo $formz->textField($model,'username'); ?>
+		<?php echo $formz->error($model,'username'); ?>
 	</div>
 
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>		
+		<?php echo $formz->labelEx($model,'password'); ?>
+		<?php echo $formz->passwordField($model,'password'); ?>
+		<?php echo $formz->error($model,'password'); ?>		
 	</div>
 	
 	<!--div class="row">
@@ -50,21 +50,21 @@ $this->breadcrumbs=array(
 	</div-->
 	
 	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
+		<?php echo $formz->checkBox($model,'rememberMe'); ?>
+		<?php echo $formz->label($model,'rememberMe'); ?>
+		<?php echo $formz->error($model,'rememberMe'); ?>
 	</div>
 
 	<?php if(CCaptcha::checkRequirements()): ?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'verifyCode'); ?>
+		<?php echo $formz->labelEx($model,'verifyCode'); ?>
 		<div>
 		<?php $this->widget('CCaptcha'); ?><br/>
-		<?php echo $form->textField($model,'verifyCode'); ?>
+		<?php echo $formz->textField($model,'verifyCode'); ?>
 		</div>
 		<div class="hint">Please enter the letters as they are shown in the image above.
 		<br/>Letters are not case-sensitive.</div>
-		<?php echo $form->error($model,'verifyCode'); ?>
+		<?php echo $formz->error($model,'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
 

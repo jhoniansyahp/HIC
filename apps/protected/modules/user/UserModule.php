@@ -55,6 +55,7 @@ class UserModule extends CWebModule
 	public $registrationUrl = array("/user/registration");
 	public $recoveryUrl = array("/user/recovery/recovery");
 	public $loginUrl = array("/user/login");
+	public $invalidLoginUrl = array("/user/login/invalidLogin");
 	public $logoutUrl = array("/user/logout");
 	public $profileUrl = array("/user/profile");
 	public $returnUrl = array("/user/profile");
