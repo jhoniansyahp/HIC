@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Lookups'=>array('index'),
-	'Create',
+	Yii::t('app','Lookups')=>array('index'),
+	Yii::t('app','Create'),
 );
 
 /*
@@ -19,6 +19,6 @@ $this->menu=array(
 );*/
 ?>
 
-<h1>Create SetupMstLookups</h1>
+<div class="page-header"><h1><?php echo Yii::t('app','Create Lookup');?></h1></div>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

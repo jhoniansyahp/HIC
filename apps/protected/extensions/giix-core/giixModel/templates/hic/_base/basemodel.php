@@ -112,7 +112,7 @@ abstract class <?php echo $this->baseModelClass; ?> extends <?php echo $this->ba
 			
 			$label = ucwords(str_replace("_"," ",$name));
 		
-			$label = "Yii::t('{$this->getModule()->name}Module.main','{$label}')";
+			$label = "Yii::t('app','{$label}')";
 			
 			$label = str_replace("'V ","'",$label);
 			$label = str_replace("'D ","'",$label);
@@ -121,9 +121,6 @@ abstract class <?php echo $this->baseModelClass; ?> extends <?php echo $this->ba
 			echo "'{$name}' => {$label},\n"; ?>
 <?php else: ?>
 			<?php 
-			if(!empty($this->getModule()->name)){
-				$label = str_replace("'app'","'{$this->getModule()->name}Module.main'",$label);
-			}
 			
 			$label = str_replace("'V ","'",$label);
 			$label = str_replace("'D ","'",$label);

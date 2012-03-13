@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'HIC',
-	'theme'=>'bootstrap',
+	'theme'=>'bootstrap',	
 	// preloading 'log' component
 	'preload'=>array('log', 'bootstrap'),
 
@@ -27,7 +27,6 @@ return array(
 		// uncomment the following to enable the Gii tool		
 		'polis',
 		'claim',
-		'polis',
 		'setup',
 		'user',
 		'rights'=>array(
@@ -51,11 +50,15 @@ return array(
 
 	// application components
 		'components'=>array(
+			'ELangHandler' => array (
+			            'class' => 'application.extensions.langhandler.ELangHandler',
+			            'languages' => array('en','id'),
+			        ),
 			'user'=>array(
 				'class'=>'RWebUser',
 				// enable cookie-based authentication
 				'allowAutoLogin'=>true,
-				'loginUrl'=>'/apps/index.php/user/login',
+				'loginUrl'=>array('/user/login'),
 			),
 			'bootstrap'=>array(
 			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
@@ -75,18 +78,34 @@ return array(
 				// http://twitter.github.com/bootstrap/javascript.html
 			),
 		),
-		'user'=>array(
+		/*'user'=>array(
+			'class'=>'RWebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-		),
+            'loginUrl'=>'/HIC/apps/user/login',
+		),*/
 		// uncomment the following to enable URLs in path-format
-		
+		'rights' => array(
+				'superuserName' => 'admin',
+				'authenticatedName'=>'Authenticated',
+				'install' => false,
+				'layout' => '//layouts/main',
+				//'appLayout'=>'application.themes.bootstrap.views.layouts',
+		 ),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',				
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',	
+				'<controller:\w+>/<action:\w+>/<lang:en>'=>'en/<controller>/<action>',
+				'<controller:\w+>/<action:\w+>/<id:\d+>/<lang:en>'=>'en/<controller>/<action>',
+				'<controller:\w+>/<id:\d+>/<lang:en>'=>'en/<controller>/view/',
+				'en'=>'site/index/?lang=en',
+				'id'=>'site/index/?lang=id',
+				'login'=>'user/login',
+				'forgot-password'=>'user/recovery',
 			),
 		),
 		/*'db'=>array(
@@ -110,6 +129,7 @@ return array(
 			'itemChildTable'=>'authitemchild',
 			'assignmentTable'=>'authassignment',
 			'rightsTable'=>'rights',
+			'defaultRoles'=>array('Guest'),
         ),
 		
 		'errorHandler'=>array(
@@ -124,11 +144,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+				
 			),
 		),
 	),

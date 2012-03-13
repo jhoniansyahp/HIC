@@ -8,40 +8,57 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Dtl Lookups'=>array('index'),
-	$model->v_lookup_dtl_code,
+	Yii::t('app','Detail Lookups')=>array('index'),
+	Yii::t('app','View'),
 );
 /*
 $this->menu=array(
-	array('label'=>'List SetupDtlLookups','url'=>array('index')),
-	array('label'=>'Create SetupDtlLookups','url'=>array('create')),
-	array('label'=>'Update SetupDtlLookups','url'=>array('update','id'=>$model->v_lookup_dtl_code)),
-	array('label'=>'Delete SetupDtlLookups','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->v_lookup_dtl_code),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage SetupDtlLookups','url'=>array('admin')),
+	array('label'=>'List Detail Lookups','url'=>array('index')),
+	array('label'=>'Create Detail Lookups','url'=>array('create')),
+	array('label'=>'Update Detail Lookups','url'=>array('update','id'=>$model->v_lookup_dtl_code)),
+	array('label'=>'Delete Detail Lookups','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->v_lookup_dtl_code),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage Detail Lookups','url'=>array('admin')),
 );
 */
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->v_lookup_dtl_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_lookup_dtl_id), array('update','id'=>$model->n_lookup_dtl_id));
 ?>
 </div>
 
-<h1>View SetupDtlLookups #<?php echo $model->v_lookup_dtl_code; ?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','View #{no}',array('{no}'=>$model->v_lookup_dtl_code)); ?></h1></div>
 
 
-<?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
+<?php 
+$mstOrg = SetupMstOrganizations::model();
+$coy = $mstOrg->findByPK($model->n_coy_id);
+$org = $mstOrg->findByPK($model->n_org_id);
+
+$this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	'data'=>$model,
 	'attributes'=>array(
-		'n_coy_id',
-		'n_org_id',
-		'v_lookup_code',
+		array(
+			"name" => "n_coy_id",
+			"value" => isset($coy->v_org_name) ? $coy->v_org_name : '-',
+		),
+		array(
+			"name" => "n_org_id",
+			"value" => isset($org->v_org_name) ? $org->v_org_name : '-',
+		),
+		array(
+			"name" => "v_lookup_code",
+			"value" => $this->lookupHelper()->custom(SetupMstLookups::model(),$model->v_lookup_code,'v_lookup_name'),
+		),
 		'v_lookup_dtl_code',
 		'v_lookup_dtl_name',
 		'v_lookup_dtl_desc',
-		'v_flex',
+		array(
+			'name' => 'v_flex',
+			'value' => Controller::appHelper()->statusActivate($model->v_flex),
+		),
 		'v_sub_kelompok',
 		'v_kelompok',
 		'v_laporan',
@@ -55,16 +72,16 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_loo
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_lookup_dtl_code),array('update','id'=>$model->v_lookup_dtl_code),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_lookup_dtl_id),array('update','id'=>$model->n_lookup_dtl_id),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->v_lookup_dtl_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_dtl_code), array('update','id'=>$model->n_lookup_dtl_id));
 ?>
 </div>
 </p>

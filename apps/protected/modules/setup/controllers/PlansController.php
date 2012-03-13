@@ -18,40 +18,41 @@ class PlansController extends Controller
 	/**
 	 * @return array action filters
 	 */
-	public function filters()
-	{
-		return array(
-			'accessControl', // perform access control for CRUD operations
-		);
-	}
+	// public function filters()
+	// {
+		// return array(
+			// 'accessControl', // perform access control for CRUD operations
+		// );
+	// }
 
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','delete','deleteall',
-				),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
-	
+
+	// public function accessRules()
+	// {
+		// return array(
+			// array('allow',  // allow all users to perform 'index' and 'view' actions
+				// 'actions'=>array('index','view'),
+				// 'users'=>array('*'),
+			// ),
+			// array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				// 'actions'=>array('create','update','delete','deleteall',
+				// ),
+				// 'users'=>array('@'),
+			// ),
+			// array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				// 'actions'=>array('admin','delete'),
+				// 'users'=>array('admin'),
+			// ),
+			// array('deny',  // deny all users
+				// 'users'=>array('*'),
+			// ),
+		// );
+	// }
+
 	
 	/**
 	 * Mass Delete
@@ -61,8 +62,10 @@ class PlansController extends Controller
 	
 	public function actions()
 	{
+					
 		return array(
-					);
+			
+				);
 		
 	}
 
@@ -75,13 +78,9 @@ class PlansController extends Controller
 		
 		$model = $this->loadModel($id);
 
-		$detailmodel = new SetupPlanBenefits('search');
-		$detailmodel->attributes = array('v_plan_code',$model->v_plan_code);
-		
 		$this->render('view',array(
 			'model'=>$model,
-			'detailmodel'=>$detailmodel,
-		));
+			));
 	}
 
 	/**
@@ -100,15 +99,15 @@ class PlansController extends Controller
 			$model->attributes=$_POST['SetupMstPlans'];
 			
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_start = $this->convertDate($model->d_plan_start);
+						$model->d_plan_start = $this->getDate()->toSave($model->d_plan_start);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_end = $this->convertDate($model->d_plan_end);
+						$model->d_plan_end = $this->getDate()->toSave($model->d_plan_end);
 										$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_plan_code));
@@ -136,9 +135,9 @@ class PlansController extends Controller
 			$model->attributes=$_POST['SetupMstPlans'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_start = $this->convertDate($model->d_plan_start);
+						$model->d_plan_start = $this->getDate()->toSave($model->d_plan_start);
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_plan_end = $this->convertDate($model->d_plan_end);
+						$model->d_plan_end = $this->getDate()->toSave($model->d_plan_end);
 						
 						$model->v_updated_by=Yii::app()->user->id;
 						$model->d_updated_date=new CDbExpression('NOW()');
@@ -147,8 +146,8 @@ class PlansController extends Controller
 				$this->redirect(array('view','id'=>$model->v_plan_code));
 		}
 	
-		$model->d_plan_start = $this->convertDateNormal($model->d_plan_start);
-		$model->d_plan_end = $this->convertDateNormal($model->d_plan_end);
+		$model->d_plan_start = $this->getDate()->toDisplay($model->d_plan_start);
+		$model->d_plan_end = $this->getDate()->toDisplay($model->d_plan_end);
 	
 		$this->render('update',array(
 			'model'=>$model,
@@ -188,19 +187,19 @@ class PlansController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_plan_start) && isset($_GET['SetupMstPlans'])){
-							$model->d_plan_start = new CDbExpression("=".$this->convertDate($model->d_plan_start));
+							$model->d_plan_start = new CDbExpression("=".$this->getDate()->toSave($model->d_plan_start));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_plan_end) && isset($_GET['SetupMstPlans'])){
-							$model->d_plan_end = new CDbExpression("=".$this->convertDate($model->d_plan_end));
+							$model->d_plan_end = new CDbExpression("=".$this->getDate()->toSave($model->d_plan_end));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupMstPlans'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstPlans'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 						
 								
@@ -224,7 +223,7 @@ class PlansController extends Controller
 	                {
 	                        $model->deleteByPk($id);
 	                }
-
+ Yii::app()->user->setFlash('error', 'Please select at least one record to delete.');
 	                $this->actionIndex();
 	        }
 	        else
@@ -274,4 +273,16 @@ class PlansController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	/**
+	 *
+	 *
+	 */
+	 public function actionCreateDetail(){
+		Yii::import('application.modules.setup.controllers.planBenefitsController');
+		
+		planBenefitsController::actionCreate();
+	}
+	
+	
 }

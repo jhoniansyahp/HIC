@@ -8,9 +8,9 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Lookups'=>array('index'),
-	$model->v_lookup_code=>array('view','id'=>$model->v_lookup_code),
-	'Update',
+	Yii::t('app','Lookups')=>array('index'),
+	Yii::t('app','View',array('$v_lookup_code'=>$model->v_lookup_code))=>array('view','id'=>$model->v_lookup_code),
+	Yii::t('app','Update'),
 );
 /*
 $this->menu=array(
@@ -21,8 +21,8 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php
-Yii::t('setupModule.main','Update Data No. {n}',$model->v_lookup_code);
-?></h1>
+<div class="page-header"><h1><?php
+echo Yii::t('app','Update Lookup',array("\$v_lookup_name"=>$model->v_lookup_name));
+?></h1></div>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

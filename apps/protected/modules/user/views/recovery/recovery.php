@@ -14,20 +14,43 @@ $this->breadcrumbs=array(
 <?php else: ?>
 
 <div class="form">
-<?php echo CHtml::beginForm(); ?>
+<?php $formz=$this->beginWidget('CActiveForm', array(
+	'id'=>'UserRecoveryForm',
+	'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+)); ?>
 
-	<?php echo CHtml::errorSummary($form); ?>
-	
+	<p class="note"><?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> </p>
+
+	<?php echo $formz->errorSummary($form); ?>
+
 	<div class="row">
-		<?php echo CHtml::activeLabel($form,'login_or_email'); ?>
-		<?php echo CHtml::activeTextField($form,'login_or_email') ?>
+		<?php echo $formz->labelEx($form,'login_or_email'); ?>
+		<?php echo $formz->textField($form,'login_or_email'); ?>
+		<?php echo $formz->error($form,'login_or_email'); ?>
 		<p class="hint"><?php echo UserModule::t("Please enter your login or email addres."); ?></p>
 	</div>
 	
+	<?php if(CCaptcha::checkRequirements()): ?>
+	<div class="row">
+		<?php echo $formz->labelEx($form,'verifyCode'); ?>
+		<div>
+		<?php $this->widget('CCaptcha'); ?>
+		<br/>
+		<?php echo $formz->textField($form,'verifyCode'); ?>
+		</div>
+		<div class="hint">Please enter the letters as they are shown in the image above.
+		<br/>Letters are not case-sensitive.</div>
+		<?php echo $formz->error($form,'verifyCode'); ?>
+	</div>
+	<?php endif; ?>
+
 	<div class="row submit">
 		<?php echo CHtml::submitButton(UserModule::t("Restore")); ?>
 	</div>
 
-<?php echo CHtml::endForm(); ?>
+<?php $this->endWidget(); ?>
 </div><!-- form -->
 <?php endif; ?>

@@ -17,9 +17,9 @@ echo "<?php\n";
 $nameColumn=$this->guessNameColumn($this->tableSchema->columns);
 $label=$this->pluralize($this->class2name($this->modelClass));
 echo "\$this->breadcrumbs=array(
-	'$label'=>array('index'),
-	\$model->{$nameColumn}=>array('view','id'=>\$model->{$this->tableSchema->primaryKey}),
-	'Update',
+	Yii::t('app','$label')=>array('index'),
+	Yii::t('app','View')=>array('view','id'=>\$model->{$this->tableSchema->primaryKey}),
+	Yii::t('app','Update'),
 );\n";
 ?>
 /*
@@ -32,7 +32,7 @@ $this->menu=array(
 ?>
 
 <h1><?php echo "<?php\n";?>
-Yii::t('<?php echo $this->getModule()->name;?>Module.main','Update Data No. {n}',$model-><?php echo $this->tableSchema->primaryKey;?>);
+echo Yii::t('app','Update #{n}',array('{n}'=>$model-><?php echo $this->tableSchema->primaryKey;?>));
 ?></h1>
 
 <?php echo "<?php echo \$this->renderPartial('_form',array('model'=>\$model)); ?>"; ?>

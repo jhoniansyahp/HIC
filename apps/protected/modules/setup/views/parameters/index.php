@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Parameters'=>array('index'),
-	'Manage',
+	Yii::t('app','Parameters')=>array('index'),
+	Yii::t('app','Index'),
 );
 /*
 $this->menu=array(
@@ -40,11 +40,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#setup-mst-parameters-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"setup-mst-parameters-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);	
 		});
 	}else{
 		$('input[name=\"setup-mst-parameters-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);	
 		});
 	}
 });
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-mst-parameters-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-mst-parameters-form').action='".Yii::app()->createUrl('/setup/parameters/deleteall')."';
                 document.getElementById('setup-mst-parameters-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1>Setup Mst Parameters</h1>
+<div class="page-header"><h1><?php echo Yii::t('app',"Parameters");?></h1></div>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -88,13 +88,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 <p>
 <?php
-echo CHtml::link(Yii::t('setupModule.main','Tambah'),array('Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
 
-echo CHtml::Button(Yii::t('setupModule.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php
@@ -110,9 +110,9 @@ $form=$this->beginWidget('CActiveForm', array(
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
 	'itemsCssClass'=>'table table-bordered',
-	'template'=>"{pager}\n{items}\n{pager}",
+	'template'=>"{items}\n{pager}",
 	'pager' => array(
-		'pageSize' => '20',
+		'htmlOptions' => array('class'=>''), 'pageSize' => '20','header' => 'Go To Page<br />',
 	 ),
 	'columns'=>array(
 
@@ -124,9 +124,16 @@ $form=$this->beginWidget('CActiveForm', array(
 			'v_param_code',
 		'v_param_name',
 		'v_param_desc',
-		'v_flag',
+		array(
+			"name"=>"v_flag",
+			"value"=> "Controller::appHelper()->statusActivate(\$data->v_flag)",
+			"htmlOptions" => array("style"=>"text-align: center"),
+		),
 		'n_value_number',
-		'd_value_date',
+		array(
+			"name"=>"d_value_date",
+			"value"=>"Controller::getDate()->toReadable(\$data->d_value_date)",
+		),
 		'v_value_char',
 		/*
 		'v_created_by',

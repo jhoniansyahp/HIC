@@ -11,25 +11,30 @@
 	'method'=>'get',
 )); ?>
 <div class="alert alert-warning">
-<?php echo $form->textFieldRow($model,'v_plan_code',array('class'=>'span5','maxlength'=>10)); ?>
-<?php echo $form->textFieldRow($model,'v_template',array('class'=>'span5','maxlength'=>20)); ?>
-<?php echo $form->textFieldRow($model,'v_kelompok',array('class'=>'span5','maxlength'=>10)); ?>
-<?php echo $form->textFieldRow($model,'n_baris',array('class'=>'span5','maxlength'=>10)); ?>
-<?php echo $form->textFieldRow($model,'v_benefit',array('class'=>'span5','maxlength'=>50)); ?>
-<?php echo $form->textFieldRow($model,'v_formula',array('class'=>'span5','maxlength'=>50)); ?>
-<?php echo $form->textFieldRow($model,'v_update',array('class'=>'span5','maxlength'=>10)); ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
+	<div class="row-fluid">
+		<div class="span5">
+<?php echo $form->textFieldRow($model,'v_plan_code',array('class'=>'span3','maxlength'=>10)); ?>
+<?php echo $form->textFieldRow($model,'v_template',array('class'=>'span3','maxlength'=>20)); ?>
+<?php echo $form->textFieldRow($model,'v_kelompok',array('class'=>'span3','maxlength'=>10)); ?>
+<?php echo $form->textFieldRow($model,'v_benefit',array('class'=>'span3','maxlength'=>50)); ?>
+<?php echo $form->textFieldRow($model,'v_formula',array('class'=>'span3','maxlength'=>50)); ?>
+</div>
+<div class="span5">
+<?php echo $form->textFieldRow($model,'v_update',array('class'=>'span3','maxlength'=>10)); ?>
+<?php echo $form->textFieldRow($model,'n_max_harirawat',array('class'=>'span3')); ?>
+<?php echo $form->textFieldRow($model,'n_max_klaim_pmonth',array('class'=>'span3')); ?>
+<?php echo $form->textFieldRow($model,'n_max_klaim_pday',array('class'=>'span3')); ?>
+<?php echo $form->textFieldRow($model,'n_max_visite_pday',array('class'=>'span3')); ?>
+</div>
+</div>
 	<div class="actions">
 		<?php
-		 echo CHtml::submitButton(Yii::t('setupModule.main','Cari'),array('class'=>'btn primary'));
+		 echo CHtml::submitButton(Yii::t('app','Search'),array('class'=>'btn primary'));
 		  echo '&nbsp;';
-		 echo CHtml::submitButton(Yii::t('setupModule.main','Batal'), array('class'=>'btn','onclick'=>'this.form.reset()'));
+		 echo CHtml::submitButton(Yii::t('app','Cancel'), array('class'=>'btn','onclick'=>'this.form.reset()'));
 		 echo '&nbsp;';
  
-		 echo CHtml::link(Yii::t('setupModule.main','Pencarian Sederhana'),'#',array('class'=>'search-simple-button btn')); 
+		 echo CHtml::link(Yii::t('app','Simple Search'),'#',array('class'=>'search-simple-button btn')); 
 		?>
 	</div>
 </div>

@@ -31,23 +31,26 @@
             'class'=>'bootstrap.widgets.BootMenu',			
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index') , 'active'=>true),
-				array('label'=>'Setup', 'url'=>array('/setup'),'items'=> array(
+				array('label'=>'Setup', 'url'=>'#','items'=> array(
 					array('label'=>'Setup Aplikasi', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Master Agent','url'=>array('/setup/agents')),
 					array('label'=>'Master Company','url'=>array('/setup/companys')),
 					array('label'=>'Master Organisasi','url'=>array('/setup/organizations')),
 					array('label'=>'Setup Produk Umum','url'=>array('/setup/plans')),
-					array('label'=>'Setup Produk Klaim','url'=>array('/setup/claimplan')),
+					array('label'=>'Setup Produk Klaim','url'=>array('/setup/planbenefits')),
 					'---',
 					array('label'=>'Setup Umum', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Parameter','url'=>array('/setup/parameters')),
-					array('label'=>'Lookup','url'=>array('/setup/lookups')),
+					array('label'=>'Lookups','url'=>array('/setup/lookups')),
+					array('label'=>'Detail Lookups','url'=>array('/setup/detaillookups')),
 					'---',
 					array('label'=>'Setup Security User', 'itemOptions'=>array('class'=>'nav-header')),
-					array('label'=>'Form','url'=>array('/setup/form')),
-					array('label'=>'Role','url'=>array('/setup/role')),
-					array('label'=>'Form - Role','url'=>array('/setup/formrole')),
-					array('label'=>'Admin User','url'=>array('/setup/users')),
+					array('label'=>'Admin User','url'=>array('/user/admin')),
+					array('label'=>'Tasks','url'=>array('/rights/authitem/tasks')),
+					array('label'=>'Roles','url'=>array('/rights/authitem/roles')),
+					array('label'=>'Operations','url'=>array('/rights/authitem/operations')),
+					array('label'=>'Permissions','url'=>array('/rights/authitem/permissions')),
+					array('label'=>'Assignment','url'=>array('/rights/assignment')),
 					//array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
 				)),
 				array('label'=>'Polis', 'url'=>'#','items' => array(
@@ -72,16 +75,13 @@
             'class'=>'bootstrap.widgets.BootMenu',
             'htmlOptions'=>array('class'=>'pull-right'),
             'items'=>array(
-	        		array('label'=>'Profile', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
-					array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
-                	array('label'=>'Action', 'url'=>'#'),
-                	array('label'=>'Another action', 'url'=>'#'),
-                	array('label'=>'Something else here', 'url'=>'#'),
-                	'---',
-                	array('label'=>'Separated link', 'url'=>'#'),
+	        		array('label'=>Yii::t("menu",'Profile'), 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(
+					array('label'=>Yii::t("menu",'Your Profile'),'url'=>array('/user/profile')),
+					array('label'=>Yii::t("menu",'Ubah Informasi'),'url'=>array('/user/profile/edit')),
+                	array('label'=>Yii::t("menu",'Ubah Password'), 'url'=>array('/user/profile/changepassword')),
             	)),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest),
                 //array('label'=>'Link', 'url'=>'#'),
             ),
         ),
@@ -96,6 +96,36 @@
 	<?php echo $content; ?>
 </div><!-- page -->
 <hr />
-
+<div class="row">
+    <div class="footer span16">   
+    
+        <div class="span2" style="float:left">System v.0.1</div>
+       
+       <div class="span6 right">
+        <select id="select01" class="span3 right">
+                <option>Pilih Bahasa</option>
+                <option>Indonesia</option>
+                <option>Ingris</option>
+                <option>Arab</option>
+                <option>Spanyol</option>
+              </select>
+              
+        <select id="select02" class="span2 right" style="margin-right:10px;">
+                <option>Pilih Style</option>
+                <option>cyborg</option>
+                <option>slate</option>
+                <option>united</option>
+                <option>dangdut</option>
+              </select>
+        </div>
+        <div class="span4" style="margin:0 auto">
+        Copyright &copy; 2012 - <a href="#">Disclaimer</a> | <a href="#">Help</a> 
+        </div>
+        
+        
+   
+        
+        </div>
+    </div>
 </body>
 </html>

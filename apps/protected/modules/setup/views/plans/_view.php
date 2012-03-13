@@ -22,11 +22,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_plan_start')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_plan_start)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_plan_start)); ?>a
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_plan_end')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_plan_end)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_plan_end)); ?>a
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('v_prod_line')); ?>:</b>
@@ -67,7 +67,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_updated_date')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_updated_date)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_updated_date)); ?>a
 	<br />
 
 	*/ ?>

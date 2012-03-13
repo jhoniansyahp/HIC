@@ -5,12 +5,14 @@ $this->breadcrumbs=array(
 );
 ?>
 <h1><?php echo UserModule::t('View User').' "'.$model->username.'"'; ?></h1>
-
+<!--
 <ul class="actions">
 	<li><?php echo CHtml::link(UserModule::t('List User'),array('index')); ?></li>
 </ul><!-- actions -->
-
 <?php 
+	$this->globalMenu = array(
+		array('label' => 'List User', 'url'=>array('index')),
+	);
 
 // For all users
 	$attributes = array(
@@ -38,7 +40,7 @@ $this->breadcrumbs=array(
 		)
 	);
 			
-	$this->widget('zii.widgets.CDetailView', array(
+	$this->widget('ext.bootstrap.widgets.BootDetailView', array(
 		'data'=>$model,
 		'attributes'=>$attributes,
 	));

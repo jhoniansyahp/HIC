@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Coys'=>array('index'),
-	$model->v_company_code,
+	Yii::t('app',"Companys")=>array('index'),
+	Yii::t('app','View'),
 );
 /*
 $this->menu=array(
@@ -23,35 +23,52 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_company_code), array('update','id'=>$model->v_company_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code), array('update','id'=>$model->v_company_code));
 ?>
 </div>
 
-<h1>View SetupMstCoys #<?php echo $model->v_company_code; ?></h1>
-
+<div class="page-header"><h1><?php echo Yii::t('app',"View Company",array("\$company_name"=>$model->v_company_name));?></h1></div>
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	'data'=>$model,
 	'attributes'=>array(
 		'v_company_code',
 		'v_company_group',
-		'v_inst_type',
+		array(
+			"name" => "v_inst_type",
+			"value" => Controller::lookupHelper()->toReadable("INST_TYPE",$model->v_inst_type),
+		),
 		'v_company_name',
 		'v_regn_no',
 		'v_short_name',
-		'v_jenis_usaha',
-		'v_mobilitas',
+		array(
+			"name" => "v_jenis_usaha",
+			"value" => Controller::lookupHelper()->toReadable("BUSINESS_LINES",$model->v_jenis_usaha),
+		),
+		array(
+			"name" => "v_mobilitas",
+			"value" => Controller::lookupHelper()->toReadable("BUSINESS_MOBILITY",$model->v_mobilitas),
+		),
 		'v_office_hours',
-		'n_existing_agent',
+		array(
+			"value"=>Controller::lookupHelper()->custom(SetupMstAgents::model(),$model->n_existing_agent,'v_agent_name'),
+			"name" => "n_existing_agent",
+		),
 		'v_comp_add1',
 		'v_comp_add2',
 		'v_comp_add3',
 		'v_postcode',
 		'v_town',
-		'v_state_code',
-		'v_country_code',
+		array(
+			"name" => "v_state_code",
+			"value" => Controller::lookupHelper()->toReadable("PROVINCE",$model->v_state_code),
+		),
+		array(
+			"name" => "v_country_code",
+			"value" => Controller::lookupHelper()->toReadable("COUNTRY",$model->v_country_code),
+		),
 		'v_phone1',
 		'v_phone2',
 		'v_fax',
@@ -60,16 +77,16 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_com
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_company_code),array('update','id'=>$model->v_company_code),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code),array('update','id'=>$model->v_company_code),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_company_code), array('update','id'=>$model->v_company_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_company_code), array('update','id'=>$model->v_company_code));
 ?>
 </div>
 </p>

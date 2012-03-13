@@ -12,7 +12,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block"><?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> </p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -31,7 +31,7 @@
 			   // display size of the FK field.  only matters if not hidden.  defaults to 10
 			  'FKFieldSize'=>15,
 			  'relName'=>'nCoy', // the relation name defined above
-			  'displayAttr'=>'n_coy_id',  // attribute or pseudo-attribute to display
+			  'displayAttr'=>'v_org_name',  // attribute or pseudo-attribute to display
 			  // length of the AutoComplete/display field, defaults to 50
 			  //'autoCompleteLength'=>15,
 			  // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may
@@ -51,22 +51,18 @@
 <?php echo $form->textFieldRow($model,'v_lookup_code',array('class'=>'span5','maxlength'=>60)); ?>
 <?php echo $form->textFieldRow($model,'v_lookup_name',array('class'=>'span5','maxlength'=>150)); ?>
 <?php echo $form->textFieldRow($model,'v_lookup_desc',array('class'=>'span5','maxlength'=>150)); ?>
-<?php echo $form->textFieldRow($model,'v_flag',array('class'=>'span5','maxlength'=>1)); ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-<?php echo ""; ?>
-	<div class="actions">
+<?php echo $form->dropDownListRow($model, 'v_flag', array('A'=>Yii::t('app','Active'),'I' => Yii::t('app','Inactive'))); ?>
+	<div class="actions btn-actions">
 		<?php
-		echo CHtml::submitButton($model->isNewRecord ? Yii::t('setupModule.main','Buat') : Yii::t('setupModule.main','Simpan'),array('class'=>'btn primary')); 
+		echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save'),array('class'=>'btn primary')); 
 		?>
 		&nbsp;
 		
 		<?php
-		echo CHtml::resetButton(Yii::t('setupModule.main','Batal'),array('class'=>'btn primary')); ?>&nbsp;|
+		echo CHtml::resetButton(Yii::t('app','Cancel'),array('class'=>'btn primary')); ?>&nbsp;|
 		
 		<?php
-		echo CHtml::link(Yii::t('setupModule.main','Kembali Ke List'),array('index'), array('class'=>'btn')); ?>
+		echo CHtml::link(Yii::t('app','Back to List'),array('index'), array('class'=>'btn')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -166,3 +166,8 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
 .search-form{
 	margin-top: 10px;
 }
+
+div.btn-actions{
+	border-top: #efefef 1px solid;
+	padding-top: 20px;
+}

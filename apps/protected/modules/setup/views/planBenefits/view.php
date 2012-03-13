@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Plan Benefits'=>array('index'),
-	$model->v_plan_code,
+	Yii::t('app','Claim Product')=>array('index'),
+	Yii::t('app','View'),
 );
 /*
 $this->menu=array(
@@ -23,38 +23,48 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_plan_code), array('update','id'=>$model->v_plan_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('update','id'=>$model->v_plan_code));
 ?>
 </div>
 
-<h1>View SetupPlanBenefits #<?php echo $model->v_plan_code; ?></h1>
+<div class="page-header"><h1><?php Yii::t('app','View #{no}',array('{no}'=>'$model->v_plan_code')); ?></h1></div>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	'data'=>$model,
 	'attributes'=>array(
 		'v_plan_code',
-		'v_template',
+		array(
+			"name" => "v_template",
+			"value" => $this->lookupHelper()->toReadable("BENEFIT_TEMPLATE",$model->v_template),
+		),
 		'v_kelompok',
 		'n_baris',
-		'v_benefit',
+		array(
+			"name" => "v_benefit",
+			"value" => $this->lookupHelper()->toReadable("BENEFIT",$model->v_benefit),
+		),
 		'v_formula',
-		'v_update',
+		//'v_update',
+		'n_max_harirawat',
+		'n_max_klaim_pmonth',
+		'n_max_klaim_pday',
+		'n_max_visite_pday',
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_plan_code),array('update','id'=>$model->v_plan_code),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code),array('update','id'=>$model->v_plan_code),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_plan_code), array('update','id'=>$model->v_plan_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('update','id'=>$model->v_plan_code));
 ?>
 </div>
 </p>

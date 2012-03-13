@@ -4,7 +4,7 @@
 *
 * @author Christoffer Niska <cniska@live.com>
 * @copyright Copyright &copy; 2010 Christoffer Niska
-* @version 1.2.0
+* @version 1.3.0
 * 
 * DO NOT CHANGE THE DEFAULT CONFIGURATION VALUES!
 * 
@@ -22,7 +22,7 @@
 class RightsModule extends CWebModule
 {
 	/**
-	* @property string the name of the role with superuser priviledges.
+	* @property string the name of the role with superuser privileges.
 	*/
 	public $superuserName = 'Admin';
 	/**
@@ -73,11 +73,14 @@ class RightsModule extends CWebModule
 	/**
 	* @property string the path to the layout file to use for displaying Rights.
 	*/
+	//public $layout = 'rights.views.layouts.main';
 	public $layout = 'rights.views.layouts.main';
+	
 	/**
 	* @property string the path to the application layout file.
 	*/
-	public $appLayout = 'application.views.layouts.main';
+	public $appLayout = '//layouts/main';
+	
 	/**
 	* @property string the style sheet file to use for Rights.
 	*/
@@ -213,6 +216,6 @@ class RightsModule extends CWebModule
 	*/
 	public function getVersion()
 	{
-		return '1.2.0';
+		return '1.3.0';
 	}
 }

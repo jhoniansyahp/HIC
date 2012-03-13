@@ -17,8 +17,8 @@ echo "<?php\n";
 $nameColumn=$this->guessNameColumn($this->tableSchema->columns);
 $label=$this->pluralize($this->class2name($this->modelClass));
 echo "\$this->breadcrumbs=array(
-	'$label'=>array('index'),
-	\$model->{$nameColumn},
+	Yii::t('app','$label')=>array('index'),
+	Yii::t('app','View'),
 );\n";
 ?>
 /*
@@ -33,13 +33,13 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php echo "<?php\n";?>
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Ubah Data {n} &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>), array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>), array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
 ?>
 </div>
 
-<h1>View <?php echo $this->modelClass." #<?php echo \$model->{$this->tableSchema->primaryKey}; ?>"; ?></h1>
+<h1><?php echo "<?php ";?>echo Yii::t('app','View #{no}',array('{no}'=>'<?php echo "\$model->{$this->tableSchema->primaryKey}"; ?>'); ?></h1>
 
 
 <?php echo "<?php"; ?> $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -63,16 +63,16 @@ foreach($this->tableSchema->columns as $column){
 	),
 )); ?>
 <?php echo "<?php\n"; ?>
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Ubah Data {n} &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>),array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>),array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php echo "<?php\n";?>
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('<?php echo $this->getModule()->name;?>Module.main','Ubah Data {n} &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>), array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model-><?php echo $this->tableSchema->primaryKey; ?>), array('update','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>));
 ?>
 </div>
 </p>

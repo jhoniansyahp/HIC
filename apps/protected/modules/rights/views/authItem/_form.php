@@ -45,7 +45,7 @@
 	<?php endif; ?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton(Rights::t('core', 'Save')); ?> | <?php echo CHtml::link(Rights::t('core', 'Cancel'), Yii::app()->user->rightsReturnUrl); ?>
+		<?php echo CHtml::submitButton(Rights::t('core', 'Save'),array('class'=>'btn')); ?> | <?php echo CHtml::link(Rights::t('core', 'Cancel'), Yii::app()->user->rightsReturnUrl,array('class'=>'btn')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

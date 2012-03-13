@@ -48,8 +48,9 @@ abstract class BaseSetupDtlLookups extends GxActiveRecord {
 		return Yii::t('app', 'SetupDtlLookups|SetupDtlLookups', $n);
 	}
 
+	
 	public static function representingColumn() {
-		return 'n_coy_id';
+		return array('v_lookup_code','v_lookup_dtl_code');
 	}
 
 	public function rules() {
@@ -73,6 +74,7 @@ abstract class BaseSetupDtlLookups extends GxActiveRecord {
 	public function relations() {
 		return array(
 			'nOrg' => array(self::BELONGS_TO, 'SetupMstOrganizations', 'n_org_id'),
+			'nCoy' => array(self::BELONGS_TO, 'SetupMstOrganizations', 'n_coy_id'),
 			'vLookupCode' => array(self::BELONGS_TO, 'SetupMstLookups', 'v_lookup_code'),
 		);
 	}
@@ -84,35 +86,35 @@ abstract class BaseSetupDtlLookups extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'n_coy_id' => Yii::t('setupModule.main', 'Coy'),
-			'n_org_id' => Yii::t('setupModule.main','Org Id'),
-			'v_lookup_code' => Yii::t('setupModule.main','Lookup Code'),
-			'v_lookup_dtl_code' => Yii::t('setupModule.main', 'Lookup Dtl Code'),
-			'v_lookup_dtl_name' => Yii::t('setupModule.main', 'Lookup Dtl Name'),
-			'v_lookup_dtl_desc' => Yii::t('setupModule.main', 'Lookup Dtl Desc'),
-			'v_flex' => Yii::t('setupModule.main', 'Flex'),
-			'v_created_by' => Yii::t('setupModule.main', 'Created By'),
-			'd_created_date' => Yii::t('setupModule.main', 'Created Date'),
-			'v_updated_by' => Yii::t('setupModule.main', 'Updated By'),
-			'd_updated_date' => Yii::t('setupModule.main', 'Updated Date'),
-			'v_sub_kelompok' => Yii::t('setupModule.main', 'Sub Kelompok'),
-			'v_kelompok' => Yii::t('setupModule.main', 'Kelompok'),
-			'v_laporan' => Yii::t('setupModule.main', 'Laporan'),
-			'v_dr_cr' => Yii::t('setupModule.main', 'Dr Cr'),
-			'v_variable_1' => Yii::t('setupModule.main', 'Variable 1'),
-			'v_variable_2' => Yii::t('setupModule.main', 'Variable 2'),
-			'v_variable_3' => Yii::t('setupModule.main', 'Variable 3'),
-			'v_variable_4' => Yii::t('setupModule.main', 'Variable 4'),
-			'v_variable_5' => Yii::t('setupModule.main', 'Variable 5'),
-			'v_variable_6' => Yii::t('setupModule.main', 'Variable 6'),
-			'nOrg' => Yii::t('setupModule.main','NOrg'),
-			'vLookupCode' => Yii::t('setupModule.main','VLookupCode'),
+			'n_coy_id' => Yii::t('app', 'Coy'),
+			'n_org_id' => Yii::t('app','Org Id'),
+			'v_lookup_code' => Yii::t('app','Lookup Code'),
+			'v_lookup_dtl_code' => Yii::t('app', 'Lookup Dtl Code'),
+			'v_lookup_dtl_name' => Yii::t('app', 'Lookup Dtl Name'),
+			'v_lookup_dtl_desc' => Yii::t('app', 'Lookup Dtl Desc'),
+			'v_flex' => Yii::t('app', 'Flex'),
+			'v_created_by' => Yii::t('app', 'Created By'),
+			'd_created_date' => Yii::t('app', 'Created Date'),
+			'v_updated_by' => Yii::t('app', 'Updated By'),
+			'd_updated_date' => Yii::t('app', 'Updated Date'),
+			'v_sub_kelompok' => Yii::t('app', 'Sub Kelompok'),
+			'v_kelompok' => Yii::t('app', 'Kelompok'),
+			'v_laporan' => Yii::t('app', 'Laporan'),
+			'v_dr_cr' => Yii::t('app', 'Dr Cr'),
+			'v_variable_1' => Yii::t('app', 'Variable 1'),
+			'v_variable_2' => Yii::t('app', 'Variable 2'),
+			'v_variable_3' => Yii::t('app', 'Variable 3'),
+			'v_variable_4' => Yii::t('app', 'Variable 4'),
+			'v_variable_5' => Yii::t('app', 'Variable 5'),
+			'v_variable_6' => Yii::t('app', 'Variable 6'),
+			'nOrg' => Yii::t('app','NOrg'),
+			'vLookupCode' => Yii::t('app','VLookupCode'),
 		);
 	}
 
 	public function search() {
 		$criteria = new CDbCriteria;
-
+		$criteria->compare('n_lookup_dtl_id', $this->n_lookup_dtl_id);
 		$criteria->compare('n_coy_id', $this->n_coy_id, true);
 		$criteria->compare('n_org_id', $this->n_org_id);
 		$criteria->compare('v_lookup_code', $this->v_lookup_code);

@@ -8,17 +8,17 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Dtl Lookups'=>array('index'),
-	'Create',
+	Yii::t('app','Detail Lookups')=>array('index'),
+	Yii::t('app','Create'),
 );
 
 /*
 $this->menu=array(
-	array('label'=>'List SetupDtlLookups','url'=>array('index')),
-	array('label'=>'Manage SetupDtlLookups','url'=>array('admin')),
+	array('label'=>'List Detail Lookups','url'=>array('index')),
+	array('label'=>'Manage Detail Lookups','url'=>array('admin')),
 );*/
 ?>
 
-<h1>Create SetupDtlLookups</h1>
+<div class="page-header"><h1><?php echo Yii::t("app","Create Detail Lookups");?></h1></div>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

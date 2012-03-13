@@ -13,10 +13,10 @@
 	</p>
 
 	<p><?php echo CHtml::link(Rights::t('core', 'Create a new role'), array('authItem/create', 'type'=>CAuthItem::TYPE_ROLE), array(
-	   	'class'=>'add-role-link',
+	   	'class'=>'add-role-link btn',
 	)); ?></p>
 
-	<?php $this->widget('zii.widgets.grid.CGridView', array(
+	<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(
 	    'dataProvider'=>$dataProvider,
 	    'template'=>'{items}',
 	    'emptyText'=>Rights::t('core', 'No roles found.'),

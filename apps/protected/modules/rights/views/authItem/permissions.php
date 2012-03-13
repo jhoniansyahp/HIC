@@ -17,10 +17,10 @@
 	</p>
 
 	<p><?php echo CHtml::link(Rights::t('core', 'Generate items for controller actions'), array('authItem/generate'), array(
-	   	'class'=>'generator-link',
+	   	'class'=>'generator-link btn',
 	)); ?></p>
 
-	<?php $this->widget('zii.widgets.grid.CGridView', array(
+	<?php $this->widget('ext.bootstrap.widgets.BootGridView', array(
 		'dataProvider'=>$dataProvider,
 		'template'=>'{items}',
 		'emptyText'=>Rights::t('core', 'No authorization items found.'),

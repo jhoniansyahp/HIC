@@ -18,40 +18,40 @@ class LookupsController extends Controller
 	/**
 	 * @return array action filters
 	 */
-	public function filters()
-	{
-		return array(
-			'accessControl', // perform access control for CRUD operations
-		);
-	}
+	// public function filters()
+	// {
+		// return array(
+			// 'accessControl', // perform access control for CRUD operations
+		// );
+	// }
 
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','delete','deleteall',
-									'combo_setup-mst-organizations',
-					),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
+	// public function accessRules()
+	// {
+		// return array(
+			// array('allow',  // allow all users to perform 'index' and 'view' actions
+				// 'actions'=>array('index','view'),
+				// 'users'=>array('*'),
+			// ),
+			// array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				// 'actions'=>array('create','update','delete','deleteall',
+									// 'combo_setup-mst-organizations',
+					// ),
+				// 'users'=>array('@'),
+			// ),
+			// array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				// 'actions'=>array('admin','delete'),
+				// 'users'=>array('admin'),
+			// ),
+			// array('deny',  // deny all users
+				// 'users'=>array('*'),
+			// ),
+		// );
+	// }
 	
 	
 	/**
@@ -66,10 +66,11 @@ class LookupsController extends Controller
 							
 			   'combo_setup-mst-organizations'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
-				  'model'=> 'SetupMstLookups',
-				  'label'=> 'n_coy_id',
-				  'value'=> 'n_coy_id',
-				   'id' => 'n_coy_id',
+				  'model'=> 'SetupMstOrganizations',
+				  'label'=> 'v_org_name',
+				  'value'=> 'v_org_name',
+				   'id' => 'n_org_id',
+				   'condition' => array('v_flag_coy_id=:flag',array(':flag'=>'Y')),
 				),
 					);
 		
@@ -81,9 +82,14 @@ class LookupsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model = $this->loadModel($id);
+		//$detailmodel =  new SetupDtlLookups('search');
+		//$detailmodel->attributes = array('v_lookup_code', $model->v_lookup_code);
+		
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
 		));
+		
 	}
 
 	/**
@@ -104,9 +110,9 @@ class LookupsController extends Controller
 								$model->v_created_by=Yii::app()->user->id;
 												$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_lookup_code));
@@ -134,11 +140,11 @@ class LookupsController extends Controller
 			$model->attributes=$_POST['SetupMstLookups'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 												$model->v_updated_by=Yii::app()->user->id;
 												$model->d_updated_date=new CDbExpression('NOW()');
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 							
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_lookup_code));
@@ -182,16 +188,44 @@ class LookupsController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupMstLookups'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupMstLookups'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
+						}
+						
+						if(empty($model->n_coy_id) && isset($_GET['SetupMstLookups'])){
+							unset($model->n_coy_id);
 						}
 								
 		$this->render('index',array(
 			'model'=>$model,
 		));
+		
+	}
+	
+	public function actionIndexDetails($PK)
+	{
+			$model=new SetupDtlLookups('search');
+			$model->findByPK($PK);
+			$model->unsetAttributes();  // clear any default values
+			if(isset($_GET['SetupDtlLookups']))
+				$model->attributes=$_GET['SetupDtlLookups'];
+
+
+									    // Convert dd/mm/yy to yy-mm-dd
+							if(!empty($model->d_created_date) && isset($_GET['SetupDtlLookups'])){
+								$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
+							}
+											    // Convert dd/mm/yy to yy-mm-dd
+							if(!empty($model->d_updated_date) && isset($_GET['SetupDtlLookups'])){
+								$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
+							}
+
+			$this->render('index',array(
+				'model'=>$model,
+			));
 	}
 
 	/*

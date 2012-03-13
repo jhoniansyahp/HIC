@@ -3,21 +3,20 @@
 <div id="rights" class="container">
 
 	<div id="content">
-
+		<div class="row-fluid">
 		<?php if( $this->id!=='install' ): ?>
-
-			<div id="menu">
-
+			<div class="span-2">
+				<div id="menu">
 				<?php $this->renderPartial('/_menu'); ?>
-
+				</div>
 			</div>
-
 		<?php endif; ?>
-
-		<?php $this->renderPartial('/_flash'); ?>
-
-		<?php echo $content; ?>
-
+			<div class="span-10">
+			<?php $this->renderPartial('/_flash'); ?>
+		
+			<?php echo $content; ?>
+			</div>
+		</div>
 	</div><!-- content -->
 
 </div>

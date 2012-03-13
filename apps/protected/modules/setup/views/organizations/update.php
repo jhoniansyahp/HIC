@@ -8,9 +8,9 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Organizations'=>array('index'),
-	$model->n_org_id=>array('view','id'=>$model->n_org_id),
-	'Update',
+	Yii::t("app","Organizations")=>array('index'),
+	Yii::t("app","View")=>array('view','id'=>$model->n_org_id),
+	Yii::t("app",'Update'),
 );
 /*
 $this->menu=array(
@@ -21,8 +21,14 @@ $this->menu=array(
 );*/
 ?>
 
-<h1><?php
-Yii::t('setupModule.main','Update Data No. {n}',$model->n_org_id);
-?></h1>
+<div class="page-header"><h1>
+<?php
+echo Yii::t('app','Update Organization',array("\$v_org_name"=>$model->v_org_name,'$v_org_code'=>$model->v_org_code));
+?></h1></div>
 
-<?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
+<?php 
+
+
+echo $this->renderPartial('_form',array('model'=>$model)); 
+
+?>

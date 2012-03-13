@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Lookups'=>array('index'),
-	'Manage',
+	Yii::t('app','Lookups')=>array('index'),
+	Yii::t('app','Index'),
 );
 /*
 $this->menu=array(
@@ -40,11 +40,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#setup-mst-lookups-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"setup-mst-lookups-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);	
 		});
 	}else{
 		$('input[name=\"setup-mst-lookups-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);	
 		});
 	}
 });
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-mst-lookups-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-mst-lookups-form').action='".Yii::app()->createUrl('/setup/lookups/deleteall')."';
                 document.getElementById('setup-mst-lookups-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1>Setup Mst Lookups</h1>
+<div class="page-header"><h1><?php echo Yii::t('app','Lookups');?></h1></div>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -88,13 +88,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 <p>
 <?php
-echo CHtml::link(Yii::t('setupModule.main','Tambah'),array('Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
 
-echo CHtml::Button(Yii::t('setupModule.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php
@@ -105,30 +105,42 @@ $form=$this->beginWidget('CActiveForm', array(
 ));
 ?>
 
-<?php $this->widget('ext.bootstrap.widgets.BootGridView',array(
+<?php 
+$org = SetupMstOrganizations::model()->findByAttributes(array("n_org_id"=>$model->n_coy_id,"v_flag_coy_id"=>"Y"));
+$orgname = !empty($org) ? $org->v_org_name : '-';
+
+
+$this->widget('ext.bootstrap.widgets.BootGridView',array(
 	'id'=>'setup-mst-lookups-grid',
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
 	'itemsCssClass'=>'table table-bordered',
-	'template'=>"{pager}\n{items}\n{pager}",
+	'template'=>"{items}\n{pager}",
 	'pager' => array(
 		'pageSize' => '20',
+		'header' => 'Go To Page<br />',
+		'htmlOptions' => array('class'=>''),
 	 ),
 	'columns'=>array(
-
-	array(
-		'header'=>CHtml::checkBox('setup-mst-lookups-master-checkbox'),
-		'value'=>$model->v_lookup_code,
-		'class'=>'CCheckBoxColumn',
-	),
-			'n_coy_id',
+		array(
+			'header'=>CHtml::checkBox('setup-mst-lookups-master-checkbox'),
+			'value'=>$model->v_lookup_code,
+			'class'=>'CCheckBoxColumn',
+		),
+		array(
+			"name" => "n_coy_id",
+			"value"=> 'Controller::lookupHelper()->custom(SetupMstOrganizations::model(),$data->n_coy_id,"v_org_name")',
+		),
 		'v_lookup_code',
 		'v_lookup_name',
 		'v_lookup_desc',
-		'v_flag',
-		'v_created_by',
+		array(
+			"name" => "v_flag",
+			"value" => "Controller::appHelper()->statusActivate(\$data->v_flag)",
+			"htmlOptions" => array('style'=>'text-align:center'),
+		),
+		/*'v_created_by',
 		'd_created_date',
-		/*
 		'v_updated_by',
 		'd_updated_date',
 		*/

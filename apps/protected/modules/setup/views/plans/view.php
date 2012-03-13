@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Plans'=>array('index'),
-	$model->v_plan_code,
+	Yii::t('app','Plans')=>array('index'),
+	Yii::t('app','View'),
 );
 /*
 $this->menu=array(
@@ -23,13 +23,13 @@ $this->menu=array(
 ?>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_plan_code), array('update','id'=>$model->v_plan_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('update','id'=>$model->v_plan_code));
 ?>
 </div>
 
-<h1>View SetupMstPlans #<?php echo $model->v_plan_code; ?></h1>
+<div class="page-header"><h1><?php echo Yii::t('app','View Plan');?></h1></div>
 
 
 <?php $this->widget('ext.bootstrap.widgets.BootDetailView',array(
@@ -40,33 +40,43 @@ echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_pla
 		'v_plan_desc',
 		array(
 			'name' => 'd_plan_start',
-			'value' => $this->convertDate2Readable($model->d_plan_start),
+			'value' => $this->getDate()->toReadable($model->d_plan_start),
 		),
 		array(
 			'name' => 'd_plan_end',
-			'value' => $this->convertDate2Readable($model->d_plan_end),
+			'value' => $this->getDate()->toReadable($model->d_plan_end),
 		),
-		'v_prod_line',
-		'v_prod_composition',
-		'v_indv_or_group',
-		'v_plan_type',
-		'v_curr_code',
+		array(
+			"name" => 'v_prod_line',
+			"value" => $this->lookupHelper()->toReadable('PRODUCT_LINE',$model->v_prod_line),
+		),
+                array(
+                  "name" =>  'v_prod_composition',
+                  "value" => $this->appHelper()->statusActivate($model->v_prod_composition),
+                ),
+		array(
+			"name" => "v_indv_or_group",
+			"value" => $this->appHelper()->labelIndividuOrGroup($model->v_indv_or_group),
+		),
+		//'v_plan_type',
+		array(
+			"name"=>"v_curr_code",
+			"value" => $this->lookupHelper()->toReadable('CURRENCY',$model->v_curr_code),
+		),
 	),
 )); ?>
 
-<?php $this->renderPartial('/planBenefits/index',array("model"=>$detailmodel));?>
-
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_plan_code),array('update','id'=>$model->v_plan_code),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code),array('update','id'=>$model->v_plan_code),array('class'=>'btn btn-primary'));
 ?>
 <!--<p>
 <div class="alert alert-info">
 <?php
-echo CHtml::Link(Yii::t('setupModule.main','&laquo; Kembali ke list'), array('index'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'));
 echo "&nbsp;-&nbsp;";
-echo CHtml::Link(Yii::t('setupModule.main','Ubah Data {n} &raquo;',$model->v_plan_code), array('update','id'=>$model->v_plan_code));
+echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_plan_code), array('update','id'=>$model->v_plan_code));
 ?>
 </div>
 </p>

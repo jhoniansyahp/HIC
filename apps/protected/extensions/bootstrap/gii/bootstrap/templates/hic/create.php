@@ -16,8 +16,8 @@
 echo "<?php\n";
 $label=$this->pluralize($this->class2name($this->modelClass));
 echo "\$this->breadcrumbs=array(
-	'$label'=>array('index'),
-	'Create',
+	Yii::t('app','$label')=>array('index'),
+	Yii::t('app','Create'),
 );\n";
 ?>
 
@@ -28,6 +28,6 @@ $this->menu=array(
 );*/
 ?>
 
-<h1>Create <?php echo $this->modelClass; ?></h1>
+<h1><?php echo "<?php ";?>echo Yii::t("app","Create <?php echo $this->modelClass; ?>");?></h1>
 
 <?php echo "<?php echo \$this->renderPartial('_form', array('model'=>\$model)); ?>"; ?>

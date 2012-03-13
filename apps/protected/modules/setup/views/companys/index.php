@@ -8,8 +8,8 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	'Setup Mst Coys'=>array('index'),
-	'Manage',
+	Yii::t('app','Companys')=>array('index'),
+	Yii::t('app','Index'),
 );
 /*
 $this->menu=array(
@@ -40,11 +40,11 @@ $('.search-advanced-form form,.search-simple-form form').submit(function(){
 $('#setup-mst-coys-master-checkbox').click(function(){
 	if($(this).attr('checked') != undefined){
 		$('input[name=\"setup-mst-coys-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',true));	
+			$(this).attr('checked',true);	
 		});
 	}else{
 		$('input[name=\"setup-mst-coys-grid_c0[]\"]').each(function(){
-			alert($(this).attr('checked',false));	
+			$(this).attr('checked',false);	
 		});
 	}
 });
@@ -55,11 +55,11 @@ $('.deleteall-button').click(function(){
 		
         if (!atLeastOneIsChecked)
         {
-                alert('".Yii::t('{$this->getModule()->name}Module.main','Pilih salah satu row')."');
+                alert('".Yii::t('app','Please select row')."');
         }
-        else if (window.confirm('".Yii::t('{$this->getModule()->name}Module.main','Apakah anda yakin ingin menghapus data ini?')."'))
+        else if (window.confirm('".Yii::t('app','Are you sure want to delete this?')."'))
         {
-                document.getElementById('setup-mst-coys-form').action='".Yii::app()->createUrl($this->route,array('DeleteAll'))."';
+                document.getElementById('setup-mst-coys-form').action='".Yii::app()->createUrl('/setup/companys/deleteall')."';
                 document.getElementById('setup-mst-coys-form').submit();
 				return false;
         }
@@ -68,7 +68,7 @@ $('.deleteall-button').click(function(){
 ");
 ?>
 
-<h1>Setup Mst Coys</h1>
+<div class="page-header"><h1><?php echo Yii::t("app","Companys");?></h1></div>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -88,13 +88,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 <p>
 <?php
-echo CHtml::link(Yii::t('setupModule.main','Tambah'),array('Create'), array('class'=>'btn btn-primary'));
+echo CHtml::link(Yii::t('app','Add'),array('Create'), array('class'=>'btn btn-primary'));
 
 ?>
 &nbsp;
 <?php
 
-echo CHtml::Button(Yii::t('setupModule.main','Hapus'), array('class'=>'btn btn-primary deleteall-button')); ?>
+echo CHtml::Button(Yii::t('app','Delete'), array('class'=>'btn btn-primary deleteall-button')); ?>
 </p>
 
 <?php
@@ -110,9 +110,11 @@ $form=$this->beginWidget('CActiveForm', array(
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
 	'itemsCssClass'=>'table table-bordered',
-	'template'=>"{pager}\n{items}\n{pager}",
+	'template'=>"{items}\n{pager}",
 	'pager' => array(
+		'htmlOptions' => array('class'=>''), 
 		'pageSize' => '20',
+		'header' => 'Go To Page<br />',
 	 ),
 	'columns'=>array(
 
@@ -123,11 +125,17 @@ $form=$this->beginWidget('CActiveForm', array(
 	),
 			'v_company_code',
 		'v_company_group',
-		'v_inst_type',
+		array(
+			"name" => "v_inst_type",
+			"value" => "Controller::lookupHelper()->toReadable('INST_TYPE',\$data->v_inst_type)",
+		),
 		'v_company_name',
 		'v_regn_no',
 		'v_short_name',
-		'v_jenis_usaha',
+		array(
+			"name" => "v_jenis_usaha",
+			"value" => "Controller::lookupHelper()->toReadable('BUSINESS_LINES',\$data->v_jenis_usaha)",
+		),
 		/*
 		'v_mobilitas',
 		'v_office_hours',

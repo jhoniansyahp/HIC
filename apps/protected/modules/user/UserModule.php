@@ -46,6 +46,7 @@ class UserModule extends CWebModule
 	 */
 	public $activeAfterRegister=false;
 	
+	public $appLayout = '//layouts/main';
 	/**
 	 * @var boolean
 	 * @desc login after registration (need loginNotActiv or activeAfterRegister = true)
@@ -55,6 +56,7 @@ class UserModule extends CWebModule
 	public $registrationUrl = array("/user/registration");
 	public $recoveryUrl = array("/user/recovery/recovery");
 	public $loginUrl = array("/user/login");
+	public $invalidLoginUrl = array("/user/login/invalidLogin");
 	public $logoutUrl = array("/user/logout");
 	public $profileUrl = array("/user/profile");
 	public $returnUrl = array("/user/profile");
@@ -117,7 +119,7 @@ class UserModule extends CWebModule
         } else {
             return array();
         }
-	}
+	}   
 
 	public function beforeControllerAction($controller, $action)
 	{
@@ -125,6 +127,7 @@ class UserModule extends CWebModule
 		{
 			// this method is called before any module controller action is performed
 			// you may place customized code here
+			//$controller->layout = 'column1';
 			return true;
 		}
 		else

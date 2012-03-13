@@ -18,19 +18,19 @@ class DetailLookupsController extends Controller
 	/**
 	 * @return array action filters
 	 */
-	public function filters()
+	/*public function filters()
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
 		);
-	}
+	}*/
 
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+	/*public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
@@ -52,7 +52,7 @@ class DetailLookupsController extends Controller
 				'users'=>array('*'),
 			),
 		);
-	}
+	}*/
 	
 	
 	/**
@@ -64,20 +64,29 @@ class DetailLookupsController extends Controller
 	public function actions()
 	{
 		return array(
+				'combo_setup-mst-organizations-coy'=>array(
+				  'class'=>'application.extensions.EAutoCompleteAction',
+				  'model'=> 'SetupMstOrganizations',
+				  'label'=> 'v_org_name',
+				  'value'=> 'v_org_name',
+				   'id' => 'n_org_id',
+				   'condition' => array('v_flag_coy_id=:flag',array(':flag'=>'Y')),
+				),
 							
 			   'combo_setup-mst-organizations'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
-				  'model'=> 'SetupDtlLookups',
-				  'label'=> 'n_org_id',
-				  'value'=> 'n_org_id',
+				  'model'=> 'SetupMstOrganizations',
+				  'label'=> 'v_org_name',
+				  'value'=> 'v_org_name',
 				   'id' => 'n_org_id',
+				   'condition' => array('v_flag_coy_id=:flag',array(':flag'=>'N')),
 				),
 							
 			   'combo_setup-mst-lookups'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
-				  'model'=> 'SetupDtlLookups',
-				  'label'=> 'v_lookup_code',
-				  'value'=> 'v_lookup_code',
+				  'model'=> 'SetupMstLookups',
+				  'label'=> 'v_lookup_name',
+				  'value'=> 'v_lookup_name',
 				   'id' => 'v_lookup_code',
 				),
 					);
@@ -110,15 +119,17 @@ class DetailLookupsController extends Controller
 		{
 			$model->attributes=$_POST['SetupDtlLookups'];
 			
-								$model->v_created_by=Yii::app()->user->id;
-												$model->d_created_date=new CDbExpression('NOW()');
+						$model->v_created_by=Yii::app()->user->id;
+						$model->d_created_date=new CDbExpression('NOW()');
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
 											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
-								
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
+						
+						$org = SetupMstLookups::model()->findByPK($model->n_org_id);
+		
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->v_lookup_dtl_code));
+				$this->redirect(array('view','id'=>$model->n_lookup_dtl_id));
 		}
 
 		$this->render('create',array(
@@ -143,14 +154,17 @@ class DetailLookupsController extends Controller
 			$model->attributes=$_POST['SetupDtlLookups'];
 			
 										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_created_date = $this->convertDate($model->d_created_date);
-												$model->v_updated_by=Yii::app()->user->id;
-												$model->d_updated_date=new CDbExpression('NOW()');
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_updated_date = $this->convertDate($model->d_updated_date);
+						$model->d_created_date = $this->getDate()->toSave($model->d_created_date);
+						$model->v_updated_by=Yii::app()->user->id;
+						$model->d_updated_date=new CDbExpression('NOW()');
+						// Convert dd/mm/yy to yy-mm-dd
+						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
+							
+						$org = SetupMstLookups::model()->findByPK($model->n_org_id);
+						
 							
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->v_lookup_dtl_code));
+				$this->redirect(array('view','id'=>$model->n_lookup_dtl_id));
 		}
 
 		$this->render('update',array(
@@ -191,11 +205,19 @@ class DetailLookupsController extends Controller
 			
 								    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_created_date) && isset($_GET['SetupDtlLookups'])){
-							$model->d_created_date = new CDbExpression("=".$this->convertDate($model->d_created_date));
+							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
 						if(!empty($model->d_updated_date) && isset($_GET['SetupDtlLookups'])){
-							$model->d_updated_date = new CDbExpression("=".$this->convertDate($model->d_updated_date));
+							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
+						}
+						
+						if(empty($model->n_org_id) && isset($_GET['SetupDtlLookups'])){
+							unset($model->n_org_id);
+						}
+						
+						if(empty($model->n_coy_id) && isset($_GET['SetupDtlLookups'])){
+							unset($model->n_coy_id);
 						}
 								
 		$this->render('index',array(
@@ -250,7 +272,7 @@ class DetailLookupsController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=SetupDtlLookups::model()->findByPk($id);
+		$model=SetupDtlLookups::model()->findByPK($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

@@ -18,11 +18,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_claim')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_claim)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_claim)); ?>a
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_submitted')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_submitted)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_submitted)); ?>a
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('v_claim_intim')); ?>:</b>
@@ -67,7 +67,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_sent_doc')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_sent_doc)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_sent_doc)); ?>a
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('v_intim_email')); ?>:</b>
@@ -99,7 +99,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_incident_date')); ?>:</b>
-	<?php echo CHtml::encode($this->ConvertDateNormal($data->d_incident_date)); ?>a
+	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_incident_date)); ?>a
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('v_claim_doc')); ?>:</b>
