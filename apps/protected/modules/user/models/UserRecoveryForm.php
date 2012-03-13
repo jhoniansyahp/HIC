@@ -7,6 +7,7 @@
  */
 class UserRecoveryForm extends CFormModel {
 	public $login_or_email, $user_id;
+	public $verifyCode;
 	
 	/**
 	 * Declares the validation rules.
@@ -21,6 +22,8 @@ class UserRecoveryForm extends CFormModel {
 			array('login_or_email', 'match', 'pattern' => '/^[A-Za-z0-9@.-\s,]+$/u','message' => UserModule::t("Incorrect symbols (A-z0-9).")),
 			// password needs to be authenticated
 			array('login_or_email', 'checkexists'),
+			// verifyCode needs to be entered correctly
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
 	}
 	/**
@@ -30,6 +33,9 @@ class UserRecoveryForm extends CFormModel {
 	{
 		return array(
 			'login_or_email'=>UserModule::t("username or email"),
+		);
+		return array(
+			'verifyCode'=>'Verification Code',
 		);
 	}
 	
