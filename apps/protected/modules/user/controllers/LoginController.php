@@ -22,11 +22,16 @@ class LoginController extends Controller
                
 		$this->layout = '//layouts/login';
 		if (Yii::app()->user->isGuest) {
-			$model=new UserLogin;
+			$session=new CHttpSession;
+			$session->open();
+			$this->invalid = $_SESSION['invalid'];
+			$model = $this->invalid? new UserLoginc : $model=new UserLogin;
+			
+			//$invalid?
 			// collect user input data
-			if(isset($_POST['UserLogin']))
+			if(isset($_POST['UserLogin']) || isset($_POST['UserLoginc']))
 			{
-				$model->attributes=$_POST['UserLogin'];
+				$model->attributes = $this->invalid ? $_POST['UserLoginc'] : $_POST['UserLogin'];
 				// validate user input and redirect to previous page if valid
 				if($model->validate()) {
 					$this->lastViset();
@@ -35,11 +40,14 @@ class LoginController extends Controller
 					else						
 						$this->redirect(Yii::app()->user->returnUrl);
 				} else {
-					$this->redirect(Yii::app()->controller->module->invalidLoginUrl);
-					// $this->layout = '//layouts/main';
-					// $model=new UserLoginc;
-					// $model->attributes=$_POST['UserLogin'];
-					// $this->render('/user/loginc',array('model'=>$model));
+					//$this->redirect(Yii::app()->controller->module->invalidLoginUrl);
+					$this->layout = '//layouts/main';
+					//$this->invalid = true;
+					$_SESSION['invalid'] = true;
+					$model=new UserLoginc;
+					$model->attributes=$this->invalid?$_POST['UserLogin'] : $_POST['UserLogin'];
+					$model->validate();
+					$this->render('/user/loginc',array('model'=>$model));
 				}
 			} else {
 				// display the login form
@@ -57,15 +65,15 @@ class LoginController extends Controller
 			$model=new UserLoginc;
 			
 			// collect user input data
-			if(isset($_POST['UserLogin']))
+			if(isset($_POST['UserLoginc']))
 			{
-				print_r($_POST['UserLogin']);
-				die();
-				$model->attributes=$_POST['UserLogin'];
+				//print_r($_POST['UserLogin']);
+				//die();
+				$model->attributes=$_POST['UserLoginc'];
 				// validate user input and redirect to previous page if valid
 				if($model->validate()) {
 					$this->lastViset();
-					$this->redirect('user/profile');
+					$this->redirect('/user/profile');
 					// if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
 						// $this->redirect(Yii::app()->controller->module->returnUrl);
 					// else						

@@ -6,10 +6,10 @@ $this->breadcrumbs=array(
 
 <h1><?php echo UserModule::t("List User"); ?></h1>
 <?php if(UserModule::isAdmin()) {
-	?><ul class="actions">
-	<li><?php echo CHtml::link(UserModule::t('Manage User'),array('/user/admin')); ?></li>
-	<li><?php echo CHtml::link(UserModule::t('Manage Profile Field'),array('profileField/admin')); ?></li>
-</ul><!-- actions --><?php 
+	$this->menu=array(
+	array('label'=>UserModule::t('Manage User'),'url'=>array('/user/admin'), 'visible'=>UserModule::isAdmin()),
+	array('label'=>UserModule::t('Manage Profile Field'),'url'=>array('profileField/admin'), 'visible'=>UserModule::isAdmin()),
+);
 } ?>
 <?php $this->widget('ext.bootstrap.widgets.BootGridView', array(
 	'dataProvider'=>$dataProvider,
