@@ -12,6 +12,7 @@ class Controller extends RController
 	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
 	 */
 	public $layout='//layouts/column1';
+	public $invalid = false;
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
 	 */

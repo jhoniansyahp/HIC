@@ -102,21 +102,25 @@
         <div class="span2" style="float:left">System v.0.1</div>
        
        <div class="span6 right">
-        <select id="select01" class="span3 right">
+        <form name="lang">
+		<select name="lang" id="select01" class="span3 right" onchange="this.form.submit();">
                 <option>Pilih Bahasa</option>
-                <option>Indonesia</option>
-                <option>Ingris</option>
-                <option>Arab</option>
-                <option>Spanyol</option>
+                <option value="id">Indonesia</option>
+                <option value="en-us">Ingris</option>
+                <option value="arab">Arab</option>
+                <option value="spanyol">Spanyol</option>
               </select>
-              
-        <select id="select02" class="span2 right" style="margin-right:10px;">
+		</form>
+        <form name="theme">      
+        <select name="theme" id="select02" class="span2 right" style="margin-right:10px;" onchange="this.form.submit();">
                 <option>Pilih Style</option>
-                <option>cyborg</option>
-                <option>slate</option>
-                <option>united</option>
-                <option>dangdut</option>
+				<option value="bootstrap">bootstrap</option>
+                <option value="cyborg">cyborg</option>
+                <option value="slate">slate</option>
+                <option value="united">united</option>
+                <option value="dangdut">dangdut</option>
               </select>
+		</form>
         </div>
         <div class="span4" style="margin:0 auto">
         Copyright &copy; 2012 - <a href="#">Disclaimer</a> | <a href="#">Help</a> 
