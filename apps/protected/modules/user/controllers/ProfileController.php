@@ -3,7 +3,7 @@
 class ProfileController extends Controller
 {
 	public $defaultAction = 'profile';
-
+	public $layout='//layouts/column2';
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.
 	 */
@@ -11,13 +11,21 @@ class ProfileController extends Controller
 	/**
 	 * Shows a particular model.
 	 */
-	public function actionProfile()
+	public function actionProfilez()
 	{
 		$model = $this->loadUser();
 	    $this->render('profile',array(
 	    	'model'=>$model,
 			'profile'=>$model->profile,
 	    ));
+	}
+	
+	public function actionProfile()
+	{
+		$model = $this->loadUser();
+		$this->render('view',array(
+			'model'=>$model,
+		));
 	}
 
 

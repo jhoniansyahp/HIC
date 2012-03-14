@@ -6,11 +6,19 @@ $this->breadcrumbs=array(
 ?>
 <h1><?php echo UserModule::t("Manage Users"); ?></h1>
 
-<?php echo $this->renderPartial('_menu', array(
-		'list'=> array(
-			CHtml::link(UserModule::t('Create User'),array('create')),
-		),
-	));
+<?php 
+// echo $this->renderPartial('_menu', array(
+		// 'list'=> array(
+			// CHtml::link(UserModule::t('Create User'),array('create')),
+		// ),
+	// ));
+$this->menu=array(
+	array('label'=>UserModule::t('Manage User'),'url'=>array('/user/admin'), 'visible'=>UserModule::isAdmin()),
+	array('label'=>UserModule::t('Create User'),'url'=>array('create')),
+	array('label'=>UserModule::t('Profile'),'url'=>array('/user/profile')),
+	array('label'=>UserModule::t('Edit'),'url'=>array('edit')),
+	array('label'=>UserModule::t('Change password'),'url'=>array('changepassword')),
+);
 ?>
 
 <?php $this->widget('ext.bootstrap.widgets.BootGridView', array(

@@ -6,13 +6,24 @@ $this->breadcrumbs=array(
 ?>
 <h1><?php echo UserModule::t('View User').' "'.$model->username.'"'; ?></h1>
 
-<?php echo $this->renderPartial('_menu', array(
-		'list'=> array(
-			CHtml::link(UserModule::t('Create User'),array('create')),
-			CHtml::link(UserModule::t('Update User'),array('update','id'=>$model->id)),
-			CHtml::linkButton(UserModule::t('Delete User'),array('submit'=>array('delete','id'=>$model->id),'confirm'=>UserModule::t('Are you sure to delete this item?'))),
-		),
-	)); 
+<?php 
+// echo $this->renderPartial('_menu', array(
+		// 'list'=> array(
+			// CHtml::link(UserModule::t('Create User'),array('create')),
+			// CHtml::link(UserModule::t('Update User'),array('update','id'=>$model->id)),
+			// CHtml::linkButton(UserModule::t('Delete User'),array('submit'=>array('delete','id'=>$model->id),'confirm'=>UserModule::t('Are you sure to delete this item?'))),
+		// ),
+	// )); 
+	
+	$this->menu=array(
+	array('label'=>UserModule::t('Manage User'),'url'=>array('/user/admin'), 'visible'=>UserModule::isAdmin()),
+	array('label'=>UserModule::t('Create User'),'url'=>array('create')),
+	array('label'=>UserModule::t('Update User'),'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>UserModule::t('Delete User'),'url'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>UserModule::t('Are you sure to delete this item?'))),
+	array('label'=>UserModule::t('Profile'),'url'=>array('/user/profile')),
+	array('label'=>UserModule::t('Edit'),'url'=>array('edit')),
+	array('label'=>UserModule::t('Change password'),'url'=>array('changepassword')),
+);
 
 
 	$attributes = array(

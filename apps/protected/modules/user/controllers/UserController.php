@@ -50,19 +50,27 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User', array(
-			'criteria'=>array(
-		        'condition'=>'status>'.User::STATUS_BANED,
-		    ),
-				
-			'pagination'=>array(
-				'pageSize'=>Yii::app()->controller->module->user_page_size,
-			),
-		));
+		
+		if(UserModule::isAdmin()) {
+			$dataProvider=new CActiveDataProvider('User', array(
+				'criteria'=>array(
+					'condition'=>'status>'.User::STATUS_BANED,
+				),
+					
+				'pagination'=>array(
+					'pageSize'=>Yii::app()->controller->module->user_page_size,
+				),
+			));
 
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+			$this->render('index',array(
+				'dataProvider'=>$dataProvider,
+			));
+		} else {
+			// if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
+						// $this->redirect(Yii::app()->controller->module->returnUrl);
+					// else						
+						$this->redirect('/user/profile');
+		}
 	}
 
 	/**

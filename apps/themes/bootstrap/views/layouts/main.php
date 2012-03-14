@@ -102,8 +102,8 @@
         <div class="span2" style="float:left">System v.0.1</div>
        
        <div class="span6 right">
-        <form name="lang">
-		<select name="lang" id="select01" class="span3 right" onchange="this.form.submit();">
+        <form class="span2" name="lang">
+		<select name="lang" id="select01" class="span2 right" onchange="this.form.submit();">
                 <option>Pilih Bahasa</option>
                 <option value="id">Indonesia</option>
                 <option value="en-us">Ingris</option>
@@ -111,7 +111,7 @@
                 <option value="spanyol">Spanyol</option>
               </select>
 		</form>
-        <form name="theme">      
+        <form class="span3" name="theme">      
         <select name="theme" id="select02" class="span2 right" style="margin-right:10px;" onchange="this.form.submit();">
                 <option>Pilih Style</option>
 				<option value="bootstrap">bootstrap</option>

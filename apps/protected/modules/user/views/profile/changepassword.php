@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 ?>
 
 <h2><?php echo UserModule::t("Change password"); ?></h2>
-<?php echo $this->renderPartial('menu'); ?>
+<?php //echo $this->renderPartial('menu'); ?>
 
 <div class="form">
 <?php $form=$this->beginWidget('UActiveForm', array(
@@ -14,7 +14,7 @@ $this->breadcrumbs=array(
 	'enableAjaxValidation'=>true,
 )); ?>
 
-	<p class="note"><?php echo UserModule::t('<?php echo Yii::t('app','Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>'));?> '); ?></p>
+	<p class="note"><?php echo UserModule::t('Fields with {required} are required.',array('{required}'=>'<span class="required">*</span>')); ?></p>
 	<?php echo CHtml::errorSummary($model); ?>
 	
 	<div class="row">
