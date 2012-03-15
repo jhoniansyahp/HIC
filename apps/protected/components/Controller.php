@@ -40,7 +40,7 @@ class Controller extends RController
 	
 	public function allowedActions() 
 	{ 
-		return 'login,index'; 
+		return 'login'; 
 	}	
 	
 	/**
