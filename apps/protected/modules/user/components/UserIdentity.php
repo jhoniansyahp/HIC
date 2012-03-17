@@ -8,6 +8,7 @@
 class UserIdentity extends CUserIdentity
 {
 	private $_id;
+	public $pic;
 	const ERROR_EMAIL_INVALID=3;
 	const ERROR_STATUS_NOTACTIV=4;
 	const ERROR_STATUS_BAN=5;
@@ -41,6 +42,10 @@ class UserIdentity extends CUserIdentity
 		else {
 			$this->_id=$user->id;
 			$this->username=$user->username;
+			//add pic 
+			// $model = Profile::model()->loadUser();
+			// $profile=$model->profile;
+			// $this->pic = $profile->pic;
 			$this->errorCode=self::ERROR_NONE;
 		}
 		return !$this->errorCode;
@@ -53,4 +58,12 @@ class UserIdentity extends CUserIdentity
 	{
 		return $this->_id;
 	}
+	
+	// public function getzPic()
+	// {
+		// //$profile=Profile::model()->findByPK($this->_id);
+		// $model = User::model()->loadUser();
+		// $profile=$model->profile;
+		// return $profile->pic;
+	// }
 }

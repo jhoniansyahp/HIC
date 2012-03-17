@@ -8052,3 +8052,561 @@ Stack trace:
 REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
 HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
 ---
+2012/03/18 00:34:24 [error] [exception.CException] exception 'CException' with message 'Property "RWebUser.pic" is not defined.' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\auth\CWebUser.php(141): CComponent->__get('pic')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\apps\themes\bootstrap\views\layouts\column2.php(7): CWebUser->__get('pic')
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CBaseController.php(127): require('D:\core\Apache\...')
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\core\Apache\...', Array, true)
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(785): CBaseController->renderFile('D:\core\Apache\...', Array, true)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\components\Controller.php(83): CController->render('view', Array, false)
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileController.php(28): Controller->render('view', Array)
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileController->actionProfile()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('')
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profile')
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/HIC/apps/user/profile
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/admin
+---
+2012/03/18 00:36:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/18 00:36:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 00:36:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 00:36:47 [error] [exception.CException] exception 'CException' with message 'Property "User.pic" is not defined.' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(144): CComponent->__get('pic')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\components\UserIdentity.php(46): CActiveRecord->__get('pic')
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\LoginController.php(36): CModel->validate()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('')
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/HIC/apps/login
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 00:44:15 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.getPic" is not defined.' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\components\UserIdentity.php(46): CComponent->__get('getPic')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\LoginController.php(36): CModel->validate()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/HIC/apps/login
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 00:48:32 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.getPic" is not defined.' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\components\UserIdentity.php(46): CComponent->__get('getPic')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\LoginController.php(36): CModel->validate()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/HIC/apps/login
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 00:49:20 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.getzPic" is not defined.' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\components\UserIdentity.php(46): CComponent->__get('getzPic')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\LoginController.php(36): CModel->validate()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/HIC/apps/login
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 00:52:28 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "loadUser".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(226): CComponent->__call('loadUser', Array)
+#1 [internal function]: CActiveRecord->__call('loadUser', Array)
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\components\UserIdentity.php(46): User->loadUser()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\LoginController.php(36): CModel->validate()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('')
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#19 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/HIC/apps/login
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 00:54:14 [error] [exception.CException] exception 'CException' with message 'Profile and its behaviors do not have a method or closure named "loadUser".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(226): CComponent->__call('loadUser', Array)
+#1 [internal function]: CActiveRecord->__call('loadUser', Array)
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\components\UserIdentity.php(46): Profile->loadUser()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\LoginController.php(36): CModel->validate()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('')
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#19 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/HIC/apps/login
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:01:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:01:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:01:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/18 01:08:14 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\css\bootstrap.min.css) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/18 01:08:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:08:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:09:31 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\js\bootstrap.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/18 01:09:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:09:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:10:50 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\css\bootstrap.min.css) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/18 01:10:50 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\js\bootstrap.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/18 01:10:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:14:26 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\js\bootstrap.min.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/18 01:14:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/18 01:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:16:57 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\js\bootstrap-tab.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/18 01:16:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('images/logo.png')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/login
+---
+2012/03/18 01:16:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('css/bootstrap.c...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/login
+---
+2012/03/18 01:16:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('images/favicon....')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/images/favicon.png
+---
+2012/03/18 01:16:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('images/favicon....')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/images/favicon.png
+---
+2012/03/18 01:16:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('images/favicon....')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/images/favicon.png
+---
+2012/03/18 01:17:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:17:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:17:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/18 01:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/18 01:22:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/18 01:22:43 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\js\bootstrap.min.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/user/images/logo.png
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/18 01:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
