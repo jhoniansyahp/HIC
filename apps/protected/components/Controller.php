@@ -26,7 +26,7 @@ class Controller extends RController
 				// array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
 				// array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
 				// array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
-				array('label'=>'LIST HEADER', 'itemOptions'=>array('class'=>'nav-header')),
+				array('label'=>'SUB MENU', 'itemOptions'=>array('class'=>'nav-header')),
 	);
 	
 	

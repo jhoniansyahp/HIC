@@ -322,7 +322,9 @@ class ProfileFieldController extends Controller
 			$model->attributes=$_POST['ProfileField'];
 			
 			if($model->validate()) {
-				$sql = 'ALTER TABLE '.Profile::model()->tableName().' ADD `'.$model->varname.'` ';
+				//$sql = 'ALTER TABLE '.Profile::model()->tableName().' ADD `'.$model->varname.'` ';
+				//this quick fix for postgresql
+				$sql = 'ALTER TABLE '.Profile::model()->tableName().' ADD "'.$model->varname.'" ';
 				$sql .= $this->fieldType($model->field_type);
 				if (
 						$model->field_type!='TEXT'
@@ -330,6 +332,7 @@ class ProfileFieldController extends Controller
 						&& $model->field_type!='BOOL'
 						&& $model->field_type!='BLOB'
 						&& $model->field_type!='BINARY'
+						&& $model->field_type!='INTEGER' //quick fix for postgresql
 					)
 					$sql .= '('.$model->field_size.')';
 				$sql .= ' NOT NULL ';
@@ -343,7 +346,7 @@ class ProfileFieldController extends Controller
 									||$model->field_type=='VARCHAR'
 									||$model->field_type=='BLOB'
 									||$model->field_type=='BINARY'
-								)?" DEFAULT ''":(($model->field_type=='DATE')?" DEFAULT '0000-00-00'":" DEFAULT 0"));
+								)?" DEFAULT ''":(($model->field_type=='DATE')?" DEFAULT '2011-11-11'":" DEFAULT 0"));
 				}
 				$model->dbConnection->createCommand($sql)->execute();
 				$model->save();

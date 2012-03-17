@@ -7187,3 +7187,868 @@ Stack trace:
 REQUEST_URI=/HIC/apps/index.php/user/css/bootstrap.css
 HTTP_REFERER=http://localhost:69/HIC/apps/index.php/user/login
 ---
+2012/03/16 02:56:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/16 02:56:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/16 02:56:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/16 02:56:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+---
+2012/03/16 02:56:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+---
+2012/03/16 02:56:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+---
+2012/03/17 16:51:21 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\js\bootstrap.min.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/17 16:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 16:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+---
+2012/03/17 16:51:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+---
+2012/03/17 16:58:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 16:58:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 16:58:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 16:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 16:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 16:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 17:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 17:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 17:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 17:18:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 17:18:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 17:18:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 17:20:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 17:20:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 17:20:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 17:25:15 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\js\bootstrap.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/17 17:25:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 17:25:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 23:32:07 [error] [php] copy(D:\core\Apache\Apache2.2\htdocs\HIC\apps\assets\5a1f798b\css\bootstrap.css) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CAssetManager.php(233): copyDirectory()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(346): CAssetManager->publish()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->getAssetsUrl()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php(57): Bootstrap->registerCss()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(388): Bootstrap->init()
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\YiiBase.php(100): createApplication()
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): createWebApplication()
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (346)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (81)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\extensions\bootstrap\components\Bootstrap.php (57)
+2012/03/17 23:32:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 23:32:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 23:32:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 23:32:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+---
+2012/03/17 23:32:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/favicon.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/favicon.png
+---
+2012/03/17 23:32:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 23:32:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 23:32:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 23:32:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 23:36:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/images/logo.png".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/log...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/images/logo.png
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 23:36:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/css/bootstrap.css".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/css/bootst...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/user/css/bootstrap.css
+HTTP_REFERER=http://localhost:69/HIC/apps/user/login
+---
+2012/03/17 23:36:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/images/bg-noise.jpg".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/bootstra...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/themes/bootstrap/images/bg-noise.jpg?cfdca00b0611
+HTTP_REFERER=http://localhost:69/HIC/apps/themes/bootstrap/css/bootstrap-fahmy.css
+---
+2012/03/17 23:44:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:44:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:46:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "`"
+LINE 1: ALTER TABLE tbl_profiles ADD `pic` VARCHAR(255) NOT NULL  DE...
+                                     ^. The SQL statement executed was: ALTER TABLE tbl_profiles ADD `pic` VARCHAR(255) NOT NULL  DEFAULT ''.
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (348)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/17 23:46:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "`"
+LINE 1: ALTER TABLE tbl_profiles ADD `pic` VARCHAR(255) NOT NULL  DE...
+                                     ^. The SQL statement executed was: ALTER TABLE tbl_profiles ADD `pic` VARCHAR(255) NOT NULL  DEFAULT ''' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(348): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:48:30 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "tbl_profiles_fields_pkey"
+DETAIL:  Key (id)=(1) already exists.. The SQL statement executed was: INSERT INTO "tbl_profiles_fields" ("field_size", "field_size_min", "required", "match", "range", "error_message", "other_validator", "default", "widget", "widgetparams", "position", "visible", "varname", "title", "field_type") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (351)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/17 23:48:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "tbl_profiles_fields_pkey"
+DETAIL:  Key (id)=(1) already exists.. The SQL statement executed was: INSERT INTO "tbl_profiles_fields" ("field_size", "field_size_min", "required", "match", "range", "error_message", "other_validator", "default", "widget", "widgetparams", "position", "visible", "varname", "title", "field_type") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14)' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(351): CActiveRecord->save()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:48:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "pic" of relation "tbl_profiles" already exists. The SQL statement executed was: ALTER TABLE tbl_profiles ADD "pic" VARCHAR(255) NOT NULL  DEFAULT ''.
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (350)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/17 23:48:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "pic" of relation "tbl_profiles" already exists. The SQL statement executed was: ALTER TABLE tbl_profiles ADD "pic" VARCHAR(255) NOT NULL  DEFAULT ''' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(350): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:49:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "pic" of relation "tbl_profiles" already exists. The SQL statement executed was: ALTER TABLE tbl_profiles ADD "pic" VARCHAR(255) NOT NULL  DEFAULT ''.
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (350)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/17 23:49:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "pic" of relation "tbl_profiles" already exists. The SQL statement executed was: ALTER TABLE tbl_profiles ADD "pic" VARCHAR(255) NOT NULL  DEFAULT ''' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(350): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:49:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:51:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "pic" of relation "tbl_profiles" already exists. The SQL statement executed was: ALTER TABLE tbl_profiles ADD "pic" VARCHAR(255) NOT NULL  DEFAULT ''.
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (350)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/17 23:51:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "pic" of relation "tbl_profiles" already exists. The SQL statement executed was: ALTER TABLE tbl_profiles ADD "pic" VARCHAR(255) NOT NULL  DEFAULT ''' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(350): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:53:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:53:31 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "tbl_profiles_fields_pkey"
+DETAIL:  Key (id)=(2) already exists.. The SQL statement executed was: INSERT INTO "tbl_profiles_fields" ("field_size", "field_size_min", "required", "match", "range", "error_message", "other_validator", "default", "widget", "widgetparams", "position", "visible", "varname", "title", "field_type") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (351)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/17 23:53:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "tbl_profiles_fields_pkey"
+DETAIL:  Key (id)=(2) already exists.. The SQL statement executed was: INSERT INTO "tbl_profiles_fields" ("field_size", "field_size_min", "required", "match", "range", "error_message", "other_validator", "default", "widget", "widgetparams", "position", "visible", "varname", "title", "field_type") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14)' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(351): CActiveRecord->save()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:54:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "tbl_profiles_fields_pkey"
+DETAIL:  Key (id)=(3) already exists.. The SQL statement executed was: INSERT INTO "tbl_profiles_fields" ("field_size", "field_size_min", "required", "match", "range", "error_message", "other_validator", "default", "widget", "widgetparams", "position", "visible", "varname", "title", "field_type") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (351)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/17 23:54:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "tbl_profiles_fields_pkey"
+DETAIL:  Key (id)=(3) already exists.. The SQL statement executed was: INSERT INTO "tbl_profiles_fields" ("field_size", "field_size_min", "required", "match", "range", "error_message", "other_validator", "default", "widget", "widgetparams", "position", "visible", "varname", "title", "field_type") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14)' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(351): CActiveRecord->save()
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#18 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/17 23:55:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/update/id/4
+---
+2012/03/18 00:00:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:01:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:02:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "("
+LINE 1: ALTER TABLE tbl_profiles ADD "coy_id" INTEGER(10) NOT NULL  ...
+                                                     ^. The SQL statement executed was: ALTER TABLE tbl_profiles ADD "coy_id" INTEGER(10) NOT NULL  DEFAULT 0.
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (350)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/18 00:02:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "("
+LINE 1: ALTER TABLE tbl_profiles ADD "coy_id" INTEGER(10) NOT NULL  ...
+                                                     ^. The SQL statement executed was: ALTER TABLE tbl_profiles ADD "coy_id" INTEGER(10) NOT NULL  DEFAULT 0' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(350): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:02:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:05:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:06:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:08:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:09:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:11:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:12:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:13:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:14:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:15:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:15:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22008]: Datetime field overflow: 7 ERROR:  date/time field value out of range: "0000-00-00". The SQL statement executed was: ALTER TABLE tbl_profiles ADD "create_date" DATE NOT NULL  DEFAULT '0000-00-00'.
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php (351)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php (36)
+in D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php (13)
+2012/03/18 00:15:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22008]: Datetime field overflow: 7 ERROR:  date/time field value out of range: "0000-00-00". The SQL statement executed was: ALTER TABLE tbl_profiles ADD "create_date" DATE NOT NULL  DEFAULT '0000-00-00'' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\user\controllers\ProfileFieldController.php(351): CDbCommand->execute()
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\actions\CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 D:\core\Apache\Apache2.2\htdocs\HIC\apps\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#10 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#11 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(292): CFilterChain->run()
+#13 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(276): CController->run('create')
+#15 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#16 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HIC/apps/user/profileField/create
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:22:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:22:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
+2012/03/18 00:22:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/5db28c6/js/form.js".' in D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/5db28c6/...')
+#1 D:\core\Apache\Apache2.2\htdocs\HIC\yii1110\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\core\Apache\Apache2.2\htdocs\HIC\apps\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/HIC/apps/assets/5db28c6/js/form.js
+HTTP_REFERER=http://localhost:69/HIC/apps/user/profileField/create
+---
