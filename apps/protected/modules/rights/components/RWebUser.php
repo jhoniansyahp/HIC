@@ -14,6 +14,7 @@ class RWebUser extends CWebUser
 	* @param boolean $fromCookie whether the login is based on cookie.
 	*/
 	public $pic;
+	public $username;
 	public function afterLogin($fromCookie)
 	{
 		parent::afterLogin($fromCookie);
