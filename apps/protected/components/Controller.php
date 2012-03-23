@@ -5,6 +5,12 @@
  */
 class Controller extends RController
 {
+	public function filters()
+	{
+		return array(
+			'rights',
+		);
+	}
 	/**
 	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
 	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
@@ -25,37 +31,17 @@ class Controller extends RController
 				array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
 				array('label'=>'LIST HEADER', 'itemOptions'=>array('class'=>'nav-header')),
 	);
-	
-	
-	public function filters()
-	{
-		
-		return array(
-			'Rights'
-		);
-	}
-	
-	public function allowedActions() 
-	{ 
-		return 'login,index'; 
-	}
-	
-	public function globalMenu(){
-		$module = $this->getModule();
-		
-		print_r($module);
-	}
+
 	/**
 	 * @var array the breadcrumbs of the current page. The value of this property will
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
-	
 	public function getDate(){
 		return new CDateFormat();
 	}
-	
+
 	public function appHelper(){
 		return new HICHelper();
 	}
@@ -75,11 +61,16 @@ class Controller extends RController
 	
 	public function render($view, $data=null, $return=false)
 	{
-		
-		if(isset($_GET['theme'])){
+
+		if(isset($_GET['theme'])) {
 			$theme = $_GET['theme'];
 			Yii::app()->setTheme($theme);
 		}
+		if(isset($_GET['lang'])) {
+			$lang = $_GET['lang'];
+			Yii::app()->setLanguage($lang);
+		}
 		parent::render($view,$data,$return);
 	}
+
 }

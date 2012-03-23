@@ -70,6 +70,7 @@ class ClmMstClaimsController extends Controller
 				  'label'=> 'v_member_no',
 				  'value'=> 'v_member_no',
 				   'id' => 'v_member_no',
+				   //'condition' => array('flagcoyid'=>'y','field_lain'=>'valuevield');
 				),
 					);
 		
