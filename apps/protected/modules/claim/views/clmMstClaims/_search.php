@@ -13,6 +13,7 @@
 <div class="alert alert-warning">
 <?php echo $form->textFieldRow($model,'v_claim_no',array('class'=>'span5','maxlength'=>100)); ?>
 <?php echo $form->textFieldRow($model,'v_policy_no',array('class'=>'span5','maxlength'=>50)); ?>
+<?php echo $form->textFieldRow($model,'n_line_no',array('class'=>'span5')); ?>
 <?php 
 		  echo '<div class="control-group">';
 		  echo $form->labelEx($model,'d_claim');
@@ -119,15 +120,14 @@
 <?php echo ""; ?>
 <?php echo ""; ?>
 <?php echo ""; ?>
-<?php echo $form->textFieldRow($model,'v_member_no',array('class'=>'span5','maxlength'=>50)); ?>
 	<div class="actions">
 		<?php
-		 echo CHtml::submitButton(Yii::t('claimModule.main','Search'),array('class'=>'btn primary'));
+		 echo CHtml::submitButton(Yii::t('app','Search'),array('class'=>'btn primary'));
 		  echo '&nbsp;';
-		 echo CHtml::submitButton(Yii::t('claimModule.main','Cancel'), array('class'=>'btn','onclick'=>'this.form.reset()'));
+		 echo CHtml::submitButton(Yii::t('app','Cancel'), array('class'=>'btn','onclick'=>'this.form.reset()'));
 		 echo '&nbsp;';
  
-		 echo CHtml::link(Yii::t('claimModule.main','Simple Search'),'#',array('class'=>'search-simple-button btn')); 
+		 echo CHtml::link(Yii::t('app','Simple Search'),'#',array('class'=>'search-simple-button btn')); 
 		?>
 	</div>
 </div>

@@ -2,7 +2,7 @@
 return array (
   'template' => 'hic',
   'tablePrefix' => '',
-  'modelPath' => 'application.modules.setup.models',
+  'modelPath' => 'application.modules.claim.models',
   'baseClass' => 'GxActiveRecord',
   'buildRelations' => true,
 );

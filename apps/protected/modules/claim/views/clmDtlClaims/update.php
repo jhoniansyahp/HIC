@@ -8,16 +8,16 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('app','Clm Mst Claims')=>array('index'),
+	Yii::t('app','Clm Dtl Claims')=>array('index'),
 	Yii::t('app','View')=>array('view','id'=>$model->v_claim_no),
 	Yii::t('app','Update'),
 );
 /*
 $this->menu=array(
-	array('label'=>'List ClmMstClaims','url'=>array('index')),
-	array('label'=>'Create ClmMstClaims','url'=>array('create')),
-	array('label'=>'View ClmMstClaims','url'=>array('view','id'=>$model->v_claim_no)),
-	array('label'=>'Manage ClmMstClaims','url'=>array('admin')),
+	array('label'=>'List ClmDtlClaims','url'=>array('index')),
+	array('label'=>'Create ClmDtlClaims','url'=>array('create')),
+	array('label'=>'View ClmDtlClaims','url'=>array('view','id'=>$model->v_claim_no)),
+	array('label'=>'Manage ClmDtlClaims','url'=>array('admin')),
 );*/
 ?>
 

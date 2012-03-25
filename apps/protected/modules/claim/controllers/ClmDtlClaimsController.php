@@ -7,7 +7,7 @@
 #	Date: @ March 2012
 ***************************/
 
-class ClmMstClaimsController extends Controller
+class ClmDtlClaimsController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -39,7 +39,7 @@ class ClmMstClaimsController extends Controller
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update','delete','deleteall',
-									'combo_pol-mst-polis',
+									'combo_clm-mst-claims',
 					),
 				'users'=>array('@'),
 			),
@@ -64,12 +64,12 @@ class ClmMstClaimsController extends Controller
 	{
 		return array(
 							
-			   'combo_pol-mst-polis'=>array(
+			   'combo_clm-mst-claims'=>array(
 				  'class'=>'application.extensions.EAutoCompleteAction',
-				  'model'=> 'PolMstPolis',
-				  'label'=> 'v_policy_no',
-				  'value'=> 'v_policy_no',
-				   'id' => 'v_policy_no',
+				  'model'=> 'ClmMstClaims',
+				  'label'=> 'v_claim_no',
+				  'value'=> 'v_claim_no',
+				   'id' => 'v_claim_no',
 				),
 					);
 		
@@ -92,24 +92,16 @@ class ClmMstClaimsController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new ClmMstClaims;
+		$model=new ClmDtlClaims;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['ClmMstClaims']))
+		if(isset($_POST['ClmDtlClaims']))
 		{
-			$model->attributes=$_POST['ClmMstClaims'];
+			$model->attributes=$_POST['ClmDtlClaims'];
 			
 									 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_claim = $this->getDate()->toSave($model->d_claim);
-											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_submitted = $this->getDate()->toSave($model->d_submitted);
-											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_sent_doc = $this->getDate()->toSave($model->d_sent_doc);
-											 // Convert dd/mm/yy to yy-mm-dd
-						$model->d_incident_date = $this->getDate()->toSave($model->d_incident_date);
-											 // Convert dd/mm/yy to yy-mm-dd
 						$model->d_verifikasi_date = $this->getDate()->toSave($model->d_verifikasi_date);
 											 // Convert dd/mm/yy to yy-mm-dd
 						$model->d_upload_date = $this->getDate()->toSave($model->d_upload_date);
@@ -141,18 +133,10 @@ class ClmMstClaimsController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['ClmMstClaims']))
+		if(isset($_POST['ClmDtlClaims']))
 		{
-			$model->attributes=$_POST['ClmMstClaims'];
+			$model->attributes=$_POST['ClmDtlClaims'];
 			
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_claim = $this->getDate()->toSave($model->d_claim);
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_submitted = $this->getDate()->toSave($model->d_submitted);
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_sent_doc = $this->getDate()->toSave($model->d_sent_doc);
-										    // Convert dd/mm/yy to yy-mm-dd
-						$model->d_incident_date = $this->getDate()->toSave($model->d_incident_date);
 										    // Convert dd/mm/yy to yy-mm-dd
 						$model->d_verifikasi_date = $this->getDate()->toSave($model->d_verifikasi_date);
 										    // Convert dd/mm/yy to yy-mm-dd
@@ -198,42 +182,26 @@ class ClmMstClaimsController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$model=new ClmMstClaims('search');
+		$model=new ClmDtlClaims('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['ClmMstClaims']))
-			$model->attributes=$_GET['ClmMstClaims'];
+		if(isset($_GET['ClmDtlClaims']))
+			$model->attributes=$_GET['ClmDtlClaims'];
 			
 			
 								    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_claim) && isset($_GET['ClmMstClaims'])){
-							$model->d_claim = new CDbExpression("=".$this->getDate()->toSave($model->d_claim));
-						}
-										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_submitted) && isset($_GET['ClmMstClaims'])){
-							$model->d_submitted = new CDbExpression("=".$this->getDate()->toSave($model->d_submitted));
-						}
-										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_sent_doc) && isset($_GET['ClmMstClaims'])){
-							$model->d_sent_doc = new CDbExpression("=".$this->getDate()->toSave($model->d_sent_doc));
-						}
-										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_incident_date) && isset($_GET['ClmMstClaims'])){
-							$model->d_incident_date = new CDbExpression("=".$this->getDate()->toSave($model->d_incident_date));
-						}
-										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_verifikasi_date) && isset($_GET['ClmMstClaims'])){
+						if(!empty($model->d_verifikasi_date) && isset($_GET['ClmDtlClaims'])){
 							$model->d_verifikasi_date = new CDbExpression("=".$this->getDate()->toSave($model->d_verifikasi_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_upload_date) && isset($_GET['ClmMstClaims'])){
+						if(!empty($model->d_upload_date) && isset($_GET['ClmDtlClaims'])){
 							$model->d_upload_date = new CDbExpression("=".$this->getDate()->toSave($model->d_upload_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_created_date) && isset($_GET['ClmMstClaims'])){
+						if(!empty($model->d_created_date) && isset($_GET['ClmDtlClaims'])){
 							$model->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model->d_created_date));
 						}
 										    // Convert dd/mm/yy to yy-mm-dd
-						if(!empty($model->d_updated_date) && isset($_GET['ClmMstClaims'])){
+						if(!empty($model->d_updated_date) && isset($_GET['ClmDtlClaims'])){
 							$model->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model->d_updated_date));
 						}
 								
@@ -247,11 +215,11 @@ class ClmMstClaimsController extends Controller
 	*/
 	public function actionDeleteAll()
 	{
-	        if (isset($_POST['clm-mst-claims-grid_c0']))
+	        if (isset($_POST['clm-dtl-claims-grid_c0']))
 	        {
-	                $ids = $_POST['clm-mst-claims-grid_c0'];
+	                $ids = $_POST['clm-dtl-claims-grid_c0'];
 
-	                $model=new ClmMstClaims;
+	                $model=new ClmDtlClaims;
 
 	                foreach ($ids as $id)
 	                {
@@ -272,10 +240,10 @@ class ClmMstClaimsController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new ClmMstClaims('search');
+		$model=new ClmDtlClaims('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['ClmMstClaims']))
-			$model->attributes=$_GET['ClmMstClaims'];
+		if(isset($_GET['ClmDtlClaims']))
+			$model->attributes=$_GET['ClmDtlClaims'];
 
 		$this->render('index',array(
 			'model'=>$model,
@@ -289,7 +257,7 @@ class ClmMstClaimsController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=ClmMstClaims::model()->findByPk($id);
+		$model=ClmDtlClaims::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -301,7 +269,7 @@ class ClmMstClaimsController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='clm-mst-claims-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='clm-dtl-claims-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

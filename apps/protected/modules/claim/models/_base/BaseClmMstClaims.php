@@ -11,6 +11,7 @@
  *
  * @property string $v_claim_no
  * @property string $v_policy_no
+ * @property integer $n_line_no
  * @property string $d_claim
  * @property string $d_submitted
  * @property string $v_claim_intim
@@ -41,10 +42,9 @@
  * @property string $d_created_date
  * @property string $v_updated_by
  * @property string $d_updated_date
- * @property string $v_member_no
  *
- * @property PolDtlPolis $vMemberNo
- * @property ClmDtlClaims[] $clmDtlClaims
+ * @property ClmDtlClaims $clmDtlClaims
+ * @property PolMstPolis $vPolicyNo
  */
 abstract class BaseClmMstClaims extends GxActiveRecord {
 
@@ -61,29 +61,29 @@ abstract class BaseClmMstClaims extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'v_policy_no';
+		return 'v_claim_no';
 	}
 
 	public function rules() {
 		return array(
-			array('v_claim_no, v_policy_no', 'required'),
+			array('v_claim_no, v_policy_no, n_line_no', 'required'),
+			array('n_line_no', 'numerical', 'integerOnly'=>true),
 			array('v_claim_no, v_city, v_province, v_claim_status_note, v_claim_status, v_intim_email, v_intim_telp, v_bank_code, v_bank_cabang, v_rekening_no, v_cabang_layanan', 'length', 'max'=>100),
-			array('v_policy_no, v_member_no', 'length', 'max'=>50),
+			array('v_policy_no', 'length', 'max'=>50),
 			array('v_claim_intim', 'length', 'max'=>150),
 			array('v_address', 'length', 'max'=>300),
 			array('v_diagnosa_note, v_doc_scan, v_sent_by, v_sent_to, v_rekening_nama, v_claim_doc', 'length', 'max'=>250),
 			array('v_verifikasi_by, v_upload_by, v_created_by, v_updated_by', 'length', 'max'=>30),
-			array('d_verifikasi_date, d_upload_date, d_created_date, d_updated_date', 'length', 'max'=>6),
-			array('d_claim, d_submitted, d_sent_doc, d_incident_date', 'safe'),
-			array('d_claim, d_submitted, v_claim_intim, v_address, v_city, v_province, v_claim_status_note, v_claim_status, v_diagnosa_note, v_doc_scan, v_sent_by, v_sent_to, d_sent_doc, v_intim_email, v_intim_telp, v_bank_code, v_bank_cabang, v_rekening_no, v_rekening_nama, v_cabang_layanan, d_incident_date, v_claim_doc, v_verifikasi_by, d_verifikasi_date, v_upload_by, d_upload_date, v_created_by, d_created_date, v_updated_by, d_updated_date, v_member_no', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('v_claim_no, v_policy_no, d_claim, d_submitted, v_claim_intim, v_address, v_city, v_province, v_claim_status_note, v_claim_status, v_diagnosa_note, v_doc_scan, v_sent_by, v_sent_to, d_sent_doc, v_intim_email, v_intim_telp, v_bank_code, v_bank_cabang, v_rekening_no, v_rekening_nama, v_cabang_layanan, d_incident_date, v_claim_doc, v_verifikasi_by, d_verifikasi_date, v_upload_by, d_upload_date, v_created_by, d_created_date, v_updated_by, d_updated_date, v_member_no', 'safe', 'on'=>'search'),
+			array('d_claim, d_submitted, d_sent_doc, d_incident_date, d_verifikasi_date, d_upload_date, d_created_date, d_updated_date', 'safe'),
+			array('d_claim, d_submitted, v_claim_intim, v_address, v_city, v_province, v_claim_status_note, v_claim_status, v_diagnosa_note, v_doc_scan, v_sent_by, v_sent_to, d_sent_doc, v_intim_email, v_intim_telp, v_bank_code, v_bank_cabang, v_rekening_no, v_rekening_nama, v_cabang_layanan, d_incident_date, v_claim_doc, v_verifikasi_by, d_verifikasi_date, v_upload_by, d_upload_date, v_created_by, d_created_date, v_updated_by, d_updated_date', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('v_claim_no, v_policy_no, n_line_no, d_claim, d_submitted, v_claim_intim, v_address, v_city, v_province, v_claim_status_note, v_claim_status, v_diagnosa_note, v_doc_scan, v_sent_by, v_sent_to, d_sent_doc, v_intim_email, v_intim_telp, v_bank_code, v_bank_cabang, v_rekening_no, v_rekening_nama, v_cabang_layanan, d_incident_date, v_claim_doc, v_verifikasi_by, d_verifikasi_date, v_upload_by, d_upload_date, v_created_by, d_created_date, v_updated_by, d_updated_date', 'safe', 'on'=>'search'),
 		);
 	}
 
 	public function relations() {
 		return array(
-			'vMemberNo' => array(self::BELONGS_TO, 'PolDtlPolis', 'v_member_no'),
-			'clmDtlClaims' => array(self::HAS_MANY, 'ClmDtlClaims', 'v_claim_no'),
+			'clmDtlClaims' => array(self::HAS_ONE, 'ClmDtlClaims', 'v_claim_no'),
+			'vPolicyNo' => array(self::BELONGS_TO, 'PolMstPolis', 'v_policy_no'),
 		);
 	}
 
@@ -94,41 +94,41 @@ abstract class BaseClmMstClaims extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'v_claim_no' => Yii::t('app', 'V Claim No'),
-			'v_policy_no' => Yii::t('app', 'V Policy No'),
-			'd_claim' => Yii::t('app', 'D Claim'),
-			'd_submitted' => Yii::t('app', 'D Submitted'),
-			'v_claim_intim' => Yii::t('app', 'V Claim Intim'),
-			'v_address' => Yii::t('app', 'V Address'),
-			'v_city' => Yii::t('app', 'V City'),
-			'v_province' => Yii::t('app', 'V Province'),
-			'v_claim_status_note' => Yii::t('app', 'V Claim Status Note'),
-			'v_claim_status' => Yii::t('app', 'V Claim Status'),
-			'v_diagnosa_note' => Yii::t('app', 'V Diagnosa Note'),
-			'v_doc_scan' => Yii::t('app', 'V Doc Scan'),
-			'v_sent_by' => Yii::t('app', 'V Sent By'),
-			'v_sent_to' => Yii::t('app', 'V Sent To'),
-			'd_sent_doc' => Yii::t('app', 'D Sent Doc'),
-			'v_intim_email' => Yii::t('app', 'V Intim Email'),
-			'v_intim_telp' => Yii::t('app', 'V Intim Telp'),
-			'v_bank_code' => Yii::t('app', 'V Bank Code'),
-			'v_bank_cabang' => Yii::t('app', 'V Bank Cabang'),
-			'v_rekening_no' => Yii::t('app', 'V Rekening No'),
-			'v_rekening_nama' => Yii::t('app', 'V Rekening Nama'),
-			'v_cabang_layanan' => Yii::t('app', 'V Cabang Layanan'),
-			'd_incident_date' => Yii::t('app', 'D Incident Date'),
-			'v_claim_doc' => Yii::t('app', 'V Claim Doc'),
-			'v_verifikasi_by' => Yii::t('app', 'V Verifikasi By'),
-			'd_verifikasi_date' => Yii::t('app', 'D Verifikasi Date'),
-			'v_upload_by' => Yii::t('app', 'V Upload By'),
-			'd_upload_date' => Yii::t('app', 'D Upload Date'),
-			'v_created_by' => Yii::t('app', 'V Created By'),
-			'd_created_date' => Yii::t('app', 'D Created Date'),
-			'v_updated_by' => Yii::t('app', 'V Updated By'),
-			'd_updated_date' => Yii::t('app', 'D Updated Date'),
-			'v_member_no' => null,
-			'vMemberNo' => null,
-			'clmDtlClaims' => null,
+			'v_claim_no' => Yii::t('app', 'Claim No'),
+			'v_policy_no' => Yii::t('app','Policy No'),
+			'n_line_no' => Yii::t('app', 'Line No'),
+			'd_claim' => Yii::t('app', 'Claim'),
+			'd_submitted' => Yii::t('app', 'Submitted'),
+			'v_claim_intim' => Yii::t('app', 'Claim Intim'),
+			'v_address' => Yii::t('app', 'Address'),
+			'v_city' => Yii::t('app', 'City'),
+			'v_province' => Yii::t('app', 'Province'),
+			'v_claim_status_note' => Yii::t('app', 'Claim Status Note'),
+			'v_claim_status' => Yii::t('app', 'Claim Status'),
+			'v_diagnosa_note' => Yii::t('app', 'Diagnosa Note'),
+			'v_doc_scan' => Yii::t('app', 'Doc Scan'),
+			'v_sent_by' => Yii::t('app', 'Sent By'),
+			'v_sent_to' => Yii::t('app', 'Sent To'),
+			'd_sent_doc' => Yii::t('app', 'Sent Doc'),
+			'v_intim_email' => Yii::t('app', 'Intim Email'),
+			'v_intim_telp' => Yii::t('app', 'Intim Telp'),
+			'v_bank_code' => Yii::t('app', 'Bank Code'),
+			'v_bank_cabang' => Yii::t('app', 'Bank Cabang'),
+			'v_rekening_no' => Yii::t('app', 'Rekening No'),
+			'v_rekening_nama' => Yii::t('app', 'Rekening Nama'),
+			'v_cabang_layanan' => Yii::t('app', 'Cabang Layanan'),
+			'd_incident_date' => Yii::t('app', 'Incident Date'),
+			'v_claim_doc' => Yii::t('app', 'Claim Doc'),
+			'v_verifikasi_by' => Yii::t('app', 'Verifikasi By'),
+			'd_verifikasi_date' => Yii::t('app', 'Verifikasi Date'),
+			'v_upload_by' => Yii::t('app', 'Upload By'),
+			'd_upload_date' => Yii::t('app', 'Upload Date'),
+			'v_created_by' => Yii::t('app', 'Created By'),
+			'd_created_date' => Yii::t('app', 'Created Date'),
+			'v_updated_by' => Yii::t('app', 'Updated By'),
+			'd_updated_date' => Yii::t('app', 'Updated Date'),
+			'clmDtlClaims' => Yii::t('app','ClmDtlClaims'),
+			'vPolicyNo' => Yii::t('app','VPolicyNo'),
 		);
 	}
 
@@ -136,7 +136,8 @@ abstract class BaseClmMstClaims extends GxActiveRecord {
 		$criteria = new CDbCriteria;
 
 		$criteria->compare('v_claim_no', $this->v_claim_no, true);
-		$criteria->compare('v_policy_no', $this->v_policy_no, true);
+		$criteria->compare('v_policy_no', $this->v_policy_no);
+		$criteria->compare('n_line_no', $this->n_line_no);
 		$criteria->compare('d_claim', $this->d_claim, true);
 		$criteria->compare('d_submitted', $this->d_submitted, true);
 		$criteria->compare('v_claim_intim', $this->v_claim_intim, true);
@@ -167,7 +168,6 @@ abstract class BaseClmMstClaims extends GxActiveRecord {
 		$criteria->compare('d_created_date', $this->d_created_date, true);
 		$criteria->compare('v_updated_by', $this->v_updated_by, true);
 		$criteria->compare('d_updated_date', $this->d_updated_date, true);
-		$criteria->compare('v_member_no', $this->v_member_no);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

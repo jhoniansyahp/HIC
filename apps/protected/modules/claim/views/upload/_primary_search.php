@@ -11,7 +11,7 @@
 	'method'=>'get',
 )); ?>
 <div class="alert alert-warning">
-	<?php echo $form->textFieldRow($model,'v_claim_no',array('class'=>'span5','maxlength'=>100)); ?>
+	<?php echo $form->textFieldRow($model,'id',array('class'=>'span5')); ?>
 
 	<div class="actions">
 		<?php

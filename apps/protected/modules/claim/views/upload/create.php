@@ -8,17 +8,17 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('app','Clm Mst Claims')=>array('index'),
+	Yii::t('app','Uploads')=>array('index'),
 	Yii::t('app','Create'),
 );
 
 /*
 $this->menu=array(
-	array('label'=>'List ClmMstClaims','url'=>array('index')),
-	array('label'=>'Manage ClmMstClaims','url'=>array('admin')),
+	array('label'=>'List Upload','url'=>array('index')),
+	array('label'=>'Manage Upload','url'=>array('admin')),
 );*/
 ?>
 
-<h1><?php echo Yii::t("app","Create ClmMstClaims");?></h1>
+<h1><?php echo Yii::t("app","Create Upload");?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

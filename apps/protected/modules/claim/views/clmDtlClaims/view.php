@@ -8,16 +8,16 @@
 ?>
 <?php
 $this->breadcrumbs=array(
-	Yii::t('app','Clm Mst Claims')=>array('index'),
+	Yii::t('app','Clm Dtl Claims')=>array('index'),
 	Yii::t('app','View'),
 );
 /*
 $this->menu=array(
-	array('label'=>'List ClmMstClaims','url'=>array('index')),
-	array('label'=>'Create ClmMstClaims','url'=>array('create')),
-	array('label'=>'Update ClmMstClaims','url'=>array('update','id'=>$model->v_claim_no)),
-	array('label'=>'Delete ClmMstClaims','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->v_claim_no),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage ClmMstClaims','url'=>array('admin')),
+	array('label'=>'List ClmDtlClaims','url'=>array('index')),
+	array('label'=>'Create ClmDtlClaims','url'=>array('create')),
+	array('label'=>'Update ClmDtlClaims','url'=>array('update','id'=>$model->v_claim_no)),
+	array('label'=>'Delete ClmDtlClaims','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->v_claim_no),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage ClmDtlClaims','url'=>array('admin')),
 );
 */
 ?>
@@ -36,30 +36,22 @@ echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_claim_no), array('updat
 	'data'=>$model,
 	'attributes'=>array(
 		'v_claim_no',
-		'v_policy_no',
 		'n_line_no',
-		'd_claim',
-		'd_submitted',
-		'v_claim_intim',
-		'v_address',
-		'v_city',
-		'v_province',
-		'v_claim_status_note',
-		'v_claim_status',
-		'v_diagnosa_note',
-		'v_doc_scan',
-		'v_sent_by',
-		'v_sent_to',
-		'd_sent_doc',
-		'v_intim_email',
-		'v_intim_telp',
-		'v_bank_code',
-		'v_bank_cabang',
-		'v_rekening_no',
-		'v_rekening_nama',
-		'v_cabang_layanan',
-		'd_incident_date',
-		'v_claim_doc',
+		'v_benefit',
+		'v_benefit_type',
+		'v_hospital_note',
+		'v_doctor_note',
+		'v_medicine_note',
+		'v_period_day_visit',
+		'v_medical_indicate_note',
+		'v_provider_non',
+		'v_document',
+		'n_max_claim',
+		'n_claim_amount',
+		'v_telp_provider',
+		'v_alamat_provider',
+		'v_nama_provider',
+		'v_kode_provider',
 	),
 )); ?>
 <?php
