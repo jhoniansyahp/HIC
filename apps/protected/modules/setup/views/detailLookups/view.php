@@ -72,7 +72,7 @@ $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 	),
 )); ?>
 <?php
-echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
+echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array(sprintf('lookups/view/id/%s',$model->v_lookup_code)),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
 echo CHtml::Link(Yii::t('app','Update &raquo;',$model->n_lookup_dtl_id),array('update','id'=>$model->n_lookup_dtl_id),array('class'=>'btn btn-primary'));
 ?>

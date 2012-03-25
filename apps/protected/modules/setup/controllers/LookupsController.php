@@ -83,11 +83,39 @@ class LookupsController extends Controller
 	public function actionView($id)
 	{
 		$model = $this->loadModel($id);
-		//$detailmodel =  new SetupDtlLookups('search');
-		//$detailmodel->attributes = array('v_lookup_code', $model->v_lookup_code);
-		
+		/*
+		$criteria = new CDbCriteria();
+		$criteria->compare('v_lookup_code',$model->v_lookup_code);*/
+		$model_details =  new SetupDtlLookups('search');
+		$model_details->unsetAttributes();  // clear any default values
+		if(isset($_GET['SetupDtlLookups'])){
+			$model_details->attributes=$_GET['SetupDtlLookups'];
+			$model_details->attributes = array('v_lookup_code'=>$model->v_lookup_code);
+			
+			
+								    // Convert dd/mm/yy to yy-mm-dd
+						if(!empty($model_details->d_created_date) && isset($_GET['SetupDtlLookups'])){
+							$model_details->d_created_date = new CDbExpression("=".$this->getDate()->toSave($model_details->d_created_date));
+						}
+										    // Convert dd/mm/yy to yy-mm-dd
+						if(!empty($model_details->d_updated_date) && isset($_GET['SetupDtlLookups'])){
+							$model_details->d_updated_date = new CDbExpression("=".$this->getDate()->toSave($model_details->d_updated_date));
+						}
+						
+						if(empty($model_details->n_org_id) && isset($_GET['SetupDtlLookups'])){
+							unset($model_details->n_org_id);
+						}
+						
+						if(empty($model_details->n_coy_id) && isset($_GET['SetupDtlLookups'])){
+							unset($model_details->n_coy_id);
+						}
+		}else{
+			$model_details->attributes = array('v_lookup_code'=>$model->v_lookup_code);
+		}
+	
 		$this->render('view',array(
 			'model'=>$model,
+			'model_details'=>$model_details,
 		));
 		
 	}

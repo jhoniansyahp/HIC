@@ -18,7 +18,7 @@
 
 <div class="row-fluid">
 	<div class="span5">
-<?php echo $form->textFieldRow($model,'n_org_id',array('class'=>'span3','maxlength'=>15)); ?>
+<?php //echo $form->textFieldRow($model,'n_org_id',array('class'=>'span3','maxlength'=>15)); ?>
 <?php echo $form->textFieldRow($model,'v_org_code',array('class'=>'span3','maxlength'=>30)); ?>
 <?php echo $form->textFieldRow($model,'v_org_name',array('class'=>'span3','maxlength'=>150)); ?>
 <?php 
@@ -39,9 +39,8 @@
 	                     	),
 	        'htmlOptions'=>array('size'=>'10','class'=>'span3 date')
 	   ));
-		echo "</div>
-</div>"; ?>
-<?php 
+		echo "</div></div>"; ?>
+<?php
 		  echo '<div class="control-group">';
 		  echo $form->labelEx($model,'d_end_date');
 		 echo '<div class="controls">';
@@ -59,9 +58,7 @@
 	                     	),
 	        'htmlOptions'=>array('size'=>'10','class'=>'span3 date')
 	   ));
-		echo "</div>
-</div>"; ?>
-
+		echo "</div></div>"; ?>
 <?php echo $form->dropDownListRow($model, 'v_flag_coy_id', array('Y'=>Yii::t('app','Company/Business'),'N' => Yii::t('app','Unit'))); ?>
 <?php 
 $helper = $this->lookupHelper();

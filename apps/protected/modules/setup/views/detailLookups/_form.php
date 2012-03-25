@@ -16,7 +16,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 <div class="row-fluid">
-	<div class="span5">
+	<div class="span6">
 	<?php 
 
 				echo '<div class="control-group">';
@@ -43,7 +43,7 @@
 					  'minLength'=>2,
 				  ),
 				  'htmlOptions' => array(
-						'class' => 'span5',
+						'class' => 'span4',
 				  ),
 			 ));
 			 echo $form->error($model, 'n_coy_id');
@@ -75,7 +75,7 @@
 				  'minLength'=>2,
 			  ),
 			  'htmlOptions' => array(
-					'class' => 'span5',
+					'class' => 'span4',
 			  ),
 		 ));
 		 echo $form->error($model, 'n_org_id');
@@ -107,7 +107,7 @@
 				  'minLength'=>2,
 			  ),
 			  'htmlOptions' => array(
-					'class' => 'span5',
+					'class' => 'span4',
 			  ),
 		 ));
 		 echo $form->error($model, 'v_lookup_code');
@@ -146,7 +146,7 @@
 		echo CHtml::resetButton(Yii::t('app','Cancel'),array('class'=>'btn primary')); ?>&nbsp;|
 		
 		<?php
-		echo CHtml::link(Yii::t('app','Back to List'),array('index'), array('class'=>'btn')); ?>
+		echo CHtml::link(Yii::t('app','Back to List'),array(sprintf('lookups/view/id/%s',$model->v_lookup_code)), array('class'=>'btn')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -42,7 +42,7 @@
 					array('label'=>'Setup Umum', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Parameter','url'=>array('/setup/parameters')),
 					array('label'=>'Lookups','url'=>array('/setup/lookups')),
-					array('label'=>'Detail Lookups','url'=>array('/setup/detaillookups')),
+					//array('label'=>'Detail Lookups','url'=>array('/setup/detaillookups')),
 					'---',
 					array('label'=>'Setup Security User', 'itemOptions'=>array('class'=>'nav-header')),
 					array('label'=>'Admin User','url'=>array('/user/admin')),

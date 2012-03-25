@@ -112,6 +112,7 @@ class OrganizationsController extends Controller
 											 // Convert dd/mm/yy to yy-mm-dd
 						$model->d_updated_date = $this->getDate()->toSave($model->d_updated_date);
 								
+								
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->n_org_id));
 		}

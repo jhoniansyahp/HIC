@@ -54,9 +54,15 @@ $this->widget('ext.bootstrap.widgets.BootDetailView',array(
 
 
 <?php
-echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
+/*echo CHtml::Link(Yii::t('app','&laquo; Back to List'), array('index'),array('class'=>'btn btn-primary'));
 echo "\n&nbsp;\n";
 echo CHtml::Link(Yii::t('app','Update &raquo;',$model->v_lookup_code),array('update','id'=>$model->v_lookup_code),array('class'=>'btn btn-primary'));
+
+*/?>
+
+
+<?php
+$this->renderPartial('index_details',array("model"=>$model_details));
 ?>
 <!--<p>
 <div class="alert alert-info">

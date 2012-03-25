@@ -92,7 +92,7 @@ abstract class BaseSetupDtlLookups extends GxActiveRecord {
 			'v_lookup_dtl_code' => Yii::t('app', 'Lookup Dtl Code'),
 			'v_lookup_dtl_name' => Yii::t('app', 'Lookup Dtl Name'),
 			'v_lookup_dtl_desc' => Yii::t('app', 'Lookup Dtl Desc'),
-			'v_flex' => Yii::t('app', 'Flex'),
+			'v_flex' => Yii::t('app', 'Flag'),
 			'v_created_by' => Yii::t('app', 'Created By'),
 			'd_created_date' => Yii::t('app', 'Created Date'),
 			'v_updated_by' => Yii::t('app', 'Updated By'),
