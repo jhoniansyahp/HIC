@@ -39,6 +39,7 @@ class LoginController extends Controller
 					if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
 						$this->redirect(Yii::app()->controller->module->returnUrl);
 					else						
+						//$this->redirect(Yii::app()->createUrl(Yii::app()->user->returnUrl));
 						$this->redirect(Yii::app()->user->returnUrl);
 				} else {
 					//$this->redirect(Yii::app()->controller->module->invalidLoginUrl);

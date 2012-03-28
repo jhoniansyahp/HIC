@@ -116,6 +116,10 @@ class ClmDtlClaimsController extends Controller
 				$this->redirect(array('view','id'=>$model->v_claim_no));
 		}
 
+		if(isset($_GET['v_claim_no']))
+                {
+                    $model->v_claim_no = $_GET['v_claim_no'];
+                }
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -151,7 +155,10 @@ class ClmDtlClaimsController extends Controller
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->v_claim_no));
 		}
-
+		if(isset($_GET['v_claim_no']))
+                {
+                    $model->v_claim_no = $_GET['v_claim_no'];
+                }
 		$this->render('update',array(
 			'model'=>$model,
 		));
