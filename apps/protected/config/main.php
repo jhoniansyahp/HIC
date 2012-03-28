@@ -97,11 +97,18 @@ return array(
 		 ),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			//'showScriptName'=>false,
+			'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',				
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',	
+				'<controller:\w+>/<action:\w+>/<lang:en>'=>'en/<controller>/<action>',
+				'<controller:\w+>/<action:\w+>/<id:\d+>/<lang:en>'=>'en/<controller>/<action>',
+				'<controller:\w+>/<id:\d+>/<lang:en>'=>'en/<controller>/view/',
+				'en'=>'site/index/?lang=en',
+				'id'=>'site/index/?lang=id',
+				'login'=>'user/login',
+				'forgot-password'=>'user/recovery',
 			),
 		),
 		/*'db'=>array(
@@ -137,10 +144,10 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
-				),*/
+				),
 				
 			),
 		),

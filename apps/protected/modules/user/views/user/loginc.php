@@ -18,20 +18,29 @@ $this->breadcrumbs=array(
 <p><?php echo UserModule::t("Please fill out the following form with your login credentials:"); ?></p>
 
 <div class="form">
-<?php echo CHtml::beginForm(); ?>
+<?php $formz=$this->beginWidget('CActiveForm', array(
+	'id'=>'login-form',
+	'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+)); ?>
 
 	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
 	
 	<?php echo CHtml::errorSummary($model); ?>
 	
 	<div class="row">
-		<?php echo CHtml::activeLabelEx($model,'username'); ?>
-		<?php echo CHtml::activeTextField($model,'username') ?>
+		<?php echo $formz->labelEx($model,'username'); ?>
+		<?php echo $formz->textField($model,'username'); ?>
+		<?php echo $formz->error($model,'username'); ?>
 	</div>
+
 	
 	<div class="row">
-		<?php echo CHtml::activeLabelEx($model,'password'); ?>
-		<?php echo CHtml::activePasswordField($model,'password') ?>
+		<?php echo $formz->labelEx($model,'password'); ?>
+		<?php echo $formz->passwordField($model,'password'); ?>
+		<?php echo $formz->error($model,'password'); ?>		
 	</div>
 	
 	<!--div class="row">
@@ -41,15 +50,30 @@ $this->breadcrumbs=array(
 	</div-->
 	
 	<div class="row rememberMe">
-		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-		<?php echo CHtml::activeLabelEx($model,'rememberMe'); ?>
+		<?php echo $formz->checkBox($model,'rememberMe'); ?>
+		<?php echo $formz->label($model,'rememberMe'); ?>
+		<?php echo $formz->error($model,'rememberMe'); ?>
 	</div>
 
-	<div class="row submit">
-		<?php echo CHtml::submitButton(UserModule::t("Login")); ?>
+	<?php if(CCaptcha::checkRequirements()): ?>
+	<div class="row">
+		<?php echo $formz->labelEx($model,'verifyCode'); ?>
+		<div>
+		<?php $this->widget('CCaptcha'); ?><br/>
+		<?php echo $formz->textField($model,'verifyCode'); ?>
+		</div>
+		<div class="hint">Please enter the letters as they are shown in the image above.
+		<br/>Letters are not case-sensitive.</div>
+		<?php echo $formz->error($model,'verifyCode'); ?>
 	</div>
-	
-<?php echo CHtml::endForm(); ?>
+	<?php endif; ?>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Submit'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
 </div><!-- form -->
 
 

@@ -11,6 +11,7 @@ class Controller extends RController
 			'rights',
 		);
 	}*/
+
 	/**
 	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
 	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
@@ -56,11 +57,12 @@ class Controller extends RController
 	
 	public function formHelper()
 	{
-		return new formHelper();
+
+		return new formHelper();		
 	}
 	
 	public function render($view, $data=null, $return=false)
-	{
+	{		
 
 		if(isset($_GET['theme'])) {
 			$theme = $_GET['theme'];

@@ -60,7 +60,7 @@ return array(
 	'Not active' => 'Nicht aktiv',
 	'Active' => 'Aktiv',
 	'Banned' => 'Verbannt',
-	'Please fill out the following form with your login credentials:' => 'Selamat Datang di PMI [+]. Silakan Login dengan menggunakan kode user / email dan kata sandi Anda.',
+	'Please fill out the following form with your login credentials:' => 'Silakan Login dengan menggunakan kode user / email dan kata sandi Anda.',
 	'Fields with <span class="required">*</span> are required.' => 'Field dengan tanda <span class="required"> * </ span> wajib diisi.',
 	'List User' => 'Benutzer auflisten',
 	'Edit' => 'Ubah',
