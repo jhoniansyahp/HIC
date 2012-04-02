@@ -54,8 +54,13 @@
 					//array('label'=>'Ubah Password','url'=>array('/setup/changepassword')),
 				)),
 				array('label'=>'Polis', 'url'=>'#','items' => array(
-					array('label'=>'Data Polis','url' => array('/polis/quotation')),
-					array('label'=>'Upload Data Polis','url' => array('/polis/upload'))
+					array('label'=>'Data Polis','url' => array('/polis/datapolis')),
+					array('label'=>'Upload Peserta Polis','url' => array('/polis/datapolis/upload')),
+					array('label'=>'Verifikasi Data Polis','url' => array('/polis/verifikasipolis')),
+					array('label'=>'Perubahan Peserta Polis','url' => array('/polis/ubahpeserta')),
+					array('label'=>'Verifikasi Data by HRD','url'=>array('/polis/VerifikasiDataHRD')),
+					array('label'=>'Verifikasi Data by Insurance','url'=>array('/polis/VerifikasiDataInsurance')),
+					array('label'=>'Surat Informasi Kelengkapan Dokumen','url' => array('/polis/dokumen')),
 				)),
 				array('label'=>'Claim', 'url'=>array('/claim')),
 				array('label'=>'Laporan', 'url'=>'#', 'items'=>array(

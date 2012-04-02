@@ -11,6 +11,7 @@ class PolisModule extends CWebModule
 		$this->setImport(array(
 			'polis.models.*',
 			'polis.components.*',
+			'application.modules.setup.models.*',
 		));
 	}
 
