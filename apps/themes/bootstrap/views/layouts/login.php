@@ -18,6 +18,22 @@
 
 </head>
 <body>
+<? 
+Yii::app()->clientScript->registerScript('search', "
+$('.search-button').click(function(){
+	$('.search-form').toggle('slow');
+	return false;
+});
+$('.search-button2').click(function(){
+	$('.search-form2').toggle('slow');
+	return false;
+});
+$('.search-button3').click(function(){
+	$('.search-form3').toggle('slow');
+	return false;
+});
+");
+?>
 <div id="landing">
   <div class="span10 right" style="margin-right:20px">      
         <form class="form-inline right" style="margin:10px 0" action="/HIC/apps/login" method="post">
@@ -54,18 +70,22 @@
 
         <div class="grid">
             
-            <h5>Tentang PAKA&trade;</h5>
-            <p>
+            <h5 class="search-button">Tentang PAKA&trade;</h5>
+            <div class="search-form" style="display:none">
+			<p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id ipsum a ipsum tincidunt rutrum nec id lectus. Nunc porta massa nec ligula varius commodo. Pellentesque congue lorem sed tortor rutrum eu fermentum nunc convallis. Donec rhoncus velit ac felis egestas sodales. Pellentesque ac felis nec leo pellentesque ultricies vel at justo. Quisque fringilla rutrum sodales. Nunc blandit ligula in magna vestibulum fringilla. Donec velit lacus, lacinia vitae dignissim ac, ullamcorper id nisl. 
             </p>
+			</div><!-- search-form -->
         </div>
         
         
         <div class="grid last">
-            <h5>Disclaimer</h5>
-            <p>
+            <h5 class="search-button2">Disclaimer</h5>
+            <div class="search-form2" style="display:none">
+			<p>
             In sapien enim, viverra sed blandit vitae, sollicitudin at nulla. Aenean euismod iaculis rutrum. Sed condimentum ipsum sagittis nisi cursus sed rhoncus ipsum porta. Maecenas rhoncus urna urna. Cras ac vehicula leo. Praesent id sapien sit amet lacus pretium pharetra in non ante. Nam consectetur nunc iaculis dolor ultrices a pellentesque purus consectetur. Curabitur ipsum tortor, cursus quis facilisis in, sagittis ut elit. Mauris in egestas velit.   
             </p>
+			</div>
         </div>
     </div>
 
@@ -73,8 +93,9 @@
     <div class="row">
         <div class="span16">
             <hr />
-            <h5 style="text-align:center;">Informasi Klaim Terkini</h5>
-            <ul id="klaim">
+            <h5 class="search-button3" style="text-align:center;">Informasi Klaim Terkini</h5>
+            <div class="search-form3" style="display:none">
+			<ul id="klaim">
             	<li>
                 <div class="span1 right"><span class="label label-info right">Klaim Diterima</span></div>
                 <div class="span12">
@@ -94,6 +115,7 @@
                 <strong>#PK03884-2293/0299ACM-2012</strong><br>
                 Nam consectetur nunc iaculis dolor ultrices a pellentesque purus consectetur. Curabitur ipsum tortor, cursus quis facilisis in, sagittis ut elit. Mauris in egestas velit.</div></li>
             </ul>
+			</div>
         </div>
     </div>
     
@@ -103,21 +125,25 @@
         <div class="span2" style="float:left">System v.0.1</div>
        
        <div class="span6 right">
-        <select id="select01" class="span3 right">
+        <form class="span2" name="lang">
+		<select name="lang" id="select01" class="span2 right" onchange="this.form.submit();">
                 <option>Pilih Bahasa</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="id">Indonesia</option>
+                <option value="en-us">Ingris</option>
+                <option value="arab">Arab</option>
+                <option value="spanyol">Spanyol</option>
               </select>
-              
-        <select id="select02" class="span2 right" style="margin-right:10px;">
+		</form>
+        <form class="span3" name="theme">      
+        <select name="theme" id="select02" class="span2 right" style="margin-right:10px;" onchange="this.form.submit();">
                 <option>Pilih Style</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+				<option value="bootstrap">bootstrap</option>
+                <option value="cyborg">cyborg</option>
+                <option value="slate">slate</option>
+                <option value="united">united</option>
+                <option value="dangdut">dangdut</option>
               </select>
+		</form>
         </div>
         <div class="span4" style="margin:0 auto">
         Copyright &copy; 2012 - <a href="#">Disclaimer</a> | <a href="#">Help</a> 

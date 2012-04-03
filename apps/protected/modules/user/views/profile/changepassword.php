@@ -18,6 +18,15 @@ $this->breadcrumbs=array(
 	<?php echo CHtml::errorSummary($model); ?>
 	
 	<div class="row">
+	<?php echo $form->labelEx($model,'oldpassword'); ?>
+	<?php echo $form->passwordField($model,'oldpassword'); ?>
+	<?php echo $form->error($model,'oldpassword'); ?>
+	<p class="hint">
+	<?php echo UserModule::t("Old Password must valid."); ?>
+	</p>
+	</div>
+	
+	<div class="row">
 	<?php echo $form->labelEx($model,'password'); ?>
 	<?php echo $form->passwordField($model,'password'); ?>
 	<?php echo $form->error($model,'password'); ?>
@@ -32,6 +41,20 @@ $this->breadcrumbs=array(
 	<?php echo $form->error($model,'verifyPassword'); ?>
 	</div>
 	
+	<?php if(CCaptcha::checkRequirements()): ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'verifyCode'); ?>
+		<div>
+		<?php $this->widget('CCaptcha'); ?>
+		<br/>
+		<?php echo $form->textField($model,'verifyCode'); ?>
+		</div>
+		<div class="hint">Please enter the letters as they are shown in the image above.
+		<br/>Letters are not case-sensitive.</div>
+		<?php echo $form->error($model,'verifyCode'); ?>
+	</div>
+	<?php endif; ?>
+
 	
 	<div class="row submit">
 	<?php echo CHtml::submitButton(UserModule::t("Save")); ?>

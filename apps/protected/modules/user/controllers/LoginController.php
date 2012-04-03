@@ -34,10 +34,12 @@ class LoginController extends Controller
 				$model->attributes = $this->invalid ? $_POST['UserLoginc'] : $_POST['UserLogin'];
 				// validate user input and redirect to previous page if valid
 				if($model->validate()) {
+					$_SESSION['invalid'] = false;
 					$this->lastViset();
 					if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
 						$this->redirect(Yii::app()->controller->module->returnUrl);
 					else						
+						//$this->redirect(Yii::app()->createUrl(Yii::app()->user->returnUrl));
 						$this->redirect(Yii::app()->user->returnUrl);
 				} else {
 					//$this->redirect(Yii::app()->controller->module->invalidLoginUrl);

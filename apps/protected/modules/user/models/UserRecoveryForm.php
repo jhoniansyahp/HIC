@@ -33,10 +33,8 @@ class UserRecoveryForm extends CFormModel {
 	{
 		return array(
 			'login_or_email'=>UserModule::t("username or email"),
-		);
-		return array(
-			'verifyCode'=>'Verification Code',
-		);
+			'verifyCode'=>UserModule::t("Verification Code"),
+		);		
 	}
 	
 	public function checkexists($attribute,$params) {
