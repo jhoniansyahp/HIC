@@ -115,7 +115,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'pgsql:host=localhost;dbname=HIC',
+			'connectionString' => 'pgsql:host=localhost;dbname=health_claim',
 			'emulatePrepare' => true,
 			'username' => 'postgres',
 			'password' => 'postgres',
@@ -144,10 +144,10 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				
+				/*
 				array(
 					'class'=>'CWebLogRoute',
-				),
+				),*/
 				
 			),
 		),

@@ -57,7 +57,10 @@
 					array('label'=>'Data Polis','url' => array('/polis/quotation')),
 					array('label'=>'Upload Data Polis','url' => array('/polis/upload'))
 				)),
-				array('label'=>'Claim', 'url'=>array('/claim')),
+				array('label'=>'Claim', 'url'=>'#','items' => array(
+					array('label'=>'Data Claim','url' => array('/claim/clmMstClaims')),
+					array('label'=>'Upload Data Claim','url' => array('/claim/upload/'))
+				)),
 				array('label'=>'Laporan', 'url'=>'#', 'items'=>array(
                     array('label'=>'DROPDOWN HEADER', 'itemOptions'=>array('class'=>'nav-header')),
                     array('label'=>'Action', 'url'=>'#'),

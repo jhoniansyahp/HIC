@@ -17,6 +17,10 @@
 	<?php echo CHtml::encode($data->v_policy_no); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('n_line_no')); ?>:</b>
+	<?php echo CHtml::encode($data->n_line_no); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_claim')); ?>:</b>
 	<?php echo CHtml::encode($this->getDate()->toReadable($data->d_claim)); ?>a
 	<br />
@@ -33,11 +37,11 @@
 	<?php echo CHtml::encode($data->v_address); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('v_city')); ?>:</b>
 	<?php echo CHtml::encode($data->v_city); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('v_province')); ?>:</b>
 	<?php echo CHtml::encode($data->v_province); ?>
 	<br />
@@ -136,10 +140,6 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('d_updated_date')); ?>:</b>
 	<?php echo CHtml::encode($data->d_updated_date); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('v_member_no')); ?>:</b>
-	<?php echo CHtml::encode($data->v_member_no); ?>
 	<br />
 
 	*/ ?>

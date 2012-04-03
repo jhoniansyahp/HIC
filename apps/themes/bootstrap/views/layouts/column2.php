@@ -4,7 +4,7 @@
     <div class="span2">
       <!--Sidebar content-->
 		<div class="thumbnail">
-		  <img src="http://placehold.it/260x180" alt="">
+		  <img src="<? echo Yii::app()->user->pic ?>" alt="">
 		</div>
 		<?php $this->menu=array_merge($this->globalMenu, $this->menu);
 			$this->widget('bootstrap.widgets.BootMenu', array(

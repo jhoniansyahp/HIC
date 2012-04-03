@@ -8,6 +8,16 @@ class ProfileController extends Controller
 	 * @var CActiveRecord the currently loaded data model instance.
 	 */
 	private $_model;
+	public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha'=>array(
+				'class'=>'CCaptchaAction',
+				'backColor'=>0xFFFFFF,
+			),			
+		);
+	}
 	/**
 	 * Shows a particular model.
 	 */
@@ -80,7 +90,13 @@ class ProfileController extends Controller
 			
 			if(isset($_POST['UserChangePassword'])) {
 					$model->attributes=$_POST['UserChangePassword'];
-					if($model->validate()) {
+					//add old password
+					
+					if($model->validate()) {						
+						$user=User::model()->notsafe()->findByPk(Yii::app()->user->id);
+						if(Yii::app()->getModule('user')->encrypting($model->oldpassword)!==$user->password)
+							Yii::app()->end('old password invalid');
+							
 						$new_password = User::model()->notsafe()->findbyPk(Yii::app()->user->id);
 						$new_password->password = UserModule::encrypting($model->password);
 						$new_password->activkey=UserModule::encrypting(microtime().$model->password);
