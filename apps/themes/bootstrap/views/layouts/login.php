@@ -36,7 +36,7 @@ $('.search-button3').click(function(){
 ?>
 <div id="landing">
   <div class="span10 right" style="margin-right:20px">      
-        <form class="form-inline right" style="margin:10px 0" action="/HIC/apps/login" method="post">
+        <form class="form-inline right" style="margin:10px 0" action="<?=Yii::app()->createUrl('user/login')?>" method="post">
         <input name="UserLogin[username]" id="UserLogin_username" type="text" placeholder="Username" class="span4">
         <input name="UserLogin[password]" id="UserLogin_password" type="password" placeholder="Password" class="span4">
         <button class="btn" type="submit" style="padding: 0.42em 1.5em">Sign in</button><br>
